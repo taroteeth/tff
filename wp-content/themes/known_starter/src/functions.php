@@ -27,10 +27,20 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
+		add_image_size('xlarge', 1366, '', true); // XL Thumbnail 
     add_image_size('large', 700, '', true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+
+		function paulund_remove_default_image_sizes( $sizes) {
+    unset( $sizes['thumbnail']);
+    // unset( $sizes['medium']);
+    // unset( $sizes['large']);
+
+    return $sizes;
+		}
+		add_filter('intermediate_image_sizes_advanced', 'paulund_remove_default_image_sizes');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -92,11 +102,11 @@ function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-        wp_enqueue_script('conditionizr'); // Enqueue it!
-
-        wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-        wp_enqueue_script('modernizr'); // Enqueue it!
+    	//  wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+      //   wp_enqueue_script('conditionizr'); // Enqueue it!
+       //
+      //   wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
+      //   wp_enqueue_script('modernizr'); // Enqueue it!
 
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
@@ -246,6 +256,23 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
     $output = '<p>' . $output . '</p>';
     echo $output;
 }
+
+//Allow svg file uploads
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+// function fix_svg_thumb_display() {
+//   echo '
+//     td.media-icon img[src$=".svg"], img[src$=".svg"].attachment-post-thumbnail {
+//       width: 100% !important;
+//       height: auto !important;
+//     }
+//   ';
+// }
+add_action('admin_head', 'fix_svg_thumb_display');
 
 // Custom View Article link to Post
 function html5_blank_view_article($more)

@@ -1,0 +1,70 @@
+#hero {
+  width: 100%;
+  position: relative;
+
+  &.grey-bg{
+    background-color: $backgroundGrey;
+  }
+
+  .inner {
+    //display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem;
+
+    #hero-photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      @media screen and (min-width: 768px){
+        height: 100%;
+        max-width: 50%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        @media screen and (min-width: 768px){
+          height: 100%;
+        }
+      }
+    }
+
+    .text-inner {
+      padding-top: 6rem;
+      @media screen and (min-width: 768px){
+        max-width: 50%;
+        padding-left: 50%;
+        padding-top: 0;
+        height: 100%;
+      }
+      .header {
+        text-align: center;
+      }
+    }
+  }
+
+  #blurb-button {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    position: absolute;
+    left: 50%;
+    bottom: -10%;
+    transform: translateX(-50%);
+    background-color: $orange;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    z-index: 4; 
+    @media screen and (min-width: 768px){
+      max-width: 60%;
+      padding: 1rem 2rem;
+    }
+
+      p {
+        color: #fff;
+      }
+  }
+}

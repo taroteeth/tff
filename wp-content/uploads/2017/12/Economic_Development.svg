@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="106px" viewBox="0 0 106 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Economic Development</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="63 23.6609 63 47.3218 0 47.3218 0 23.6609 0 0 63 0"></polygon>
+    </defs>
+    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1067.000000, -1076.000000)">
+        <g id="You-Have-A-Funding-Need" transform="translate(0.000000, 721.000000)">
+            <g id="Treatment-1" transform="translate(149.000000, 138.000000)">
+                <g id="Group-14" transform="translate(0.000000, 209.000000)">
+                    <g id="Group-34" transform="translate(806.000000, 9.000000)">
+                        <g id="Economic-Development" transform="translate(113.000000, 0.000000)">
+                            <circle id="Oval-2-Copy-2" stroke="#0176BC" stroke-width="2" cx="52" cy="52" r="52"></circle>
+                            <g id="Page-1" transform="translate(21.000000, 28.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Clip-2"></g>
+                                <path d="M2,45.322 L2,37.004 L9.562,37.004 L9.562,41.572 L22.937,41.572 L22.937,37.004 L39.396,37.004 L39.396,41.572 L52.771,41.572 L52.771,37.004 L61,37.004 L61,45.322 L2,45.322 Z M11.563,39.572 L20.938,39.572 L20.938,37.004 L11.563,37.004 L11.563,39.572 Z M41.396,39.572 L50.771,39.572 L50.771,37.004 L41.396,37.004 L41.396,39.572 Z M61,9.858 L61,35.004 L52.771,35.004 L52.771,34.983 L39.396,34.983 L39.396,35.004 L22.937,35.004 L22.937,34.983 L9.562,34.983 L9.562,35.004 L2,35.004 L2,9.858 L61,9.858 Z M22.984,3.736 C22.984,2.779 23.763,2 24.72,2 L37.943,2 C38.901,2 39.68,2.779 39.68,3.736 L39.68,7.816 L22.984,7.816 L22.984,3.736 Z M41.68,7.858 L41.68,3.736 C41.68,1.673 40.007,0 37.943,0 L24.72,0 C22.657,0 20.984,1.673 20.984,3.736 L20.984,7.858 L0,7.858 L0,47.322 L63,47.322 L63,7.858 L41.68,7.858 Z" id="Fill-1" fill="#0176BC" mask="url(#mask-2)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

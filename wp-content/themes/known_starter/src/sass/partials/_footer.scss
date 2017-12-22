@@ -1,1 +1,54 @@
-//HELLO 
+#primary-footer {
+  background-color: $backgroundGrey;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+
+  .inner {
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    //width: 100%;
+    @media screen and (min-width: 768px){
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0;
+    }
+
+    #footer-logo {
+      margin-bottom: 1.5rem;
+    }
+
+    .button {
+
+    }
+
+    #footer-address {
+      list-style: none;
+      -webkit-padding-start: 0;
+      line-height: 1.5rem;
+      padding: 2rem 0;
+      @media screen and (min-width: 768px){
+        padding: 0;
+      }
+    }
+
+    #sm-container {
+      list-style: none;
+      -webkit-padding-start: 0;
+      @media screen and (min-width: 768px){
+        padding: 1rem 0;
+      }
+
+      li {
+        display: inline-block;
+      }
+
+      #twitter {
+        margin: 0 .5rem;
+      }
+    }
+
+  }
+}

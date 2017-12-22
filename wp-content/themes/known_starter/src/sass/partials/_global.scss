@@ -1,3 +1,65 @@
 body {
-  background-color: #000; 
+  background-color: #fff;
+  width: 100%;
+  max-width: 144rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-family: 'Merriweather', serif;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+
+.header {
+  font-size: 1.8rem;
+  font-family: 'Merriweather', serif;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  color: #3A3A3A;
+  line-height: 1.3em;
+}
+
+li {
+  font-family: 'Poppins', sans-serif;
+  font-weight: light;
+  color: $textGrey;
+}
+
+.body-content {
+  margin-top: 4rem;
+
+
+  //padding: 0 2rem;  add this to larger screen sizes
+}
+
+.button {
+  background-color: #0176BC;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 1rem;
+  display: block;
+  margin: 0 auto; 
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .2rem;
+    font-size: 1rem;
+
+    &:after {
+      content: "";
+      width: 3rem;
+      height:  .2rem;
+      background-color: #fff;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
 }

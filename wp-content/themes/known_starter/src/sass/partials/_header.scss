@@ -1,0 +1,71 @@
+#primary-header {
+  //padding: 0 2rem;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: #fff;
+  z-index: 5;
+
+  #header-inner {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+
+    svg {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    #hamburgers {
+      &:after {
+        content: "MENU";
+        display: none;
+        vertical-align: middle;
+        font-size: .8rem;
+        font-weight: bold;
+        letter-spacing: .1rem;
+        padding-left: 1rem;
+        font-family: $Poppins;
+
+        @media screen and (min-width: 768px){
+          display: inline-block;
+        }
+      }
+
+      #hamburger {
+        left: 2rem;
+
+        &.blue g #hamburger_paths polygon {
+            fill: $blue;
+          }
+
+        g#hamburger_paths {
+          display: block;
+        }
+      }
+    }
+
+
+    #primary-logo {
+      padding: 0 1rem;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #search {
+      right: 2rem;
+    }
+  }
+}

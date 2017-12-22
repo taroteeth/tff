@@ -1,0 +1,60 @@
+.next-step-container {
+  background-color: #0176BC;
+  max-height: 30rem;
+  position: relative;
+  @media screen and (min-width: 768px){
+
+  }
+
+  .inner {
+    display: block;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    @media screen and (min-width: 768px){
+      width: 50%;
+      margin: 0;
+    }
+
+    #next-step-label {
+      color: #fff;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+      margin: .5rem 0;
+      @media screen and (min-width: 768px){
+
+      }
+
+      &:after {
+        content: "";
+        width: 5rem;
+        height:  .2rem;
+        background-color: #F69420;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 1.5rem;
+      }
+    }
+
+    #next-step-heading {
+      color: #fff;
+    }
+  }
+
+  #next-step-img {
+    object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    @media screen and (min-width: 768px){
+      width: 50%;
+      height: 100%;
+      margin-left: 50%;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+}
