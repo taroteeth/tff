@@ -85,7 +85,6 @@ Thumbs.db
 *.zip
 
 wp-content/cache
-!wp-content/plugins
 wp-content/upgrade
 wp-content/w3tc-config
 wp-content/advanced-cache.php
@@ -104,6 +103,9 @@ node_modules/
 
 # track uploads file
 !wp-content/uploads/*
+
+#track plugins
+!wp-content/plugins
 
 #track database file
 !wp-content/databases/*
