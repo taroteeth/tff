@@ -29,7 +29,7 @@
 
  // staging
 
- define('DB_NAME', 'devontri_tff');
+ define('DB_NAME', 'devontri_tffz');
  define('DB_USER', 'devontri_devon');
  define('DB_PASSWORD', 'Forsaken_26!');
  define('DB_HOST', 'localhost');
