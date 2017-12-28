@@ -90,7 +90,7 @@ wp-content/w3tc-config
 wp-content/advanced-cache.php
 wp-content/index.php
 
-wp-content/themes
+!wp-content/themes
 
 # ignore these plugins
 wp-content/plugins/hello.php
