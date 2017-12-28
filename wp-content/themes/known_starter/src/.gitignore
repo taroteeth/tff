@@ -105,7 +105,7 @@ node_modules/
 !wp-content/uploads/*
 
 #track plugins
-!wp-content/plugins
+!wp-content/plugins/*
 
 #track database file
 !wp-content/databases/*
