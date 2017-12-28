@@ -18,9 +18,20 @@
  * @package WordPress
  */
 
- define('DB_NAME', 'tff');
- define('DB_USER', 'root');
- define('DB_PASSWORD', 'root');
+ //local
+
+ // define('DB_NAME', 'tff');
+ // define('DB_USER', 'root');
+ // define('DB_PASSWORD', 'root');
+ // define('DB_HOST', 'localhost');
+ // define('DB_CHARSET', 'utf8');
+ // define('DB_COLLATE', '');
+
+ // staging
+
+ define('DB_NAME', 'devontri_tff-z');
+ define('DB_USER', 'devontri_devon');
+ define('DB_PASSWORD', 'Forsaken_26!');
  define('DB_HOST', 'localhost');
  define('DB_CHARSET', 'utf8');
  define('DB_COLLATE', '');
