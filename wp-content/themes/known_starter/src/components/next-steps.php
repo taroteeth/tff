@@ -18,9 +18,9 @@ echo '<div class="next-step-container">';
    echo '</div> <!-- inner -->';
 
    if($image){
-      echo '<div id="next-step-img">';
-      echo wp_get_attachment_image($image);
-      echo '</div> <!-- next-step-img -->';
+      echo '<div id="next-step-img">'; ?>
+      <img srcset="<?php echo wp_get_attachment_image_srcset($image, 'full'); ?>" src="<?php echo wp_get_attachment_image_url($image);?>" />
+      <?php echo '</div> <!-- next-step-img -->';
    }
    
 echo '</div>';

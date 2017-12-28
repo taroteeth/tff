@@ -1,18 +1,22 @@
 .next-step-container {
   background-color: #0176BC;
+  display: flex;
+  flex-direction: column;
   max-height: 30rem;
   position: relative;
   @media screen and (min-width: 768px){
-
+    flex-direction: row;
   }
 
   .inner {
     display: block;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 4rem 0;
+    flex: 0 0 50%;
     @media screen and (min-width: 768px){
       width: 50%;
       margin: 0;
+      position: relative; 
     }
 
     #next-step-label {
@@ -21,7 +25,9 @@
       text-transform: uppercase;
       margin: .5rem 0;
       @media screen and (min-width: 768px){
-
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       &:after {
@@ -37,18 +43,24 @@
 
     #next-step-heading {
       color: #fff;
+      @media screen and (min-width: 768px){
+        position: absolute;
+        bottom: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 
   #next-step-img {
     object-fit: cover;
     overflow: hidden;
-    position: absolute;
     bottom: 0;
+    flex: 0 0 50%;
+    position: static;
     @media screen and (min-width: 768px){
       width: 50%;
       height: 100%;
-      margin-left: 50%;
     }
 
     img {

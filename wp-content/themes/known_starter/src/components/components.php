@@ -13,9 +13,18 @@ if(have_rows('components')) :
       include('4-icon-col.php');
       break;
 
+      case 'rte':
+      include('rte.php');
+      break;
+
+      case 'alt_grid':
+      include('alt-grid.php');
+      break;
+
       case 'next_step_button':
       include('next-steps.php');
       break;
+
     }
   endwhile;
 endif;

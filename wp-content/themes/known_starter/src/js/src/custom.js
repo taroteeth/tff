@@ -1,7 +1,12 @@
 // add class to body if mobile detected
 
+
+var body = document.getElementsByTagName('body');
+
+console.log(document);
+
 if(mobileDetected){
-	document.body.classList.add('is-mobile');
+	body.classList.add('TEST');
 }
 
 console.log('test');
@@ -12,7 +17,7 @@ function toggleMobileNav() {
 
 	hamburger.addEventListener("click", function(e){
 		e.preventDefault();
-		document.body.classList.toggle("mobile-nav-active");
+		document.body[0].classList.toggle("mobile-nav-active");
 	});
 }
 

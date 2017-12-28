@@ -1,7 +1,12 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
   background-color: #fff;
   width: 100%;
   max-width: 144rem;
+  font-size: 1.6rem;
 }
 
 h1 {
@@ -12,7 +17,7 @@ h1 {
 }
 
 .header {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-family: 'Merriweather', serif;
   font-weight: normal;
   line-height: 1.5em;
@@ -35,31 +40,4 @@ li {
 
 
   //padding: 0 2rem;  add this to larger screen sizes
-}
-
-.button {
-  background-color: #0176BC;
-  height: 2rem;
-  line-height: 2rem;
-  padding: 0 1rem;
-  display: block;
-  margin: 0 auto; 
-
-  a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: .2rem;
-    font-size: 1rem;
-
-    &:after {
-      content: "";
-      width: 3rem;
-      height:  .2rem;
-      background-color: #fff;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
 }

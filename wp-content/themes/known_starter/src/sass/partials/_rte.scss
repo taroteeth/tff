@@ -1,0 +1,32 @@
+#rte {
+  background-color: #fff;
+
+  &.grey-bg{
+    background-color: $backgroundGrey;
+  }
+
+  .inner {
+    padding: 4rem 2rem;
+    display: block;
+    margin: 0 auto;
+
+    #content-title {
+      text-align: center;
+
+      &:after {
+        content: "";
+        width: 5rem;
+        height:  .2rem;
+        background-color: #F69420;
+        display: block;
+        vertical-align: middle;
+        margin: 1rem auto;
+      }
+    }
+
+    #content-inner {
+      padding: 2rem;
+      text-align: center;
+    }
+  }
+}

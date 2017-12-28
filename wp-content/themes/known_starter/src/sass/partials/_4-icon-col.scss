@@ -8,6 +8,8 @@
 
   .inner {
     padding: 4rem 2rem;
+    display: block;
+    margin: 0 auto;
 
     #col-header {
       margin: 0 auto;
@@ -75,12 +77,19 @@
 
           p {
             text-align: center;
+            padding: 0 2rem;
           }
         }
       }
       #col-cta {
-        width: 20rem; 
+        width: 20rem;
         text-align: center;
+        display: block;
+        margin: 0 auto;
+        @media screen and (min-width: 768px){
+          display: block;
+          margin: 2rem auto 0;
+        }
       }
     }
   }
