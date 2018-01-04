@@ -1,3 +1,22 @@
+.bold {
+  font-weight: bold;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  padding: 0 1rem !important;
+}
+
+.divider {
+  &:after {
+    content: "";
+    width: 3rem;
+    height: .3rem;
+    display: block;
+    margin: 1rem auto;
+    background-color: $orange;
+  }
+}
+
 #icon-col {
   background-color: #fff;
   display: flex;
@@ -10,6 +29,8 @@
     padding: 4rem 2rem;
     display: block;
     margin: 0 auto;
+    max-width: 90rem;
+    width: 100%;
 
     #col-header {
       margin: 0 auto;
@@ -28,6 +49,8 @@
     .cols-inner {
       display: flex;
       flex-direction: column;
+      box-sizing: border-box;
+      justify-content: space-between;
       @media screen and (min-width: 768px){
         flex-direction: row;
       }
@@ -58,7 +81,7 @@
               margin: 0 auto;
             }
 
-            .submodule-title {
+            #submodule-title {
               text-align: center;
               font-family: $Poppins;
               font-weight: bold;
@@ -66,6 +89,7 @@
               text-transform: uppercase;
               letter-spacing: .2rem;
               padding: 1rem 0;
+              white-space: nowrap;
 
               &:after {
                 content: ">";
@@ -78,6 +102,9 @@
           p {
             text-align: center;
             padding: 0 2rem;
+            max-width: 50rem;
+            display: block;
+            margin: 0 auto;
           }
         }
       }

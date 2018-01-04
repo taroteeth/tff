@@ -11,44 +11,43 @@ $orangeCircle = get_sub_field('orange_circle');
 $blurbButton = get_sub_field('blurb_button');
 $blurbText = get_sub_field('blurb_button_text');
 
-?>
 
-<div id="hero" class="<?php if($greyBg){ echo "grey-bg"; } ?>">
-  <div class="inner">
-
-    <?php
-
-    if($image){ ?>
-      <div id="hero-photo" class="<?php echo $imagePos == "Left" ? "image-left" : "image-right";?>">
-        <img srcset="<?php echo wp_get_attachment_image_srcset($image, 'full'); ?>" src="<?php echo wp_get_attachment_image_url($image);?>" /> <?php
-      echo '</div> <!-- #hero-photo -->';
+echo '<div id="hero">'; ?>
+  <div id="inner" class="<?php echo $imagePos == "Left" ? "image-left" : "image-right";?>"> <?php
+    if($image){
+      echo '<div id="hero-img-wrapper">';
+      echo wp_get_attachment_image($image);
+      echo '</div> <!-- #hero-img-wrapper -->';
     }
 
-    echo '<div class="text-inner">';
+    echo '<div id="hero-text-wrapper">';
 
       if(is_page('6')){
         echo '<svg width="17px" height="17px" viewBox="0 0 17 17"><use xlink:href="#color-logo"></use></svg> ';
-       } else {
-        echo '<p class="hero-title">' . get_the_title() . '</p>';
+      } else { ?>
+        <p id="hero-title" class="<?php echo $imagePos == "Left" ? "div-left" : "div-right";?>"> <?php echo get_the_title() ?></p> <?php
       }
 
+
       if($heroHeader){
-        echo '<p class="header">' . $heroHeader . '</h1>';
+        echo '<p class="header">';
+        echo $heroHeader;
+        echo '</p>';
       }
 
       if($heroContent){
-        echo '<p>'. $heroContent .'</p>';
+        echo '<div class="subheader">';
+        echo $heroContent;
+        echo '</div>';
       }
 
-    echo '</div> <!-- .text-inner -->';
+    echo '</div><!-- #hero-text-wrapper -->';
+    echo '</div><!-- inner -->';
 
     if($orangeCircle){ ?>
-      <div id="orange-circle" class="<?php if($imageLeft){ echo "circle-right"; } if($imageRight){ echo "circle-left"; }?>"> <?php
-        echo $orangeCircle;
+      <div id="orange-circle" class="<?php echo $imagePos == "Left" ? "circle-right" : "circle-left";?>"> <?php
       echo '</div> <!-- #orange-circle --> ';
     }
-
-  echo '</div>';
 
   if($blurbButton){
     echo '<div id="blurb-button">';
@@ -56,5 +55,6 @@ $blurbText = get_sub_field('blurb_button_text');
     echo '</div>';
   }
 
-echo '</div> <!-- #hero -->';
+echo '</div> <!-- .hero -->';
+
 ?>

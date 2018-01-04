@@ -94,6 +94,8 @@ wp-content/index.php
 
 # ignore these plugins
 wp-content/plugins/hello.php
+wp-content/plugins/gravityforms/*
+
 
 # ignore specific themes
 wp-content/themes/twenty*/

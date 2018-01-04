@@ -7,7 +7,7 @@
     @media screen and (min-width: 768px){
       flex-direction: row;
       min-height: 40rem; // add more for dif screen sizes
-      max-height: 50rem; 
+      max-height: 50rem;
     }
 
     .right {
@@ -157,6 +157,7 @@
 
       .button {
         margin: 1.5rem 0;
+        max-width: 15rem;
 
         a:after {
         width: 2rem;

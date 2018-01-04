@@ -36,6 +36,7 @@
 
 
 	</head>
+<body <?php body_class(); ?>>
 	<div id="primary-header">
 		<div id="header-inner">
 
@@ -99,5 +100,4 @@
 
 		</div> <!-- #header-inner -->
 	</div> <!-- #primary-header -->
-	<body <?php body_class(); ?>>
-		<div class="body-content">
+	<div class="body-content">

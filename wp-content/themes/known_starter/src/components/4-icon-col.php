@@ -1,6 +1,7 @@
-<?php // our network panel at bottom of home should be similar except that the icons aren't links and there's a button option at the bottom
+<?php
 
 $greyBg = get_sub_field('grey_background');
+$divider = get_sub_field('image_divider');
 $moduleTitle = get_sub_field('module_title');
 $hasBtn = get_sub_field('bottom_cta');
 $btnText = get_sub_field('bottom_cta_text');
@@ -26,6 +27,7 @@ $btnLink = get_sub_field('bottom_cta_link');
 
       $submodIcon = get_sub_field('submodule_icon');
       $submodTitle = get_sub_field('submodule_title');
+      $boldTitle = get_sub_field('bold_title_option');
       $submodContent = get_sub_field('submodule_content');
       $isLink = get_sub_field('link_option');
       $linkSrc = get_sub_field('link_source');
@@ -34,19 +36,23 @@ $btnLink = get_sub_field('bottom_cta_link');
 
         if($submodIcon){
           if($isLink){
-            echo '<a href="'. $linkSrc .'">';
+            echo '<a href="'. $linkSrc .'">'; ?>
+            <div id="sub-icon-wrapper" class="<?php if($divider){echo 'divider';}?>"> <?php
             echo wp_get_attachment_image($submodIcon);
-          } else {
+            echo '</div><!-- #sub-icon-wrapper -->';
+          } else { ?>
+            <div id="sub-icon-wrapper" class="<?php if($divider){echo 'divider';}?>"> <?php
             echo wp_get_attachment_image($submodIcon);
+            echo '</div><!-- #sub-icon-wrapper -->';
           }
         }
 
         if($submodTitle){
-          if($isLink){
-            echo '<p class="submodule-title">'. $submodTitle .'</p>';
-            echo '</a>';
-          } else {
-            echo $submodTitle;
+          if($isLink){ ?>
+            <p id="submodule-title" class="<?php if($boldTitle){echo 'bold';} ?>"> <?php echo $submodTitle ?> </p>
+            </a> <?php
+          } else { ?>
+            <p id="submodule-title" class="<?php if($boldTitle){echo 'bold';} ?>"> <?php echo $submodTitle;?> </p> <?php
           }
         }
 

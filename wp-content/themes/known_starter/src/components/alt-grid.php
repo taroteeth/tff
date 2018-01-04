@@ -23,6 +23,10 @@
 			?>
 
 			<div id="img-block" class="<?php if($iteration % 2 !== 0){ echo 'right';}?>"> <?php
+			if($textBlockCta){
+				echo '<a href="">';
+			}
+
 			if($imgBlockBackground){ ?>
 				<div class="img-block-inner"></div>
 				<img srcset="<?php echo wp_get_attachment_image_srcset($imgBlockBackground, 'full'); ?>" src="<?php echo wp_get_attachment_image_url($imgBlockBackground);?>" />
@@ -39,6 +43,11 @@
 				echo $imgBlockCaption;
 				echo '</div><!-- image-block-caption -->';
 			}
+
+			if($textBlockCta){
+				echo '</a>'; 
+			}
+
 			echo '</div> <!-- .img-block -->';
 
 

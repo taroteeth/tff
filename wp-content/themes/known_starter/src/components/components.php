@@ -21,6 +21,14 @@ if(have_rows('components')) :
       include('alt-grid.php');
       break;
 
+      case 'stat_module':
+      include('stat-module.php');
+      break;
+
+      case 'contact_form_module':
+      include('contact-form-module.php');
+      break; 
+
       case 'next_step_button':
       include('next-steps.php');
       break;
