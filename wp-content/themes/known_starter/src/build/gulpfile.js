@@ -29,7 +29,7 @@ gulp.task('default', function () {
 gulp.task('scripts', function() {
   return gulp.src([
     './bower_components/jquery/dist/jquery.min.js',
-    './../js/src/**/*.js'
+    './../js/src/*.js'
     ])
     .pipe(concat('all.js'))
     .pipe(gulp.dest('./../js/dist/'));

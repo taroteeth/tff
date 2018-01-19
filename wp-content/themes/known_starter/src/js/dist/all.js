@@ -5,13 +5,9 @@
 
 var body = document.getElementsByTagName('body');
 
-console.log(document);
-
 if(mobileDetected){
 	body.classList.add('TEST');
 }
-
-console.log('test');
 
 // Mobile Nav Toggle
 function toggleMobileNav() {
@@ -33,8 +29,8 @@ function(){
 	loadCurrentPage();
 	$("#next, #prev").click(function(){
 		offset = ($(this).attr('id')=='next') ? offset + 6 : offset - 6;
-		if(offset < 0);
-		offset = 0
+		if(offset < 0)
+		offset = 0;
 		else
 		loadCurrentPage();
 	});
@@ -47,7 +43,7 @@ function(){
 			success: function (data) {
 				$('#grid-inner').html(data);
 			}
-		}); 
+		});
 	}
 }
 
