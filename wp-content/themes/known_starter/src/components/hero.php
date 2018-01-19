@@ -1,10 +1,9 @@
 <?php
 
-//still need to bring in orange bar as after pseudoelement
-
 $greyBg = get_sub_field('grey_background');
 $heroHeader = get_sub_field('hero_header');
 $heroContent = get_sub_field('text_content');
+$blueText = get_sub_field('blue_text');
 $image = get_sub_field('main_image');
 $imagePos = get_sub_field('main_image_position');
 $orangeCircle = get_sub_field('orange_circle');
@@ -14,10 +13,12 @@ $blurbText = get_sub_field('blurb_button_text');
 
 echo '<div id="hero">'; ?>
   <div id="inner" class="<?php echo $imagePos == "Left" ? "image-left" : "image-right";?>"> <?php
-    if($image){
-      echo '<div id="hero-img-wrapper">';
-      echo wp_get_attachment_image($image);
-      echo '</div> <!-- #hero-img-wrapper -->';
+    if(!is_page('290')){ // there is no image in the hero for the resources page
+      if($image){
+        echo '<div id="hero-img-wrapper">';
+        echo wp_get_attachment_image($image);
+        echo '</div> <!-- #hero-img-wrapper -->';
+      }
     }
 
     echo '<div id="hero-text-wrapper">';
@@ -30,13 +31,11 @@ echo '<div id="hero">'; ?>
 
 
       if($heroHeader){
-        echo '<p class="header">';
-        echo $heroHeader;
-        echo '</p>';
+        echo '<p class="header">'. $heroHeader. '</p>';
       }
 
-      if($heroContent){
-        echo '<div class="subheader">';
+      if($heroContent){ ?>
+        <div id="subheader" class="<?php if($blueText){echo 'blue';}?>"> <?php
         echo $heroContent;
         echo '</div>';
       }

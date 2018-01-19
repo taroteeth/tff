@@ -1,9 +1,9 @@
 <?php // TEMPLATE NAME: Home
 
-get_header(); ?>
+get_header();
 
+include('components/components.php');
 
-  <?php include('components/components.php'); ?>
+get_footer();
 
-
-<?php get_footer(); ?>
+?>

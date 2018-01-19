@@ -476,4 +476,94 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
+/*------------------------------------*\
+	AJAX
+\*------------------------------------*/
+
+function wordpress_ajaxurl(){ ?>
+	<script type="text-javascript">
+	var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+	</script>
+<?php } //assign ajax wp file so that the function is pointing the right way
+
+add_action('wp_head', 'wordpress_ajaxurl'); //run this first, not in footer
+
+// Load more Posts Function
+
+// function load_more_posts(){
+//
+// 	$currentPage = $_POST['wrapper'];
+// 	$currentOffset = $_POST['offset'];
+// 	$excludePages = $_POST['exclude'];
+//
+// 	$args = array(
+// 		'posts_per_page' => 6,
+// 		'offset' => $currentOffset,
+// 		'post_status' => 'publish'
+// 	);
+//
+// 	if($excludePages){
+// 		$args['post__not_in'] = json_decode($excludePages);
+// 	}
+//
+// 		$ajax_query = new WP_Query( $args );
+//
+// 		if( $ajax_query->have_posts() ):
+// 			$output;
+//
+// 			$i = 0;
+//
+// 				while( $ajax_query->have_posts() ): $ajax_query->the_post();
+//
+// 					$image = get_field('cover_photo');
+// 					$title = get_the_title();
+// 					$permalink = get_permalink();
+// 					$pdf = get_field('pdf');
+// 					$totalCounter = 0;
+// 					$total = wp_count_posts('resource')->publish;
+//
+// 					if($i == 0){
+// 						$output .= '<div class="row">';
+// 					}
+//
+// 					$output .= '<div class="article-wrapper">';
+// 					$output .= '<a href="'. $permalink .'">';
+// 					if($image){
+// 						echo wp_get_attachment_image($image);
+// 					};
+// 					$output .= '</a>';
+// 					$output .= '<div class="text-wrapper">';
+// 					$output .= '<p class="header">'. $title .'</p>';
+//
+// 					$output .= '<div class="button">';
+// 					$output .= '<a href="'. $permalink .'">';
+// 						if($pdf){
+// 							$output .= 'Download PDF';
+// 						} else {
+// 							$output .= 'Read Article';
+// 						}
+// 					$output .= '</a>';
+// 					$output .= '</div><!-- .button -->';
+//
+// 					$output .= '</div> <!-- .text-wrapper -->';
+// 					$output .= '</div> <!-- .article-wrapper -->';
+// 					$i++;
+// 					$totalCounter++;
+//
+// 					if($i === 3 || $totalCounter === $total){
+// 						$output .= '</div><!-- .row -->';
+// 						$i = 0;
+// 					}
+// 				endwhile;
+// 				wp_reset_postdata();
+// 			endif;
+//
+// 			echo json_encode(array('offset' => $ajax_query->post_count, 'html' => $output));
+//
+// 			exit;
+// }
+
+//how do I add action here with multiple buttons?
+
+
 ?>

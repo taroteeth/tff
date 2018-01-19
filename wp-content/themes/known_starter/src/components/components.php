@@ -13,12 +13,24 @@ if(have_rows('components')) :
       include('4-icon-col.php');
       break;
 
+      case 'section_header':
+      include('section-header.php');
+      break;
+
       case 'rte':
       include('rte.php');
       break;
 
+      case '5050_image_module':
+      include('5050-module.php');
+      break;
+
       case 'alt_grid':
       include('alt-grid.php');
+      break;
+
+      case 'content_columns':
+      include('content-cols.php');
       break;
 
       case 'stat_module':
@@ -27,7 +39,7 @@ if(have_rows('components')) :
 
       case 'contact_form_module':
       include('contact-form-module.php');
-      break; 
+      break;
 
       case 'next_step_button':
       include('next-steps.php');

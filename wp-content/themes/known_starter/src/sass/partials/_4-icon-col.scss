@@ -20,6 +20,8 @@
 #icon-col {
   background-color: #fff;
   display: flex;
+  position: relative;
+  z-index: 5; 
 
   &.grey-bg {
     background-color: $backgroundGrey;

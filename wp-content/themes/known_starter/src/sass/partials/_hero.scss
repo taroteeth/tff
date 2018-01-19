@@ -3,7 +3,7 @@
   padding: 2rem;
   display: flex;
   position: relative;
-  z-index: 4;
+  z-index: 6;
 
   .image-left { //styling for specifically if image is on left
     width: 100%;
@@ -136,12 +136,22 @@
           text-align: left;
         }
       }
-      .subheader p {
+      #subheader p {
         font-family: $Merriweather;
         color: $lightGrey;
         text-align: center;
         @media screen and (min-width: 768px){
           text-align: left;
+        }
+      }
+      .blue {
+        padding: 1rem 0;
+        p {
+          font-family: $Poppins !important;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: $blue!important;
+          line-height: 1.5em;
         }
       }
     }
