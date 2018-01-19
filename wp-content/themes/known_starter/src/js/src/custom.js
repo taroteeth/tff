@@ -45,7 +45,7 @@ function(){
 			success: function (data) {
 				$('#grid-inner').html(data);
 			}
-		});
+		}); 
 	}
 }
 
