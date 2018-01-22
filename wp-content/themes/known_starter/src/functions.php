@@ -264,15 +264,49 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
-// function fix_svg_thumb_display() {
-//   echo '
-//     td.media-icon img[src$=".svg"], img[src$=".svg"].attachment-post-thumbnail {
-//       width: 100% !important;
-//       height: auto !important;
-//     }
-//   ';
-// }
-add_action('admin_head', 'fix_svg_thumb_display');
+
+// Add custom style option to WYGIWYG for grey text
+function wpb_mce_buttons_2($buttons) {
+    array_unshift($buttons, 'styleselect');
+    return $buttons;
+}
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+
+/*
+* Callback function to filter the MCE settings
+*/
+
+function my_mce_before_init_insert_formats( $init_array ) {
+
+// Define the style_formats array
+
+    $style_formats = array(
+/*
+* Each array child is a format with it's own settings
+* Notice that each array has title, block, classes, and wrapper arguments
+* Title is the label which will be visible in Formats menu
+* Block defines whether it is a span, div, selector, or inline style
+* Classes allows you to define CSS classes
+* Wrapper whether or not to add a new block-level element around any selected elements
+*/
+        array(
+            'title' => 'Grey Text',
+            'block' => 'span',
+            'classes' => 'grey-text',
+            'wrapper' => false,
+
+        ),
+    );
+    // Insert the array, JSON ENCODED, into 'style_formats'
+    $init_array['style_formats'] = json_encode( $style_formats );
+
+    return $init_array;
+
+}
+// Attach callback to 'tiny_mce_before_init'
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+
+
 
 // Custom View Article link to Post
 function html5_blank_view_article($more)

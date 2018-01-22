@@ -73,6 +73,9 @@ p {
   color: #3A3A3A;
   line-height: 1.3em; }
 
+.grey-text {
+  color: #909090; }
+
 li {
   font-family: 'Poppins', sans-serif;
   font-weight: light;
