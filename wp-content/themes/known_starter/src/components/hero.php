@@ -16,7 +16,7 @@ echo '<div id="hero">'; ?>
     if(!is_page('290')){ // there is no image in the hero for the resources page
       if($image){
         echo '<div id="hero-img-wrapper">';
-        echo wp_get_attachment_image($image);
+        echo wp_get_attachment_image($image, 'large');
         echo '</div> <!-- #hero-img-wrapper -->';
       }
     }
