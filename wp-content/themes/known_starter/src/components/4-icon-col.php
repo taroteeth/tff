@@ -26,6 +26,7 @@ $btnLink = get_sub_field('bottom_cta_link');
       while(have_rows('col_submodule')): the_row();
 
       $submodIcon = get_sub_field('submodule_icon');
+      $iconFiletype = wp_check_filetype($submodIcon);
       $submodTitle = get_sub_field('submodule_title');
       $boldTitle = get_sub_field('bold_title_option');
       $submodContent = get_sub_field('submodule_content');
@@ -37,11 +38,11 @@ $btnLink = get_sub_field('bottom_cta_link');
         if($submodIcon){
           if($isLink){
             echo '<a href="'. $linkSrc .'">'; ?>
-            <div id="sub-icon-wrapper" class="<?php if($divider){echo 'divider';}?>"> <?php
+            <div id="sub-icon-wrapper" class="<?php if($divider){echo 'divider';}?><?php if($iconFiletype = "svg"){echo 'svg';} ?>"> <?php
             echo wp_get_attachment_image($submodIcon);
             echo '</div><!-- #sub-icon-wrapper -->';
           } else { ?>
-            <div id="sub-icon-wrapper" class="<?php if($divider){echo 'divider';}?>"> <?php
+            <div id="sub-icon-wrapper" class="<?php if($divider){echo 'divider';}?>, <?php ?>"> <?php
             echo wp_get_attachment_image($submodIcon);
             echo '</div><!-- #sub-icon-wrapper -->';
           }

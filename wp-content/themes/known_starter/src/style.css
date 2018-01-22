@@ -1090,6 +1090,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             max-width: 33.3%;
             -ms-flex-item-align: baseline;
                 align-self: baseline; } }
+        #icon-col .inner .cols-inner .col-inner .svg img {
+          width: 10rem;
+          height: 10rem; }
         #icon-col .inner .cols-inner .col-inner img {
           display: block;
           margin: 0 auto;

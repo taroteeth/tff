@@ -19,12 +19,12 @@ function toggleMobileNav() {
 	});
 }
 
-toggleMobileNav();
+toggleMobileNav(); 
 
 
 // AJAX POST LOADER
 
-function(){
+function sampleName(){
 	var offset = 0;
 	loadCurrentPage();
 	$("#next, #prev").click(function(){
