@@ -18,7 +18,7 @@ if(have_rows('components')) :
       break;
 
       case 'section_header':
-      include('section-header.php');
+      include('section-header.php'); 
       break;
 
       case 'rte':
