@@ -828,7 +828,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
-                flex-direction: row; } }
+                flex-direction: row;
+        padding: 4rem 2rem; } }
     #case-study-highlight-module #inner #bubble-image-wrapper {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
@@ -855,7 +856,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             min-height: 35rem;
             max-width: 40rem;
             max-height: 40rem;
-            position: absolute; } }
+            position: absolute;
+            top: -4rem; } }
     #case-study-highlight-module #inner #text-wrapper {
       width: auto;
       padding: 2rem;

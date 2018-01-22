@@ -2,20 +2,19 @@
 
 $btnLink = get_sub_field('button_link');
 $btnText = get_sub_field('button_text');
-$btnPath = get_sub_field('button_path'[0]);
+$btnPath = get_sub_field('button_path');
 
 
 echo '<div class="button">';
-echo $btnPath;
 
 if($btnPath){
-  echo '<a class="test" href="'. $btnPath .'">';
+  echo '<a class="test" href="'. get_permalink($btnPath[0]) .'">';
 }
 else {
   echo '<a href="'. $btnLink .'">';
 }
 echo $btnText;
 echo '</a>';
-echo '</div> <!-- #col-cta -->';
+echo '</div> <!-- .button -->';
 
 ?>
