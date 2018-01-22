@@ -1495,6 +1495,12 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
                 flex-direction: row; } }
+    #next-step-wrapper .next-step-container .page-path {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      top: 0; }
     #next-step-wrapper .next-step-container .inner {
       display: block;
       margin: 0 auto;

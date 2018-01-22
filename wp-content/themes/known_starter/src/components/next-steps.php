@@ -3,13 +3,16 @@
 if(get_post_type() == 'case_study'){
    $heading = get_field('next_step_heading');
    $image = get_field('next_step_image');
+   $path = get_sub_field('next_step_page'[0]);
 } else {
    $heading = get_sub_field('next_step_heading');
    $image = get_sub_field('next_step_image');
+   $path = get_sub_field('next_step_page'[0]);
 }
 
 echo '<div id="next-step-wrapper">';
    echo '<div class="next-step-container">';
+   echo '<a class="page-path" href="'. $path .'"></a>';
       echo '<div class="inner">';
 
          if(get_post_type() == 'case_study'){
