@@ -13,6 +13,10 @@ if(have_rows('components')) :
       include('4-icon-col.php');
       break;
 
+      case 'network_module':
+      include('network-module.php');
+      break;
+
       case 'section_header':
       include('section-header.php');
       break;
