@@ -33,6 +33,10 @@ if(have_rows('components')) :
       include('case-study-highlight.php');
       break;
 
+      case 'our_network_content_columns':
+      include('our-network-content-cols.php');
+      break;
+
       case 'alt_grid':
       include('alt-grid.php');
       break;
