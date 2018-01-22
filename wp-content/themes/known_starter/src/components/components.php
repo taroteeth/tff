@@ -29,6 +29,10 @@ if(have_rows('components')) :
       include('5050-module.php');
       break;
 
+      case 'case_study_highlight_module':
+      include('case-study-highlight.php');
+      break;
+
       case 'alt_grid':
       include('alt-grid.php');
       break;

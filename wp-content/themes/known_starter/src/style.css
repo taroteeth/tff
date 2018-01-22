@@ -808,6 +808,100 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       display: block;
       margin: 0 auto; }
 
+#case-study-highlight-module {
+  position: relative;
+  z-index: 6;
+  display: block;
+  margin: 0 auto; }
+  #case-study-highlight-module #inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    padding: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media screen and (min-width: 768px) {
+      #case-study-highlight-module #inner {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
+    #case-study-highlight-module #inner #bubble-image-wrapper {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      position: relative;
+      height: 100%; }
+      @media screen and (min-width: 768px) {
+        #case-study-highlight-module #inner #bubble-image-wrapper {
+          -webkit-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+                  order: 2; } }
+      #case-study-highlight-module #inner #bubble-image-wrapper img {
+        min-width: 25rem;
+        min-height: 25rem;
+        max-width: 30rem;
+        max-height: 30rem;
+        border-radius: 100%;
+        position: relative;
+        display: block;
+        margin: 0 auto; }
+        @media screen and (min-width: 768px) {
+          #case-study-highlight-module #inner #bubble-image-wrapper img {
+            min-width: 35rem;
+            min-height: 35rem;
+            max-width: 40rem;
+            max-height: 40rem;
+            position: absolute; } }
+    #case-study-highlight-module #inner #text-wrapper {
+      width: auto;
+      padding: 2rem;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; }
+      @media screen and (min-width: 768px) {
+        #case-study-highlight-module #inner #text-wrapper {
+          -webkit-box-ordinal-group: 2;
+              -ms-flex-order: 1;
+                  order: 1;
+          width: 50%; } }
+      #case-study-highlight-module #inner #text-wrapper .title {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .1rem;
+        color: #0176BC;
+        padding: 2rem 0; }
+        #case-study-highlight-module #inner #text-wrapper .title:before {
+          content: "";
+          width: 2rem;
+          height: .2rem;
+          display: inline-block;
+          background-color: #F69420;
+          vertical-align: middle; }
+      #case-study-highlight-module #inner #text-wrapper #block-quote {
+        font-style: italic; }
+        #case-study-highlight-module #inner #text-wrapper #block-quote p {
+          font-family: "Merriweather", serif;
+          line-height: 1.5em; }
+      #case-study-highlight-module #inner #text-wrapper #byline {
+        padding: 2rem 0;
+        font-weight: bold;
+        color: #0176BC;
+        font-family: "Merriweather", serif; }
+        #case-study-highlight-module #inner #text-wrapper #byline:before {
+          content: "-";
+          margin-right: .5rem; }
+      #case-study-highlight-module #inner #text-wrapper .button {
+        text-align: center; }
+        @media screen and (min-width: 768px) {
+          #case-study-highlight-module #inner #text-wrapper .button {
+            margin: 0 0;
+            max-width: 15rem;
+            text-align: left; } }
+
 #embed-image-module {
   position: relative;
   z-index: 6;
@@ -953,6 +1047,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       #bubble-image-module #inner #bubble-image-wrapper img {
         min-width: 25rem;
         min-height: 25rem;
+        max-width: 30rem;
+        max-height: 30rem;
         border-radius: 100%;
         position: relative;
         display: block;
@@ -961,6 +1057,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           #bubble-image-module #inner #bubble-image-wrapper img {
             min-width: 35rem;
             min-height: 35rem;
+            max-width: 40rem;
+            max-height: 40rem;
             position: absolute; } }
     @media screen and (min-width: 768px) {
       #bubble-image-module #inner .left {

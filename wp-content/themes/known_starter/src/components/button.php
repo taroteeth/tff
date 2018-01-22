@@ -6,12 +6,13 @@ $btnPath = get_sub_field('button_path'[0]);
 
 
 echo '<div class="button">';
+echo $btnPath;
 
-if($btnLink){
-  echo '<a href="'. $btnLink .'">';
+if($btnPath){
+  echo '<a class="test" href="'. $btnPath .'">';
 }
 else {
-  echo '<a href="'. $btnPath .'">';
+  echo '<a href="'. $btnLink .'">';
 }
 echo $btnText;
 echo '</a>';
