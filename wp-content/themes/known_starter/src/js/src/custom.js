@@ -17,8 +17,25 @@ function toggleMobileNav() {
 	});
 }
 
-toggleMobileNav(); 
+toggleMobileNav();
 
+// contact form label animation
+
+function labelDrift(){
+	jQuery('.contact-form input').on('focus', function(){
+	    var label = jQuery(this).siblings('label');
+	    if(label) label.addClass('active');
+	  });
+
+	  jQuery('.contact-form input').on('blur', function(){
+	    var label = jQuery(this).siblings('label');
+	    if(jQuery(this).val() === ''){
+	      if(label) label.removeClass('active');
+	    }
+	  });
+}
+
+labelDrift();
 
 // AJAX POST LOADER
 
