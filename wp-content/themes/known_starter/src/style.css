@@ -907,6 +907,72 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             max-width: 15rem;
             text-align: left; } }
 
+#our-network-content-cols .content-module {
+  padding: 2rem; }
+  #our-network-content-cols .content-module .header {
+    text-align: center; }
+    #our-network-content-cols .content-module .header:after {
+      content: "";
+      width: 5rem;
+      height: .2rem;
+      background-color: #F69420;
+      display: block;
+      vertical-align: middle;
+      margin: 1rem auto; }
+  #our-network-content-cols .content-module .module-intro {
+    padding: 2rem;
+    text-align: center; }
+  #our-network-content-cols .content-module .content-submodule {
+    padding: 2rem; }
+    #our-network-content-cols .content-module .content-submodule .title {
+      font-size: 1.4rem;
+      color: #0176BC;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      font-family: "Poppins", sans-serif;
+      text-align: left;
+      padding: 1rem 5.5rem 1rem 0;
+      padding-left: 5.5rem;
+      position: relative; }
+      #our-network-content-cols .content-module .content-submodule .title:before {
+        content: "";
+        width: 5rem;
+        height: .2rem;
+        background-color: #F69420;
+        display: block;
+        vertical-align: middle;
+        margin: 1rem auto;
+        position: absolute;
+        left: 0; }
+      @media screen and (min-width: 768px) {
+        #our-network-content-cols .content-module .content-submodule .title {
+          text-align: left; } }
+    @media screen and (min-width: 768px) {
+      #our-network-content-cols .content-module .content-submodule .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+    @media screen and (min-width: 768px) {
+      #our-network-content-cols .content-module .content-submodule .row .odd-col {
+        max-width: 50%;
+        padding-right: 1rem; } }
+    @media screen and (min-width: 768px) {
+      #our-network-content-cols .content-module .content-submodule .row .even-col {
+        max-width: 50%;
+        padding-left: 1rem; } }
+    #our-network-content-cols .content-module .content-submodule .row .block {
+      padding: 1rem 0; }
+    #our-network-content-cols .content-module .content-submodule .row .block-header {
+      font-weight: bold; }
+    #our-network-content-cols .content-module .content-submodule .row .block-subheader {
+      padding-top: 1rem;
+      color: #0176BC; }
+    #our-network-content-cols .content-module .content-submodule .row .block-content {
+      padding: 1rem 0; }
+      #our-network-content-cols .content-module .content-submodule .row .block-content p {
+        padding: .5rem 0; }
+
 #embed-image-module {
   position: relative;
   z-index: 6;
@@ -1523,58 +1589,18 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     #content-cols .inner #specs-wrapper .spec-content p {
       line-height: 1.5em !important; }
 
-#gform_1 {
+#contact-module .inner {
   padding: 4rem 2rem; }
-
-.gfield {
-  border: 1px solid #979797;
-  margin: 2rem;
-  height: 4rem; }
-  .gfield .gfield_label {
-    display: none; }
-  .gfield .ginput_container {
-    height: 100%; }
-    .gfield .ginput_container input {
-      font-family: "Merriweather", serif;
-      font-style: italic;
-      color: #ACACAC;
-      margin: 0 2rem; }
-      .gfield .ginput_container input:focus {
-        outline: none; }
-    .gfield .ginput_container textarea {
-      font-family: "Merriweather", serif;
-      font-style: italic;
-      color: #ACACAC;
-      margin: 0 2rem; }
-      .gfield .ginput_container textarea:focus {
-        outline: none; }
-
-#field_1_1 {
-  display: inline-block;
-  width: 40%; }
-
-#field_1_2 {
-  display: inline-block;
-  width: 40%; }
-
-#gform_submit_button_1 {
-  background-color: #0176BC;
-  height: 2rem;
-  line-height: 2rem;
-  padding: 0 1rem;
-  display: block;
-  margin: 0 auto; }
-
-#contact-module .inner .header {
-  text-align: center; }
-  #contact-module .inner .header:after {
-    content: "";
-    width: 5rem;
-    height: .2rem;
-    background-color: #F69420;
-    display: block;
-    vertical-align: middle;
-    margin: 1rem auto; }
+  #contact-module .inner .header {
+    text-align: center; }
+    #contact-module .inner .header:after {
+      content: "";
+      width: 5rem;
+      height: .2rem;
+      background-color: #F69420;
+      display: block;
+      vertical-align: middle;
+      margin: 1rem auto; }
 
 #next-step-wrapper {
   background-color: #fff;
