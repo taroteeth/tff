@@ -915,11 +915,30 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             max-width: 15rem;
             text-align: left; } }
 
-#our-network-content-cols .content-module {
+#our-network-content-cols .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  #our-network-content-cols .group .title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%; }
+  #our-network-content-cols .group .col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%; }
+
+#our-network-content-cols .content-cols-module {
   padding: 2rem; }
-  #our-network-content-cols .content-module .header {
+  #our-network-content-cols .content-cols-module .header {
     text-align: center; }
-    #our-network-content-cols .content-module .header:after {
+    #our-network-content-cols .content-cols-module .header:after {
       content: "";
       width: 5rem;
       height: .2rem;
@@ -927,12 +946,27 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       display: block;
       vertical-align: middle;
       margin: 1rem auto; }
-  #our-network-content-cols .content-module .module-intro {
+  #our-network-content-cols .content-cols-module .module-intro {
     padding: 2rem;
-    text-align: center; }
-  #our-network-content-cols .content-module .content-submodule {
-    padding: 2rem; }
-    #our-network-content-cols .content-module .content-submodule .title {
+    text-align: center;
+    max-width: 90rem;
+    margin: 0 auto; }
+  #our-network-content-cols .content-cols-module .group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2rem;
+    max-width: 90rem;
+    margin: 0 auto; }
+    #our-network-content-cols .content-cols-module .group .title {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%;
       font-size: 1.4rem;
       color: #0176BC;
       font-weight: bold;
@@ -943,7 +977,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       padding: 1rem 5.5rem 1rem 0;
       padding-left: 5.5rem;
       position: relative; }
-      #our-network-content-cols .content-module .content-submodule .title:before {
+      #our-network-content-cols .content-cols-module .group .title:before {
         content: "";
         width: 5rem;
         height: .2rem;
@@ -954,10 +988,41 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         position: absolute;
         left: 0; }
       @media screen and (min-width: 768px) {
-        #our-network-content-cols .content-module .content-submodule .title {
+        #our-network-content-cols .content-cols-module .group .title {
+          text-align: left; } }
+    #our-network-content-cols .content-cols-module .group .col {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 50%;
+              flex: 0 0 50%;
+      max-width: 50%; }
+  #our-network-content-cols .content-cols-module .content-submodule {
+    padding: 2rem; }
+    #our-network-content-cols .content-cols-module .content-submodule .title {
+      font-size: 1.4rem;
+      color: #0176BC;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      font-family: "Poppins", sans-serif;
+      text-align: left;
+      padding: 1rem 5.5rem 1rem 0;
+      padding-left: 5.5rem;
+      position: relative; }
+      #our-network-content-cols .content-cols-module .content-submodule .title:before {
+        content: "";
+        width: 5rem;
+        height: .2rem;
+        background-color: #F69420;
+        display: block;
+        vertical-align: middle;
+        margin: 1rem auto;
+        position: absolute;
+        left: 0; }
+      @media screen and (min-width: 768px) {
+        #our-network-content-cols .content-cols-module .content-submodule .title {
           text-align: left; } }
     @media screen and (min-width: 768px) {
-      #our-network-content-cols .content-module .content-submodule .row {
+      #our-network-content-cols .content-cols-module .content-submodule .row {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -965,23 +1030,23 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             -ms-flex-pack: justify;
                 justify-content: space-between; } }
     @media screen and (min-width: 768px) {
-      #our-network-content-cols .content-module .content-submodule .row .odd-col {
+      #our-network-content-cols .content-cols-module .content-submodule .row .odd-col {
         max-width: 50%;
         padding-right: 1rem; } }
     @media screen and (min-width: 768px) {
-      #our-network-content-cols .content-module .content-submodule .row .even-col {
+      #our-network-content-cols .content-cols-module .content-submodule .row .even-col {
         max-width: 50%;
         padding-left: 1rem; } }
-    #our-network-content-cols .content-module .content-submodule .row .block {
+    #our-network-content-cols .content-cols-module .content-submodule .row .block {
       padding: 1rem 0; }
-    #our-network-content-cols .content-module .content-submodule .row .block-header {
+    #our-network-content-cols .content-cols-module .content-submodule .row .block-header {
       font-weight: bold; }
-    #our-network-content-cols .content-module .content-submodule .row .block-subheader {
+    #our-network-content-cols .content-cols-module .content-submodule .row .block-subheader {
       padding-top: 1rem;
       color: #0176BC; }
-    #our-network-content-cols .content-module .content-submodule .row .block-content {
+    #our-network-content-cols .content-cols-module .content-submodule .row .block-content {
       padding: 1rem 0; }
-      #our-network-content-cols .content-module .content-submodule .row .block-content p {
+      #our-network-content-cols .content-cols-module .content-submodule .row .block-content p {
         padding: .5rem 0; }
 
 #embed-image-module {

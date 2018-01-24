@@ -12,18 +12,18 @@ if( have_rows('content_cols_module') ):
 
       $moduleTitle = get_sub_field('module_title');
       $moduleIntro = get_sub_field('module_introduction');
-      $subModuleObj = get_sub_field_object('content_submodule')['value'];
-      $groups = [];
+      $subModuleObj = get_sub_field_object('content_submodule')['value']; // value array, array of all repeater fields
+      $groups = []; //we want to store each set of title and content and clump together
       $currentGroup = -1;
 
       // This will loop through all the rows, and generate a new multidimensional array for each set of title/items
       for($i = 0; $i < count($subModuleObj); $i++) {
         if($subModuleObj[$i]['title_button'] && $subModuleObj[$i]['title_text'] !== '') :
-          $currentGroup++;
+          $currentGroup++; //increase current group to 0 index
           $groups[] = ['title' => [], 'content' => []];
           $groups[$currentGroup]['title'] = $subModuleObj[$i];
         else :
-          $groups[$currentGroup]['content'][] = $subModuleObj[$i];
+          $groups[$currentGroup]['content'][] = $subModuleObj[$i]; // third bracket allows you to add new stuff without overwriting 
         endif;
       }
 
@@ -39,12 +39,14 @@ if( have_rows('content_cols_module') ):
 
           echo '<div class="group">';
 
+          // add if title here
           echo '<div class="title">';
           echo $group['title']['title_text'];
           echo '</div>';
 
           foreach($group['content'] as $g) :
 
+            // if zero or half of the count, round rounds up
             if($contentCounter === 0 || $contentCounter == round($contentCount / 2)) echo '<div class="col">';
 
             $header = $g['header'];
