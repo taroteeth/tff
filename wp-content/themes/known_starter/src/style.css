@@ -49,12 +49,20 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #fff;
+  background-color: #e5ecef;
   width: 100%;
   max-width: 144rem;
   font-size: 1.6rem;
   display: block;
   margin: 0 auto; }
+
+#body-wrapper {
+  max-width: 160rem;
+  background-color: #fff;
+  display: block;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 30px 1px rgba(201, 201, 201, 0.5);
+          box-shadow: 0px 0px 30px 1px rgba(201, 201, 201, 0.5); }
 
 h1 {
   font-size: 1.8rem;
@@ -493,7 +501,7 @@ li {
               max-width: 15rem; } }
 
 #primary-header {
-  padding: 1rem;
+  padding: 1rem 0;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1364,6 +1372,63 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       #network-icon-col #col-cta {
         display: block;
         margin: 2rem auto 0; } }
+
+#network-exhibit .inner {
+  padding: 2rem 0; }
+  #network-exhibit .inner #exhibit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media screen and (min-width: 768px) {
+      #network-exhibit .inner #exhibit {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
+    #network-exhibit .inner #exhibit .exhibit-col {
+      max-width: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%;
+      background-color: #F8F8F8;
+      padding: 5rem 0; }
+      @media screen and (min-width: 768px) {
+        #network-exhibit .inner #exhibit .exhibit-col {
+          max-width: 33.3%;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 33.3%;
+                  flex: 0 0 33.3%;
+          padding: 10rem 0; } }
+      #network-exhibit .inner #exhibit .exhibit-col .number {
+        font-size: 10rem;
+        color: #F69420;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold; }
+        @media screen and (min-width: 768px) {
+          #network-exhibit .inner #exhibit .exhibit-col .number {
+            font-size: 5rem; } }
+        #network-exhibit .inner #exhibit .exhibit-col .number:before {
+          content: "0"; }
+      #network-exhibit .inner #exhibit .exhibit-col .title {
+        text-align: center;
+        font-weight: bold;
+        color: #0176BC;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        max-width: 60%;
+        display: block;
+        margin: 0 auto;
+        letter-spacing: .1rem; }
+        @media screen and (min-width: 768px) {
+          #network-exhibit .inner #exhibit .exhibit-col .title {
+            font-size: 1rem;
+            max-width: 40%; } }
 
 #alt-grid {
   width: 100%; }
