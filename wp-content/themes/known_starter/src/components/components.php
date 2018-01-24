@@ -18,7 +18,7 @@ if(have_rows('components')) :
       break;
 
       case 'section_header':
-      include('section-header.php'); 
+      include('section-header.php');
       break;
 
       case 'rte':
@@ -35,6 +35,10 @@ if(have_rows('components')) :
 
       case 'our_network_content_columns':
       include('our-network-content-cols.php');
+      break;
+
+      case 'network_exhibit':
+      include('network-exhibit.php');
       break;
 
       case 'alt_grid':
