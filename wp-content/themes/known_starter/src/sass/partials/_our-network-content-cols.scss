@@ -1,0 +1,92 @@
+#our-network-content-cols {
+  .content-module {
+    padding: 2rem;
+
+    .header {
+      text-align: center;
+      &:after {
+        content: "";
+        width: 5rem;
+        height: .2rem;
+        background-color: $orange;
+        display: block;
+        vertical-align: middle;
+        margin: 1rem auto;
+      }
+    }
+
+    .module-intro {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .content-submodule {
+      padding: 2rem;
+
+      .title {
+        font-size: 1.4rem;
+        color: $blue;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        font-family: "Poppins", sans-serif;
+        text-align: left;
+        padding: 1rem 5.5rem 1rem 0;
+        padding-left: 5.5rem;
+        position: relative;
+        &:before {
+          content: "";
+          width: 5rem;
+          height: .2rem;
+          background-color: $orange;
+          display: block;
+          vertical-align: middle;
+          margin: 1rem auto;
+          position: absolute;
+          left: 0;
+        }
+        @media screen and (min-width: 768px){
+          text-align: left;
+        }
+      }
+
+      .row {
+        @media screen and (min-width: 768px){
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .odd-col {
+          @media screen and (min-width: 768px){
+            max-width: 50%;
+            padding-right: 1rem;
+          }
+        }
+
+        .even-col {
+          @media screen and (min-width: 768px){
+            max-width: 50%;
+            padding-left: 1rem;
+          }
+        }
+
+        .block {
+          padding: 1rem 0;
+        }
+        .block-header {
+          font-weight: bold;
+        }
+        .block-subheader {
+          padding-top: 1rem;
+          color: $blue;
+        }
+        .block-content {
+          padding: 1rem 0;
+          p {
+            padding: .5rem 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+#contact-module {
+  .inner {
+    padding: 4rem 2rem;
+
+    .header {
+      text-align: center;
+      &:after {
+        content: "";
+        width: 5rem;
+        height: .2rem;
+        background-color: $orange;
+        display: block;
+        vertical-align: middle;
+        margin: 1rem auto;
+      }
+    }
+
+    .fields {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 2rem;
+      max-width: 50rem;
+      margin: 0 auto;
+
+      .half {
+        flex: 0 0 100%;
+        @media screen and (min-width: 768px){
+          max-width: 50%;
+          flex: 0 0 50%;
+        }
+      }
+
+      .full {
+        flex: 0 0 100%;
+      }
+
+      .field {
+        box-sizing: border-box;
+        position: relative;
+        margin: 1rem 0;
+        padding: 0 1rem;
+
+        label {
+          color: $lightGrey;
+          font-style: italic;
+          background: #fff;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 2rem;
+          transition: all ease 150ms;
+        }
+
+        .active {
+          top: 0;
+          font-size: 1.3rem;
+        }
+
+        input {
+          border: .1rem solid $lightGrey;
+          width: 100%;
+          height: 4rem;
+          padding: 0 1rem;
+          margin: 0;
+          box-sizing: border-box;
+          border-radius: .2rem;
+          font-size: 1.4rem;
+          font-family: $Poppins;
+          text-transform: uppercase;
+          color: $lightGrey;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    #contact-button {
+      border: none;
+      text-transform: uppercase;
+      background-color: $blue;
+      vertical-align: middle;
+      height: 2rem;
+      max-width: 30rem;
+      line-height: 2rem;
+      padding: 1rem;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      @media screen and (min-width: 768px){
+        padding: 2rem;
+        text-align: left;
+      }
+
+      span {
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: .2rem;
+        font-size: 1.3rem;
+        &:after {
+          content: "";
+          width: 2rem;
+          height:  .2rem;
+          margin-left: 1rem;
+          background-color: #fff;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

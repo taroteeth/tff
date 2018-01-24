@@ -1,0 +1,74 @@
+#network-icon-col {
+  background-color: $backgroundGrey;
+  display: flex;
+  position: relative;
+  z-index: 5;
+
+  .inner {
+    padding: 4rem 2rem;
+    display: block;
+    margin: 0 auto;
+    max-width: 90rem;
+    width: 100%;
+
+    #col-header {
+      margin: 0 auto;
+      text-align: center;
+
+      &:after {
+        content: "";
+        height: .2rem;
+        width: 5rem;
+        background-color: #F78E11;
+        display: block;
+        margin: 1rem auto;
+      }
+    }
+
+    .cols-inner {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      justify-content: space-between;
+      @media screen and (min-width: 768px){
+        flex-direction: row;
+      }
+
+        .col-inner {
+          padding: 2rem 0;
+          width: 100%;
+          @media screen and (min-width: 768px){
+            padding: 1rem;
+            max-width: 33.3%;
+          }
+
+          img {
+            width: 10rem;
+            height: 10rem;
+            display: block;
+            margin: 0 auto;
+            padding-bottom: 1rem;
+          }
+
+            #submodule-title {
+              text-align: center;
+              padding: 0 2rem;
+              max-width: 50rem;
+              display: block;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+
+      #col-cta {
+        width: 20rem;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        @media screen and (min-width: 768px){
+          display: block;
+          margin: 2rem auto 0;
+        }
+      }
+    }

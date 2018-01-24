@@ -1,0 +1,19 @@
+#content-cols {
+  .inner {
+    padding: 4rem 2rem;
+
+    #specs-wrapper{
+      padding-bottom: 0;
+      border-bottom: none; 
+      .spec-content {
+        p {
+          line-height: 1.5em !important;
+        }
+      }
+    }
+
+    .button {
+
+    }
+  }
+}

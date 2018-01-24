@@ -31,7 +31,10 @@
 # -----------------------------------------------------------------
 
 # ignore everything in the root except the "wp-content" directory.
-/*
+wp-admin/
+wp-includes/
+
+
 !wp-content/
 !wp-config.php
 !wp-config/
