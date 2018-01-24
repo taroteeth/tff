@@ -55,7 +55,7 @@ if( have_rows('content_cols_module') ):
             $content = $g['content'];
 
             echo '<div class="block">';
-            echo $header;
+            echo '<p class="block-header">'. $header .'</p><!-- .block-header -->';
             echo $subheader;
             echo $content;
             echo '</div>';

@@ -1,18 +1,4 @@
 #our-network-content-cols {
-  .group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    .title {
-      flex: 0 0 100%;
-    }
-
-    .col {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  }
 
   .content-cols-module {
     padding: 2rem;
@@ -41,9 +27,14 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      flex-direction: column;
       padding: 2rem;
       max-width: 90rem;
       margin: 0 auto;
+      @media screen and (min-width: 768px){
+        flex-direction: row;
+        padding: 4rem 2rem;
+      }
 
       .title {
         flex: 0 0 100%;
@@ -74,8 +65,28 @@
       }
 
       .col {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 100%;
+        @media screen and (min-width: 768px){
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        .block {
+          padding: 2rem 0;
+
+          .block-header {
+            font-weight: bold;
+            padding-bottom: .5rem; 
+          }
+
+          p {
+            line-height: 1.5em;
+
+            br {
+              line-height: 2em;
+            }
+          }
+        }
       }
     }
 
