@@ -73,10 +73,13 @@
 
         .block {
           padding: 2rem 0;
+          @media screen and (min-width: 768px){
+            padding: 2rem 2rem 2rem 0;
+          }
 
           .block-header {
             font-weight: bold;
-            padding-bottom: .5rem; 
+            padding-bottom: .5rem;
           }
 
           p {
@@ -85,6 +88,11 @@
             br {
               line-height: 2em;
             }
+          }
+
+          .block-subheader {
+            padding-top: 1rem;
+            color: $blue;
           }
         }
       }

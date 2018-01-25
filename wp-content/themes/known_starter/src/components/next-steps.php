@@ -17,9 +17,15 @@ echo '<div id="next-step-wrapper">';
 
          if(get_post_type() == 'case_study'){
            echo '<p id="next-step-label">Next Case Study</p>';
-         } else {
+         }
+         if(get_post_type() == 'team_member'){
+           echo '<p id="next-step-label">Next Team Member</p>';
+         }
+         else {
            echo '<p id="next-step-label">Next Step</p>';
          }
+
+         // add function, if last of team member of case study, puse this message instead
 
          if($heading){
             echo '<p id="next-step-heading" class="header">';

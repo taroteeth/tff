@@ -33,7 +33,7 @@ if(have_rows('components')) :
       include('case-study-highlight.php');
       break;
 
-      case 'our_network_content_columns':
+      case 'content_cols_module':
       include('our-network-content-cols.php');
       break;
 
@@ -51,6 +51,10 @@ if(have_rows('components')) :
 
       case 'stat_module':
       include('stat-module.php');
+      break;
+
+      case 'contact_information_module':
+      include('contact-information-module.php');
       break;
 
       case 'contact_form_module':

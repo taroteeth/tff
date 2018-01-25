@@ -1,0 +1,150 @@
+#team-member {
+  .inner {
+    #hero {
+
+      #hero-text-wrapper {
+        .hero-header {
+          font-size: 4rem;
+          font-family: $Merriweather;
+          position: relative;
+        }
+
+        .hero-subheader {
+          font-family: $Merriweather;
+          color: $lightGrey;
+          padding: 2rem 0;
+          font-size: 1.8rem;
+        }
+      }
+
+    }
+
+    #specs-module {
+      display: flex;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+      max-width: 120rem;
+      margin: 0 auto;
+      @media screen and (min-width: 768px){
+        
+      }
+
+      .title {
+        font-weight: bold;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        color: $blue;
+        font-size: 1.4rem;
+        padding-left: 6rem;
+        position: relative;
+        &:before {
+          content: "";
+          background-color: $orange;
+          width: 5rem;
+          height: .2rem;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+
+      .module-content {
+        padding: 2rem 0;
+
+        p {
+          line-height: 1.5em;
+          font-size: 1.8rem;
+
+          br {
+            line-height: 4rem;
+          }
+        }
+      }
+
+      #experience-module {
+        max-width: 50%;
+        padding: 0 2rem;
+      }
+
+      #highlights-module {
+        max-width: 50%;
+        padding: 0 2rem;
+      }
+    }
+
+    #bio-blurb-module {
+      background-color: $backgroundGrey;
+      padding: 2rem 0;
+      position: relative;
+      z-index: 5;
+
+      .blurb {
+        display: block;
+        margin: 0 auto;
+        max-width: 70rem;
+        text-align: center;
+        font-size: 3rem;
+        padding-bottom: 10rem;
+        padding-top: 4rem;
+
+        p {
+          font-family: $Merriweather;
+          line-height: 1.5em;
+        }
+      }
+
+      .blurb-circle {
+        display: block;
+        position: absolute;
+        height: 17rem;
+        width: 17rem;
+        background-color: $orange;
+        left: 50%;
+        bottom: -8.5rem;
+        transform: translateX(-50%);
+        border-radius: 100%;
+        overflow: hidden;
+      }
+    }
+
+    .content-block-wrapper {
+      position: relative;
+      z-index: 6;
+      background-color: #fff;
+      padding: 4rem 2rem;
+      max-width: 70rem;
+      margin: 0 auto;
+
+      .content-block {
+        padding: 2rem 0;
+
+        .title {
+          font-family: $Merriweather;
+          font-size: 2.4rem;
+          &:after {
+            content: "";
+            display: block;
+            background-color: $orange;
+            width: 7.5rem;
+            height: .2rem;
+            margin: 1.5rem 0;
+          }
+        }
+
+        .content {
+          p {
+            line-height: 1.5em;
+            padding-bottom: 1.5rem;
+            font-size: 1.8rem;
+
+            br {
+              line-height: 4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
