@@ -1,4 +1,6 @@
 #section-header {
+  position: relative;
+  z-index: 7; 
   .inner {
     padding: 5rem 2rem;
     max-width: 70rem;

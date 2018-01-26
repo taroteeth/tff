@@ -1,0 +1,123 @@
+#team-grid {
+  max-width: 160rem;
+  display: block;
+  margin: 0 auto;
+
+  .inner {
+    .row {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      @media screen and (min-width: 768px){
+        flex-direction: row;
+      }
+
+      .right {
+        @media screen and (min-width: 768px){
+          order: 2;
+        }
+      }
+
+      .photo-block {
+        display: block;
+        max-width: 100%;
+        @media screen and (min-width: 768px){
+          display: flex;
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        .image-wrapper {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+
+          img {
+            object-fit: cover;
+            vertical-align: bottom;
+            width: 100%;
+            max-height: 35rem;
+            @media screen and (min-width: 768px){
+              width: 50vw;
+              height: 50vw;
+            }
+            @media screen and (min-width: 992px){
+              max-height: 50rem;
+            }
+          }
+        }
+      }
+
+      .content-block {
+        display: block;
+        max-width: 100%;
+        min-height: 35rem;
+        @media screen and (min-width: 768px){
+          display: flex;
+          flex: 0 0 50%;
+        }
+
+        .content-inner {
+          position: absolute;
+          padding: 2rem;
+          margin: 0 auto;
+          top: 75%;
+          box-sizing: border-box;
+          transform: translateY(-50%);
+          @media screen and (min-width: 768px){
+            top: 50%;
+            max-width: 50%;
+          }
+          @media screen and (min-width: 992px){
+            padding: 3rem;
+          }
+
+          .title {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $blue;
+            font-size: 1.4rem;
+            letter-spacing: .1rem;
+          }
+
+          .header {
+            padding: 1rem 0;
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              height: .2rem;
+              width: 4rem;
+              background-color: $orange;
+              margin: 1rem 0;
+            }
+          }
+
+          .blurb {
+            padding: 1rem 0;
+          }
+
+          .button-container {
+            margin: 2rem 0;
+
+            a {
+              background-color: $blue;
+              color: #fff;
+              text-decoration: none;
+              font-family: $Poppins;
+              text-transform: uppercase;
+              font-size: 1.3rem;
+              line-height: 100%;
+              padding: 1rem;
+            }
+
+            .profile-button {
+              margin: 0 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

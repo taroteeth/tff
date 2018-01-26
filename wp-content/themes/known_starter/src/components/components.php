@@ -45,6 +45,10 @@ if(have_rows('components')) :
       include('alt-grid.php');
       break;
 
+      case 'our_team_grid':
+      include('our-team-grid.php');
+      break;
+
       case 'content_columns':
       include('content-cols.php');
       break;

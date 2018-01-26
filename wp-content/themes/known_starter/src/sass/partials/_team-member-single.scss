@@ -2,11 +2,33 @@
   .inner {
     #hero {
 
+      #hero-img-wrapper {
+        img {
+          object-fit: cover; 
+        }
+      }
+
       #hero-text-wrapper {
         .hero-header {
           font-size: 4rem;
           font-family: $Merriweather;
           position: relative;
+          &:before {
+            content: "";
+            display: block;
+            background-color: $orange;
+            position: absolute;
+            top: 50%;
+            left: -9rem;
+            @media screen and (min-width: 768px){
+              height: .2rem;
+              width: 7.5rem;
+            }
+            @media screen and (min-width: 922px){
+              width: 10rem;
+              left: -12rem;
+            }
+          }
         }
 
         .hero-subheader {
@@ -25,8 +47,9 @@
       padding: 4rem 2rem;
       max-width: 120rem;
       margin: 0 auto;
+      flex-direction: column;
       @media screen and (min-width: 768px){
-        
+        flex-direction: row;
       }
 
       .title {
@@ -64,30 +87,42 @@
       }
 
       #experience-module {
-        max-width: 50%;
-        padding: 0 2rem;
+        width: 100%;
+        @media screen and (min-width: 768px){
+          max-width: 50%;
+          padding: 0 2rem;
+        }
       }
 
       #highlights-module {
-        max-width: 50%;
-        padding: 0 2rem;
+        width: 100%;
+        @media screen and (min-width: 768px){
+          max-width: 50%;
+          padding: 0 2rem;
+        }
       }
     }
 
     #bio-blurb-module {
       background-color: $backgroundGrey;
-      padding: 2rem 0;
+      padding: 2rem;
       position: relative;
       z-index: 5;
+      @media screen and (min-width: 768px){
+        padding: 2rem 0;
+      }
 
       .blurb {
         display: block;
         margin: 0 auto;
         max-width: 70rem;
         text-align: center;
-        font-size: 3rem;
+        font-size: 2.5rem;
         padding-bottom: 10rem;
         padding-top: 4rem;
+        @media screen and (min-width: 768px){
+          font-size: 3rem;
+        }
 
         p {
           font-family: $Merriweather;
