@@ -772,21 +772,10 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       height: 72vh; } }
   #hero.has-blurb {
     overflow: visible; }
-  #hero .image-left {
-    width: 100%; }
-    #hero .image-left #hero-text-wrapper {
-      margin-left: 0; }
-      #hero .image-left #hero-text-wrapper p {
-        padding: 0 2rem; }
   #hero .image-right #hero-img-wrapper {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2; }
-  #hero .image-right #hero-text-wrapper {
-    margin-left: 0; }
-    @media screen and (min-width: 768px) {
-      #hero .image-right #hero-text-wrapper {
-        margin-left: 0; } }
   #hero #inner {
     width: 100%;
     display: -webkit-box;
@@ -802,7 +791,10 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       height: 20rem; }
       @media screen and (min-width: 768px) {
         #hero #inner #hero-img-wrapper {
-          width: 50%;
+          max-width: 50%;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 50%;
+                  flex: 0 0 50%;
           height: auto; } }
       #hero #inner #hero-img-wrapper img {
         width: 100%;
@@ -815,15 +807,24 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             width: 100%; } }
     #hero #inner #hero-text-wrapper {
       padding: 2rem;
-      text-align: center; }
+      text-align: center;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
       @media screen and (min-width: 768px) {
         #hero #inner #hero-text-wrapper {
-          width: 50%;
-          padding: 4rem 0 4rem 0;
-          padding: 4rem;
+          padding: 0 5rem;
           -ms-flex-item-align: center;
               align-self: center;
-          text-align: left; } }
+          text-align: left;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 50%;
+                  flex: 0 0 50%;
+          max-width: 50%; } }
+      @media screen and (min-width: 992px) {
+        #hero #inner #hero-text-wrapper {
+          padding: vw; } }
+      #hero #inner #hero-text-wrapper svg {
+        padding: 2rem; }
       @media screen and (min-width: 768px) {
         #hero #inner #hero-text-wrapper .div-left:before {
           position: absolute !important;

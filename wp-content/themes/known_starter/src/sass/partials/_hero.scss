@@ -16,25 +16,9 @@
     overflow: visible;
   }
 
-  .image-left { //styling for specifically if image is on left
-    width: 100%;
-    #hero-text-wrapper {
-      margin-left: 0;
-      p {
-        padding: 0 2rem;
-      }
-    }
-  }
-
   .image-right { //styling for specifically if the image is on right
     #hero-img-wrapper {
       order: 2;
-    }
-    #hero-text-wrapper {
-      margin-left: 0;
-      @media screen and (min-width: 768px){
-        margin-left: 0;
-      }
     }
   }
 
@@ -50,8 +34,9 @@
     #hero-img-wrapper {
       height: 20rem;
       @media screen and (min-width: 768px){
-        width: 50%;
-        height: auto; 
+        max-width: 50%;
+        flex: 0 0 50%;
+        height: auto;
       }
 
       img {
@@ -68,13 +53,22 @@
     #hero-text-wrapper {
       padding: 2rem;
       text-align: center;
+      box-sizing: border-box;
       @media screen and (min-width: 768px){
-        width: 50%;
-        padding: 4rem 0 4rem 0;
-        padding: 4rem;
+        padding: 0 5rem;
         align-self: center;
         text-align: left;
+        flex: 0 0 50%;
+        max-width: 50%;
       }
+      @media screen and (min-width: 992px){
+        padding: vw;
+      }
+
+      svg {
+        padding: 2rem;
+      }
+      
       .div-left{
         &:before {
           @media screen and (min-width: 768px){
