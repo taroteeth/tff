@@ -439,7 +439,7 @@ li {
     font-size: 2.5rem;
     padding-bottom: 10rem;
     padding-top: 4rem; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
       #team-member .inner #bio-blurb-module .blurb {
         font-size: 3rem; } }
     #team-member .inner #bio-blurb-module .blurb p {

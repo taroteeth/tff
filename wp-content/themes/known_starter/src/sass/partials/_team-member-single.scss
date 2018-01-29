@@ -4,7 +4,7 @@
 
       #hero-img-wrapper {
         img {
-          object-fit: cover; 
+          object-fit: cover;
         }
       }
 
@@ -120,7 +120,7 @@
         font-size: 2.5rem;
         padding-bottom: 10rem;
         padding-top: 4rem;
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: 992px){
           font-size: 3rem;
         }
 
