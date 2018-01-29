@@ -757,13 +757,15 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
 
 #hero {
   background-color: #F8F8F8;
-  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
   z-index: 6;
   overflow: hidden; }
+  @media screen and (min-width: 768px) {
+    #hero {
+      height: 72vh; } }
   #hero .image-left {
     width: 100%; }
     #hero .image-left #hero-img-wrapper img {
@@ -797,22 +799,32 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     #hero .image-right #hero-text-wrapper p {
       padding: 0 2rem; }
   #hero #inner {
-    width: 100%; }
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     @media screen and (min-width: 768px) {
-      #hero #inner #hero-img-wrapper {
-        width: 50%; } }
-    #hero #inner #hero-img-wrapper img {
-      position: absolute;
-      top: 0;
-      height: 20rem;
-      width: 100%; }
+      #hero #inner {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; } }
+    #hero #inner #hero-img-wrapper {
+      height: 20rem; }
       @media screen and (min-width: 768px) {
-        #hero #inner #hero-img-wrapper img {
-          height: 100%;
-          width: 45%; } }
+        #hero #inner #hero-img-wrapper {
+          width: 50%; } }
+      #hero #inner #hero-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; }
+        @media screen and (min-width: 768px) {
+          #hero #inner #hero-img-wrapper img {
+            height: 100%;
+            width: 45%; } }
     #hero #inner #hero-text-wrapper {
-      height: 50%;
-      padding: 20rem 0 4rem 0; }
+      padding: 2rem; }
       @media screen and (min-width: 768px) {
         #hero #inner #hero-text-wrapper {
           width: 50%;
@@ -1497,8 +1509,6 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         width: 100%; }
         @media screen and (min-width: 768px) {
           #icon-col .inner .cols-inner .col-inner {
-            padding: 1rem 2rem;
-            max-width: 33.3%;
             -ms-flex-item-align: baseline;
                 align-self: baseline; } }
         #icon-col .inner .cols-inner .col-inner .svg img {

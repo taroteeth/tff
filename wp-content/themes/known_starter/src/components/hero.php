@@ -8,7 +8,7 @@ $image = get_sub_field('main_image');
 $imagePos = get_sub_field('main_image_position');
 $orangeCircle = get_sub_field('orange_circle');
 $blurbButton = get_sub_field('blurb_button');
-$blurbText = get_sub_field('blurb_button_text'); 
+$blurbText = get_sub_field('blurb_button_text');
 
 
 echo '<div id="hero">'; ?>
@@ -24,7 +24,7 @@ echo '<div id="hero">'; ?>
     echo '<div id="hero-text-wrapper">';
 
       if(is_page('6')){
-        echo '<svg width="17px" height="17px" viewBox="0 0 17 17"><use xlink:href="#color-logo"></use></svg> ';
+        echo '<svg width="176px" height="39px" viewBox="0 0 176 39"><use href="#color-logo"></use></svg> ';
       } else { ?>
         <p id="hero-title" class="<?php echo $imagePos == "Left" ? "div-left" : "div-right";?>"> <?php echo get_the_title() ?></p> <?php
       }

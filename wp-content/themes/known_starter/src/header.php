@@ -37,8 +37,10 @@
 
 	</head>
 <body <?php body_class(); ?>>
+	<?php include('inc/master-svg.svg'); ?>
+
 	<div id="body-wrapper">
-	
+
 	<div id="primary-header">
 		<div id="header-inner">
 

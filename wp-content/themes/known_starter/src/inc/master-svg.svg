@@ -1,7 +1,7 @@
-<div id="svg-wrapper">
+<div id="svg-wrapper" style="display:none;">
   <svg>
 
-    <symbol id="color-logo" width="176px" height="39px" viewBox="0 0 176 39">
+    <symbol id="color-logo" viewBox="0 0 176 39">
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
     <g id="Logo/Color">
     <g id="Page-1">
