@@ -12,7 +12,7 @@ $button = get_sub_field('button_option');
     echo '<div id="specs-module">';
       if(have_rows('specs')):
 
-          echo '<div id="specs-wrapper">';
+          echo '<div class="specs-wrapper">';
           // add i loop here to wrap rows at 3 specs
           $i = 0;
           $totalCounter = 0;
@@ -40,7 +40,7 @@ $button = get_sub_field('button_option');
             }
 
           endwhile;
-          echo '</div> <!-- #specs-wrapper -->';
+          echo '</div> <!-- .specs-wrapper -->';
       endif; // specs module
     echo '</div> <!-- #specs-module -->';
 

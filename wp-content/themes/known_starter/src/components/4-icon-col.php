@@ -17,9 +17,12 @@ $btnLink = get_sub_field('bottom_cta_link');
       echo '</p> <!-- .col-header -->';
     }
 
-    if(have_rows('col_submodule')):
+    $rowCount = count(get_sub_field('col_submodule'));
 
-      echo '<div class="cols-inner">';
+    if(have_rows('col_submodule')): ?>
+
+      <div class="cols-inner col-<?php echo $rowCount ?>"><?php
+      $iteration = 1;
 
       while(have_rows('col_submodule')): the_row();
 
@@ -29,9 +32,9 @@ $btnLink = get_sub_field('bottom_cta_link');
       $boldTitle = get_sub_field('bold_title_option');
       $submodContent = get_sub_field('submodule_content');
       $isLink = get_sub_field('link_option');
-      $linkSrc = get_sub_field('link_source');
+      $linkSrc = get_sub_field('link_source'); ?>
 
-      echo '<div class="col-inner">';
+      <div class="col-inner <?php echo $iteration ?>"> <?php
 
         if($submodIcon){
           if($isLink){
@@ -60,6 +63,7 @@ $btnLink = get_sub_field('bottom_cta_link');
         }
 
       echo '</div> <!-- col-inner -->';
+      $iteration++;
       endwhile;
       echo '</div> <!-- cols-inner -->';
     endif; // end repeater loop

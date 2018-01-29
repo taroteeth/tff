@@ -18,12 +18,12 @@ $nextBtn = get_field('next_step_heading');
 
     <div class="hero"> <?php
       if($heroImg){
-        echo '<div id="hero-img-wrapper">';
+        echo '<div class="hero-img-wrapper">';
         echo wp_get_attachment_image($heroImg, 'full');
-        echo '</div> <!-- #hero-img-wrapper -->';
+        echo '</div> <!-- .hero-img-wrapper -->';
       }
 
-      echo '<div id="hero-text-wrapper">';
+      echo '<div class="hero-text-wrapper">';
         echo '<p class="hero-title">';
         echo $title;
         echo '</p>';
@@ -48,7 +48,7 @@ $nextBtn = get_field('next_step_heading');
     echo '<div class="specs-module">';
 
       if($role){
-        echo '<div id="spec-title">';
+        echo '<div class="spec-title">';
         echo '<p>ThinkForward served as '. $role .'</p>';
         echo '</div>';
       }
@@ -116,11 +116,11 @@ $nextBtn = get_field('next_step_heading');
         echo '<div class="inner">';
 
           if($testimonial){
-            echo '<div id="testimonial-quote">'. $testimonial .'</div>';
+            echo '<div class="testimonial-quote">'. $testimonial .'</div>';
           }
 
           if($byline){
-            echo '<p id="testimonial-byline">'. $byline .'</p>';
+            echo '<p class="testimonial-byline">'. $byline .'</p>';
           }
 
           echo '<div class="orange-circle"></div>';

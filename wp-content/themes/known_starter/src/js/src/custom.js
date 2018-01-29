@@ -1,3 +1,4 @@
+
 //--------------- Utility Functions ---------------//
 
 function findAncestorByClass (el, cls) {
@@ -14,8 +15,6 @@ function findAncestorById (el, id) {
 
 
 // add class to body if mobile detected
-
-
 var body = document.getElementsByTagName('body');
 
 if(mobileDetected){
@@ -73,7 +72,7 @@ class blurbPositioning {
 
 var blurbButtons = document.querySelectorAll('.blurb-button');
 if(blurbButtons) {
-	var blurbButtonInstances = [];
+	var blurbButtonInstances = []; //new instance of class for each blurb button
 	for(var i = 0; i < blurbButtons.length; i++) {
 		blurbButtonInstances[i] = new blurbPositioning(blurbButtons[i]);
 	}
