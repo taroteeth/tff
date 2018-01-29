@@ -1,3 +1,6 @@
+// write in function finding height of blurb button on hero and then adding half of that worth of padding to bottom of parent and top to whatever element below.
+
+
 // add class to body if mobile detected
 
 

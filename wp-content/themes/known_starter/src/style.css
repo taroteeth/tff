@@ -765,6 +765,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   overflow: hidden; }
   @media screen and (min-width: 768px) {
     #hero {
+      height: 40vh; } }
+  @media screen and (min-width: 992px) {
+    #hero {
       height: 72vh; } }
   #hero .image-left {
     width: 100%; }
@@ -778,26 +781,17 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           width: 100%; } }
     #hero .image-left #hero-text-wrapper {
       margin-left: 0; }
-      @media screen and (min-width: 768px) {
-        #hero .image-left #hero-text-wrapper {
-          margin-left: 50%; } }
       #hero .image-left #hero-text-wrapper p {
         padding: 0 2rem; }
-  #hero .image-right #hero-img-wrapper img {
-    position: absolute;
-    width: 50%;
-    left: unset;
-    right: 0; }
-    @media screen and (min-width: 768px) {
-      #hero .image-right #hero-img-wrapper img {
-        width: 100%; } }
+  #hero .image-right #hero-img-wrapper {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
   #hero .image-right #hero-text-wrapper {
     margin-left: 0; }
     @media screen and (min-width: 768px) {
       #hero .image-right #hero-text-wrapper {
         margin-left: 0; } }
-    #hero .image-right #hero-text-wrapper p {
-      padding: 0 2rem; }
   #hero #inner {
     width: 100%;
     display: -webkit-box;
@@ -822,16 +816,18 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         @media screen and (min-width: 768px) {
           #hero #inner #hero-img-wrapper img {
             height: 100%;
-            width: 45%; } }
+            width: 100%; } }
     #hero #inner #hero-text-wrapper {
-      padding: 2rem; }
+      padding: 2rem;
+      text-align: center; }
       @media screen and (min-width: 768px) {
         #hero #inner #hero-text-wrapper {
           width: 50%;
-          padding: 4rem 0 4rem 0; } }
-      @media screen and (min-width: 992px) {
-        #hero #inner #hero-text-wrapper {
-          padding: 10rem 2rem; } }
+          padding: 4rem 0 4rem 0;
+          padding: 4rem;
+          -ms-flex-item-align: center;
+              align-self: center;
+          text-align: left; } }
       @media screen and (min-width: 768px) {
         #hero #inner #hero-text-wrapper .div-left:before {
           position: absolute !important;
@@ -913,14 +909,15 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
 #blurb-button {
   display: block;
   margin: 0 auto;
-  width: 75%;
+  max-width: 72rem;
+  width: 70vw;
   position: absolute;
   left: 50%;
   bottom: -10%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-color: #F69420;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
   text-transform: uppercase;
   line-height: 1.2em;
@@ -932,7 +929,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       max-width: 60%;
       padding: 1rem 2rem; } }
   #blurb-button p {
-    color: #fff; }
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.5em; }
     @media screen and (min-width: 992px) {
       #blurb-button p {
         max-width: 50%;
