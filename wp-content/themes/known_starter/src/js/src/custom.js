@@ -47,12 +47,23 @@ class blurbPositioning {
 		this.blurbBoxRect = this.blurbBox.getBoundingClientRect();
 		this.hero = findAncestorByClass(this.blurbBox, 'hero');
 		this.heroText = this.hero.querySelector('.hero-text-wrapper');
-		this.heroTextPadding = parseInt(window.getComputedStyle(this.heroText, null).getPropertyValue('padding-bottom'));
 		this.nextModule = this.hero.nextElementSibling;
-		this.nextModulePadding = parseInt(window.getComputedStyle(this.nextModule, null).getPropertyValue('padding-top'));
+    this.heroTextPadding;
+    this.nextModulePadding;
 
-		this.enableBlurbPositioning();
+    this.calculatePositions();
+
+    window.addEventListener('resize', function(){
+      this.calculatePositions();
+    }.bind(this));
 	}
+
+  calculatePositions() {
+    this.heroTextPadding = parseInt(window.getComputedStyle(this.heroText, null).getPropertyValue('padding-bottom'));
+    this.nextModulePadding = parseInt(window.getComputedStyle(this.nextModule, null).getPropertyValue('padding-top'));
+
+    this.enableBlurbPositioning();
+  }
 
 	enableBlurbPositioning() {
 		this.heroText.style.paddingBottom = (this.heroTextPadding + (this.blurbBoxRect.height / 2)) + 'px';
