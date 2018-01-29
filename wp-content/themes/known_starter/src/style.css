@@ -824,7 +824,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         #hero #inner #hero-text-wrapper {
           padding: vw; } }
       #hero #inner #hero-text-wrapper svg {
-        padding: 2rem; }
+        margin-bottom: 2rem; }
       @media screen and (min-width: 768px) {
         #hero #inner #hero-text-wrapper .div-left:before {
           position: absolute !important;
