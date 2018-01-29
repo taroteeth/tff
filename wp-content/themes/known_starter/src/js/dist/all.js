@@ -54,15 +54,6 @@ class blurbPositioning {
 		this.nextModulePadding = parseInt(window.getComputedStyle(this.nextModule, null).getPropertyValue('padding-top'));
 
 		this.enableBlurbPositioning();
-
-		window.addEventListener('resize', function(){
-			this.disableBlurbPositioning();
-		});
-	}
-
-	disableBlurbPositioning() {
-		this.heroText.style.removeProperty('padding-bottom');
-		this.nextModule.style.removePropert('padding-top');
 	}
 
 	enableBlurbPositioning() {
@@ -78,22 +69,6 @@ if(blurbButtons) {
 		blurbButtonInstances[i] = new blurbPositioning(blurbButtons[i]);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
