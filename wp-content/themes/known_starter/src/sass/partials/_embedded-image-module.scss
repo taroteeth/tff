@@ -1,10 +1,10 @@
-#embed-image-module {
+.embed-image-module {
   position: relative;
   z-index: 6;
   display: block;
   margin: 0 auto;
 
-  #inner {
+  .inner {
     display: flex;
     position: relative;
     flex-direction: column;

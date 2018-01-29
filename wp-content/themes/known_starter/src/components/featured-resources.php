@@ -3,7 +3,7 @@
 $featuredPosts = get_field('featured_posts');
 $featuredPostIds = [];
 
-echo '<div id="featured-resources">';
+echo '<div class="featured-resources">';
 if($featuredPosts){
   echo '<ul>';
   foreach ($featuredPosts as $p):

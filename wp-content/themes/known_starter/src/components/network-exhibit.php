@@ -1,5 +1,5 @@
 <?php
-echo '<div id="network-exhibit">';
+echo '<div class="network-exhibit">';
   echo '<div class="inner">';
 
     if( have_rows('network_exhibit_block') ) :

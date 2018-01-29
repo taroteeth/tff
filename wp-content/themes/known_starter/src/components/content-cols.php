@@ -5,7 +5,7 @@ $button = get_sub_field('button_option');
 
 
 
-<div id="content-cols" class="<?php if($greyBg){echo 'grey-bg';}?>">
+<div class="content-cols <?php if($greyBg){echo 'grey-bg';}?>">
   <div class="inner">
 
     <?php
@@ -45,7 +45,7 @@ $button = get_sub_field('button_option');
     echo '</div> <!-- #specs-module -->';
 
     if($button){
-      include('button.php'); 
+      include('button.php');
     }
 
     ?>

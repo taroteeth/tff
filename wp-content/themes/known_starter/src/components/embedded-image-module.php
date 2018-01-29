@@ -9,8 +9,8 @@ $imagePos = get_sub_field('image_position');
 $textContent = get_sub_field('text_content');
 $cta = get_sub_field('cta_option');
 
-echo '<div id="embed-image-module">';
-  echo '<div id="inner" >';
+echo '<div class="embed-image-module">';
+  echo '<div class="inner" >';
     if($image){ ?>
       <div id="embed-image-wrapper" class="<?php if($imagePos === 'Left'){echo 'left';} if($imageRound){echo ', round';}?>"> <?php
       echo wp_get_attachment_image($image);
@@ -34,8 +34,8 @@ echo '<div id="embed-image-module">';
       }
 
     echo '</div><!-- #text-wrapper -->';
-    echo '</div><!-- inner -->';
+    echo '</div><!-- .inner -->';
 
-echo '</div> <!-- #embed-image-module -->';
+echo '</div> <!-- .embed-image-module -->';
 
 ?>
