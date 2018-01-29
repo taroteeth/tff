@@ -44,7 +44,9 @@ echo '<div class="next-step-wrapper">';
          echo '<div id="next-step-img">';
          echo '<a class="page-path" href="'. $path .'"></a>'; ?>
          <img srcset="<?php echo wp_get_attachment_image_srcset($image, 'full'); ?>" src="<?php echo wp_get_attachment_image_url($image);?>" />
-         <?php echo '</div> <!-- next-step-img -->';
+         <?php echo '<svg class="photo-curve-horiz" viewBox="0 0 103 650"><use href="#blue-photo-curve-horiz"></use></svg>';
+         echo '<svg class="photo-curve-vert" viewBox="0 0 320 54"><use href="#blue-photo-curve-vert"></use></svg>';
+         echo '</div> <!-- next-step-img -->';
       }
 
    echo '</div><!-- next-step-container-->';

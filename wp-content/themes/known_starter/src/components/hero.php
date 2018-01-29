@@ -17,8 +17,8 @@ $blurbText = get_sub_field('blurb_button_text'); ?>
       if($image){
         echo '<div class="hero-img-wrapper">';
         echo wp_get_attachment_image($image, 'full');
-        echo '<svg id="photo-curve-horiz" viewBox="0 0 103 650"><use href="#photo-curve-horiz"></use></svg>';
-        echo '<svg id="photo-curve-vert" viewBox="0 0 320 54"><use href="#photo-curve-vert"></use></svg>';
+        echo '<svg class="photo-curve-horiz" viewBox="0 0 103 650"><use href="#photo-curve-horiz"></use></svg>';
+        echo '<svg class="photo-curve-vert" viewBox="0 0 320 54"><use href="#photo-curve-vert"></use></svg>';
         echo '</div> <!-- .hero-img-wrapper -->';
       }
     }

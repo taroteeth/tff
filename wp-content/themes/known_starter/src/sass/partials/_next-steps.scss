@@ -75,7 +75,7 @@
         overflow: hidden;
         bottom: 0;
         flex: 0 0 50%;
-        position: static;
+        position: relative;
         @media screen and (min-width: 768px){
           width: 50%;
           height: 100%;
@@ -89,6 +89,16 @@
           display: block;
           z-index: 999;
           top: 0;
+        }
+
+        .photo-curve-vert {
+            position: absolute;
+            top: 0;
+            display: block;
+            transform: rotate(180deg);
+            @media screen and (min-width: 768px){
+                display: none;
+            }
         }
 
         img {

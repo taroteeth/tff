@@ -50,7 +50,7 @@
         }
       }
 
-      #photo-curve-horiz {
+      .photo-curve-horiz {
         position: absolute;
         display: none;
         @media screen and (min-width: 768px){
@@ -61,7 +61,7 @@
         }
       }
 
-      #photo-curve-vert {
+      .photo-curve-vert {
         position: absolute;
         display: block;
         bottom: 0;
