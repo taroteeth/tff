@@ -17,8 +17,8 @@ if(get_post_type() == 'team_member'){
 
 echo '<div class="next-step-wrapper">';
    echo '<div class="next-step-container">';
-   echo '<a class="page-path" href="'. $path .'"></a>';
       echo '<div class="inner">';
+      echo '<a class="page-path" href="'. $path .'"></a>';
 
          if(get_post_type() == 'case_study'){
            echo '<p id="next-step-label">Next Case Study</p>';
@@ -41,7 +41,8 @@ echo '<div class="next-step-wrapper">';
       echo '</div> <!-- inner -->';
 
       if($image){
-         echo '<div id="next-step-img">'; ?>
+         echo '<div id="next-step-img">';
+         echo '<a class="page-path" href="'. $path .'"></a>'; ?>
          <img srcset="<?php echo wp_get_attachment_image_srcset($image, 'full'); ?>" src="<?php echo wp_get_attachment_image_url($image);?>" />
          <?php echo '</div> <!-- next-step-img -->';
       }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="54px" viewBox="0 0 320 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M320,0.253076503 L320,54.2530765 L0,54.2530765 L0,0.337955592 C44.2839235,34.1483578 99.7486444,54.2530713 159.944444,54.2530713 C220.1906,54.2530713 275.697758,34.1147073 320,0.253076503 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <g id="Group-26">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#F8F8F8" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

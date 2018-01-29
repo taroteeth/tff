@@ -6,7 +6,7 @@ $bodyContent = get_sub_field('body_content');
 
 ?>
 
-<div class="rte <?php if($greyBg){ echo ", grey-bg"; } ?>">
+<div class="rte <?php if($greyBg){ echo "grey-bg"; } ?>">
   <div class="inner">
 
     <?php
