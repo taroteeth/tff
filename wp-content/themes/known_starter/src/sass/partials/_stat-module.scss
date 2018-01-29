@@ -17,10 +17,16 @@
     display: block;
     margin: 0 auto;
     max-width: 90rem;
+    @media(min-width: 1024px) {
+      padding: 10rem 2rem;
+    }
 
     #module-header {
-      margin: 0 auto;
+      margin: 0 auto 1em auto;
       text-align: center;
+      @media(min-width: 1024px) {
+        margin: 0 auto 2em auto;
+      }
 
       &:after {
         content: "";
@@ -28,52 +34,74 @@
         width: 5rem;
         background-color: #F78E11;
         display: block;
-        margin: 1rem auto;
+        margin: 1rem auto 0 auto;
       }
     }
 
     .stat-inner {
-      padding: 2rem 0;
       display: flex;
       flex-wrap: wrap;
-      overflow: hidden;
       justify-content: center;
-      @media screen and (min-width: 768px){
-        flex-direction: row;
-        flex-wrap: nowrap;
-        padding: 2rem;
-        justify-content: space-between;
+
+      @media(min-width: 768px) {
+        &.col-3 {
+          .col-inner{
+            flex: 0 0 33.3%;
+            max-width: 33.3%;
+          }
+        }
+
+        &.col-4 {
+          .col-inner{
+            flex: 0 0 25%;
+            max-width: 25%;
+          }
+        }
       }
 
       .col-inner {
+        margin-bottom: 3rem;
         vertical-align: top;
-        padding: 1rem;
         box-sizing: border-box;
         @media screen and (min-width: 768px){
           max-width: 25%;
           display: inline-block;
           flex: 0 0 25%;
+          margin: 0;
+          padding: 0 1rem;
+        }
+        @media(min-width: 1024px) {
+          padding: 0 3rem;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
         }
 
         #integer {
-          font-size: 4rem;
+          font-family: $Merriweather;
+          font-size: 3rem;
+          color: $textGrey;
           display: block;
           margin: 0 auto;
           white-space: nowrap;
           text-align: center;
+          @media(min-width: 768px) {
+            font-size: 4rem;
+          }
         }
 
         #descriptor {
-          padding-top: 1rem;
           display: block;
-          margin: 0 auto;
+          margin: 1rem auto 0 auto;
+          font-size: 1.4rem;
           font-family: $Poppins;
           font-weight: bold;
           color: $blue;
           text-transform: uppercase;
           text-align: center;
-          line-height: 1.3em;
-          max-width: 50%;
+          line-height: 1.5em;
+          letter-spacing: .1rem;
           @media screen and (min-width: 768px){
             max-width: 100%;
           }

@@ -11,9 +11,21 @@
     padding: 4rem 2rem;
     display: block;
     margin: 0 auto;
+    max-width: 70rem;
+    @media(min-width: 768px) {
+      width: 70vw;
+    }
+    @media(min-width: 1024px) {
+      padding: 10rem 2rem;
+    }
 
     #content-title {
       text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      @media(min-width: 768px) {
+        max-width: 50vw;
+      }
 
       &:after {
         content: "";
@@ -22,14 +34,12 @@
         background-color: $orange;
         display: block;
         vertical-align: middle;
-        margin: 1rem auto;
+        margin: 2rem auto;
       }
     }
 
     #content-inner {
-      padding: 2rem;
       text-align: center;
-      max-width: 70rem;
       display: block;
       margin: 0 auto;
     }

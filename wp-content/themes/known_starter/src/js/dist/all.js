@@ -1,5 +1,6 @@
 /*! Conditionizr v4.3.0 | (c) 2014 @toddmotto, @markgdyr | MIT license | conditionizr.com */
 !function(a,b){"function"==typeof define&&define.amd?define([],b):"object"==typeof exports?module.exports=b:a.conditionizr=b()}(this,function(){"use strict";var a,b={},c=document.head||document.getElementsByTagName("head")[0],d=function(b,d,e){var f=e?b:a+b+("style"===d?".css":".js");switch(d){case"script":var g=document.createElement("script");g.src=f,c.appendChild(g);break;case"style":var h=document.createElement("link");h.href=f,h.rel="stylesheet",c.appendChild(h);break;case"class":document.documentElement.className+=" "+b}};return b.config=function(c){var e=c||{},f=e.tests;a=e.assets||"";for(var g in f){var h=g.toLowerCase();if(b[h])for(var i=f[g],j=i.length;j--;)d(h,i[j])}},b.add=function(a,c,e){var f=a.toLowerCase();if(b[f]=e(),b[f])for(var g=c.length;g--;)d(f,c[g])},b.on=function(a,c){var d=/^\!/;(b[a.toLowerCase()]||d.test(a)&&!b[a.replace(d,"")])&&c()},b.load=b.polyfill=function(a,c){for(var e=/\.js$/.test(a)?"script":"style",f=c.length;f--;)b[c[f].toLowerCase()]&&d(a,e,!0)},b});
+
 //--------------- Utility Functions ---------------//
 
 function findAncestorByClass (el, cls) {
@@ -44,15 +45,26 @@ toggleMobileNav();
 class blurbPositioning {
 	constructor(blurb) {
 		this.blurbBox = blurb;
-		this.blurbBoxRect = this.blurbBox.getBoundingClientRect(); //gives you top, bottom, height, etc on object
-		this.hero = findAncestorByClass(this.blurbBox, 'hero'); // get hero to get container
-		this.heroText = this.hero.querySelector('.hero-text-wrapper'); //to get text wrapper 
-		this.heroTextPadding = parseInt(window.getComputedStyle(this.heroText, null).getPropertyValue('padding-bottom'));
+		this.blurbBoxRect = this.blurbBox.getBoundingClientRect();
+		this.hero = findAncestorByClass(this.blurbBox, 'hero');
+		this.heroText = this.hero.querySelector('.hero-text-wrapper');
 		this.nextModule = this.hero.nextElementSibling;
-		this.nextModulePadding = parseInt(window.getComputedStyle(this.nextModule, null).getPropertyValue('padding-top'));
+    this.heroTextPadding;
+    this.nextModulePadding;
 
-		this.enableBlurbPositioning();
+    this.calculatePositions();
+
+    window.addEventListener('resize', function(){
+      this.calculatePositions();
+    }.bind(this));
 	}
+
+  calculatePositions() {
+    this.heroTextPadding = parseInt(window.getComputedStyle(this.heroText, null).getPropertyValue('padding-bottom'));
+    this.nextModulePadding = parseInt(window.getComputedStyle(this.nextModule, null).getPropertyValue('padding-top'));
+
+    this.enableBlurbPositioning();
+  }
 
 	enableBlurbPositioning() {
 		this.heroText.style.paddingBottom = (this.heroTextPadding + (this.blurbBoxRect.height / 2)) + 'px';

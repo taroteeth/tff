@@ -1,12 +1,10 @@
 <?php
-
 $greyBg = get_sub_field('grey_background');
 $divider = get_sub_field('image_divider');
 $moduleTitle = get_sub_field('module_title');
 $hasBtn = get_sub_field('bottom_cta');
 $btnText = get_sub_field('bottom_cta_text');
 $btnLink = get_sub_field('bottom_cta_link');
-
 ?>
 
 <div class="icon-col <?php if($greyBg){ echo "grey-bg"; } ?>">
@@ -45,7 +43,7 @@ $btnLink = get_sub_field('bottom_cta_link');
             echo wp_get_attachment_image($submodIcon);
             echo '</div><!-- #sub-icon-wrapper -->';
           } else { ?>
-            <div id="sub-icon-wrapper" class="<?php if($divider){echo 'divider';}?>, <?php ?>"> <?php
+            <div id="sub-icon-wrapper" class="<?php if($divider){echo 'divider';}?>"> <?php
             echo wp_get_attachment_image($submodIcon);
             echo '</div><!-- #sub-icon-wrapper -->';
           }
