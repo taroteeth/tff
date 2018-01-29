@@ -17,6 +17,7 @@ $blurbText = get_sub_field('blurb_button_text'); ?>
       if($image){
         echo '<div id="hero-img-wrapper">';
         echo wp_get_attachment_image($image, 'full');
+        echo '<img src="'. get_bloginfo('template_directory') .'/img/Left-img-rounding.svg" class="curve" />'; 
         echo '</div> <!-- #hero-img-wrapper -->';
       }
     }
