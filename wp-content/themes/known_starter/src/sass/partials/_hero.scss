@@ -12,6 +12,10 @@
     height: 72vh;
   }
 
+  &.has-blurb {
+    overflow: visible;
+  }
+
   .image-left { //styling for specifically if image is on left
     width: 100%;
     #hero-text-wrapper {
@@ -171,8 +175,8 @@
     width: 70vw;
     position: absolute;
     left: 50%;
-    bottom: -10%;
-    transform: translateX(-50%);
+    bottom: 0;
+    transform: translate3d(-50%, 50%, 0);
     background-color: $orange;
     padding: 2rem;
     text-align: center;

@@ -8,10 +8,10 @@ $image = get_sub_field('main_image');
 $imagePos = get_sub_field('main_image_position');
 $orangeCircle = get_sub_field('orange_circle');
 $blurbButton = get_sub_field('blurb_button');
-$blurbText = get_sub_field('blurb_button_text');
+$blurbText = get_sub_field('blurb_button_text'); ?>
 
 
-echo '<div id="hero">'; ?>
+<div id="hero" class="<?php if($blurbButton){echo 'has-blurb';}?>">
   <div id="inner" class="<?php echo $imagePos == "Left" ? "image-left" : "image-right";?>"> <?php
     if(!is_page('290')){ // there is no image in the hero for the resources page
       if($image){

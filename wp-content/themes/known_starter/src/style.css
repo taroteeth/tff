@@ -770,6 +770,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   @media screen and (min-width: 992px) {
     #hero {
       height: 72vh; } }
+  #hero.has-blurb {
+    overflow: visible; }
   #hero .image-left {
     width: 100%; }
     #hero .image-left #hero-text-wrapper {
@@ -906,9 +908,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   width: 70vw;
   position: absolute;
   left: 50%;
-  bottom: -10%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  bottom: 0;
+  -webkit-transform: translate3d(-50%, 50%, 0);
+          transform: translate3d(-50%, 50%, 0);
   background-color: #F69420;
   padding: 2rem;
   text-align: center;
