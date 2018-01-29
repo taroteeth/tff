@@ -15,14 +15,14 @@ $blurbText = get_sub_field('blurb_button_text'); ?>
   <div id="inner" class="<?php echo $imagePos == "Left" ? "image-left" : "image-right";?>"> <?php
     if(!is_page('290')){ // there is no image in the hero for the resources page
       if($image){
-        echo '<div id="hero-img-wrapper">';
+        echo '<div class="hero-img-wrapper">';
         echo wp_get_attachment_image($image, 'full');
         echo '<svg viewBox="0 0 140 650"><use href="#photo-curve"></use></svg> ';
-        echo '</div> <!-- #hero-img-wrapper -->';
+        echo '</div> <!-- .hero-img-wrapper -->';
       }
     }
 
-    echo '<div id="hero-text-wrapper">';
+    echo '<div class="hero-text-wrapper">';
 
       if(is_page('6')){
         echo '<svg width="176px" height="39px" viewBox="0 0 176 39"><use href="#color-logo"></use></svg> ';
@@ -41,7 +41,7 @@ $blurbText = get_sub_field('blurb_button_text'); ?>
         echo '</div>';
       }
 
-    echo '</div><!-- #hero-text-wrapper -->';
+    echo '</div><!-- .hero-text-wrapper -->';
     echo '</div><!-- inner -->';
 
     if($orangeCircle){ ?>
