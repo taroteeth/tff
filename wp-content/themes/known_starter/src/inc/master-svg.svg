@@ -31,6 +31,22 @@
     </g>
   </symbol>
 
+  <symbol width="140px" height="650px" viewBox="0 0 140 650" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  <path d="M64.3925437,-5.68434189e-14 L140,-5.68434189e-14 L140,247.529085 C134.620983,157.652406 107.74812,73.4911793 64.3925437,-1.31237243e-11 Z M140,314.552978 L140,650 L0.230276253,650 C80.8805595,559.420633 132.324204,442.80599 140.000001,314.552974 Z" id="path-1"></path>
+  </defs>
+  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+  <g id="Hero/Left-img-Copy">
+  <g id="Group-26">
+  <mask id="mask-2" fill="white">
+  <use xlink:href="#path-1"></use>
+  </mask>
+  <use id="Combined-Shape" fill="#F8F8F8" xlink:href="#path-1"></use>
+  </g>
+  </g>
+  </g>
+  </symbol>
+
   <!-- each has an id, when you go to use it list the symbol in the x below  -->
 
   <!-- <svg width="17px" height="17px" viewBox="0 0 17 17">
