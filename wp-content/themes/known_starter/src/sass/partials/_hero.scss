@@ -52,7 +52,9 @@
 
       svg {
         position: absolute;
+        display: none; 
         @media screen and (min-width: 768px){
+          display: block;
           right: 0;
           bottom: 0;
           height: 100%;

@@ -13,7 +13,7 @@
       max-width: 80rem;
     }
 
-    #bubble-image-wrapper {
+    .bubble-image-wrapper {
       @media screen and (min-width: 768px){
         height: 30rem;
         width: 30rem;
@@ -36,7 +36,7 @@
       }
     }
 
-    #text-wrapper {
+    .text-wrapper {
       display: block;
       margin: 0 auto;
       padding: 4rem 0;

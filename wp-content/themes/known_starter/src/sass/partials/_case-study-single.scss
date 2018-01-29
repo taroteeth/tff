@@ -5,7 +5,7 @@
     display: flex;
     position: relative;
 
-    #hero-img-wrapper {
+    .hero-img-wrapper {
       @media screen and (min-width: 768px){
         width: 50%;
       }
@@ -23,7 +23,7 @@
       }
     }
 
-    #hero-text-wrapper {
+    .hero-text-wrapper {
       height: 50%;
       padding: 25rem 0 3rem 0;
       @media screen and (min-width: 768px){
@@ -93,7 +93,7 @@
   .specs-module {
     padding: 2rem;
 
-    #spec-title {
+    .spec-title {
       text-align: center;
       font-size: 2.5rem;
       padding: 4rem 0;
@@ -154,7 +154,7 @@
 
   }
 
-  #text-wrapper {
+  .text-wrapper {
 
     .text-module {
       .inner {
@@ -241,7 +241,7 @@
       display: block;
       margin: 0 auto;
 
-      #testimonial-quote {
+      .testimonial-quote {
         p {
           text-align: center;
           font-style: italic;
@@ -252,7 +252,7 @@
           margin: 0 auto;
         }
       }
-      #testimonial-byline {
+      .testimonial-byline {
         text-align: center;
         font-weight: bold;
         color: $blue;

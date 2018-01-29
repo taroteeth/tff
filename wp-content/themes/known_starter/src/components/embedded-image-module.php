@@ -12,12 +12,12 @@ $cta = get_sub_field('cta_option');
 echo '<div class="embed-image-module">';
   echo '<div class="inner" >';
     if($image){ ?>
-      <div id="embed-image-wrapper" class="<?php if($imagePos === 'Left'){echo 'left';} if($imageRound){echo ', round';}?>"> <?php
+      <div class="embed-image-wrapper <?php if($imagePos === 'Left'){echo 'left';} if($imageRound){echo ', round';}?>"> <?php
       echo wp_get_attachment_image($image);
-      echo '</div> <!-- #embed-image-wrapper -->';
+      echo '</div> <!-- .embed-image-wrapper -->';
     } ?>
 
-    <div id="text-wrapper" class="<?php if($imagePos === 'Left'){echo 'right';}?>"> <?php
+    <div class="text-wrapper <?php if($imagePos === 'Left'){echo 'right';}?>"> <?php
 
       if($header){ ?>
         <p class="header <?php if($headerDivider){echo ', divider';}?>"> <?php
@@ -26,14 +26,14 @@ echo '<div class="embed-image-module">';
       }
 
       if($textContent){
-        echo '<div id="body-content">'. $textContent .'</div>';
+        echo '<div class="body-content">'. $textContent .'</div>';
       }
 
       if($cta){
         include('button.php');
       }
 
-    echo '</div><!-- #text-wrapper -->';
+    echo '</div><!-- .text-wrapper -->';
     echo '</div><!-- .inner -->';
 
 echo '</div> <!-- .embed-image-module -->';

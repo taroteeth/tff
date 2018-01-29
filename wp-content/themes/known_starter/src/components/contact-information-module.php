@@ -8,12 +8,12 @@ $email = get_sub_field('email');
 echo '<div class="contact-information-module">';
   echo '<div class="inner" >';
     if($image){
-      echo '<div id="bubble-image-wrapper">';
+      echo '<div class="bubble-image-wrapper">';
       echo wp_get_attachment_image($image, 'full');
       echo '</div> <!-- #bubble-image-wrapper -->';
     }
 
-    echo '<div id="text-wrapper">';
+    echo '<div class="text-wrapper">';
 
       echo '<p class="title">Contact Information</p>';
 
@@ -29,7 +29,7 @@ echo '<div class="contact-information-module">';
         echo '<a class="email" href="mailto:'. $email .'">'. $email .'</a>';
       }
 
-    echo '</div><!-- #text-wrapper -->';
+    echo '</div><!-- .text-wrapper -->';
     echo '</div><!-- inner -->';
 
 echo '</div> <!-- #contact-information-module -->';

@@ -22,7 +22,7 @@
 
 			?>
 
-			<div id="img-block" class="<?php if($iteration % 2 !== 0){ echo 'right';}?>"> <?php
+			<div class="img-block <?php if($iteration % 2 !== 0){ echo 'right';}?>"> <?php
 			if($textBlockCta){
 				echo '<a href="">';
 			}
@@ -33,13 +33,13 @@
 			<?php }
 
 			if($imgBlockTitle){
-				echo '<div id="image-block-title">';
+				echo '<div class="image-block-title">';
 				echo $imgBlockTitle;
-				echo '</div><!-- #image-block-title -->';
+				echo '</div><!-- .image-block-title -->';
 			}
 
 			if($imgBlockCaption){
-				echo '<div id="image-block-caption">';
+				echo '<div class="image-block-caption">';
 				echo $imgBlockCaption;
 				echo '</div><!-- image-block-caption -->';
 			}
@@ -54,17 +54,17 @@
 			echo '<div class="text-block">';
 				echo '<div class="text-inner">';
 				if($textBlockHeader){ ?>
-					<div id="text-header" class="<?php if($orangeLine){echo 'divider';} ?>">
+					<div class="text-header <?php if($orangeLine){echo 'divider';} ?>">
 						 <?php echo $textBlockHeader ?>
-					 </div> <!-- #text-header -->
+					 </div> <!-- .text-header -->
 				<?php }
 
 				if($textBlockByline){
-					echo '<p id="text-byline">'. $textBlockByline .'</p><!-- #text-byline -->';
+					echo '<p class="text-byline">'. $textBlockByline .'</p><!-- .text-byline -->';
 				}
 
 				if($textBlockCopy){
-					echo '<p id="text-copy">'. $textBlockCopy .'</p><!-- #text-copy -->';
+					echo '<p class="text-copy">'. $textBlockCopy .'</p><!-- .text-copy -->';
 				}
 
 				if($textBlockCta){

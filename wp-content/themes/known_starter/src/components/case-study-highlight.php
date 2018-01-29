@@ -11,12 +11,12 @@ $byline = get_sub_field('quote_byline');
 echo '<div class="case-study-highlight-module">';
   echo '<div class="inner" >';
     if($image){
-      echo '<div id="bubble-image-wrapper">';
+      echo '<div class="bubble-image-wrapper">';
       echo wp_get_attachment_image($image, 'full');
-      echo '</div> <!-- #bubble-image-wrapper -->';
+      echo '</div> <!-- .bubble-image-wrapper -->';
     }
 
-    echo '<div id="text-wrapper">';
+    echo '<div class="text-wrapper">';
 
       if($studyTitle){ ?>
         <p class="title"> <?php
@@ -25,16 +25,16 @@ echo '<div class="case-study-highlight-module">';
       }
 
       if($blockQuote){
-        echo '<div id="block-quote">'. $blockQuote .'</div>';
+        echo '<div class="block-quote">'. $blockQuote .'</div>';
       }
 
       if($byline){
-        echo '<p id="byline">'. $byline .'</p>';
+        echo '<p class="byline">'. $byline .'</p>';
       }
 
       include('button.php');
 
-    echo '</div><!-- #text-wrapper -->';
+    echo '</div><!-- .text-wrapper -->';
     echo '</div><!-- inner -->';
 
 echo '</div> <!-- .case-study-highlight-module -->';

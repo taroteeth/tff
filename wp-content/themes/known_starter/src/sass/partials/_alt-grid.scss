@@ -16,7 +16,7 @@
       }
     }
 
-    #img-block {
+    .img-block {
       width: 100%;
       overflow: hidden;
       position: relative;
@@ -41,7 +41,7 @@
         }
       }
 
-      #image-block-title {
+      .image-block-title {
         font-family: $Poppins;
         position: absolute;
         width: 80%;
@@ -62,7 +62,7 @@
         }
       }
 
-      #image-block-caption {
+      .image-block-caption {
         position: absolute;
         background-color: $blueTransparent;
         bottom: 0;
@@ -114,7 +114,7 @@
           }
         }
 
-        #text-header {
+        .text-header {
           p {
             font-size: 2.5rem;
             font-family: 'Merriweather', serif;
@@ -128,7 +128,7 @@
           }
         }
 
-        #text-byline {
+        .text-byline {
           font-size: 1.3rem;
           font-family: $Merriweather;
           font-weight: bold;

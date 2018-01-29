@@ -14,8 +14,6 @@ function findAncestorById (el, id) {
 
 
 // add class to body if mobile detected
-
-
 var body = document.getElementsByTagName('body');
 
 if(mobileDetected){
@@ -44,9 +42,9 @@ toggleMobileNav();
 class blurbPositioning {
 	constructor(blurb) {
 		this.blurbBox = blurb;
-		this.blurbBoxRect = this.blurbBox.getBoundingClientRect();
-		this.hero = findAncestorByClass(this.blurbBox, 'hero');
-		this.heroText = this.hero.querySelector('.hero-text-wrapper');
+		this.blurbBoxRect = this.blurbBox.getBoundingClientRect(); //gives you top, bottom, height, etc on object
+		this.hero = findAncestorByClass(this.blurbBox, 'hero'); // get hero to get container
+		this.heroText = this.hero.querySelector('.hero-text-wrapper'); //to get text wrapper 
 		this.heroTextPadding = parseInt(window.getComputedStyle(this.heroText, null).getPropertyValue('padding-bottom'));
 		this.nextModule = this.hero.nextElementSibling;
 		this.nextModulePadding = parseInt(window.getComputedStyle(this.nextModule, null).getPropertyValue('padding-top'));
@@ -62,7 +60,7 @@ class blurbPositioning {
 
 var blurbButtons = document.querySelectorAll('.blurb-button');
 if(blurbButtons) {
-	var blurbButtonInstances = [];
+	var blurbButtonInstances = []; //new instance of class for each blurb button
 	for(var i = 0; i < blurbButtons.length; i++) {
 		blurbButtonInstances[i] = new blurbPositioning(blurbButtons[i]);
 	}
