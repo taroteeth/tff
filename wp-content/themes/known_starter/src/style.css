@@ -911,7 +911,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   .hero .circle-right {
     right: -5rem; }
 
-#blurb-button {
+.blurb-button {
   display: block;
   margin: 0 auto;
   max-width: 72rem;
@@ -930,15 +930,15 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   -webkit-box-shadow: 0 4px 2px -2px #e6e6e6;
           box-shadow: 0 4px 2px -2px #e6e6e6; }
   @media screen and (min-width: 768px) {
-    #blurb-button {
+    .blurb-button {
       max-width: 60%;
       padding: 2rem; } }
-  #blurb-button p {
+  .blurb-button p {
     color: #fff;
     font-weight: 600;
     line-height: 1.5em; }
     @media screen and (min-width: 992px) {
-      #blurb-button p {
+      .blurb-button p {
         max-width: 50%;
         display: block;
         margin: 0 auto; } }
