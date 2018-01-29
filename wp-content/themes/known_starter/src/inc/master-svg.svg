@@ -31,13 +31,32 @@
     </g>
   </symbol>
 
-  <symbol id="photo-curve" viewBox="0 0 140 650" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- image rounding - mobile screen size -->
+  <symbol id="photo-curve-vert" viewBox="0 0 320 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-  <path d="M64.3925437,-5.68434189e-14 L140,-5.68434189e-14 L140,247.529085 C134.620983,157.652406 107.74812,73.4911793 64.3925437,-1.31237243e-11 Z M140,314.552978 L140,650 L0.230276253,650 C80.8805595,559.420633 132.324204,442.80599 140.000001,314.552974 Z" id="path-1"></path>
+  <path d="M320,0.253076503 L320,54.2530765 L0,54.2530765 L0,0.337955592 C44.2839235,34.1483578 99.7486444,54.2530713 159.944444,54.2530713 C220.1906,54.2530713 275.697758,34.1147073 320,0.253076503 Z" id="path-1"></path>
+  </defs>
+  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+  <g id="Artboard">
+  <g id="Group-26">
+  <mask id="mask-2" fill="white">
+  <use xlink:href="#path-1"></use>
+  </mask>
+  <use id="Combined-Shape" fill="#F8F8F8" xlink:href="#path-1"></use>
+  </g>
+  </g>
+  </g>
+  </symbol>
+
+
+  <!-- image rounding - ipad screen size and up -->
+  <symbol id="photo-curve-horiz" viewBox="0 0 103 650" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  <path d="M0.243078268,0 L105,0 L105,650 L1.01853134,650 C66.5022043,558.395501 105,446.431527 105,325.541033 C105,204.174121 66.1981734,91.8042236 0.243078268,-2.84217094e-14 Z" id="path-1"></path>
   </defs>
   <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
   <g id="Hero/Left-img-Copy">
-  <g id="Group-26">
+  <g id="Group-26" transform="translate(-2.000000, 0.000000)">
   <mask id="mask-2" fill="white">
   <use xlink:href="#path-1"></use>
   </mask>

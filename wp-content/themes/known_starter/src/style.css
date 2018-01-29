@@ -806,15 +806,22 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           .hero .inner .hero-img-wrapper img {
             height: 100%;
             width: 100%; } }
-      .hero .inner .hero-img-wrapper svg {
+      .hero .inner .hero-img-wrapper .photo-curve-horiz {
         position: absolute;
         display: none; }
         @media screen and (min-width: 768px) {
-          .hero .inner .hero-img-wrapper svg {
+          .hero .inner .hero-img-wrapper .photo-curve-horiz {
             display: block;
             right: 0;
             bottom: 0;
             height: 100%; } }
+      .hero .inner .hero-img-wrapper .photo-curve-vert {
+        position: absolute;
+        display: block;
+        bottom: 0; }
+        @media screen and (min-width: 768px) {
+          .hero .inner .hero-img-wrapper .photo-curve-vert {
+            display: none; } }
     .hero .inner .hero-text-wrapper {
       padding: 2rem;
       text-align: center;

@@ -50,14 +50,23 @@
         }
       }
 
-      svg {
+      .photo-curve-horiz {
         position: absolute;
-        display: none; 
+        display: none;
         @media screen and (min-width: 768px){
           display: block;
           right: 0;
           bottom: 0;
           height: 100%;
+        }
+      }
+
+      .photo-curve-vert {
+        position: absolute;
+        display: block;
+        bottom: 0; 
+        @media screen and (min-width: 768px){
+          display: none;
         }
       }
     }
