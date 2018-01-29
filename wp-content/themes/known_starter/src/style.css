@@ -772,14 +772,6 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       height: 72vh; } }
   #hero .image-left {
     width: 100%; }
-    #hero .image-left #hero-img-wrapper img {
-      position: absolute;
-      width: 50%;
-      left: 0;
-      right: unset; }
-      @media screen and (min-width: 768px) {
-        #hero .image-left #hero-img-wrapper img {
-          width: 100%; } }
     #hero .image-left #hero-text-wrapper {
       margin-left: 0; }
       #hero .image-left #hero-text-wrapper p {
