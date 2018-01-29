@@ -17,13 +17,13 @@
   }
 
   .image-right { //styling for specifically if the image is on right
-    #hero-img-wrapper {
+    .hero-img-wrapper {
       order: 2;
     }
   }
 
 
-  #inner {
+  .inner {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -31,7 +31,7 @@
       flex-wrap: nowrap;
     }
 
-    #hero-img-wrapper {
+    .hero-img-wrapper {
       height: 20rem;
       position: relative;
       @media screen and (min-width: 768px){
@@ -54,13 +54,13 @@
         position: absolute;
         @media screen and (min-width: 768px){
           right: 0;
-          top: 0;
+          bottom: 0;
           height: 100%;
         }
       }
     }
 
-    #hero-text-wrapper {
+    .hero-text-wrapper {
       padding: 2rem;
       text-align: center;
       box-sizing: border-box;
@@ -88,7 +88,7 @@
         }
       }
 
-      #hero-title {
+      .hero-title {
         font-size: 1.4rem;
         color: $blue;
         font-weight: bold;
@@ -131,7 +131,7 @@
           text-align: left;
         }
       }
-      #subheader p {
+      .subheader p {
         font-family: $Merriweather;
         color: $lightGrey;
         text-align: center;
@@ -151,7 +151,7 @@
       }
     }
   }
-  #orange-circle {
+  .orange-circle {
     display: none;
     width: 15rem;
     height: 15rem;

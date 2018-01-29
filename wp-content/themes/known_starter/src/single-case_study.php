@@ -13,10 +13,10 @@ $nextBtn = get_field('next_step_heading');
 
 ?>
 
-<div id="case-study">
+<div class="case-study">
   <div class="inner">
 
-    <div id="hero"> <?php
+    <div class="hero"> <?php
       if($heroImg){
         echo '<div id="hero-img-wrapper">';
         echo wp_get_attachment_image($heroImg, 'full');
@@ -45,7 +45,7 @@ $nextBtn = get_field('next_step_heading');
 
     </div> <!-- .hero --> <?php
 
-    echo '<div id="specs-module">';
+    echo '<div class="specs-module">';
 
       if($role){
         echo '<div id="spec-title">';
@@ -55,7 +55,7 @@ $nextBtn = get_field('next_step_heading');
 
       if(have_rows('specs')):
 
-          echo '<div id="specs-wrapper">';
+          echo '<div class="specs-wrapper">';
           // add i loop here to wrap rows at 3 specs
           $i = 0;
           $totalCounter = 0;
@@ -85,13 +85,13 @@ $nextBtn = get_field('next_step_heading');
           endwhile;
           echo '</div> <!-- #specs-wrapper -->';
       endif; // specs module
-    echo '</div> <!-- #specs-module -->';
+    echo '</div> <!-- .specs-module -->';
 
 
       //put text module code back in here
       if(have_rows('text_module')):
 
-        echo '<div id="text-wrapper">';
+        echo '<div class="text-wrapper">';
 
         while(have_rows('text_module')): the_row();
           $greyBg = get_sub_field('grey_background');
@@ -107,11 +107,11 @@ $nextBtn = get_field('next_step_heading');
 
         endwhile;
 
-        echo '</div><!-- #text-wrapper -->';
+        echo '</div><!-- .text-wrapper -->';
       endif; // text module
 
 
-      echo '<div id="testimonial">';
+      echo '<div class="testimonial">';
 
         echo '<div class="inner">';
 
@@ -126,7 +126,7 @@ $nextBtn = get_field('next_step_heading');
           echo '<div class="orange-circle"></div>';
 
         echo '</div><!-- .inner -->';
-      echo '</div><!-- #testimonial -->';
+      echo '</div><!-- .testimonial -->';
 
       if($nextBtn){
         include('components/next-steps.php');

@@ -95,7 +95,7 @@ li {
 .body-content {
   margin-top: 6rem; }
 
-#case-study #hero {
+.case-study .hero {
   background-color: #F8F8F8;
   padding: 2rem;
   display: -webkit-box;
@@ -103,29 +103,29 @@ li {
   display: flex;
   position: relative; }
   @media screen and (min-width: 768px) {
-    #case-study #hero #hero-img-wrapper {
+    .case-study .hero #hero-img-wrapper {
       width: 50%; } }
-  #case-study #hero #hero-img-wrapper img {
+  .case-study .hero #hero-img-wrapper img {
     position: absolute;
     left: 0;
     top: 0;
     height: 25rem;
     width: 100%; }
     @media screen and (min-width: 768px) {
-      #case-study #hero #hero-img-wrapper img {
+      .case-study .hero #hero-img-wrapper img {
         height: 100%;
         width: 45%; } }
-  #case-study #hero #hero-text-wrapper {
+  .case-study .hero #hero-text-wrapper {
     height: 50%;
     padding: 25rem 0 3rem 0; }
     @media screen and (min-width: 768px) {
-      #case-study #hero #hero-text-wrapper {
+      .case-study .hero #hero-text-wrapper {
         width: 50%;
         padding: 4rem 0 4rem 0; } }
     @media screen and (min-width: 992px) {
-      #case-study #hero #hero-text-wrapper {
+      .case-study .hero #hero-text-wrapper {
         padding: 10rem 2rem; } }
-    #case-study #hero #hero-text-wrapper .hero-title {
+    .case-study .hero #hero-text-wrapper .hero-title {
       font-size: 1.4rem;
       color: #0176BC;
       font-weight: bold;
@@ -137,10 +137,10 @@ li {
       padding-top: 1.5rem;
       position: relative; }
       @media screen and (min-width: 768px) {
-        #case-study #hero #hero-text-wrapper .hero-title {
+        .case-study .hero #hero-text-wrapper .hero-title {
           text-align: left;
           padding-top: 0; } }
-      #case-study #hero #hero-text-wrapper .hero-title:before {
+      .case-study .hero #hero-text-wrapper .hero-title:before {
         content: "";
         width: .3rem;
         height: 5rem;
@@ -152,7 +152,7 @@ li {
                 transform: translateX(-50%);
         top: -5rem; }
         @media screen and (min-width: 768px) {
-          #case-study #hero #hero-text-wrapper .hero-title:before {
+          .case-study .hero #hero-text-wrapper .hero-title:before {
             width: 12rem;
             height: .3rem;
             display: inline-block;
@@ -162,29 +162,29 @@ li {
                     transform: unset;
             right: unset;
             left: -14rem; } }
-    #case-study #hero #hero-text-wrapper .header {
+    .case-study .hero #hero-text-wrapper .header {
       text-align: center;
       padding: 2rem 0; }
       @media screen and (min-width: 768px) {
-        #case-study #hero #hero-text-wrapper .header {
+        .case-study .hero #hero-text-wrapper .header {
           text-align: left; } }
-    #case-study #hero #hero-text-wrapper .subheader {
+    .case-study .hero #hero-text-wrapper .subheader {
       font-family: "Merriweather", serif;
       color: #777777;
       text-align: center; }
       @media screen and (min-width: 768px) {
-        #case-study #hero #hero-text-wrapper .subheader {
+        .case-study .hero #hero-text-wrapper .subheader {
           text-align: left; } }
 
-#case-study #specs-module {
+.case-study .specs-module {
   padding: 2rem; }
-  #case-study #specs-module #spec-title {
+  .case-study .specs-module #spec-title {
     text-align: center;
     font-size: 2.5rem;
     padding: 4rem 0; }
-    #case-study #specs-module #spec-title p {
+    .case-study .specs-module #spec-title p {
       font-family: "Merriweather", serif; }
-  #case-study #specs-module #specs-wrapper {
+  .case-study .specs-module .specs-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -199,18 +199,18 @@ li {
     margin: 0 auto;
     border-bottom: 3px solid #F8F8F8;
     padding-bottom: 4rem; }
-    #case-study #specs-module #specs-wrapper .row {
+    .case-study .specs-module .specs-wrapper .row {
       display: block; }
       @media screen and (min-width: 768px) {
-        #case-study #specs-module #specs-wrapper .row {
+        .case-study .specs-module .specs-wrapper .row {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
           padding: 1rem 0; } }
-      #case-study #specs-module #specs-wrapper .row .spec {
+      .case-study .specs-module .specs-wrapper .row .spec {
         padding: 2rem 1rem; }
         @media screen and (min-width: 768px) {
-          #case-study #specs-module #specs-wrapper .row .spec {
+          .case-study .specs-module .specs-wrapper .row .spec {
             padding: 1rem;
             max-width: 33.3%;
             -webkit-box-flex: 0;
@@ -218,57 +218,57 @@ li {
                     flex: 0 0 33.3%;
             -webkit-box-sizing: border-box;
                     box-sizing: border-box; } }
-        #case-study #specs-module #specs-wrapper .row .spec .spec-name {
+        .case-study .specs-module .specs-wrapper .row .spec .spec-name {
           font-weight: bold;
           color: #0176BC; }
-          #case-study #specs-module #specs-wrapper .row .spec .spec-name:after {
+          .case-study .specs-module .specs-wrapper .row .spec .spec-name:after {
             content: "";
             height: .2rem;
             width: 4rem;
             background-color: #F69420;
             display: block;
             margin: 1rem 0; }
-        #case-study #specs-module #specs-wrapper .row .spec .spec-content p {
+        .case-study .specs-module .specs-wrapper .row .spec .spec-content p {
           line-height: 1.5em; }
           @media screen and (min-width: 768px) {
-            #case-study #specs-module #specs-wrapper .row .spec .spec-content p {
+            .case-study .specs-module .specs-wrapper .row .spec .spec-content p {
               line-height: 2em; } }
 
-#case-study #text-wrapper #text-module .inner {
+.case-study #text-wrapper .text-module .inner {
   padding: 5rem 2rem;
   max-width: 70rem;
   margin: 0 auto; }
-  #case-study #text-wrapper #text-module .inner .header:after {
+  .case-study #text-wrapper .text-module .inner .header:after {
     content: "";
     height: .2rem;
     width: 7.5rem;
     background-color: #F69420;
     display: block;
     margin-top: 2rem; }
-  #case-study #text-wrapper #text-module .inner p {
+  .case-study #text-wrapper .text-module .inner p {
     line-height: 1.3em;
     padding: 2rem 0; }
-  #case-study #text-wrapper #text-module .inner .wp-caption {
+  .case-study #text-wrapper .text-module .inner .wp-caption {
     max-width: 100% !important;
     position: relative;
     padding: 2rem 0; }
     @media screen and (min-width: 768px) {
-      #case-study #text-wrapper #text-module .inner .wp-caption {
+      .case-study #text-wrapper .text-module .inner .wp-caption {
         margin-left: -2rem; } }
-    #case-study #text-wrapper #text-module .inner .wp-caption img {
+    .case-study #text-wrapper .text-module .inner .wp-caption img {
       border-radius: 100%;
       display: block;
       margin: 0 auto; }
       @media screen and (min-width: 768px) {
-        #case-study #text-wrapper #text-module .inner .wp-caption img {
+        .case-study #text-wrapper .text-module .inner .wp-caption img {
           display: inline-block; } }
-    #case-study #text-wrapper #text-module .inner .wp-caption .wp-caption-text {
+    .case-study #text-wrapper .text-module .inner .wp-caption .wp-caption-text {
       font-style: italic;
       font-family: "Merriweather", serif;
       text-align: center;
       padding-top: 4rem; }
       @media screen and (min-width: 768px) {
-        #case-study #text-wrapper #text-module .inner .wp-caption .wp-caption-text {
+        .case-study #text-wrapper .text-module .inner .wp-caption .wp-caption-text {
           width: 50%;
           position: absolute;
           left: 30rem;
@@ -277,7 +277,7 @@ li {
                   transform: translateY(-50%);
           text-align: left;
           padding: 0; } }
-      #case-study #text-wrapper #text-module .inner .wp-caption .wp-caption-text:before {
+      .case-study #text-wrapper .text-module .inner .wp-caption .wp-caption-text:before {
         content: "";
         background-color: #0176BC;
         position: absolute;
@@ -287,24 +287,24 @@ li {
         left: 50%;
         top: 24rem; }
         @media screen and (min-width: 768px) {
-          #case-study #text-wrapper #text-module .inner .wp-caption .wp-caption-text:before {
+          .case-study #text-wrapper .text-module .inner .wp-caption .wp-caption-text:before {
             height: .2rem;
             width: 7.5rem;
             left: -10rem;
             top: 1rem; } }
 
-#case-study #testimonial {
+.case-study .testimonial {
   display: block;
   margin: 0 auto;
   background-color: #F8F8F8;
   position: relative;
   z-index: 5; }
-  #case-study #testimonial .inner {
+  .case-study .testimonial .inner {
     padding: 4rem 2rem 9rem 2rem;
     max-width: 70rem;
     display: block;
     margin: 0 auto; }
-    #case-study #testimonial .inner #testimonial-quote p {
+    .case-study .testimonial .inner #testimonial-quote p {
       text-align: center;
       font-style: italic;
       font-family: "Merriweather", serif;
@@ -312,13 +312,13 @@ li {
       max-width: 50rem;
       display: block;
       margin: 0 auto; }
-    #case-study #testimonial .inner #testimonial-byline {
+    .case-study .testimonial .inner #testimonial-byline {
       text-align: center;
       font-weight: bold;
       color: #0176BC;
       font-family: "Merriweather", serif;
       padding: 2rem; }
-    #case-study #testimonial .inner .orange-circle {
+    .case-study .testimonial .inner .orange-circle {
       display: block;
       position: absolute;
       height: 17rem;
@@ -330,7 +330,7 @@ li {
       border-radius: 100%;
       margin-top: 2rem; }
 
-#case-study #next-step-wrapper {
+.case-study .next-step-wrapper {
   position: relative;
   z-index: 7; }
 
@@ -772,11 +772,11 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       height: 72vh; } }
   .hero.has-blurb {
     overflow: visible; }
-  .hero .image-right #hero-img-wrapper {
+  .hero .image-right .hero-img-wrapper {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2; }
-  .hero #inner {
+  .hero .inner {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -784,42 +784,42 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
     @media screen and (min-width: 768px) {
-      .hero #inner {
+      .hero .inner {
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap; } }
-    .hero #inner #hero-img-wrapper {
+    .hero .inner .hero-img-wrapper {
       height: 20rem;
       position: relative; }
       @media screen and (min-width: 768px) {
-        .hero #inner #hero-img-wrapper {
+        .hero .inner .hero-img-wrapper {
           max-width: 50%;
           -webkit-box-flex: 0;
               -ms-flex: 0 0 50%;
                   flex: 0 0 50%;
           height: auto; } }
-      .hero #inner #hero-img-wrapper img {
+      .hero .inner .hero-img-wrapper img {
         width: 100%;
         height: 100%;
         -o-object-fit: cover;
            object-fit: cover; }
         @media screen and (min-width: 768px) {
-          .hero #inner #hero-img-wrapper img {
+          .hero .inner .hero-img-wrapper img {
             height: 100%;
             width: 100%; } }
-      .hero #inner #hero-img-wrapper svg {
+      .hero .inner .hero-img-wrapper svg {
         position: absolute; }
         @media screen and (min-width: 768px) {
-          .hero #inner #hero-img-wrapper svg {
+          .hero .inner .hero-img-wrapper svg {
             right: 0;
-            top: 0;
+            bottom: 0;
             height: 100%; } }
-    .hero #inner #hero-text-wrapper {
+    .hero .inner .hero-text-wrapper {
       padding: 2rem;
       text-align: center;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; }
       @media screen and (min-width: 768px) {
-        .hero #inner #hero-text-wrapper {
+        .hero .inner .hero-text-wrapper {
           padding: 0 5rem;
           -ms-flex-item-align: center;
               align-self: center;
@@ -829,15 +829,15 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
                   flex: 0 0 50%;
           max-width: 50%; } }
       @media screen and (min-width: 992px) {
-        .hero #inner #hero-text-wrapper {
+        .hero .inner .hero-text-wrapper {
           padding: vw; } }
-      .hero #inner #hero-text-wrapper svg {
+      .hero .inner .hero-text-wrapper svg {
         margin-bottom: 2rem; }
       @media screen and (min-width: 768px) {
-        .hero #inner #hero-text-wrapper .div-left:before {
+        .hero .inner .hero-text-wrapper .div-left:before {
           position: absolute !important;
           left: 0 !important; } }
-      .hero #inner #hero-text-wrapper #hero-title {
+      .hero .inner .hero-text-wrapper .hero-title {
         font-size: 1.4rem;
         color: #0176BC;
         font-weight: bold;
@@ -849,10 +849,10 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         padding-top: 1.5rem;
         position: relative; }
         @media screen and (min-width: 768px) {
-          .hero #inner #hero-text-wrapper #hero-title {
+          .hero .inner .hero-text-wrapper .hero-title {
             text-align: left;
             padding-top: 0; } }
-        .hero #inner #hero-text-wrapper #hero-title:before {
+        .hero .inner .hero-text-wrapper .hero-title:before {
           content: "";
           width: .3rem;
           height: 5rem;
@@ -864,7 +864,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
                   transform: translateX(-50%);
           top: -5rem; }
           @media screen and (min-width: 768px) {
-            .hero #inner #hero-text-wrapper #hero-title:before {
+            .hero .inner .hero-text-wrapper .hero-title:before {
               width: 12rem;
               height: .3rem;
               display: inline-block;
@@ -874,27 +874,27 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
                       transform: unset;
               right: unset;
               left: -14rem; } }
-      .hero #inner #hero-text-wrapper .header {
+      .hero .inner .hero-text-wrapper .header {
         text-align: center; }
         @media screen and (min-width: 768px) {
-          .hero #inner #hero-text-wrapper .header {
+          .hero .inner .hero-text-wrapper .header {
             text-align: left; } }
-      .hero #inner #hero-text-wrapper #subheader p {
+      .hero .inner .hero-text-wrapper .subheader p {
         font-family: "Merriweather", serif;
         color: #777777;
         text-align: center; }
         @media screen and (min-width: 768px) {
-          .hero #inner #hero-text-wrapper #subheader p {
+          .hero .inner .hero-text-wrapper .subheader p {
             text-align: left; } }
-      .hero #inner #hero-text-wrapper .blue {
+      .hero .inner .hero-text-wrapper .blue {
         padding: 1rem 0; }
-        .hero #inner #hero-text-wrapper .blue p {
+        .hero .inner .hero-text-wrapper .blue p {
           font-family: "Poppins", sans-serif !important;
           text-transform: uppercase;
           font-weight: bold;
           color: #0176BC !important;
           line-height: 1.5em; }
-  .hero #orange-circle {
+  .hero .orange-circle {
     display: none;
     width: 15rem;
     height: 15rem;
@@ -904,7 +904,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     overflow: hidden;
     bottom: -10rem; }
     @media screen and (min-width: 768px) {
-      .hero #orange-circle {
+      .hero .orange-circle {
         display: block; } }
   .hero .circle-left {
     left: -5rem; }
@@ -1478,10 +1478,10 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     margin: 0 auto;
     max-width: 90rem;
     width: 100%; }
-    .icon-col .inner #col-header {
+    .icon-col .inner .col-header {
       margin: 0 auto;
       text-align: center; }
-      .icon-col .inner #col-header:after {
+      .icon-col .inner .col-header:after {
         content: "";
         height: .2rem;
         width: 5rem;
@@ -1527,7 +1527,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           .icon-col .inner .cols-inner .col-inner a img {
             display: block;
             margin: 0 auto; }
-          .icon-col .inner .cols-inner .col-inner a #submodule-title {
+          .icon-col .inner .cols-inner .col-inner a .submodule-title {
             text-align: center;
             font-family: "Poppins", sans-serif;
             font-weight: bold;
@@ -1536,7 +1536,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             letter-spacing: .2rem;
             padding: 1rem 0;
             white-space: nowrap; }
-            .icon-col .inner .cols-inner .col-inner a #submodule-title:after {
+            .icon-col .inner .cols-inner .col-inner a .submodule-title:after {
               content: ">";
               display: inline-block;
               padding: 0 .2rem; }

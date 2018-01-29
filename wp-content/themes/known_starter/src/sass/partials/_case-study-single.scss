@@ -1,5 +1,5 @@
-#case-study {
-  #hero {
+.case-study {
+  .hero {
     background-color: $backgroundGrey;
     padding: 2rem;
     display: flex;
@@ -90,7 +90,7 @@
   }
 
 
-  #specs-module {
+  .specs-module {
     padding: 2rem;
 
     #spec-title {
@@ -102,7 +102,7 @@
       }
     }
 
-    #specs-wrapper {
+    .specs-wrapper {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
@@ -156,7 +156,7 @@
 
   #text-wrapper {
 
-    #text-module {
+    .text-module {
       .inner {
         padding: 5rem 2rem;
         max-width: 70rem;
@@ -228,7 +228,7 @@
     }
   }
 
-  #testimonial {
+  .testimonial {
     display: block;
     margin: 0 auto;
     background-color: $backgroundGrey;
@@ -274,7 +274,7 @@
 
   }
 
-  #next-step-wrapper {
+  .next-step-wrapper {
     position: relative;
     z-index: 7;
   }

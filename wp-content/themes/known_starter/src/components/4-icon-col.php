@@ -14,9 +14,9 @@ $btnLink = get_sub_field('bottom_cta_link');
 
     <?php
     if($moduleTitle){
-      echo '<p id="col-header" class="header">';
+      echo '<p class="col-header header">';
       echo $moduleTitle;
-      echo '</p> <!-- col-header -->';
+      echo '</p> <!-- .col-header -->';
     }
 
     if(have_rows('col_submodule')):
@@ -50,10 +50,10 @@ $btnLink = get_sub_field('bottom_cta_link');
 
         if($submodTitle){
           if($isLink){ ?>
-            <p id="submodule-title" class="<?php if($boldTitle){echo 'bold';} ?>"> <?php echo $submodTitle ?> </p>
+            <p class="submodule-title <?php if($boldTitle){echo 'bold';} ?>"> <?php echo $submodTitle ?> </p>
             </a> <?php
           } else { ?>
-            <p id="submodule-title" class="<?php if($boldTitle){echo 'bold';} ?>"> <?php echo $submodTitle;?> </p> <?php
+            <p class="submodule-title <?php if($boldTitle){echo 'bold';} ?>"> <?php echo $submodTitle;?> </p> <?php
           }
         }
 
@@ -67,9 +67,9 @@ $btnLink = get_sub_field('bottom_cta_link');
     endif; // end repeater loop
 
     if($hasBtn){
-      echo '<div id="col-cta">';
+      echo '<div class="col-cta">';
       include('button.php');
-      echo '</div> <!-- #col-cta -->';
+      echo '</div> <!-- .col-cta -->';
     } ?>
 
   </div> <!-- .inner -->

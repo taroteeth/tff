@@ -12,22 +12,22 @@ $blurbText = get_sub_field('blurb_button_text'); ?>
 
 
 <div class="hero <?php if($blurbButton){echo 'has-blurb';}?>">
-  <div id="inner" class="<?php echo $imagePos == "Left" ? "image-left" : "image-right";?>"> <?php
+  <div class="inner <?php echo $imagePos == "Left" ? "image-left" : "image-right";?>"> <?php
     if(!is_page('290')){ // there is no image in the hero for the resources page
       if($image){
-        echo '<div id="hero-img-wrapper">';
+        echo '<div class="hero-img-wrapper">';
         echo wp_get_attachment_image($image, 'full');
         echo '<svg viewBox="0 0 140 650"><use href="#photo-curve"></use></svg> ';
-        echo '</div> <!-- #hero-img-wrapper -->';
+        echo '</div> <!-- .hero-img-wrapper -->';
       }
     }
 
-    echo '<div id="hero-text-wrapper">';
+    echo '<div class="hero-text-wrapper">';
 
       if(is_page('6')){
         echo '<svg width="176px" height="39px" viewBox="0 0 176 39"><use href="#color-logo"></use></svg> ';
       } else { ?>
-        <p id="hero-title" class="<?php echo $imagePos == "Left" ? "div-left" : "div-right";?>"> <?php echo get_the_title() ?></p> <?php
+        <p class="hero-title <?php echo $imagePos == "Left" ? "div-left" : "div-right";?>"> <?php echo get_the_title() ?></p> <?php
       }
 
 
@@ -36,17 +36,17 @@ $blurbText = get_sub_field('blurb_button_text'); ?>
       }
 
       if($heroContent){ ?>
-        <div id="subheader" class="<?php if($blueText){echo 'blue';}?>"> <?php
+        <div class="subheader <?php if($blueText){echo 'blue';}?>"> <?php
         echo $heroContent;
         echo '</div>';
       }
 
-    echo '</div><!-- #hero-text-wrapper -->';
-    echo '</div><!-- inner -->';
+    echo '</div><!-- .hero-text-wrapper -->';
+    echo '</div><!-- .inner -->';
 
     if($orangeCircle){ ?>
-      <div id="orange-circle" class="<?php echo $imagePos == "Left" ? "circle-right" : "circle-left";?>"> <?php
-      echo '</div> <!-- #orange-circle --> ';
+      <div class="orange-circle <?php echo $imagePos == "Left" ? "circle-right" : "circle-left";?>"> <?php
+      echo '</div> <!-- .orange-circle --> ';
     }
 
   if($blurbButton){
