@@ -1543,8 +1543,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             color: #0176BC;
             text-transform: uppercase;
             letter-spacing: .2rem;
-            padding: 1rem 0;
-            white-space: nowrap; }
+            padding: 1rem 0; }
             .icon-col .inner .cols-inner .col-inner a .submodule-title:after {
               content: ">";
               display: inline-block;
