@@ -1,4 +1,16 @@
-// write in function finding height of blurb button on hero and then adding half of that worth of padding to bottom of parent and top to whatever element below.
+//--------------- Utility Functions ---------------//
+
+function findAncestorByClass (el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls));
+    return el;
+}
+
+function findAncestorById (el, id) {
+    while ((el = el.parentElement) && !el.id === id);
+    return el;
+}
+
+//--------------- Utility Functions ---------------//
 
 
 // add class to body if mobile detected
@@ -7,10 +19,13 @@
 var body = document.getElementsByTagName('body');
 
 if(mobileDetected){
-	body.classList.add('TEST');
+	body[0].classList.add('is-mobile');
 }
 
+
+
 // Mobile Nav Toggle
+
 function toggleMobileNav() {
 	var hamburger = document.getElementById("hamburger");
 
@@ -21,6 +36,64 @@ function toggleMobileNav() {
 }
 
 toggleMobileNav();
+
+
+
+// Correct positioning of orange blurb box on #hero
+
+class blurbPositioning {
+	constructor(blurb) {
+		this.blurbBox = blurb;
+		this.blurbBoxRect = this.blurbBox.getBoundingClientRect();
+		this.hero = findAncestorByClass(this.blurbBox, 'hero');
+		this.heroText = this.hero.querySelector('.hero-text-wrapper');
+		this.heroTextPadding = parseInt(window.getComputedStyle(this.heroText, null).getPropertyValue('padding-bottom'));
+		this.nextModule = this.hero.nextElementSibling;
+		this.nextModulePadding = parseInt(window.getComputedStyle(this.nextModule, null).getPropertyValue('padding-top'));
+
+		this.enableBlurbPositioning();
+
+		window.addEventListener('resize', function(){
+			this.disableBlurbPositioning();
+		});
+	}
+
+	disableBlurbPositioning() {
+		this.heroText.style.removeProperty('padding-bottom');
+		this.nextModule.style.removePropert('padding-top');
+	}
+
+	enableBlurbPositioning() {
+		this.heroText.style.paddingBottom = (this.heroTextPadding + (this.blurbBoxRect.height / 2)) + 'px';
+		this.nextModule.style.paddingTop = (this.nextModulePadding + (this.blurbBoxRect.height / 2)) + 'px';
+	}
+}
+
+var blurbButtons = document.querySelectorAll('.blurb-button');
+if(blurbButtons) {
+	var blurbButtonInstances = [];
+	for(var i = 0; i < blurbButtons.length; i++) {
+		blurbButtonInstances[i] = new blurbPositioning(blurbButtons[i]);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // contact form label animation
 
@@ -39,6 +112,8 @@ function labelDrift(){
 }
 
 labelDrift();
+
+
 
 // AJAX POST LOADER
 

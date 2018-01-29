@@ -1,6 +1,18 @@
 /*! Conditionizr v4.3.0 | (c) 2014 @toddmotto, @markgdyr | MIT license | conditionizr.com */
 !function(a,b){"function"==typeof define&&define.amd?define([],b):"object"==typeof exports?module.exports=b:a.conditionizr=b()}(this,function(){"use strict";var a,b={},c=document.head||document.getElementsByTagName("head")[0],d=function(b,d,e){var f=e?b:a+b+("style"===d?".css":".js");switch(d){case"script":var g=document.createElement("script");g.src=f,c.appendChild(g);break;case"style":var h=document.createElement("link");h.href=f,h.rel="stylesheet",c.appendChild(h);break;case"class":document.documentElement.className+=" "+b}};return b.config=function(c){var e=c||{},f=e.tests;a=e.assets||"";for(var g in f){var h=g.toLowerCase();if(b[h])for(var i=f[g],j=i.length;j--;)d(h,i[j])}},b.add=function(a,c,e){var f=a.toLowerCase();if(b[f]=e(),b[f])for(var g=c.length;g--;)d(f,c[g])},b.on=function(a,c){var d=/^\!/;(b[a.toLowerCase()]||d.test(a)&&!b[a.replace(d,"")])&&c()},b.load=b.polyfill=function(a,c){for(var e=/\.js$/.test(a)?"script":"style",f=c.length;f--;)b[c[f].toLowerCase()]&&d(a,e,!0)},b});
-// write in function finding height of blurb button on hero and then adding half of that worth of padding to bottom of parent and top to whatever element below.
+//--------------- Utility Functions ---------------//
+
+function findAncestorByClass (el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls));
+    return el;
+}
+
+function findAncestorById (el, id) {
+    while ((el = el.parentElement) && !el.id === id);
+    return el;
+}
+
+//--------------- Utility Functions ---------------//
 
 
 // add class to body if mobile detected
@@ -9,10 +21,13 @@
 var body = document.getElementsByTagName('body');
 
 if(mobileDetected){
-	body.classList.add('TEST');
+	body[0].classList.add('is-mobile');
 }
 
+
+
 // Mobile Nav Toggle
+
 function toggleMobileNav() {
 	var hamburger = document.getElementById("hamburger");
 
@@ -23,6 +38,64 @@ function toggleMobileNav() {
 }
 
 toggleMobileNav();
+
+
+
+// Correct positioning of orange blurb box on #hero
+
+class blurbPositioning {
+	constructor(blurb) {
+		this.blurbBox = blurb;
+		this.blurbBoxRect = this.blurbBox.getBoundingClientRect();
+		this.hero = findAncestorByClass(this.blurbBox, 'hero');
+		this.heroText = this.hero.querySelector('.hero-text-wrapper');
+		this.heroTextPadding = parseInt(window.getComputedStyle(this.heroText, null).getPropertyValue('padding-bottom'));
+		this.nextModule = this.hero.nextElementSibling;
+		this.nextModulePadding = parseInt(window.getComputedStyle(this.nextModule, null).getPropertyValue('padding-top'));
+
+		this.enableBlurbPositioning();
+
+		window.addEventListener('resize', function(){
+			this.disableBlurbPositioning();
+		});
+	}
+
+	disableBlurbPositioning() {
+		this.heroText.style.removeProperty('padding-bottom');
+		this.nextModule.style.removePropert('padding-top');
+	}
+
+	enableBlurbPositioning() {
+		this.heroText.style.paddingBottom = (this.heroTextPadding + (this.blurbBoxRect.height / 2)) + 'px';
+		this.nextModule.style.paddingTop = (this.nextModulePadding + (this.blurbBoxRect.height / 2)) + 'px';
+	}
+}
+
+var blurbButtons = document.querySelectorAll('.blurb-button');
+if(blurbButtons) {
+	var blurbButtonInstances = [];
+	for(var i = 0; i < blurbButtons.length; i++) {
+		blurbButtonInstances[i] = new blurbPositioning(blurbButtons[i]);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // contact form label animation
 
@@ -41,6 +114,8 @@ function labelDrift(){
 }
 
 labelDrift();
+
+
 
 // AJAX POST LOADER
 
