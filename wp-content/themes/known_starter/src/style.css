@@ -2276,7 +2276,6 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-height: 35rem;
     max-width: 90rem;
     margin: 0 auto; }
     @media screen and (min-width: 768px) {
@@ -2284,7 +2283,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
-                flex-direction: row; } }
+                flex-direction: row;
+        max-height: 35rem; } }
     .next-step-wrapper .next-step-container .inner {
       display: block;
       margin: 0 auto;
@@ -2301,9 +2301,12 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         position: absolute;
         width: 100%;
         height: 100%;
-        display: block;
+        display: none;
         z-index: 999;
         top: 0; }
+        @media screen and (min-width: 768px) {
+          .next-step-wrapper .next-step-container .inner .page-path {
+            display: block; } }
       .next-step-wrapper .next-step-container .inner #next-step-label {
         color: #fff;
         letter-spacing: .2rem;
@@ -2350,9 +2353,12 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         position: absolute;
         width: 100%;
         height: 100%;
-        display: block;
+        display: none;
         z-index: 999;
         top: 0; }
+        @media screen and (min-width: 768px) {
+          .next-step-wrapper .next-step-container #next-step-img .page-path {
+            display: block; } }
       .next-step-wrapper .next-step-container #next-step-img .photo-curve-vert {
         position: absolute;
         top: 0;

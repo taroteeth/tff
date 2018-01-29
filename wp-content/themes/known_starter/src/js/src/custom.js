@@ -1,4 +1,3 @@
-
 //--------------- Utility Functions ---------------//
 
 function findAncestorByClass (el, cls) {
@@ -43,26 +42,15 @@ toggleMobileNav();
 class blurbPositioning {
 	constructor(blurb) {
 		this.blurbBox = blurb;
-		this.blurbBoxRect = this.blurbBox.getBoundingClientRect();
-		this.hero = findAncestorByClass(this.blurbBox, 'hero');
-		this.heroText = this.hero.querySelector('.hero-text-wrapper');
+		this.blurbBoxRect = this.blurbBox.getBoundingClientRect(); //gives you top, bottom, height, etc on object
+		this.hero = findAncestorByClass(this.blurbBox, 'hero'); // get hero to get container
+		this.heroText = this.hero.querySelector('.hero-text-wrapper'); //to get text wrapper
+		this.heroTextPadding = parseInt(window.getComputedStyle(this.heroText, null).getPropertyValue('padding-bottom')); //computed style is updated, parseint gets rid of "px"
 		this.nextModule = this.hero.nextElementSibling;
-    this.heroTextPadding;
-    this.nextModulePadding;
+		this.nextModulePadding = parseInt(window.getComputedStyle(this.nextModule, null).getPropertyValue('padding-top'));
 
-    this.calculatePositions();
-
-    window.addEventListener('resize', function(){
-      this.calculatePositions();
-    }.bind(this));
+		this.enableBlurbPositioning();
 	}
-
-  calculatePositions() {
-    this.heroTextPadding = parseInt(window.getComputedStyle(this.heroText, null).getPropertyValue('padding-bottom'));
-    this.nextModulePadding = parseInt(window.getComputedStyle(this.nextModule, null).getPropertyValue('padding-top'));
-
-    this.enableBlurbPositioning();
-  }
 
 	enableBlurbPositioning() {
 		this.heroText.style.paddingBottom = (this.heroTextPadding + (this.blurbBoxRect.height / 2)) + 'px';
