@@ -15,7 +15,7 @@ if(get_post_type() == 'team_member'){
    $path = get_sub_field('next_step_page'[0]);
 }
 
-echo '<div id="next-step-wrapper">';
+echo '<div class="next-step-wrapper">';
    echo '<div class="next-step-container">';
    echo '<a class="page-path" href="'. $path .'"></a>';
       echo '<div class="inner">';
@@ -47,6 +47,6 @@ echo '<div id="next-step-wrapper">';
       }
 
    echo '</div><!-- next-step-container-->';
-echo '</div> <!-- next-step-wrapper -->';
+echo '</div> <!-- .next-step-wrapper -->';
 
 ?>

@@ -9,7 +9,7 @@ $btnLink = get_sub_field('bottom_cta_link');
 
 ?>
 
-<div id="icon-col" class="<?php if($greyBg){ echo "grey-bg"; } ?>">
+<div class="icon-col <?php if($greyBg){ echo ", grey-bg"; } ?>">
   <div class="inner">
 
     <?php
@@ -73,4 +73,4 @@ $btnLink = get_sub_field('bottom_cta_link');
     } ?>
 
   </div> <!-- .inner -->
-</div> <!-- icon-col -->
+</div> <!-- .icon-col -->

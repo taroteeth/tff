@@ -2,7 +2,7 @@
 
 	$orangeLine = get_sub_field('orange_line');
 
-	echo '<div id="alt-grid">';
+	echo '<div class="alt-grid">';
 
 	 if( have_rows('grid_row') ):
 		$iteration = 0;
@@ -45,7 +45,7 @@
 			}
 
 			if($textBlockCta){
-				echo '</a>'; 
+				echo '</a>';
 			}
 
 			echo '</div> <!-- .img-block -->';
@@ -84,6 +84,6 @@
 
 	endif;
 
-	echo '</div> <!-- #alt-grid -->';
+	echo '</div> <!-- .alt-grid -->';
 
 ?>

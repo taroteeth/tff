@@ -1,10 +1,10 @@
-#case-study-highlight-module {
+.case-study-highlight-module {
   position: relative;
   z-index: 6;
   display: block;
   margin: 0 auto;
 
-  #inner {
+  .inner {
     display: flex;
     position: relative;
     padding: 2rem;

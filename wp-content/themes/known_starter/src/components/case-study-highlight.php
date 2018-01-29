@@ -8,8 +8,8 @@ $byline = get_sub_field('quote_byline');
 
 
 
-echo '<div id="case-study-highlight-module">';
-  echo '<div id="inner" >';
+echo '<div class="case-study-highlight-module">';
+  echo '<div class="inner" >';
     if($image){
       echo '<div id="bubble-image-wrapper">';
       echo wp_get_attachment_image($image, 'full');
@@ -37,6 +37,6 @@ echo '<div id="case-study-highlight-module">';
     echo '</div><!-- #text-wrapper -->';
     echo '</div><!-- inner -->';
 
-echo '</div> <!-- #case-study-highlight-module -->';
+echo '</div> <!-- .case-study-highlight-module -->';
 
 ?>

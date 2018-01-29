@@ -5,7 +5,7 @@ $moduleTitle = get_sub_field('module_title');
 
 ?>
 
-<div id="stat-module" class="<?php if($greyBg){ echo "grey-bg"; } ?>">
+<div class="stat-module <?php if($greyBg){ echo ", grey-bg"; } ?>">
   <div class="inner">
 
     <?php

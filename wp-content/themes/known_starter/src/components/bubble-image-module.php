@@ -10,8 +10,8 @@ $cta = get_sub_field('cta_option');
 
 
 
-echo '<div id="bubble-image-module">';
-  echo '<div id="inner" >';
+echo '<div class="bubble-image-module">';
+  echo '<div class="inner" >';
     if($image){ ?>
       <div id="bubble-image-wrapper" class="<?php if($imagePos === 'Left'){echo 'left';}?>"> <?php
       echo wp_get_attachment_image($image, 'full');
@@ -41,6 +41,6 @@ echo '<div id="bubble-image-module">';
     echo '</div><!-- #text-wrapper -->';
     echo '</div><!-- inner -->';
 
-echo '</div> <!-- #bubble-image-module -->';
+echo '</div> <!-- .bubble-image-module -->';
 
 ?>

@@ -4,7 +4,7 @@ $contactTitle = get_sub_field('contact_title');
 
 ?>
 
-<div id='contact-module'>
+<div class='contact-module'>
   <form class="contact-form">
     <div class='inner'>
 
@@ -47,4 +47,4 @@ $contactTitle = get_sub_field('contact_title');
     </div><!-- inner -->
   </form> <!-- contact-form -->
 
-</div> <!-- #contact-module -->
+</div> <!-- .contact-module -->

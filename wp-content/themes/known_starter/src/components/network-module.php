@@ -2,7 +2,7 @@
 //style w grey background
 $hasBtn = get_sub_field('button_text');
 
-echo '<div id="network-icon-col">';
+echo '<div class="network-icon-col">';
   echo '<div class="inner">';
 
     echo '<p id="col-header" class="header">Our Network is Expansive</p> <!-- col-header -->';
@@ -40,4 +40,4 @@ echo '<div id="network-icon-col">';
     } ?>
 
   </div> <!-- .inner -->
-</div> <!-- network-icon-col -->
+</div> <!-- .network-icon-col -->
