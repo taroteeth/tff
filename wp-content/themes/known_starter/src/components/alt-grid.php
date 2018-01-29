@@ -5,6 +5,7 @@
 	echo '<div class="alt-grid">';
 
 	 if( have_rows('grid_row') ):
+
 		$iteration = 0;
 
 		while( have_rows('grid_row') ): the_row();
@@ -19,16 +20,19 @@
 			$textBlockByline = get_sub_field('text_block_byline');
 			$textBlockCopy = get_sub_field('text_block_copy');
 			$textBlockCta = get_sub_field('text_block_cta');
-
+			$btnLink = get_sub_field('button_link');
+			$btnPath = get_sub_field('button_path');
+			$url = (!empty($btnPath)) ? get_permalink($btnPath[0]) : $btnLink;
 			?>
 
-			<div class="img-block <?php if($iteration % 2 !== 0){ echo 'right';}?>"> <?php
-			if($textBlockCta){
-				echo '<a href="">';
+			<div class="img-block <?php if($iteration % 2 !== 0){ echo 'right';}?>">
+
+			<?php
+			if($textBlockCta && ($btnLink || $btnPath)){
+				echo '<a href="'. $url .'" class="cover-link"></a>';
 			}
 
 			if($imgBlockBackground){ ?>
-				<div class="img-block-inner"></div>
 				<img srcset="<?php echo wp_get_attachment_image_srcset($imgBlockBackground, 'full'); ?>" src="<?php echo wp_get_attachment_image_url($imgBlockBackground);?>" />
 			<?php }
 
@@ -42,10 +46,6 @@
 				echo '<div class="image-block-caption">';
 				echo $imgBlockCaption;
 				echo '</div><!-- image-block-caption -->';
-			}
-
-			if($textBlockCta){
-				echo '</a>';
 			}
 
 			echo '</div> <!-- .img-block -->';
