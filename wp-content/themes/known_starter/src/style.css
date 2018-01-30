@@ -1549,17 +1549,29 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         @media (min-width: 1024px) {
           .icon-col .inner .cols-inner .col-inner {
             padding: 0 3rem; } }
+        .icon-col .inner .cols-inner .col-inner .sub-icon-wrapper {
+          text-align: center;
+          height: 6.5rem;
+          line-height: 6.5rem;
+          position: relative;
+          margin-bottom: 4rem; }
+          .icon-col .inner .cols-inner .col-inner .sub-icon-wrapper.divider:after {
+            position: absolute;
+            left: 50%;
+            bottom: -2rem;
+            -webkit-transform: translate(-50%, 0.3rem);
+                    transform: translate(-50%, 0.3rem);
+            margin: 0; }
+          .icon-col .inner .cols-inner .col-inner .sub-icon-wrapper img {
+            display: inline-block;
+            vertical-align: bottom;
+            max-height: 100%;
+            width: auto; }
         .icon-col .inner .cols-inner .col-inner .svg img {
           width: 10rem;
           height: 10rem; }
-        .icon-col .inner .cols-inner .col-inner img {
-          display: block;
-          margin: 0 auto 1rem auto; }
         .icon-col .inner .cols-inner .col-inner a {
           text-decoration: none; }
-          .icon-col .inner .cols-inner .col-inner a img {
-            display: block;
-            margin: 0 auto; }
           .icon-col .inner .cols-inner .col-inner a .submodule-title {
             text-align: center;
             font-family: "Poppins", sans-serif;
