@@ -10,6 +10,7 @@ $byline = get_sub_field('quote_byline');
 
 echo '<div class="case-study-highlight-module">';
   echo '<div class="inner" >';
+  echo '<div class="columns">';
     if($image){
       echo '<div class="bubble-image-wrapper">';
       echo wp_get_attachment_image($image, 'full');
@@ -35,6 +36,7 @@ echo '<div class="case-study-highlight-module">';
       include('button.php');
 
     echo '</div><!-- .text-wrapper -->';
+    echo '</div><!-- .columns -->';
     echo '</div><!-- inner -->';
 
 echo '</div> <!-- .case-study-highlight-module -->';

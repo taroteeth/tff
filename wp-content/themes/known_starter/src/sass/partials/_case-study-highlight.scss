@@ -1,62 +1,112 @@
 .case-study-highlight-module {
-  position: relative;
   z-index: 6;
-  display: block;
-  margin: 0 auto;
-  overflow: hidden; 
+  position: relative;
+  overflow: hidden;
+  background: #eee;
+  @media screen and (min-width: 1024px) {
+    overflow: visible;
+  }
 
   .inner {
-    display: flex;
-    position: relative;
-    padding: 2rem;
-    flex-direction: column;
+    padding: 4rem 3rem;
+    box-sizing: border-box;
     @media screen and (min-width: 768px){
-      flex-direction: row;
-      padding: 4rem 2rem;
+      display: flex;
+      justify-content: center;
+      width: 80vw;
+      max-width: 114rem;
+      margin: 0 auto;
+      padding: 4rem 0;
+    }
+    @media screen and (min-width: 1024px) {
+      padding: 10rem 0;
+      min-height: 40vw;
+    }
+    @media screen and (min-width: 1660px) {
+      min-height: 64rem;
+    }
+
+    .columns {
+      position: relative;
+      @media screen and (min-width: 768px){
+        display: flex;
+        margin: 0 -2rem;
+      }
+      @media screen and (min-width: 1024px){
+        display: flex;
+        margin: 0 -4rem;
+      }
+
+      // Right orange line
+      &:before {
+        @media screen and (min-width: 1024px) {
+          content: '';
+          position: absolute;
+          z-index: 5;
+          right: calc(-8vw + 4rem);
+          top: 0;
+          width: 10vw;
+          border-top: .2rem solid $orange;
+        }
+      }
     }
 
     .bubble-image-wrapper {
-      order: 1;
       position: relative;
-      height: 100%;
+      margin-bottom: 4rem;
+      box-sizing: border-box;
       @media screen and (min-width: 768px){
+        flex: 0 0 50%;
+        max-width: 50%;
         order: 2;
+        padding: 0 2rem;
+        margin: 0;
+      }
+      @media screen and (min-width: 1024px) {
+        padding: 0 4rem;
       }
 
       img {
-        min-width: 25rem;
-        min-height: 25rem;
-        max-width: 30rem;
-        max-height: 30rem;
+        width: 25rem;
+        height: 25rem;
         border-radius: 100%;
-        position: relative;
         display: block;
         margin: 0 auto;
         @media screen and (min-width: 768px){
-          min-width: 35rem;
-          min-height: 35rem;
-          max-width: 40rem;
-          max-height: 40rem;
+          width:50vw;
+          height: 50vw;
           position: absolute;
-          top: -4rem;
+        }
+        @media screen and (min-width: 1024px) {
+          width: 40vw;
+          height: 40vw;
+          top: -15rem;
+        }
+        @media screen and (min-width: 1600px) {
+          width: 64rem;
+          height: 64rem;
         }
       }
     }
 
     .text-wrapper {
-      width: auto;
-      padding: 2rem;
-      order: 2;
+      box-sizing: border-box;
       @media screen and (min-width: 768px){
-        order: 1;
-        width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 2rem;
       }
+      @media screen and (min-width: 1024px) {
+        align-self: center;
+      }
+
       .title {
         text-transform: uppercase;
         font-weight: bold;
         letter-spacing: .1rem;
         color: $blue;
-        padding: 2rem 0;
+        margin-bottom: 1em;
+        position: relative;
 
         &:before {
           content: "";
@@ -65,6 +115,16 @@
           display: inline-block;
           background-color: $orange;
           vertical-align: middle;
+          @media screen and (min-width: 1024px) {
+            position: absolute;
+            left: calc(-7vw - 2rem);
+            top: 1rem;
+            width: 7vw;
+          }
+          @media screen and (min-width: 1440px) {
+            left: -12rem;
+            width: 10rem;
+          }
         }
       }
 
