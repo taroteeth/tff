@@ -9,7 +9,7 @@ $button = get_sub_field('button_option');
   <div class="inner">
 
     <?php
-    echo '<div id="specs-module">';
+    echo '<div class="specs-module">';
       if(have_rows('specs')):
 
           echo '<div class="specs-wrapper">';

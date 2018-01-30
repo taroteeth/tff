@@ -99,7 +99,7 @@
 
         .photo-curve-vert {
             position: absolute;
-            top: 0;
+            top: -1px;
             display: block;
             transform: rotate(180deg);
             @media screen and (min-width: 768px){

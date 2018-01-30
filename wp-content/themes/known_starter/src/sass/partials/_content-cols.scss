@@ -1,19 +1,55 @@
 .content-cols {
+  &.grey-bg{
+    background-color: $backgroundGrey;
+  }
   .inner {
     padding: 4rem 2rem;
 
-    .specs-wrapper{
-      padding-bottom: 0;
-      border-bottom: none;
-      .spec-content {
-        p {
-          line-height: 1.5em !important;
+    .specs-module {
+      .specs-wrapper{
+        padding-bottom: 0;
+        border-bottom: none;
+
+        .row {
+          display: block;
+          @media screen and (min-width: 768px){
+            padding: 2rem 0;
+          }
+          .spec {
+            padding: 2rem 1rem;
+            @media screen and (min-width: 768px){
+              max-width: 33.3%;
+              flex: 0 0 33.3%;
+              display: inline-block;
+              vertical-align: top;
+              justify-content: space-between;
+              padding: 0 1rem;
+              box-sizing: border-box;
+            }
+            .spec-name {
+              font-weight: bold;
+              color: $blue;
+              &:after {
+                content: "";
+                height: .2rem;
+                width: 4rem;
+                background-color: $orange;
+                display: block;
+                margin: 1rem 0;
+              }
+            }
+            .spec-content {
+              p {
+                line-height: 1.5em !important;
+              }
+            }
+          }
         }
       }
     }
 
     .button {
-
+      margin: 2rem auto; 
     }
   }
 }

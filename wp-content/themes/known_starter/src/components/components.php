@@ -49,6 +49,10 @@ if(have_rows('components')) :
       include('our-team-grid.php');
       break;
 
+      case 'clients_grid':
+      include('clients-grid.php');
+      break;
+
       case 'content_columns':
       include('content-cols.php');
       break;
