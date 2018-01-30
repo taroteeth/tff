@@ -9,6 +9,7 @@ body {
   font-size: 1.6rem;
   display: block;
   margin: 0 auto;
+  color: $textGrey;
 }
 
 #body-wrapper {
@@ -38,7 +39,6 @@ h1 {
 
 p, li {
   font-family: 'Poppins', sans-serif;
-  color: $textGrey;
   line-height: 1.5em;
 }
 

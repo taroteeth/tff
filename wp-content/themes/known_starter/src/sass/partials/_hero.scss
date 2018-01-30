@@ -50,9 +50,10 @@
         }
       }
 
-      .photo-curve-horiz {
+      .photo-curve-vert {
         position: absolute;
         display: none;
+        fill: $backgroundGrey;
         @media screen and (min-width: 768px){
           display: block;
           right: 0;
@@ -61,10 +62,11 @@
         }
       }
 
-      .photo-curve-vert {
+      .photo-curve-horiz {
         position: absolute;
         display: block;
         bottom: 0;
+        fill: $backgroundGrey;
         @media screen and (min-width: 768px){
           display: none;
         }
