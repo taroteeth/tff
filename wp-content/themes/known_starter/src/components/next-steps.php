@@ -45,7 +45,7 @@ echo '<div class="next-step-wrapper">';
          echo '<a class="page-path" href="'. $path .'"></a>'; ?>
          <img srcset="<?php echo wp_get_attachment_image_srcset($image, 'full'); ?>" src="<?php echo wp_get_attachment_image_url($image);?>" />
          <?php
-         echo '<svg class="photo-curve-vert" viewBox="0 0 320 54"><use href="#blue-photo-curve-vert"></use></svg>';
+         echo '<svg class="photo-curve-horiz" viewBox="0 0 320 54"><use href="#photo-curve-horiz"></use></svg>';
          echo '</div> <!-- next-step-img -->';
       }
 

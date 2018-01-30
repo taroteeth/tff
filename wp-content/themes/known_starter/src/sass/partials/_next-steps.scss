@@ -7,7 +7,7 @@
     }
 
     .next-step-container {
-      background-color: #0176BC;
+      background-color: $blue;
       display: flex;
       flex-direction: column;
       max-width: 90rem;
@@ -97,11 +97,12 @@
           }
         }
 
-        .photo-curve-vert {
+        .photo-curve-horiz {
             position: absolute;
             top: 0;
             display: block;
             transform: rotate(180deg);
+            fill: $blue;
             @media screen and (min-width: 768px){
                 display: none;
             }

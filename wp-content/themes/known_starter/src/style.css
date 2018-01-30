@@ -819,21 +819,23 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           .hero .inner .hero-img-wrapper img {
             height: 100%;
             width: 100%; } }
-      .hero .inner .hero-img-wrapper .photo-curve-horiz {
+      .hero .inner .hero-img-wrapper .photo-curve-vert {
         position: absolute;
-        display: none; }
+        display: none;
+        fill: #F8F8F8; }
         @media screen and (min-width: 768px) {
-          .hero .inner .hero-img-wrapper .photo-curve-horiz {
+          .hero .inner .hero-img-wrapper .photo-curve-vert {
             display: block;
             right: 0;
             bottom: 0;
             height: 100%; } }
-      .hero .inner .hero-img-wrapper .photo-curve-vert {
+      .hero .inner .hero-img-wrapper .photo-curve-horiz {
         position: absolute;
         display: block;
-        bottom: 0; }
+        bottom: 0;
+        fill: #F8F8F8; }
         @media screen and (min-width: 768px) {
-          .hero .inner .hero-img-wrapper .photo-curve-vert {
+          .hero .inner .hero-img-wrapper .photo-curve-horiz {
             display: none; } }
     .hero .inner .hero-text-wrapper {
       padding: 2rem;
@@ -2359,14 +2361,15 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         @media screen and (min-width: 768px) {
           .next-step-wrapper .next-step-container #next-step-img .page-path {
             display: block; } }
-      .next-step-wrapper .next-step-container #next-step-img .photo-curve-vert {
+      .next-step-wrapper .next-step-container #next-step-img .photo-curve-horiz {
         position: absolute;
         top: 0;
         display: block;
         -webkit-transform: rotate(180deg);
-                transform: rotate(180deg); }
+                transform: rotate(180deg);
+        fill: #0176BC; }
         @media screen and (min-width: 768px) {
-          .next-step-wrapper .next-step-container #next-step-img .photo-curve-vert {
+          .next-step-wrapper .next-step-container #next-step-img .photo-curve-horiz {
             display: none; } }
       .next-step-wrapper .next-step-container #next-step-img img {
         height: 100%;

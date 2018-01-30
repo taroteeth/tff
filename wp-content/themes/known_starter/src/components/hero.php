@@ -12,13 +12,13 @@ $blurbText = get_sub_field('blurb_button_text'); ?>
 
 
 <div class="hero <?php if($blurbButton){echo 'has-blurb';}?>">
-  <div class="inner <?php echo $imagePos == "Left" ? "image-left" : "image-right";?>"> <?php
-    if(!is_page('290')){ // there is no image in the hero for the resources page
+  <div class="inner <?php echo $imagePos == "Left" ? "image-left" : "image-right";?>">
+    <?php if(!is_page('290')){ // there is no image in the hero for the resources page
       if($image){
         echo '<div class="hero-img-wrapper">';
         echo wp_get_attachment_image($image, 'full');
-        echo '<svg class="photo-curve-horiz" viewBox="0 0 103 650"><use href="#photo-curve-horiz"></use></svg>';
-        echo '<svg class="photo-curve-vert" viewBox="0 0 320 54"><use href="#photo-curve-vert"></use></svg>';
+        echo '<svg class="photo-curve-vert" viewBox="0 0 103 650"><use href="#photo-curve-vert"></use></svg>';
+        echo '<svg class="photo-curve-horiz" viewBox="0 0 320 54"><use href="#photo-curve-horiz"></use></svg>';
         echo '</div> <!-- .hero-img-wrapper -->';
       }
     }
