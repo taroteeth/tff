@@ -2409,10 +2409,10 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
               -ms-flex: 0 0 60%;
                   flex: 0 0 60%;
           max-width: 60%;
-          padding: 7vw; } }
+          padding: 9vw; } }
       @media (min-width: 1600px) {
         .next-step-wrapper .next-step-container .content {
-          padding: 11.2rem; } }
+          padding: 14.4rem; } }
       .next-step-wrapper .next-step-container .content #next-step-label {
         font-size: 1rem;
         letter-spacing: .2rem;
