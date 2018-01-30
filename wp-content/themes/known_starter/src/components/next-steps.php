@@ -1,5 +1,4 @@
 <?php
-
 if(get_post_type() == 'case_study'){
    $heading = get_field('next_step_heading');
    $image = get_field('next_step_image');
@@ -14,42 +13,33 @@ if(get_post_type() == 'team_member'){
    $image = get_sub_field('next_step_image');
    $path = get_sub_field('next_step_page'[0]);
 }
+?>
 
-echo '<div class="next-step-wrapper">';
-   echo '<div class="next-step-container">';
-      echo '<div class="inner">';
-      echo '<a class="page-path" href="'. $path .'"></a>';
-
-         if(get_post_type() == 'case_study'){
-           echo '<p id="next-step-label">Next Case Study</p>';
-         }
-         if(get_post_type() == 'team_member'){
-           echo '<p id="next-step-label">Next Team Member</p>';
-         }
-         else {
-           echo '<p id="next-step-label">Next Step</p>';
-         }
-
-         // add function, if last of team member of case study, puse this message instead
-
-         if($heading){
-            echo '<p id="next-step-heading" class="header">';
-            echo $heading;
-            echo '</p> <!-- next_step_heading -->';
-         }
-
-      echo '</div> <!-- inner -->';
-
-      if($image){
-         echo '<div id="next-step-img">';
-         echo '<a class="page-path" href="'. $path .'"></a>'; ?>
-         <img srcset="<?php echo wp_get_attachment_image_srcset($image, 'full'); ?>" src="<?php echo wp_get_attachment_image_url($image);?>" />
-         <?php
-         echo '<svg class="photo-curve-horiz" viewBox="0 0 320 54"><use href="#photo-curve-horiz"></use></svg>';
-         echo '</div> <!-- next-step-img -->';
+<div class="next-step-wrapper">
+  <div class="next-step-container">
+    <div class="content">
+      <?php
+      if(get_post_type() == 'case_study'){
+        echo '<p id="next-step-label">Next Case Study</p>';
+      }
+      if(get_post_type() == 'team_member'){
+        echo '<p id="next-step-label">Next Team Member</p>';
+      }
+      else {
+        echo '<p id="next-step-label">Next Step</p>';
       }
 
-   echo '</div><!-- next-step-container-->';
-echo '</div> <!-- .next-step-wrapper -->';
-
-?>
+      if($heading){
+         echo '<p id="next-step-heading" class="header">';
+         echo $heading;
+         echo '</p> <!-- next_step_heading -->';
+      }
+      ?>
+    </div>
+    <div class="image">
+      <img srcset="<?php echo wp_get_attachment_image_srcset($image, 'full'); ?>" src="<?php echo wp_get_attachment_image_url($image);?>" />
+      <svg class="photo-curve-horiz" viewBox="0 0 320 54"><use href="#photo-curve-horiz"></use></svg>
+      <svg class="photo-curve-vert" viewBox="0 0 103 650"><use href="#photo-curve-vert"></use></svg>
+    </div>
+  </div>
+</div>

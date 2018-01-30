@@ -1,119 +1,95 @@
 .next-step-wrapper {
-    background-color: #fff;
-    position: relative;
-    z-index: 7;
-    @media screen and (min-width: 768px){
-      padding: 5rem;
-    }
+  background-color: #fff;
+  position: relative;
+  z-index: 7;
+  @media screen and (min-width: 768px){
+    padding: 5rem;
+  }
 
-    .next-step-container {
-      background-color: $blue;
+  .next-step-container {
+    background-color: $blue;
+    max-width: 114rem;
+    margin: 0 auto;
+    @media(min-width: 768px) {
       display: flex;
-      flex-direction: column;
-      max-width: 90rem;
-      margin: 0 auto;
-      @media screen and (min-width: 768px){
-        flex-direction: row;
-        max-height: 35rem;
+      width: 80vw;
+    }
+
+    .content {
+      padding: 4rem 3rem;
+      box-sizing: border-box;
+      color: #fff;
+      @media(min-width: 768px) {
+        flex: 0 0 60%;
+        max-width: 60%;
+        padding: 7vw;
+      }
+      @media(min-width: 1600px) {
+        padding: 11.2rem;
       }
 
-      .inner {
-        display: block;
-        margin: 0 auto;
-        padding: 4rem 0;
-        flex: 0 0 50%;
-        @media screen and (min-width: 768px){
-          width: 50%;
-          margin: 0;
-          position: relative;
-        }
+      #next-step-label {
+        font-size: 1rem;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        margin-bottom: 1em;
 
-        .page-path {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          display: none;
-          z-index: 999;
-          top: 0;
-          @media screen and (min-width: 768px){
-              display: block;
-          }
-        }
-
-        #next-step-label {
-          color: #fff;
-          letter-spacing: .2rem;
-          text-transform: uppercase;
-          margin: .5rem 0;
-          @media screen and (min-width: 768px){
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-
-          &:after {
-            content: "";
-            width: 5rem;
-            height:  .2rem;
-            background-color: #F69420;
-            display: inline-block;
-            vertical-align: middle;
-            margin: 0 1.5rem;
-          }
-        }
-
-        #next-step-heading {
-          color: #fff;
-          @media screen and (min-width: 768px){
-            position: absolute;
-            bottom: 35%;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-        }
-      }
-
-      #next-step-img {
-        object-fit: cover;
-        overflow: hidden;
-        bottom: 0;
-        flex: 0 0 50%;
-        position: relative;
-        @media screen and (min-width: 768px){
-          width: 50%;
-          height: 100%;
-          position: relative;
-        }
-
-        .page-path {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          display: none;
-          z-index: 999;
-          top: 0;
-          @media screen and (min-width: 768px){
-              display: block;
-          }
-        }
-
-        .photo-curve-horiz {
-            position: absolute;
-            top: 0;
-            display: block;
-            transform: rotate(180deg);
-            fill: $blue;
-            @media screen and (min-width: 768px){
-                display: none;
-            }
-        }
-
-        img {
-          height: 100%;
-          max-height: 35rem;
-          width: 100%;
-          vertical-align: bottom;
+        &:after {
+          content: "";
+          width: 5rem;
+          height: .2rem;
+          background-color: #F69420;
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 1.5rem;
         }
       }
     }
+
+    .image {
+      position: relative;
+      @media(min-width: 768px) {
+        flex: 0 0 40%;
+        max-width: 40%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: bottom;
+        @media(min-width: 768px) {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .photo-curve-horiz {
+        position: absolute;
+        top: 0;
+        display: block;
+        transform: rotate(180deg);
+        fill: $blue;
+        @media screen and (min-width: 768px){
+          display: none;
+        }
+      }
+
+      .photo-curve-vert {
+        display: none;
+        @media screen and(min-width: 768px) {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          fill: $blue;
+          height: 100%;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
 }
