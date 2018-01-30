@@ -29,7 +29,7 @@
       }
 
       #next-step-label {
-        font-size: 1rem;
+        font-size: 1.2rem;
         letter-spacing: .2rem;
         text-transform: uppercase;
         margin-bottom: 1em;
@@ -67,16 +67,6 @@
         }
       }
 
-<<<<<<< HEAD
-        .photo-curve-vert {
-            position: absolute;
-            top: -1px;
-            display: block;
-            transform: rotate(180deg);
-            @media screen and (min-width: 768px){
-                display: none;
-            }
-=======
       .photo-curve-horiz {
         position: absolute;
         top: 0;
@@ -85,7 +75,6 @@
         fill: $blue;
         @media screen and (min-width: 768px){
           display: none;
->>>>>>> ef0cd0e10e5033919dc51abeed53c1d873e7faa3
         }
       }
 

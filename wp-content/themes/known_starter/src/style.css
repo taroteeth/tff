@@ -783,6 +783,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   @media screen and (min-width: 992px) {
     .hero {
       height: 72vh; } }
+  @media screen and (min-width: 1440px) {
+    .hero {
+      height: 65rem; } }
   .hero.has-blurb {
     overflow: visible; }
   .hero .image-right .hero-img-wrapper {
@@ -1792,7 +1795,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       background-color: rgba(1, 118, 188, 0.75);
       bottom: 0;
       width: 100%;
-      padding: 1rem 0;
+      padding: 2rem 0;
       font-size: 1.4rem;
       letter-spacing: .1rem;
       font-weight: bold; }
@@ -2414,7 +2417,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         .next-step-wrapper .next-step-container .content {
           padding: 14.4rem; } }
       .next-step-wrapper .next-step-container .content #next-step-label {
-        font-size: 1rem;
+        font-size: 1.2rem;
         letter-spacing: .2rem;
         text-transform: uppercase;
         margin-bottom: 1em; }
@@ -2449,7 +2452,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             height: 100%; } }
       .next-step-wrapper .next-step-container .image .photo-curve-horiz {
         position: absolute;
-        top: -1px;
+        top: 0;
         display: block;
         -webkit-transform: rotate(180deg);
                 transform: rotate(180deg);
