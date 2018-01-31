@@ -22,10 +22,10 @@
       @media(min-width: 768px) {
         flex: 0 0 60%;
         max-width: 60%;
-        padding: 9vw;
+        padding: 7vw;
       }
       @media(min-width: 1600px) {
-        padding: 14.4rem;
+        padding: 11.2rem;
       }
 
       #next-step-label {
@@ -38,7 +38,7 @@
           content: "";
           width: 5rem;
           height: .2rem;
-          background-color: #F69420;
+          background-color: $orange;
           display: inline-block;
           vertical-align: middle;
           margin: 0 1.5rem;
@@ -67,16 +67,6 @@
         }
       }
 
-<<<<<<< HEAD
-        .photo-curve-vert {
-            position: absolute;
-            top: -1px;
-            display: block;
-            transform: rotate(180deg);
-            @media screen and (min-width: 768px){
-                display: none;
-            }
-=======
       .photo-curve-horiz {
         position: absolute;
         top: 0;
@@ -85,7 +75,6 @@
         fill: $blue;
         @media screen and (min-width: 768px){
           display: none;
->>>>>>> ef0cd0e10e5033919dc51abeed53c1d873e7faa3
         }
       }
 

@@ -1,4 +1,10 @@
 .clients-grid {
+  padding: 0 2rem;
+  margin: 0 auto;
+  @media screen and (min-width: 992px){
+    width: 80vw;
+    max-width: 100rem;
+  }
   .inner {
 
     .header {
@@ -8,11 +14,35 @@
       text-align: center;
     }
 
+    .categories-list {
+      display: block;
+      margin: 4rem auto;
+      text-align: center;
+
+      span {
+        color: #858585;
+        padding: 0 .5rem;
+        text-transform: uppercase;
+        font-family: $Poppins;
+        font-size: 1.2rem;
+        letter-spacing: .2rem;
+        font-weight: bold;
+        &:after {
+          content: "|";
+          color: #858585;
+          margin-left: .5rem;
+        }
+        &:last-child{
+          &:after {
+            content: "";
+            display: none;
+          }
+        }
+      }
+    }
+
     .category-submodule {
       border-top: 2px solid $backgroundGrey;
-      width: 80vw;
-      max-width: 100rem;
-      margin: 0 auto;
 
       .title {
         text-transform: uppercase;

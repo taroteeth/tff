@@ -14,13 +14,17 @@ if( have_rows('client_industry_module' ) ) :
 
       echo '<p class="header">'. $moduleTitle .'</p>';
       //for each var , var empty array, get value number and push to array then echo array, not array push
-      $categories = var_dump(get_sub_field_object('industry_category_submodule')['value']);
+      $categories = get_sub_field_object('industry_category_submodule')['value'];
       $categoriesArray = [];
 
-      var_dump(get_sub_field_object('industry_category_submodule')['value'][0]);
+      foreach($categories as $cat){
+        $categoriesArray[] = $cat['category_title'];
+      }
 
       echo '<div class="categories-list">';
-      echo ;
+        foreach($categoriesArray as $catItem){
+          echo '<span>'. $catItem .'</span>';
+        }
       echo '</div><!-- categories-list -->';
 
 
