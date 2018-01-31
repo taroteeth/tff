@@ -11,6 +11,9 @@
   @media screen and (min-width: 992px){
     height: 72vh;
   }
+  @media screen and (min-width: 1440px) {
+    height: 65rem;
+  }
 
   &.has-blurb {
     overflow: visible;
