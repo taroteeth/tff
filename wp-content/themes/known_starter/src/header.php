@@ -45,7 +45,7 @@
 		<div id="header-inner">
 
 			<!-- Menu Hamburger -->
-			<div id="hamburgers">
+			<div id="hamburgers" onclick="openNav()">
 				<svg id="hamburger" width="28px" height="19px" viewBox="0 0 28 19">
 					<g id="hamburger_paths" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 					<g id="Icon/Hamburger/Black" transform="translate(-3.000000, -1.000000)" fill="#3A3A3A">
@@ -102,6 +102,14 @@
 				</g>
 			</svg>
 
+			<!-- nav dropdown -->
+			<div id="nav">
+				<div class="inner">
+					<button onclick="closeNav()">X</button>
+					<?php wp_nav_menu('default-menu'); ?>
+				</div> <!-- .inner -->
+			</div> <!-- .nav -->
+
 		</div> <!-- #header-inner -->
 	</div> <!-- #primary-header -->
-	<div class="body-content">
+	<div id="body-content">

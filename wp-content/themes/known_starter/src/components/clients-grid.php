@@ -13,7 +13,7 @@ if( have_rows('client_industry_module' ) ) :
       echo '<div class="industry-module">';
 
       echo '<p class="header">'. $moduleTitle .'</p>';
-      //for each var , var empty array, get value number and push to array then echo array, not array push
+      
       $categories = get_sub_field_object('industry_category_submodule')['value'];
       $categoriesArray = [];
 

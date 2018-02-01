@@ -10,16 +10,20 @@ $role = get_field('role_title');
 $testimonial = get_field('testimonial_quote');
 $byline = get_field('testimonial_byline');
 $nextBtn = get_field('next_step_heading');
+$imgCount = 0;
 
 ?>
 
 <div class="case-study">
   <div class="inner">
 
-    <div class="hero"> <?php
+    <div class="hero">
+      <div class="inner"><?php
       if($heroImg){
         echo '<div class="hero-img-wrapper">';
         echo wp_get_attachment_image($heroImg, 'full');
+        echo '<svg class="photo-curve-vert" viewBox="0 0 103 650"><use href="#photo-curve-vert"></use></svg>';
+        echo '<svg class="photo-curve-horiz" viewBox="0 0 320 54"><use href="#photo-curve-horiz"></use></svg>';
         echo '</div> <!-- .hero-img-wrapper -->';
       }
 
@@ -42,7 +46,7 @@ $nextBtn = get_field('next_step_heading');
         }
 
       echo '</div><!-- #hero-text-wrapper -->'; ?>
-
+      </div> <!-- .inner -->
     </div> <!-- .hero --> <?php
 
     echo '<div class="specs-module">';
@@ -102,6 +106,10 @@ $nextBtn = get_field('next_step_heading');
             echo '<div class="inner">';
               echo '<p class="header">'. $title .'</p>';
               echo $bodyContent;
+              if( strpos(get_the_content(), '<div id="attachment_"') ){
+                //for each img $imgCount++
+                echo 'test';
+              }
             echo '</div><!-- inner -->';
           echo '</div><!-- #text-module -->';
 

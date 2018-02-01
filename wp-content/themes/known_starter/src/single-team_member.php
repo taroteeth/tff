@@ -12,17 +12,22 @@ $nextBtn = get_field('next_step_heading');
 
 ?>
 
-<div id="team-member">
+<div class="team-member">
   <div class="inner">
 
-    <div id="hero"> <?php
+    <div class="hero">
+    <div class="inner">
+
+    <?php
       if($heroImg){
-        echo '<div id="hero-img-wrapper">';
+        echo '<div class="hero-img-wrapper">';
         echo wp_get_attachment_image($heroImg, 'full');
+        echo '<svg class="photo-curve-vert" viewBox="0 0 103 650"><use href="#photo-curve-vert"></use></svg>';
+        echo '<svg class="photo-curve-horiz" viewBox="0 0 320 54"><use href="#photo-curve-horiz"></use></svg>';
         echo '</div> <!-- #hero-img-wrapper -->';
       }
 
-      echo '<div id="hero-text-wrapper">';
+      echo '<div class="hero-text-wrapper">';
         echo '<p class="hero-header">';
         echo $title;
         echo '</p>';
@@ -35,6 +40,7 @@ $nextBtn = get_field('next_step_heading');
         }
       echo '</div><!-- #hero-text-wrapper -->'; ?>
 
+      </div> <!-- .inner -->
     </div> <!-- .hero --> <?php
 
     echo '<div id="specs-module">';
@@ -57,8 +63,10 @@ $nextBtn = get_field('next_step_heading');
 
     if($bioBlurb){
       echo '<div id="bio-blurb-module">';
+      echo '<div class="inner">';
       echo '<div class="blurb">'. $bioBlurb .'</div>';
       echo '<div class="blurb-circle"></div>';
+      echo '</div><!-- .inner -->'; 
       echo '</div><!-- #bio-blurb-module -->';
     }
 

@@ -18,7 +18,9 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin: 0;
+      margin: 0 auto;
+      width: 80vw;
+      max-width: 140rem; 
     }
 
     #footer-logo {
