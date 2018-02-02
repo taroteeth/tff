@@ -23,10 +23,11 @@ if( have_rows('content_cols_module') ):
           $groups[] = ['title' => [], 'content' => []];
           $groups[$currentGroup]['title'] = $subModuleObj[$i];
         else :
+          $subModuleObj[$i]['length'] = strlen($subModuleObj[$i]['content']);
           $groups[$currentGroup]['content'][] = $subModuleObj[$i]; // third bracket allows you to add new stuff without overwriting
         endif;
       }
-
+      print_r($groups);
       if($moduleTitle) echo '<p class="header">'. $moduleTitle .'</p>';
       if($moduleIntro) echo '<div class="module-intro">'. $moduleIntro .'</div>';
 

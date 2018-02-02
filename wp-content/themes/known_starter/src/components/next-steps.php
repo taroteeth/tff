@@ -17,7 +17,7 @@ if(get_post_type() == 'case_study' || get_post_type() == 'team_member'){
       if(get_post_type() == 'case_study'){
         echo '<p id="next-step-label">Next Case Study</p>';
       }
-      if(get_post_type() == 'team_member'){
+      else if(get_post_type() == 'team_member'){
         echo '<p id="next-step-label">Next Team Member</p>';
       }
       else {

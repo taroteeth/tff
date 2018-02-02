@@ -97,19 +97,27 @@ $imgCount = 0;
 
         echo '<div class="text-wrapper">';
 
+        $imgCounter = 0;
+
         while(have_rows('text_module')): the_row();
           $greyBg = get_sub_field('grey_background');
           $title = get_sub_field('module_title');
-          $bodyContent = get_sub_field('module_body_content'); ?>
+          $bodyContent = get_sub_field('module_body_content');
 
-          <div id="text-module" class="<?php if($greyBg){echo 'grey-bg';}?>"> <?php
+          // print_r(get_sub_field_object('module_body_content'));
+
+          if( strpos(get_sub_field_object('module_body_content')['value'], '<img') ){
+            $imgCounter++;
+            echo 'test';
+          }
+
+          echo $imgCounter;
+          ?>
+
+          <div id="text-module" class="<?php if($greyBg){echo 'grey-bg';} if($imgCounter % 2 == 0){echo ' img-right';}?>"> <?php
             echo '<div class="inner">';
               echo '<p class="header">'. $title .'</p>';
               echo $bodyContent;
-              if( strpos(get_the_content(), '<div id="attachment_"') ){
-                //for each img $imgCount++
-                echo 'test';
-              }
             echo '</div><!-- inner -->';
           echo '</div><!-- #text-module -->';
 
