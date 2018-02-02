@@ -43,6 +43,7 @@ toggleNav();
 function openNav(){
 	document.getElementById('nav').style.height = "80vh";
 	document.getElementById('nav').classList.add("active");
+  document.getElementById('body-content').classList.add("nav");
 	document.getElementById('body-content').style.marginTop = "80vh";
 }
 
@@ -52,7 +53,7 @@ function openNav(){
 function closeNav(){
 	document.getElementById('nav').style.height = "0px";
 	document.getElementById('nav').classList.remove("active");
-	document.getElementById('body-content').style.marginTop = "0px"; 
+	document.getElementById('body-content').style.marginTop = "0px";
 }
 
 

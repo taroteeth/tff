@@ -37,9 +37,26 @@ $introduction = get_sub_field('content_module_introduction');
 
         echo '<div class="group">';
 
+        foreach($group['content'] as $g) :
+
+          if($contentCounter === 0 || $contentCounter ==round($contentCount / 2)) echo '<div class="col">';
+
+          $title = $g['title'];
+          $content = $g['content'];
+
+          echo '<div class="block">';
+          echo '<p class="title">'. $title .'</p>';
+          echo '<div class="content">'. $content .'</div>'; 
+          echo '</div>';
+
+          if($contentCounter == round(($contentCount / 2) -1) || $contentCounter == count($group['content'] -1) echo '</div><!-- .col -->';
+
+          $contentCounter ++;
+        endforeach;
+
         echo '</div><!-- .group -->';
 
-      endforeach; //groups as group 
+      endforeach; //groups as group
 
     endif; //not empty groups
     ?>

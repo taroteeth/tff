@@ -131,6 +131,7 @@
 
     #nav {
       &.active {
+        height: 80vh;
         .inner {
           display: block;
 
@@ -160,4 +161,7 @@
 
 #body-content {
   transition: all ease .5s;
+  &.nav {
+    overflow-y: hidden; 
+  }
 }

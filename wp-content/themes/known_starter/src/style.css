@@ -915,10 +915,12 @@ p, li {
                 display: inline-block;
                 vertical-align: middle;
                 margin: 1rem; }
-    #primary-header #header-inner #nav.active .inner {
-      display: block; }
-      #primary-header #header-inner #nav.active .inner button {
+    #primary-header #header-inner #nav.active {
+      height: 80vh; }
+      #primary-header #header-inner #nav.active .inner {
         display: block; }
+        #primary-header #header-inner #nav.active .inner button {
+          display: block; }
     #primary-header #header-inner .sub-menu {
       padding: 2rem 0; }
       #primary-header #header-inner .sub-menu li {
@@ -932,6 +934,8 @@ p, li {
 #body-content {
   -webkit-transition: all ease .5s;
   transition: all ease .5s; }
+  #body-content.nav {
+    overflow-y: hidden; }
 
 .button {
   background-color: #0176BC;
