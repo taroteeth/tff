@@ -11,18 +11,20 @@
         border-bottom: none;
 
         .row {
-          display: block;
+          display: flex;
+          padding: 2rem 0;
           @media screen and (min-width: 768px){
-            padding: 2rem 0;
+            max-width: 60vw;
+            margin: 0 auto;
           }
           .spec {
             padding: 2rem 1rem;
             @media screen and (min-width: 768px){
               max-width: 33.3%;
               flex: 0 0 33.3%;
-              display: inline-block;
+              display: block;
               vertical-align: top;
-              justify-content: space-between;
+              justify-content: center;
               padding: 0 1rem;
               box-sizing: border-box;
             }
@@ -49,7 +51,7 @@
     }
 
     .button {
-      margin: 2rem auto; 
+      margin: 2rem auto;
     }
   }
 }

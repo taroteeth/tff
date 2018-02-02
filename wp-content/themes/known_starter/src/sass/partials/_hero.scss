@@ -22,6 +22,11 @@
   .image-right { //styling for specifically if the image is on right
     .hero-img-wrapper {
       order: 2;
+
+      .photo-curve-vert {
+        transform: rotate(180deg);
+        left: 0; 
+      }
     }
   }
 
