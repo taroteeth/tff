@@ -108,6 +108,19 @@ function labelDrift(){
 labelDrift();
 
 
+//Blog WYSIWYG bxslider
+var adaptiveHeight = (window.matchMedia('(min-width: 992px)').matches) ? false : true;
+
+$('.blog-bxslider').each(function(ele,index){
+  $(this).bxSlider({
+    pager: false,
+    infiniteLoop: true,
+    adaptiveHeight: adaptiveHeight,
+    prevText: '<',
+    nextText: '>'
+  });
+});
+
 
 // AJAX POST LOADER
 
