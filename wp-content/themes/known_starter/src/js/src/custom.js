@@ -157,7 +157,7 @@ class contactForm {
       'required': 'Required',
       'name': 'At least 4 characters',
       'email': 'Enter a valid email address',
-      'invalid': 'Some characters are not valid',
+      'invalid': 'invalid characters',
       'human': 'incorrect'
     }
 
@@ -190,11 +190,11 @@ class contactForm {
         this.fieldsArr[i].ele.classList.add('error');
       }
 
-      if(!validateChars()) {
-        this.errors = true;
-        inlineMsg.innerHTML = this.validationErrors.invalid;
-        this.fieldsArr[i].ele.classList.add('error');
-      }
+      // if(!this.validateChars(value)) {
+      //   this.errors = true;
+      //   inlineMsg.innerHTML = this.validationErrors.invalid;
+      //   this.fieldsArr[i].ele.classList.add('error');
+      // }
 
       // TODO General special characters validation
       // TODO Better way to implement error class on fields
@@ -254,7 +254,7 @@ class contactForm {
   }
 
   validateChars(value){
-    var re = !/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g
+    var re = /[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g;
     return re.test(String(value).toLowerCase());
   }
 
