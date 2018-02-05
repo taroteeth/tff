@@ -19,7 +19,7 @@ function contact_form_submit() {
     // TODO insert form submission as new row in database
     echo 'success';
   } else {
-    echo 'error';
+    echo $message;
   }
 
   exit();
