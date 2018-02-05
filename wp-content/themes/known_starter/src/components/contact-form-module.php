@@ -36,10 +36,10 @@ $contactTitle = get_sub_field('contact_title');
           <div class="inline-msg"></div>
         </div><!-- company-name -->
 
-        <!-- <div class="field full text-area">
+        <div class="field full text-area">
           <label>Message*</label>
           <textarea name="message"></textarea>
-        </div> -->
+        </div>
 
         <div class="field full">
           <label>Are you human? 2 + 7 =</label>

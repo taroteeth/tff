@@ -146,11 +146,13 @@ class contactForm {
     for(var i = 0; i < this.fields.length; i++) {
       this.fieldsArr[i] = {
         'ele': this.fields[i],
-        'input': this.fields[i].querySelector('input'),
-        'value': this.fields[i].querySelector('input').value,
+        'input': (this.fields[i].querySelector('input')) ? this.fields[i].querySelector('input') : this.fields[i].querySelector('textarea'),
+        'value': (this.fields[i].querySelector('input')) ? this.fields[i].querySelector('input').value : this.fields[i].querySelector('textarea').value,
         'inlineMsg': this.fields[i].querySelector('.inline-msg')
       }
     }
+
+    console.log(this.fieldsArr);
 
     // Messages
     this.validationErrors = {
