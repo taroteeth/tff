@@ -1,0 +1,71 @@
+.search-result-content {
+  text-align: left;
+  margin-top: 6rem;
+
+  .inner {
+    padding: 4rem 2rem;
+    @media screen and (min-width: 992px){
+      width: 80vw;
+      max-width: 100rem;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h1 {
+      padding: 3rem 0;
+      border-bottom: 2px solid $lightGrey;
+      font-size: 3rem;
+      @media screen and (min-width: 768px){
+        font-size: 4rem;
+      }
+    }
+
+
+  .btn {
+    svg {
+      margin-right: .5rem;
+    }
+  }
+
+  #grid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+
+
+    .article-wrapper { // fix later pls
+      min-height: 30rem;
+      position: relative;
+      display: flex;
+      flex: 0 0 100%;
+      max-width: 100%;
+      overflow: hidden;
+      @media screen and (min-width: 768px){
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+      }
+    }
+
+    .article-wrapper {
+      box-sizing: border-box;
+      @media screen and (min-width: 768px){
+        padding: 2rem;
+      }
+
+        img {
+          object-fit: cover;
+          object-position: 50% 50%;
+          height: 75%;
+          width: 100%;
+          position: absolute;
+          transition: all ease 1s;
+        }
+      }
+      .text-wrapper {
+        position: absolute;
+        bottom: 0;
+        padding: 2rem;
+      }
+    }
+  }
+  }

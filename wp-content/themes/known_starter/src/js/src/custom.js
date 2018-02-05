@@ -146,6 +146,64 @@ function sampleName(){
 }
 
 
+// SEARCH BAR
+
+var searchBarActive = false,
+    searchBox = document.getElementById('search-form'),
+    searchBar = document.querySelector('.search-field')
+
+// button click event
+if(searchButton){
+  searchButton.addEventListener('click', function(e){
+    e.preventDefault();
+    if(window.matchMedia('(min-width: 768px)').matches){
+      //console.log('desktop');
+      searchBox.submit();
+    } else {
+      //console.log('mobile');
+      if(searchBarActive){
+        searchBox.submit();
+      } else {
+        openSearchbar();
+      }
+    }
+  });
+}
+
+
+// body click event
+document.body.addEventListener('click', function(e){
+  if(searchBarActive){
+    var classList = event.target.classList;
+    if(!$(e.target).parents('.search-field').length && !$(e.target).parents('.submit-button').length && !$(e.target).hasClass('search-field') && !$(e.target).hasClass('submit-button')){
+      closeSearchbar();
+    }
+  }
+});
+
+// search bar click
+if(searchBar){
+  searchBar.addEventListener('click', function(e){
+    openSearchbar();
+    e.stopPropagation();
+  });
+}
+
+function openSearchbar(){
+  searchBarActive = true;
+  searchBox.classList.add('search-active');
+  console.log('search open');
+}
+
+function closeSearchbar(){
+  searchBox.classList.remove('search-active');
+  searchBarActive = false;
+  console.log('close');
+}
+
+
+
+
 
 // CONTACT FORM SUBMISSION
 
