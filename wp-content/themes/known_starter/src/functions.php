@@ -5,6 +5,9 @@
  *  Custom functions, support, custom post types and more.
  */
 
+ // wysiwyg buttons
+ require( 'inc/custom-editor-buttons/buttons.php' );
+
 /*------------------------------------*\
 	External Modules/Files
 \*------------------------------------*/
