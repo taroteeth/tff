@@ -145,6 +145,7 @@ function sampleName(){
 	}
 }
 
+<<<<<<< HEAD
 
 // SEARCH BAR
 
@@ -357,6 +358,8 @@ if(document.getElementById('contact-form')) {
   var contactFormObj = new contactForm(document.getElementById('contact-form'));
 }
 
+=======
+>>>>>>> 549f0f1836685ff493430d6a9484e5e70e5753cf
 // class AjaxPostLoader {
 // 	constructor(){ //what runs as soon as the class is set up
 // 		this.nextbtn = document.getElementById('next-btn');

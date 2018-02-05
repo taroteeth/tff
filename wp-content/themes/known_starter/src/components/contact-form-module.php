@@ -36,7 +36,7 @@ $contactTitle = get_sub_field('contact_title');
           <div class="inline-msg"></div>
         </div><!-- company-name -->
 
-        <div class="field full text-area">
+        <div class="field full textarea">
           <label>Message*</label>
           <textarea name="message"></textarea>
         </div>

@@ -604,7 +604,4 @@ add_action('wp_head', 'wordpress_ajaxurl'); //run this first, not in footer
 // }
 
 //how do I add action here with multiple buttons?
-
-
-include('inc/process-form.php')
 ?>

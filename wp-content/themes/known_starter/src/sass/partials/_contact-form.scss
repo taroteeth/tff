@@ -57,6 +57,10 @@
           pointer-events: none;
         }
 
+        &.textarea label {
+          top: 2rem;
+        }
+
         .inline-msg {
           position: absolute;
           left: 0;
@@ -76,6 +80,23 @@
           width: 100%;
           height: 4rem;
           padding: 0 1rem;
+          margin: 0;
+          box-sizing: border-box;
+          border-radius: .2rem;
+          font-size: 1.3rem;
+          font-family: $Poppins;
+          text-transform: uppercase;
+          color: $textGrey;
+          &:focus {
+            outline: none;
+          }
+        }
+
+        textarea {
+          border: .1rem solid $lightGrey;
+          width: 100%;
+          height: 10rem;
+          padding: 1rem;
           margin: 0;
           box-sizing: border-box;
           border-radius: .2rem;
