@@ -264,11 +264,22 @@ class contactForm {
 
   }
 
-
-
   submitForm() {
-    console.log('success!');
+    jQuery.ajax({
+			method : 'post',
+			url : ajaxurl,
+			data : {
+				'action' : 'contact_form_submit'
+			},
+			error : function(xhr, status, error){
+				console.log(xhr, status, error);
+			},
+			success : function(data, status, xhr){
+        console.log(data);
+			}
+	  });
   }
+
 }
 
 if(document.getElementById('contact-form')) {

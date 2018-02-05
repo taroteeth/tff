@@ -518,7 +518,7 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 \*------------------------------------*/
 
 function wordpress_ajaxurl(){ ?>
-	<script type="text-javascript">
+	<script type="text/javascript">
 	var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 	</script>
 <?php } //assign ajax wp file so that the function is pointing the right way
@@ -603,4 +603,5 @@ add_action('wp_head', 'wordpress_ajaxurl'); //run this first, not in footer
 //how do I add action here with multiple buttons?
 
 
+include('inc/process-form.php')
 ?>
