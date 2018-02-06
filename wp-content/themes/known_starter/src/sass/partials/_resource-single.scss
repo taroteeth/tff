@@ -91,6 +91,16 @@
             font-family: $Merriweather;
           }
         }
+
+        #blog-bxslider-wrapper {
+          .bx-viewport {
+            height: 500px !important;
+          }
+
+          .bx-controls {
+            
+          }
+        }
       }
     }
   }
