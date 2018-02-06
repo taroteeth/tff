@@ -55,6 +55,7 @@
 			</div>
 
 			<div id="primary-logo">
+				<?php echo '<a href="'. get_permalink('6') .'"></a>'; ?>
 				<svg viewBox="0 0 176 39">
 					<use href="#color-logo"></use>
 				</svg>
