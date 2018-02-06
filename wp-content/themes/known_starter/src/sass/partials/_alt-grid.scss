@@ -1,5 +1,6 @@
 .alt-grid {
   width: 100%;
+  border-top: 1px solid $backgroundGrey; 
 
   .row-inner {
     @media(min-width: 768px) {

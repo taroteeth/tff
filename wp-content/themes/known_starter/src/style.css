@@ -727,6 +727,8 @@ p, li {
       margin: 6rem 0; }
       .resource-single .inner .body-content .inner blockquote p {
         font-family: "Merriweather", serif; }
+    .resource-single .inner .body-content .inner #blog-bxslider-wrapper .bx-viewport {
+      height: 500px !important; }
 
 #article-grid {
   padding: 2rem; }
@@ -2199,7 +2201,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             max-width: 40%; } }
 
 .alt-grid {
-  width: 100%; }
+  width: 100%;
+  border-top: 1px solid #F8F8F8; }
   @media (min-width: 768px) {
     .alt-grid .row-inner {
       display: -webkit-box;
@@ -3131,7 +3134,6 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     #primary-footer .inner #footer-logo {
       margin-bottom: 1.5rem; }
     #primary-footer .inner .button {
-      width: 50%;
       margin: 0 0; }
     #primary-footer .inner #footer-address {
       list-style: none;
