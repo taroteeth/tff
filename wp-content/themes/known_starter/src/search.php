@@ -46,7 +46,7 @@
 		echo '</div> <!-- .grid-wrapper -->';
 		}
 		else {
-			echo '<h2>No results for \'<span class="query-term">'.get_search_query() .'</span>\'</h2>';
+			echo '<h2 class="results">No results for \'<span class="query-term">'. get_search_query() .'</span>\'</h2>';
 		}?>
 
 	</div>

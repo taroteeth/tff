@@ -149,6 +149,7 @@ function sampleName(){
 // SEARCH BAR
 
 var searchBarActive = false,
+    searchButton = document.querySelector('.submit-button'),
     searchBox = document.getElementById('search-form'),
     searchBar = document.querySelector('.search-field')
 
@@ -156,17 +157,11 @@ var searchBarActive = false,
 if(searchButton){
   searchButton.addEventListener('click', function(e){
     e.preventDefault();
-    if(window.matchMedia('(min-width: 768px)').matches){
-      //console.log('desktop');
-      searchBox.submit();
-    } else {
-      //console.log('mobile');
       if(searchBarActive){
         searchBox.submit();
       } else {
         openSearchbar();
       }
-    }
   });
 }
 
@@ -191,12 +186,12 @@ if(searchBar){
 
 function openSearchbar(){
   searchBarActive = true;
-  searchBox.classList.add('search-active');
+  searchBar.classList.add('search-active');
   console.log('search open');
 }
 
 function closeSearchbar(){
-  searchBox.classList.remove('search-active');
+  searchBar.classList.remove('search-active');
   searchBarActive = false;
   console.log('close');
 }

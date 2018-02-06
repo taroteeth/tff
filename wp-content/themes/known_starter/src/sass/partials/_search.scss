@@ -4,6 +4,7 @@
 
   .inner {
     padding: 4rem 2rem;
+    min-height: calc(100vh - 293px);
     @media screen and (min-width: 992px){
       width: 80vw;
       max-width: 100rem;
@@ -19,9 +20,23 @@
         font-size: 4rem;
       }
       span {
-        color: $blue; 
+        color: $blue;
       }
     }
+
+    .results {
+      padding: 3rem 0;
+      border-bottom: 2px solid $lightGrey;
+      font-size: 3rem;
+      @media screen and (min-width: 768px){
+        font-size: 4rem;
+      }
+      span {
+        color: $blue;
+      }
+    }
+
+
 
 
   .btn {
