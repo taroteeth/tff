@@ -1,23 +1,42 @@
+//--------------- Global Variables ---------------//
+
+var body = document.getElementsByTagName('body'),
+    primaryHeader = document.getElementById('primary-header').getBoundingClientRect(),
+    hamburger = document.getElementById("hamburger");
+
+
 //--------------- Utility Functions ---------------//
 
 function findAncestorByClass (el, cls) {
-    while ((el = el.parentElement) && !el.classList.contains(cls));
-    return el;
+  while ((el = el.parentElement) && !el.classList.contains(cls));
+  return el;
 }
 
 function findAncestorById (el, id) {
-    while ((el = el.parentElement) && !el.id === id);
-    return el;
+  while ((el = el.parentElement) && !el.id === id);
+  return el;
 }
 
 //--------------- Utility Functions ---------------//
 
 
 // add class to body if mobile detected
-var body = document.getElementsByTagName('body');
-
 if(mobileDetected){
 	body[0].classList.add('is-mobile');
+}
+
+
+// Body top padding for fixed header
+if(primaryHeader) {
+  setBodyTopPadding();
+  window.onresize = function(){
+    setBodyTopPadding();
+  };
+}
+
+function setBodyTopPadding() {
+  var height = document.getElementById('primary-header').getBoundingClientRect().height;
+  body[0].style.paddingTop = height + 'px';
 }
 
 
@@ -25,14 +44,13 @@ if(mobileDetected){
 // Mobile Nav Toggle
 
 function toggleNav() {
-	var hamburger = document.getElementById("hamburger");
-
-	hamburger.addEventListener("click", function(e){
-		e.preventDefault();
-		document.body[0].classList.toggle("nav-active");
-	});
+  if(hamburger) {
+    hamburger.addEventListener("click", function(e){
+  		e.preventDefault();
+  		body[0].classList.toggle("nav-active");
+  	});
+  }
 }
-
 toggleNav();
 
 
@@ -145,13 +163,12 @@ function sampleName(){
 	}
 }
 
-<<<<<<< HEAD
-
 // SEARCH BAR
 
 var searchBarActive = false,
     searchBox = document.getElementById('search-form'),
-    searchBar = document.querySelector('.search-field')
+    searchBar = document.querySelector('.search-field'),
+    searchButton = document.querySelector('#search-form .submit-button');
 
 // button click event
 if(searchButton){
@@ -358,8 +375,8 @@ if(document.getElementById('contact-form')) {
   var contactFormObj = new contactForm(document.getElementById('contact-form'));
 }
 
-=======
->>>>>>> 549f0f1836685ff493430d6a9484e5e70e5753cf
+
+
 // class AjaxPostLoader {
 // 	constructor(){ //what runs as soon as the class is set up
 // 		this.nextbtn = document.getElementById('next-btn');
