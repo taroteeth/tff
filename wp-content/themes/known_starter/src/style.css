@@ -659,7 +659,6 @@ p, li {
     font-size: 2rem; }
 
 .resource-single .inner .hero {
-  margin-top: 6rem;
   max-height: 50rem; }
   .resource-single .inner .hero .inner .hero-text-wrapper {
     width: 100%; }
@@ -985,6 +984,12 @@ p, li {
       top: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); }
+      #primary-header #header-inner #primary-logo a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 99; }
       #primary-header #header-inner #primary-logo svg {
         width: 14rem;
         height: auto; }
@@ -1205,7 +1210,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   z-index: 6;
   overflow: hidden;
   padding: 0;
-  margin-top: 6rem; }
+  margin-top: 0; }
   @media screen and (min-width: 768px) {
     .hero {
       height: 40vh; } }
@@ -3019,11 +3024,10 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
                     transform: rotate(180deg); } }
 
 .search-result-content {
-  text-align: left;
-  margin-top: 6rem; }
+  text-align: left; }
   .search-result-content .inner {
     padding: 4rem 2rem;
-    min-height: calc(100vh - 293px); }
+    min-height: calc(100vh - 233px); }
     @media screen and (min-width: 992px) {
       .search-result-content .inner {
         width: 80vw;

@@ -1,10 +1,9 @@
 .search-result-content {
   text-align: left;
-  margin-top: 6rem;
 
   .inner {
     padding: 4rem 2rem;
-    min-height: calc(100vh - 293px);
+    min-height: calc(100vh - 233px);
     @media screen and (min-width: 992px){
       width: 80vw;
       max-width: 100rem;
