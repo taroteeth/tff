@@ -145,6 +145,221 @@ function sampleName(){
 	}
 }
 
+<<<<<<< HEAD
+
+// SEARCH BAR
+
+var searchBarActive = false,
+    searchBox = document.getElementById('search-form'),
+    searchBar = document.querySelector('.search-field')
+
+// button click event
+if(searchButton){
+  searchButton.addEventListener('click', function(e){
+    e.preventDefault();
+    if(window.matchMedia('(min-width: 768px)').matches){
+      //console.log('desktop');
+      searchBox.submit();
+    } else {
+      //console.log('mobile');
+      if(searchBarActive){
+        searchBox.submit();
+      } else {
+        openSearchbar();
+      }
+    }
+  });
+}
+
+
+// body click event
+document.body.addEventListener('click', function(e){
+  if(searchBarActive){
+    var classList = event.target.classList;
+    if(!$(e.target).parents('.search-field').length && !$(e.target).parents('.submit-button').length && !$(e.target).hasClass('search-field') && !$(e.target).hasClass('submit-button')){
+      closeSearchbar();
+    }
+  }
+});
+
+// search bar click
+if(searchBar){
+  searchBar.addEventListener('click', function(e){
+    openSearchbar();
+    e.stopPropagation();
+  });
+}
+
+function openSearchbar(){
+  searchBarActive = true;
+  searchBox.classList.add('search-active');
+  console.log('search open');
+}
+
+function closeSearchbar(){
+  searchBox.classList.remove('search-active');
+  searchBarActive = false;
+  console.log('close');
+}
+
+
+
+
+
+// CONTACT FORM SUBMISSION
+
+class contactForm {
+  constructor(form) {
+    this.form = form;
+    this.fields = form.querySelectorAll('.field');
+    this.fieldsArr = [];
+    this.errors = false;
+
+    for(var i = 0; i < this.fields.length; i++) {
+      this.fieldsArr[i] = {
+        'ele': this.fields[i],
+        'input': (this.fields[i].querySelector('input')) ? this.fields[i].querySelector('input') : this.fields[i].querySelector('textarea'),
+        'value': (this.fields[i].querySelector('input')) ? this.fields[i].querySelector('input').value : this.fields[i].querySelector('textarea').value,
+        'inlineMsg': this.fields[i].querySelector('.inline-msg')
+      }
+    }
+
+    console.log(this.fieldsArr);
+
+    // Messages
+    this.validationErrors = {
+      'required': 'Required',
+      'name': 'At least 4 characters',
+      'email': 'Enter a valid email address',
+      'invalid': 'invalid characters',
+      'human': 'incorrect'
+    }
+
+    form.addEventListener('submit', function(evt) {
+      evt.preventDefault();
+      this.clearErrors();
+      this.validateForm();
+    }.bind(this));
+  }
+
+  clearErrors() {
+    this.errors = false;
+    for(var i = 0; i < this.fieldsArr.length; i++) {
+      this.fieldsArr[i].ele.classList.remove('error');
+      if(this.fieldsArr[i].inlineMsg) {
+        this.fieldsArr[i].inlineMsg.innerHTML = '';
+      }
+    }
+  }
+
+  validateForm() {
+    for(var i = 0; i < this.fieldsArr.length; i++) {
+      var input = this.fieldsArr[i].input,
+          value = input.value,
+          inlineMsg = this.fieldsArr[i].inlineMsg;
+
+      if(input.required && !value) {
+        this.errors = true;
+        inlineMsg.innerHTML = this.validationErrors.required;
+        this.fieldsArr[i].ele.classList.add('error');
+      }
+
+      // if(!this.validateChars(value)) {
+      //   this.errors = true;
+      //   inlineMsg.innerHTML = this.validationErrors.invalid;
+      //   this.fieldsArr[i].ele.classList.add('error');
+      // }
+
+      // TODO General special characters validation
+      // TODO Better way to implement error class on fields
+
+      switch(input.type) {
+        case 'text':
+          if(input.name == 'full_name'){
+            if(!this.validateName(value)) {
+              this.errors = true;
+              inlineMsg.innerHTML = this.validationErrors.name;
+              this.fieldsArr[i].ele.classList.add('error');
+            }
+          }
+          if(input.name == 'not_human') {
+            if(!value) {
+              this.errors = true;
+              inlineMsg.innerHTML = this.validationErrors.required;
+              this.fieldsArr[i].ele.classList.add('error');
+            } else if(value !== '9') {
+              this.errors = true;
+              inlineMsg.innerHTML = this.validationErrors.human;
+              this.fieldsArr[i].ele.classList.add('error');
+            }
+          }
+          break;
+        case 'email':
+          if(!this.validateEmail(value)) {
+            this.errors = true;
+            inlineMsg.innerHTML = this.validationErrors.email;
+            this.fieldsArr[i].ele.classList.add('error');
+          }
+          break;
+        case 'message':
+          // TODO validate textarea
+          break;
+      }
+    }
+
+    if(!this.errors) {
+      this.submitForm();
+    }
+  }
+
+  validateName(value) {
+    if(value){
+      if(value.length <= 3) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
+
+  validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  validateChars(value){
+    var re = /[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g;
+    return re.test(String(value).toLowerCase());
+  }
+
+  validateRequired() {
+
+  }
+
+  submitForm() {
+    jQuery.ajax({
+			method : 'post',
+			url : ajaxurl,
+			data : {
+				'action' : 'contact_form_submit'
+			},
+			error : function(xhr, status, error){
+				console.log(xhr, status, error);
+			},
+			success : function(data, status, xhr){
+        console.log(data);
+			}
+	  });
+  }
+
+}
+
+if(document.getElementById('contact-form')) {
+  var contactFormObj = new contactForm(document.getElementById('contact-form'));
+}
+
+=======
+>>>>>>> 549f0f1836685ff493430d6a9484e5e70e5753cf
 // class AjaxPostLoader {
 // 	constructor(){ //what runs as soon as the class is set up
 // 		this.nextbtn = document.getElementById('next-btn');
