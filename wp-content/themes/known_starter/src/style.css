@@ -1053,6 +1053,12 @@ p, li {
       #primary-header #header-inner .search-form.search-active .search-field {
         width: 25rem;
         padding-left: 1rem; }
+        @media (min-width: 768px) {
+          #primary-header #header-inner .search-form.search-active .search-field {
+            width: 20rem; } }
+        @media (min-width: 992px) {
+          #primary-header #header-inner .search-form.search-active .search-field {
+            width: 25rem; } }
     #primary-header #header-inner #nav {
       background-color: #0176BC;
       height: 0px;

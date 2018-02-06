@@ -186,6 +186,12 @@
       &.search-active .search-field {
         width: 25rem;
         padding-left: 1rem;
+        @media(min-width: 768px) {
+          width: 20rem;
+        }
+        @media(min-width: 992px) {
+          width: 25rem;
+        }
       }
 
     } //.search-form
