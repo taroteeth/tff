@@ -54,9 +54,9 @@ if( $team_query->have_posts() ) :
             echo '<a class="linkedIn" href="'. $linkedIn .'">';
             echo 'in'; // add svg here
             echo '</a><!-- .linkedIn -->';
-          }
+          }?>
 
-          echo '<a class="profile-button" href="'. $path .'">';
+          <a class="profile-button <?php if($linkedIn){echo 'plural';} ?>" href="<?php echo $path ?>"> <?php 
           echo '<span>View Profile</span>';
           echo '</a>';
         echo '</div><!-- .button-container-->';

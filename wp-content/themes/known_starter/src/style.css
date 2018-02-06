@@ -51,7 +51,6 @@ html {
 body {
   background-color: #e5ecef;
   width: 100%;
-  max-width: 144rem;
   font-size: 1.6rem;
   display: block;
   margin: 0 auto;
@@ -1201,10 +1200,12 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   position: relative;
   z-index: 6;
   overflow: hidden;
-  padding: 0; }
+  padding: 0;
+  margin-top: 6rem; }
   @media screen and (min-width: 768px) {
     .hero {
-      height: 40vh; } }
+      height: 40vh;
+      margin-top: 0; } }
   @media screen and (min-width: 992px) {
     .hero {
       height: 72vh; } }
@@ -1213,14 +1214,15 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       height: 65rem; } }
   .hero.has-blurb {
     overflow: visible; }
-  .hero .image-right .hero-img-wrapper {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2; }
-    .hero .image-right .hero-img-wrapper .photo-curve-vert {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg);
-      left: 0; }
+  @media screen and (min-width: 768px) {
+    .hero .image-right .hero-img-wrapper {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; } }
+  .hero .image-right .hero-img-wrapper .photo-curve-vert {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    left: 0; }
   .hero .inner {
     width: 100%;
     display: -webkit-box;
@@ -2474,7 +2476,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             line-height: 100%;
             padding: 1rem; }
           #team-grid .inner .row .content-block .content-inner .button-container .profile-button {
-            margin: 0 3rem; }
+            margin: 0; }
+            #team-grid .inner .row .content-block .content-inner .button-container .profile-button.plural {
+              margin: 0 3rem; }
 
 .clients-grid {
   padding: 0 2rem;
@@ -3029,6 +3033,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       @media screen and (min-width: 768px) {
         .search-result-content .inner h1 {
           font-size: 4rem; } }
+      .search-result-content .inner h1 span {
+        color: #0176BC; }
     .search-result-content .inner .btn svg {
       margin-right: .5rem; }
     .search-result-content .inner #grid-wrapper {
@@ -3057,7 +3063,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             max-width: 33.33%; } }
       .search-result-content .inner #grid-wrapper .article-wrapper {
         -webkit-box-sizing: border-box;
-                box-sizing: border-box; }
+                box-sizing: border-box;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
         @media screen and (min-width: 768px) {
           .search-result-content .inner #grid-wrapper .article-wrapper {
             padding: 2rem; } }
@@ -3066,15 +3074,35 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
              object-fit: cover;
           -o-object-position: 50% 50%;
              object-position: 50% 50%;
-          height: 75%;
+          height: 20rem;
           width: 100%;
-          position: absolute;
+          position: relative;
           -webkit-transition: all ease 1s;
           transition: all ease 1s; }
       .search-result-content .inner #grid-wrapper .text-wrapper {
-        position: absolute;
+        position: relative;
         bottom: 0;
-        padding: 2rem; }
+        padding: 2rem;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        width: 100%;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        text-align: center; }
+        .search-result-content .inner #grid-wrapper .text-wrapper h2 {
+          font-size: 1.8rem; }
+          .search-result-content .inner #grid-wrapper .text-wrapper h2:after {
+            content: "";
+            background-color: #F69420;
+            height: .3rem;
+            width: 6.7rem;
+            display: block;
+            position: relative;
+            margin: 1.5rem auto; }
+        .search-result-content .inner #grid-wrapper .text-wrapper .button {
+          position: relative;
+          margin: 1rem auto; }
 
 #primary-footer {
   background-color: #F8F8F8;
@@ -3086,7 +3114,6 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       -ms-flex-align: left;
           align-items: left;
   width: 100%;
-  padding-top: 10rem;
   text-align: center; }
   @media screen and (min-width: 768px) {
     #primary-footer {
