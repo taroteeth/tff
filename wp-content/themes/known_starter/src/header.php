@@ -82,14 +82,14 @@
 			</label>
 			</form> <!-- search-form -->
 
-			<!-- nav dropdown -->
-			<div id="nav">
-				<div class="inner">
-					<button onclick="closeNav()">X</button>
-					<?php wp_nav_menu('default-menu'); ?>
-				</div> <!-- .inner -->
-			</div> <!-- .nav -->
-
 		</div> <!-- #header-inner -->
 	</div> <!-- #primary-header -->
+
+	<!-- nav dropdown -->
+	<div id="primary-nav">
+		<div class="inner">
+			<?php wp_nav_menu('default-menu'); ?>
+		</div> <!-- .inner -->
+	</div> <!-- .nav -->
+
 	<div id="body-content">
