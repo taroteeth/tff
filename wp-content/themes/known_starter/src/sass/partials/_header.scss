@@ -134,7 +134,7 @@
         padding: 0;
         left: 1rem;
         position: relative;
-        transition: left 300ms ease 350ms;
+        transition: left ease 0;
 
         &:focus {
           outline: none;
@@ -148,6 +148,7 @@
 
       &.search-active .submit-button {
         left: 0;
+        transition: left 300ms ease 350ms;
       }
 
       label {

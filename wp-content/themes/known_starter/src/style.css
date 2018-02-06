@@ -1014,15 +1014,17 @@ p, li {
         padding: 0;
         left: 1rem;
         position: relative;
-        -webkit-transition: left 300ms ease 350ms;
-        transition: left 300ms ease 350ms; }
+        -webkit-transition: left ease 0;
+        transition: left ease 0; }
         #primary-header #header-inner .search-form .submit-button:focus {
           outline: none; }
         #primary-header #header-inner .search-form .submit-button svg {
           display: inline-block;
           vertical-align: middle; }
       #primary-header #header-inner .search-form.search-active .submit-button {
-        left: 0; }
+        left: 0;
+        -webkit-transition: left 300ms ease 350ms;
+        transition: left 300ms ease 350ms; }
       #primary-header #header-inner .search-form label {
         border: none;
         display: block;
