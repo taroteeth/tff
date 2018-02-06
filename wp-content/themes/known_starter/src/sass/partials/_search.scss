@@ -18,6 +18,9 @@
       @media screen and (min-width: 768px){
         font-size: 4rem;
       }
+      span {
+        color: $blue; 
+      }
     }
 
 
@@ -48,6 +51,7 @@
 
     .article-wrapper {
       box-sizing: border-box;
+      flex-wrap: wrap;
       @media screen and (min-width: 768px){
         padding: 2rem;
       }
@@ -55,16 +59,39 @@
         img {
           object-fit: cover;
           object-position: 50% 50%;
-          height: 75%;
+          height: 20rem;
           width: 100%;
-          position: absolute;
+          position: relative;
           transition: all ease 1s;
         }
       }
       .text-wrapper {
-        position: absolute;
+        position: relative;
         bottom: 0;
         padding: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+
+        h2 {
+          font-size: 1.8rem;
+          &:after {
+            content: "";
+            background-color: $orange;
+            height: .3rem;
+            width: 6.7rem;
+            display: block;
+            position: relative;
+            margin: 1.5rem auto;
+          }
+        }
+
+        .button {
+          position: relative;
+          margin: 1rem auto;
+        }
       }
     }
   }

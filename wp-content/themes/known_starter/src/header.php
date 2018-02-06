@@ -64,6 +64,7 @@
 			</div>
 
 			<div id="primary-logo">
+				<?php echo '<a href="'. get_permalink('6') .'"></a>'; ?>
 				<svg width="176px" height="39px" viewBox="0 0 176 39">
 					<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 					<g id="Logo/Color">
