@@ -6,7 +6,7 @@
   overflow: hidden;
   padding: 0;
   @media screen and (min-width: 768px){
-    height: 40vh;
+    height: 50vh;
   }
   @media screen and (min-width: 992px){
     height: 55vh;
@@ -88,7 +88,7 @@
       padding: 2rem;
       text-align: center;
       box-sizing: border-box;
-      flex: 0 0 100%; 
+      flex: 0 0 100%;
       @media screen and (min-width: 768px){
         padding: 0 5rem;
         align-self: center;

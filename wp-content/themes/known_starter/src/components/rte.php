@@ -7,7 +7,7 @@ $bodyContent = get_sub_field('body_content');
 ?>
 
 <div class="rte <?php if($greyBg){ echo "grey-bg"; } ?>">
-  <div class="inner">
+  <div class="inner <?php if(is_page('447')){echo "contact"; } ?>">
 
     <?php
 

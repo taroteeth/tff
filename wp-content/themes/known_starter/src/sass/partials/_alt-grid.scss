@@ -1,6 +1,7 @@
 .alt-grid {
   width: 100%;
-  border-top: 1px solid $backgroundGrey; 
+  border-top: 1px solid $backgroundGrey;
+  padding: 2rem 0; 
 
   .row-inner {
     @media(min-width: 768px) {
@@ -20,6 +21,21 @@
         height: 45rem;
         max-width: 50%;
         flex: 0 0 50%;
+      }
+      &.number {
+        min-height: 25rem;
+        &:before {
+          background-color: rgba(0,0,0,0);
+        }
+        @media screen and (min-width: 768px){
+          border-right: 3px solid $backgroundGrey;
+        }
+        &.right {
+          border-right: none;
+          @media screen and (min-width: 768px){
+            border-left: 3px solid $backgroundGrey;
+          }
+        }
       }
 
       &:before {
@@ -42,6 +58,14 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
       }
 
       .image-block-title {
