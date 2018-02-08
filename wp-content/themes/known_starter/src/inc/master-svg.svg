@@ -1,6 +1,6 @@
 <div id="svg-wrapper" style="display:none;">
   <svg>
-    
+
     <symbol id="color-logo" viewBox="0 0 176 39">
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
     <g id="Logo/Color">
@@ -36,13 +36,74 @@
     <path d="M320,0.253076503 L320,54.2530765 L0,54.2530765 L0,0.337955592 C44.2839235,34.1483578 99.7486444,54.2530713 159.944444,54.2530713 C220.1906,54.2530713 275.697758,34.1147073 320,0.253076503 Z"></path>
   </symbol>
 
-
-<!-- image rounding - ipad and up -->
-  <symbol id="photo-curve-vert" viewBox="0 0 103 650">
-    <g transform="translate(-2.000000, 0.000000)">
-      <path d="M0.243078268,0 L105,0 L105,650 L1.01853134,650 C66.5022043,558.395501 105,446.431527 105,325.541033 C105,204.174121 66.1981734,91.8042236 0.243078268,-2.84217094e-14 Z"></path>
-    </g>
+  <!-- image rounding - ipad and up - updated -->
+  <symbol id="photo-curve-vert" viewBox="0 0 110 650">
+  <path d="M0.243078268,0 L112,0 L112,650 L1.01853134,650 C66.5022043,558.395501 105,446.431527 105,325.541033 C105,204.174121 66.1981734,91.8042236 0.243078268,-2.84217094e-14 Z" id="path-1"></path>
+  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+  <g id="Hero/Left-img-Copy">
+  <g id="Group-26" transform="translate(-2.000000, 0.000000)">
+  <mask id="mask-2" fill="white">
+  <use xlink:href="#path-1"></use>
+  </mask>
+  <use id="Combined-Shape" fill="#F8F8F8" xlink:href="#path-1"></use>
+  </g>
+  </g>
+  </g>
   </symbol>
+
+
+<!-- case study, team member image rounding - ipad and up -->
+<symbol id="test-shape" viewBox="0 0 350 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Hero/Case Study Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M339.937825,0 L350,0 L350,500 L0.488647211,500 C199.230951,423.115652 340,231.874945 340,8.13941415 C340,5.42142874 339.979225,2.70823887 339.937825,-8.68227846e-06 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hero/Case-Study-Copy">
+            <g id="Group-3" transform="translate(2.000000, 0.000000)">
+                <g id="Fill-55">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Combined-Shape" fill="#EA053B" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</symbol>
+
+<!-- network exhibit shadow -->
+<symbol id="curve-shadow" viewBox="0 0 701 499" version="1.1">
+<defs>
+<ellipse id="path-1" cx="741" cy="733" rx="741" ry="733"></ellipse>
+<filter x="-6.8%" y="-6.8%" width="113.7%" height="113.8%" filterUnits="objectBoundingBox" id="filter-2">
+<feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+<feGaussianBlur stdDeviation="33.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+<feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+<feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0711333786 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+</filter>
+</defs>
+<g id="Oval-+-Oval-Copy-+-Oval-Copy-2-Mask" transform="translate(-862.000000, -483.000000)">
+<g id="Oval">
+<use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+<use fill-opacity="0" fill="#F8F8F8" fill-rule="evenodd" xlink:href="#path-1"></use>
+</g>
+</g>
+</symbol>
+
+<!-- <symbol id="case-study-curve-vert" viewBox="0 0 350 500">
+<defs>
+<path d="M339.937825,0 L350,0 L350,500 L0.488647211,500 C199.230951,423.115652 340,231.874945 340,8.13941415 C340,5.42142874 339.979225,2.70823887 339.937825,-8.68227846e-06 Z" id="path-1"></path>
+</defs>
+<g id="Group-3" transform="translate(2.000000, 0.000000)">
+<mask id="mask-2" fill="white">
+<use xlink:href="#path-1"></use>
+</mask>
+<use id="Combined-Shape" fill="#F8F8F8" xlink:href="#path-1"></use>
+</g>
+</symbol> -->
 
 <!-- footer logo -->
 <symbol id="footer-logo" viewBox="0 0 176 39">

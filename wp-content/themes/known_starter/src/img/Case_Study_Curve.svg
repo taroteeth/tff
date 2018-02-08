@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="350px" height="500px" viewBox="0 0 350 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Hero/Case Study Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M339.937825,0 L350,0 L350,500 L0.488647211,500 C199.230951,423.115652 340,231.874945 340,8.13941415 C340,5.42142874 339.979225,2.70823887 339.937825,-8.68227846e-06 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hero/Case-Study-Copy">
+            <g id="Group-3" transform="translate(2.000000, 0.000000)">
+                <g id="Fill-55">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Combined-Shape" fill="#F8F8F8" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -18,6 +18,11 @@ echo '<div class="network-exhibit">';
         if($title){
           echo '<p class="title">'. $title .'</p>';
         }
+
+        if($i == 1 || $i == 2){
+          echo '<svg class="shadow" viewBox="0 0 701 499"><use href="#curve-shadow"></use></svg>';
+        }
+
         $i++;
 
       echo '</div><!-- .exhibit-col-->';

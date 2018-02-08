@@ -134,10 +134,10 @@ jQuery('.blog-bxslider').each(function(ele,index){
     pager: true,
     infiniteLoop: true,
     //adaptiveHeight: adaptiveHeight,
-		controls: false,
-		onSliderLoad: function(){
-	    document.getElementsByClassName('blog-bxslider')[0].classList.remove('load-delay');}
-  });
+		controls: false
+	// 	onSliderLoad: function(){
+	//     document.getElementsByClassName('blog-bxslider')[0].classList.remove('load-delay');}
+  // });
 });
 
 
