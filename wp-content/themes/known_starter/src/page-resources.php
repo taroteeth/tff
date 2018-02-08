@@ -7,10 +7,10 @@ $heroTitle = get_field('hero_title');
 $heroHeader = get_field('hero_header');
 $heroSubheader = get_field('hero_subheader');
 
-echo '<div id="hero">';
-  echo '<div id="hero-text-wrapper">';
+echo '<div class="hero resources-hero">';
+  echo '<div class="hero-text-wrapper">';
   if($heroTitle){
-    echo '<p id="hero-title">'. $heroTitle .'</p>';
+    echo '<p class="hero-title">'. $heroTitle .'</p>';
   }
 
   if($heroHeader){

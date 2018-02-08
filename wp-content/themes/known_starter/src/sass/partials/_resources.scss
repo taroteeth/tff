@@ -1,13 +1,16 @@
-.resources {
-  #hero {
+.resources-hero {
+    margin-top: 6rem;
     @media screen and (min-width: 768px){
         padding: 2rem 4rem;
     }
 
-    #hero-text-wrapper {
-      padding: 4rem 0 !important;
+    .hero-text-wrapper {
+      padding: 6rem 2rem;
+      @media screen and (min-width: 768px){
+        padding: 4rem 0;
+      }
 
-      #hero-title {
+      .hero-title {
         font-weight: bold;
         letter-spacing: .2rem;
         text-transform: uppercase;
@@ -34,4 +37,3 @@
       }
     }
   }
-}

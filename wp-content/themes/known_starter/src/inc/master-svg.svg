@@ -75,7 +75,7 @@
 </symbol>
 
 <!-- network exhibit shadow -->
-<symbol id="curve-shadow" viewBox="0 0 701 499" version="1.1">
+<symbol id="curve-shadow" viewBox="0 0 701 499">
 <defs>
 <ellipse id="path-1" cx="741" cy="733" rx="741" ry="733"></ellipse>
 <filter x="-6.8%" y="-6.8%" width="113.7%" height="113.8%" filterUnits="objectBoundingBox" id="filter-2">
@@ -86,10 +86,8 @@
 </filter>
 </defs>
 <g id="Oval-+-Oval-Copy-+-Oval-Copy-2-Mask" transform="translate(-862.000000, -483.000000)">
-<g id="Oval">
 <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
 <use fill-opacity="0" fill="#F8F8F8" fill-rule="evenodd" xlink:href="#path-1"></use>
-</g>
 </g>
 </symbol>
 
