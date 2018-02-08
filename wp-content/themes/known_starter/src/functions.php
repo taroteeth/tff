@@ -531,6 +531,7 @@ function wordpress_ajaxurl(){ ?>
 add_action('wp_head', 'wordpress_ajaxurl'); //run this first, not in footer
 
 
+include('inc/functions/knowledge-base-query.php');
 
 // Load more Posts Function
 

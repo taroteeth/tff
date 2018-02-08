@@ -2,7 +2,7 @@
 
 if(get_post_type() == 'resource'){
 
-  // R E S O U R C E   P O S T   T Y P E 
+  // R E S O U R C E   P O S T   T Y P E
 
   $args = array(
     'post_type' => 'resource',

@@ -148,20 +148,26 @@ $('.blog-bxslider').each(function(ele,index){
 
 // AJAX POST LOADER
 
-function sampleName(){
-	var offset = 0;
-	loadCurrentPage();
-	$("#next, #prev").click(function(){
-		offset = ($(this).attr('id')=='next') ? offset + 6 : offset - 6;
-		if(offset < 0)
-		offset = 0;
-		else
-		loadCurrentPage();
-	});
+class sampleName {
+  constructor() {
+    this.offset = 0;
+  	this.loadCurrentPage();
+  	$("#next, #prev").click(function(){
+  		offset = ($(this).attr('id')=='next') ? offset + 6 : offset - 6;
+  		if(offset < 0)
+  		offset = 0;
+  		else
+  		loadCurrentPage();
+  	});
+  }
 
-	function loadCurrentPage() {
-		$.ajax({
-			url: 'resources-grid.php?offset=' + offset,
+
+	loadCurrentPage() {
+    $.ajax({
+			url: ajaxurl,
+      data: {
+        'action': 
+      }
 			type: 'POST',
 			cache: true,
 			success: function (data) {
