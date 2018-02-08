@@ -145,9 +145,9 @@ $('.blog-bxslider').each(function(ele,index){
 });
 
 
-// AJAX POST LOADER
+// KNOWLEDGE BASE AJAX LOADER
 
-class sampleName {
+class knowledgeBaseQuery {
   constructor() {
     this.currentPage = 0;
     this.total = $('#article-grid').attr('data-total');
@@ -222,7 +222,10 @@ class sampleName {
 	}
 }
 
-var postLoader = new sampleName();
+var resourcesGrid = document.querySelector('body.page-template-page-resources #article-grid');
+if(resourcesGrid) {
+  var postLoader = new knowledgeBaseQuery();
+}
 
 // SEARCH BAR
 

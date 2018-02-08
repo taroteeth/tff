@@ -43,7 +43,6 @@ body {
   }
 
   #body-wrapper-inner {
-    top: 10rem;
     position: relative;
     transition: top 500ms cubic-bezier(0.86, 0, 0.07, 1);
     @media(min-width: 992px) {

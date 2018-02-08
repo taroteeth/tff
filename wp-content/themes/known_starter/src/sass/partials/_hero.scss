@@ -125,6 +125,7 @@
           text-align: left;
           padding-top: 0;
         }
+
         &:before {
           content: "";
           width: .3rem;
@@ -141,7 +142,7 @@
             display: inline-block;
             bottom: .8rem !important;
             top: unset !important;
-            transform: unset;
+            transform: translateX(calc(-100% - 2rem));
             right: unset;
             left: -14rem;
           }
