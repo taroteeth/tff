@@ -68,6 +68,8 @@ if(get_post_type() == 'resource'){
 
   $resourcequery = new WP_Query( $args );
 
+  $totalPosts = ceil($resourcequery->found_posts / 6);
+
   if ( $resourcequery->have_posts() ) :
 
     echo '<div id="article-grid" data-total="'. $resourcequery->found_posts .'">';
@@ -119,19 +121,31 @@ if(get_post_type() == 'resource'){
       }
 
     endwhile; // resourcequery have posts
-    wp_reset_postdata();
+    wp_reset_postdata(); ?>
 
-    echo '</div> <!-- #grid-inner -->';
+    </div>
 
-    echo '<div id="page-counter">';
-      echo '<button id="prev"> < </button><!-- #prev-btn -->';
-      echo '<button id="next"> > </button><!-- #next-btn -->';
-    echo '</div><!-- #page-counter -->';
+    <div id="page-counter">
+      <button id="prev" class="disable">
+        <svg viewbox="0 0 7 14" width="7px" height="14px">
+          <use xlink:href="#triangle-left"></use>
+        </svg>
+      </button>
+      <?php for($i = 0; $i < $totalPosts.length; $i++) { ?>
+        <button data-page="<?php echo $i ?>" class="page-num">
+          <?php echo $i + 1 ?>
+        </button>
+      <?php } ?>
+      <button id="next">
+        <svg viewbox="0 0 7 14" width="7px" height="14px">
+          <use href="#triangle-right"></use>
+        </svg>
+      </button>
+    </div>
 
-    echo '</div> <!-- #article-grid -->';
+  </div>
 
-  endif; // resourcequery have posts
-
+  <?php endif; // resourcequery have posts
 
 }
 

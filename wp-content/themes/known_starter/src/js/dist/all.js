@@ -149,46 +149,74 @@ $('.blog-bxslider').each(function(ele,index){
 
 class sampleName {
   constructor() {
-    this.offset = 0;
+    this.currentPage = 0;
     this.total = $('#article-grid').attr('data-total');
-    this.currentPages = (this.offset * 6) + 6;
+    this.totalPages = Math.ceil(this.total / 6);
+    this.prevBtn = document.querySelector('#page-counter #prev');
+    this.nextBtn = document.querySelector('#page-counter #next');
+    this.pageBtns = document.querySelectorAll('#page-counter button.page-num');
 
-  	$("#next, #prev").on('click', function(e){
-      var btn = $(e.target);
+    this.prevBtn.addEventListener('click', function(){
+      this.prev();
+    }.bind(this));
 
-      if(this.currentPages < this.total && this.offset >= 0){
-        this.loadCurrentPage(btn.attr('id'));
-      }
-      if(this.offset < 0){
-        this.offset = 0;
-      }
-  	}.bind(this));
+    this.nextBtn.addEventListener('click', function(){
+      this.next();
+    }.bind(this));
+
+    for(var i = 0; i < this.pageBtns.length; i++) {
+      var btn = this.pageBtns[i];
+      var current = i;
+      btn.addEventListener('click', function(e){
+        this.goToPage(e.target);
+      }.bind(this));
+    }
+
   }
 
+  prev() {
+    if(this.currentPage !== 0) { // don't go below 0
+      this.currentPage = this.currentPage - 1;
+      this.loadPage();
+      if(this.currentPage == 0) {
+        this.prevBtn.classList.add('disable');
+      }
+    }
+    this.nextBtn.classList.remove('disable');
+  }
 
-	loadCurrentPage(id) {
-    console.log(id);
+  next() {
+    if(this.currentPage < (this.totalPages - 1)) {
+      this.prevBtn.classList.remove('disable');
+      this.currentPage = this.currentPage + 1;
+      this.loadPage();
+      if(this.currentPage == this.totalPages - 1) {
+        this.nextBtn.classList.add('disable');
+      }
+    }
+  }
 
+  goToPage(btn) {
+    var page = parseInt(btn.dataset.page);
+    if(this.currentPage !== page) {
+      this.currentPage = page;
+      this.loadPage();
+      btn.classList.add('active');
+    }
+  }
+
+	loadPage() {
     $.ajax({
 			url: ajaxurl,
       dataType : 'json',
       data: {
         'action': 'knowledge_base_query',
-        'offset': this.offset
+        'currentPage': this.currentPage
       },
 			type: 'GET',
-			//cache: true,
+			cache: true,
 			success: function (data) {
-        if(data.html !== null){ /// WE LEFT OFF HERE 
-          this.offset = (btn.attr('id')=='next') ? this.offset + 1 : this.offset - 1;
-          console.log(this.offset);
-
-          console.log(data);
-          this.total =  parseInt(data.total); // set to vars getting from PHP
-          this.currentPages = data.current_pages;
-
-          $('#grid-inner').html(data.html);
-        }
+        $('#grid-inner').html(data.html);
 			}
 		});
 	}

@@ -2,27 +2,18 @@
 
 function knowledge_base_query() {
 
-  $offset = $_GET['offset'];
-  $current_pages = ($offset * 6)+6;
-
-  $data = array(
-    'currentPages' => $current_pages,
-    'offset' => $offset
-  );
+  $currentPage = $_GET['currentPage'];
 
   $args = array(
     'post_type' => 'resource',
-     'orderby' => 'date',
-     'order' => 'DESC',
-     'posts_per_page' => 6,
-     'offset' => ($offset*6),
-     //'post__not_in' => $featuredPostIds,
-     'post_status' => 'publish'
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'posts_per_page' => 6,
+    'offset' => ($currentPage * 6),
+    'post_status' => 'publish'
   );
 
   $resourcequery = new WP_Query( $args );
-
-  $total = $resourcequery->found_posts;
 
     if ( $resourcequery->have_posts() ) :
 
@@ -30,7 +21,6 @@ function knowledge_base_query() {
 
       while( $resourcequery->have_posts() ): $resourcequery->the_post();
 
-        //setup_postdata($resourcequery);
         $image = get_field('cover_photo');
         $title = get_the_title();
         $permalink = get_permalink();
@@ -76,6 +66,7 @@ function knowledge_base_query() {
     endif;
 
     $data['html'] = $html; // sets html as json object
+    $data['currentPage'] = $currentPage;
 
   echo json_encode($data); //turns php array into json string which js will change into js object
 

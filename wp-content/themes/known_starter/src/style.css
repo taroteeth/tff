@@ -846,25 +846,27 @@ p, li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin: 3rem auto; }
     @media screen and (min-width: 768px) {
       #article-grid #grid-inner .row {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
         margin: 6rem auto; } }
     #article-grid #grid-inner .row .article-wrapper {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%;
       padding: 2rem 0;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; }
       @media screen and (min-width: 768px) {
         #article-grid #grid-inner .row .article-wrapper {
           max-width: 33.3%;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 33.33%;
+                  flex: 0 0 33.33%;
           padding: 1rem; } }
       #article-grid #grid-inner .row .article-wrapper:last-child {
         padding-bottom: 0; }
@@ -896,6 +898,13 @@ p, li {
     display: block;
     margin: 0 auto;
     text-align: center; }
+    #article-grid #page-counter button {
+      background: none;
+      border: none;
+      outline: none;
+      padding: .5rem 1rem; }
+      #article-grid #page-counter button svg {
+        fill: #F69420; }
     #article-grid #page-counter #prev-btn {
       display: inline-block; }
     #article-grid #page-counter #next-btn {
