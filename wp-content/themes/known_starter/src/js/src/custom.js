@@ -166,7 +166,7 @@ class sampleName {
     $.ajax({
 			url: ajaxurl,
       data: {
-        'action': 
+        'action':
       }
 			type: 'POST',
 			cache: true,
