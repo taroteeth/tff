@@ -70,7 +70,7 @@ if(get_post_type() == 'resource'){
 
   if ( $resourcequery->have_posts() ) :
 
-    echo '<div id="article-grid">';
+    echo '<div id="article-grid" data-total="'. $resourcequery->found_posts .'">';
     echo '<div id="articles-header"><p>Articles</p></div>';
     echo '<div id="grid-inner">';
     $i = 0;

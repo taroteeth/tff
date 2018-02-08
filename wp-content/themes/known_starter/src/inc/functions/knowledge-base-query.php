@@ -3,71 +3,81 @@
 function knowledge_base_query() {
 
   $offset = $_GET['offset'];
+  $current_pages = ($offset * 6)+6;
+
+  $data = array(
+    'currentPages' => $current_pages,
+    'offset' => $offset
+  );
 
   $args = array(
     'post_type' => 'resource',
      'orderby' => 'date',
      'order' => 'DESC',
      'posts_per_page' => 6,
-     'offset' => $offset,
+     'offset' => ($offset*6),
      //'post__not_in' => $featuredPostIds,
      'post_status' => 'publish'
   );
 
   $resourcequery = new WP_Query( $args );
 
-  if ( $resourcequery->have_posts() ) :
+  $total = $resourcequery->found_posts;
 
-    $i = 0;
+    if ( $resourcequery->have_posts() ) :
 
-    while( $resourcequery->have_posts() ): $resourcequery->the_post();
+      $i = 0;
 
-      //setup_postdata($resourcequery);
-      $image = get_field('cover_photo');
-      $title = get_the_title();
-      $permalink = get_permalink();
-      $pdf = get_field('pdf');
-      $totalCounter = 0;
-      $total = wp_count_posts('resource')->publish;
+      while( $resourcequery->have_posts() ): $resourcequery->the_post();
 
-      if($i == 0){
-        $data .= '<div class="row">';
-      }
+        //setup_postdata($resourcequery);
+        $image = get_field('cover_photo');
+        $title = get_the_title();
+        $permalink = get_permalink();
+        $pdf = get_field('pdf');
+        $totalCounter = 0;
+        $total = wp_count_posts('resource')->publish;
 
-      $data .= '<div class="article-wrapper">';
-      $data .= '<a href="'. $permalink .'">';
-      if($image){
-        echo wp_get_attachment_image($image);
-      };
-      $data .= '</a>';
-      $data .= '<div class="text-wrapper">';
-      $data .= '<p class="header">'. $title .'</p>';
-
-      $data .= '<div class="button">';
-      $data .= '<a href="'. $permalink .'">';
-        if($pdf){
-          $data .= 'Download PDF';
-        } else {
-          $data .= 'Read Article';
+        if($i == 0){
+          $html .= '<div class="row">';
         }
-      $data .= '</a>';
-      $data .= '</div><!-- .button -->';
 
-      $data .= '</div> <!-- .text-wrapper -->';
-      $data .= '</div> <!-- .article-wrapper -->';
-      $i++;
-      $totalCounter++;
+        $html .= '<div class="article-wrapper">';
+        $html .= '<a href="'. $permalink .'">';
+        if($image){
+          $html .= wp_get_attachment_image($image);
+        };
+        $html .= '</a>';
+        $html .= '<div class="text-wrapper">';
+        $html .= '<p class="header">'. $title .'</p>';
 
-      if($i === 3 || $totalCounter === $total){
-        $data .= '</div><!-- .row -->';
-        $i = 0;
-      }
+        $html .= '<div class="button">';
+        $html .= '<a href="'. $permalink .'">';
+          if($pdf){
+            $html .= 'Download PDF';
+          } else {
+            $html .= 'Read Article';
+          }
+        $html .= '</a>';
+        $html .= '</div><!-- .button -->';
 
-    endwhile; // resourcequery have posts
+        $html .= '</div> <!-- .text-wrapper -->';
+        $html .= '</div> <!-- .article-wrapper -->';
+        $i++;
+        $totalCounter++;
 
-  endif;
+        if($i === 3 || $totalCounter === $total){
+          $html .= '</div><!-- .row -->';
+          $i = 0;
+        }
 
-  print_r($data);
+      endwhile; // resourcequery have posts
+
+    endif;
+
+    $data['html'] = $html; // sets html as json object
+
+  echo json_encode($data); //turns php array into json string which js will change into js object
 
   wp_reset_postdata();
 
