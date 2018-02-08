@@ -59,7 +59,7 @@ if(have_rows('components')) :
 
       case 'two_column_content_module':
       include('2-col-content.php');
-      break; 
+      break;
 
       case 'stat_module':
       include('stat-module.php');
