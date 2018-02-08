@@ -32,20 +32,6 @@
     }
 
     #hamburgers {
-      // &:after {
-      //   content: "MENU";
-      //   display: none;
-      //   vertical-align: middle;
-      //   font-size: .8rem;
-      //   font-weight: bold;
-      //   letter-spacing: .1rem;
-      //   padding-left: 1rem;
-      //   font-family: $Poppins;
-      //
-      //   @media screen and (min-width: 768px){
-      //     display: inline-block;
-      //   }
-      // }
 
       #hamburger {
         width: 2.6rem;
@@ -205,21 +191,43 @@
   }
 }
 
+body.nav-active {
+  overflow-y: hidden;
+}
+
 #primary-nav {
-  background-color: $blue;
-  width: 100vw;
-  max-width: 160rem;
-  display: block;
-  position: absolute;
-  z-index: 10;
+  position: fixed;
+  z-index: 50;
   left: 0;
   top: 0;
-  overflow-x: hidden;
-  transition: all ease .5s;
+  width: 100%;
+  transform: translateY(calc(-100% - 2rem));
+  transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
+  @media(min-width: 992px) {
+    transform: translateX(-100%);
+    max-width: 70rem;
+    height: calc(100% - 6rem);
+  }
+
+  body.nav-active & {
+    transform: translatex(0);
+  }
 
   .inner {
-    padding: 2rem;
+    width: 100%;
+    padding: 3rem 2rem;
     box-sizing: border-box;
+    background-color: $blue;
+    display: block;
+    transition: all ease .5s;
+    @media(min-width: 768px) {
+      & {
+        padding: 3rem;
+      }
+    }
+    @media(min-width: 992px) {
+      height: 100%;
+    }
 
     button {
       font-size: 5rem;
@@ -228,15 +236,58 @@
 
     #menu-default-menu {
       display: flex;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80vw;
+      flex-wrap: wrap;
       justify-content: center;
+      margin: 0 -2rem;
+
+      & > li {
+        flex: 0 0 50%;
+        margin: 0 0 3rem 0;
+        padding: 0 2rem;
+        font-size: 1.4rem;
+        box-sizing: border-box;
+
+        &:nth-last-child(-n+2) {
+          margin-bottom: 0;
+        }
+
+        & > a:first-child {
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: .2rem;
+          margin: 0 0 .5em 0;
+          display: inline-block;
+          pointer-events: none;
+
+          &:after {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            width: 2.5rem;
+            height: .4rem;
+            background-color: $orange;
+            margin-left: 1rem;
+          }
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      ul.sub-menu {
+        li {
+          margin: 0 0 .6em 0;
+          font-size: 1.4rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
 
       .nav-header {
-
         display: block;
         margin: 0 auto;
 

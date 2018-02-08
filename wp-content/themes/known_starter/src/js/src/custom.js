@@ -4,6 +4,7 @@
 
 var body = document.getElementsByTagName('body'),
     primaryHeader = document.getElementById('primary-header').getBoundingClientRect(),
+    primaryNav = document.getElementById('primary-nav'),
     hamburger = document.getElementById("hamburger");
 
 
@@ -42,8 +43,16 @@ function setBodyTopPadding() {
 }
 
 
-
 // Mobile Nav Toggle
+function setNavPadding() {
+  if(primaryNav) {
+    var height = document.getElementById('primary-header').getBoundingClientRect().height;
+    if(window.matchMedia('(max-width: 991px)').matches) {
+      primaryNav.style.top = height + 'px';
+    }
+  }
+}
+setNavPadding();
 
 function toggleNav() {
   if(hamburger) {
@@ -57,7 +66,6 @@ toggleNav();
 
 
 // Nav slide down
-
 function openNav(){
 	document.getElementById('nav').style.height = "80vh";
 	document.getElementById('nav').classList.add("active");
@@ -65,9 +73,7 @@ function openNav(){
 	document.getElementById('body-content').style.marginTop = "80vh";
 }
 
-
 // Nav slide up
-
 function closeNav(){
 	document.getElementById('nav').style.height = "0px";
 	document.getElementById('nav').classList.remove("active");
@@ -87,7 +93,6 @@ class blurbPositioning {
 		this.heroTextPadding = parseInt(window.getComputedStyle(this.heroText, null).getPropertyValue('padding-bottom')); //computed style is updated, parseint gets rid of "px"
 		this.nextModule = this.hero.nextElementSibling;
 		this.nextModulePadding = parseInt(window.getComputedStyle(this.nextModule, null).getPropertyValue('padding-top'));
-
 		this.enableBlurbPositioning();
 	}
 
@@ -108,7 +113,6 @@ if(blurbButtons) {
 
 
 // contact form label animation
-
 function labelDrift(){
 	jQuery('.contact-form input').on('focus', function(){
 	    var label = jQuery(this).siblings('label');
@@ -135,6 +139,7 @@ jQuery('.blog-bxslider').each(function(ele,index){
     infiniteLoop: true,
     //adaptiveHeight: adaptiveHeight,
 		controls: false
+  });
 	// 	onSliderLoad: function(){
 	//     document.getElementsByClassName('blog-bxslider')[0].classList.remove('load-delay');}
   // });

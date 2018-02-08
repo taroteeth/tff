@@ -42,54 +42,56 @@
 
 	<div id="body-wrapper">
 
-	<div id="primary-header">
-		<div id="header-inner">
+			<div id="primary-header">
+				<div id="header-inner">
 
-			<!-- Menu Hamburger -->
-			<div id="hamburgers">
-				<div id="hamburger">
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				</div>
-			</div>
+					<!-- Menu Hamburger -->
+					<div id="hamburgers">
+						<div id="hamburger">
+						  <span></span>
+						  <span></span>
+						  <span></span>
+						</div>
+					</div>
 
-			<div id="primary-logo">
-				<?php echo '<a href="'. get_permalink('6') .'"></a>'; ?>
-				<svg viewBox="0 0 176 39">
-					<use href="#color-logo"></use>
-				</svg>
-			</div>
+					<div id="primary-logo">
+						<?php echo '<a href="'. get_permalink('6') .'"></a>'; ?>
+						<svg viewBox="0 0 176 39">
+							<use href="#color-logo"></use>
+						</svg>
+					</div>
 
-			<!-- Search Icon -->
-			<form role="search" method="get" id="search-form" class="search-form" action="<?php echo get_bloginfo('home'); ?>">
+					<!-- Search Icon -->
+					<form role="search" method="get" id="search-form" class="search-form" action="<?php echo get_bloginfo('home'); ?>">
 
-				<button type="submit" class="submit-button">
-					<svg id="search" width="26px" height="25px" viewBox="0 0 26 25">
-						<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-						<g id="Desktop/Nav" transform="translate(-1380.000000, -23.000000)" fill-rule="nonzero" fill="#0178BE">
-						<g id="Combined-Shape">
-						<path d="M1395.30211,38.2400291 C1398.22738,35.3107005 1398.22738,30.5613204 1395.30211,27.6319917 C1392.37684,24.7026631 1387.63405,24.7026631 1384.70879,27.6319917 C1381.78352,30.5613204 1381.78352,35.3107005 1384.70879,38.2400291 C1387.63405,41.1693577 1392.37684,41.1693577 1395.30211,38.2400291 Z M1396.10967,40.7705136 C1392.21647,43.8201927 1386.57319,43.5506318 1382.98937,39.9618308 C1379.1145,36.0815773 1379.1145,29.7904435 1382.98937,25.9101901 C1386.86424,22.0299366 1393.14665,22.0299366 1397.02152,25.9101901 C1400.60535,29.4989911 1400.87453,35.1501035 1397.82908,39.0487119 L1404.69244,45.9216016 C1405.16724,46.397064 1405.16724,47.1679408 1404.69244,47.6434032 C1404.21764,48.1188656 1403.44783,48.1188656 1402.97303,47.6434032 L1396.10967,40.7705136 Z"></path>
-						</g>
-						</g>
-						</g>
-					</svg>
-			</button> <!-- .submit-button -->
+						<button type="submit" class="submit-button">
+							<svg id="search" width="26px" height="25px" viewBox="0 0 26 25">
+								<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<g id="Desktop/Nav" transform="translate(-1380.000000, -23.000000)" fill-rule="nonzero" fill="#0178BE">
+								<g id="Combined-Shape">
+								<path d="M1395.30211,38.2400291 C1398.22738,35.3107005 1398.22738,30.5613204 1395.30211,27.6319917 C1392.37684,24.7026631 1387.63405,24.7026631 1384.70879,27.6319917 C1381.78352,30.5613204 1381.78352,35.3107005 1384.70879,38.2400291 C1387.63405,41.1693577 1392.37684,41.1693577 1395.30211,38.2400291 Z M1396.10967,40.7705136 C1392.21647,43.8201927 1386.57319,43.5506318 1382.98937,39.9618308 C1379.1145,36.0815773 1379.1145,29.7904435 1382.98937,25.9101901 C1386.86424,22.0299366 1393.14665,22.0299366 1397.02152,25.9101901 C1400.60535,29.4989911 1400.87453,35.1501035 1397.82908,39.0487119 L1404.69244,45.9216016 C1405.16724,46.397064 1405.16724,47.1679408 1404.69244,47.6434032 C1404.21764,48.1188656 1403.44783,48.1188656 1402.97303,47.6434032 L1396.10967,40.7705136 Z"></path>
+								</g>
+								</g>
+								</g>
+							</svg>
+					</button> <!-- .submit-button -->
 
-			<label>
-				<span class="screen-reader-text">Search for:</span>
-				<input type="search" class="search-field" placeholder="Search website..." value="" name="s" autocomplete="off"/>
-			</label>
-			</form> <!-- search-form -->
+					<label>
+						<span class="screen-reader-text">Search for:</span>
+						<input type="search" class="search-field" placeholder="Search website..." value="" name="s" autocomplete="off"/>
+					</label>
+					</form> <!-- search-form -->
 
-		</div> <!-- #header-inner -->
-	</div> <!-- #primary-header -->
+				</div> <!-- #header-inner -->
+			</div> <!-- #primary-header -->
 
-	<!-- nav dropdown -->
-	<div id="primary-nav">
-		<div class="inner">
-			<?php wp_nav_menu('default-menu'); ?>
-		</div> <!-- .inner -->
-	</div> <!-- .nav -->
+			<!-- nav dropdown -->
+			<div id="primary-nav">
+				<div class="inner">
+					<?php wp_nav_menu('default-menu'); ?>
+				</div> <!-- .inner -->
+			</div> <!-- .nav -->
 
-	<div id="body-content">
+			<div id="body-wrapper-inner">
+				
+			<div id="body-content">
