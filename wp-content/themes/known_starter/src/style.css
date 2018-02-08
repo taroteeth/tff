@@ -672,31 +672,35 @@ p, li {
       .team-member .inner .content-block-wrapper .content-block .content p br {
         line-height: 4rem; }
 
-@media screen and (min-width: 768px) {
-  .resources #hero {
-    padding: 2rem 4rem; } }
-
-.resources #hero #hero-text-wrapper {
-  padding: 4rem 0 !important; }
-  .resources #hero #hero-text-wrapper #hero-title {
-    font-weight: bold;
-    letter-spacing: .2rem;
-    text-transform: uppercase;
-    color: #0176BC; }
-    .resources #hero #hero-text-wrapper #hero-title:before {
-      content: "";
-      width: 3rem;
-      height: .3rem;
-      background-color: #F69420;
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 0;
-      margin-right: 1rem; }
-  .resources #hero #hero-text-wrapper .header {
-    text-align: left !important; }
-  .resources #hero #hero-text-wrapper #subheader {
-    color: #aaa;
-    font-size: 2rem; }
+.resources-hero {
+  margin-top: 6rem; }
+  @media screen and (min-width: 768px) {
+    .resources-hero {
+      padding: 2rem 4rem; } }
+  .resources-hero .hero-text-wrapper {
+    padding: 6rem 2rem; }
+    @media screen and (min-width: 768px) {
+      .resources-hero .hero-text-wrapper {
+        padding: 4rem 0; } }
+    .resources-hero .hero-text-wrapper .hero-title {
+      font-weight: bold;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+      color: #0176BC; }
+      .resources-hero .hero-text-wrapper .hero-title:before {
+        content: "";
+        width: 3rem;
+        height: .3rem;
+        background-color: #F69420;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 0;
+        margin-right: 1rem; }
+    .resources-hero .hero-text-wrapper .header {
+      text-align: left !important; }
+    .resources-hero .hero-text-wrapper #subheader {
+      color: #aaa;
+      font-size: 2rem; }
 
 .resource-single .inner .hero {
   max-height: 50rem; }
@@ -959,7 +963,8 @@ p, li {
         .featured-resources ul li .text-wrapper .header-link {
           text-decoration: none; }
           .featured-resources ul li .text-wrapper .header-link .header {
-            padding: 1rem 0; }
+            padding: 1rem 0;
+            color: #000; }
         .featured-resources ul li .text-wrapper .subheader {
           padding: 0;
           font-family: "Merriweather", serif;
@@ -1316,7 +1321,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       height: 40vh; } }
   @media screen and (min-width: 992px) {
     .hero {
-      height: 72vh; } }
+      height: 55vh; } }
   @media screen and (min-width: 1440px) {
     .hero {
       height: 65rem; } }
@@ -1384,7 +1389,10 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       padding: 2rem;
       text-align: center;
       -webkit-box-sizing: border-box;
-              box-sizing: border-box; }
+              box-sizing: border-box;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%; }
       @media screen and (min-width: 768px) {
         .hero .inner .hero-text-wrapper {
           padding: 0 5rem;

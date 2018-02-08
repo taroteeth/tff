@@ -114,14 +114,14 @@ if(blurbButtons) {
 
 // contact form label animation
 function labelDrift(){
-	jQuery('.contact-form input').on('focus', function(){
-	    var label = jQuery(this).siblings('label');
+	$('.contact-form input').on('focus', function(){
+	    var label = $(this).siblings('label');
 	    if(label) label.addClass('active');
 	  });
 
-	  jQuery('.contact-form input').on('blur', function(){
-	    var label = jQuery(this).siblings('label');
-	    if(jQuery(this).val() === ''){
+	  $('.contact-form input').on('blur', function(){
+	    var label = $(this).siblings('label');
+	    if($(this).val() === ''){
 	      if(label) label.removeClass('active');
 	    }
 	  });
@@ -133,8 +133,8 @@ labelDrift();
 //Blog WYSIWYG bxslider
 //var adaptiveHeight = (window.matchMedia('(min-width: 992px)').matches) ? false : true;
 
-jQuery('.blog-bxslider').each(function(ele,index){
-  jQuery(this).bxSlider({
+$('.blog-bxslider').each(function(ele,index){
+  $(this).bxSlider({
     pager: true,
     infiniteLoop: true,
     //adaptiveHeight: adaptiveHeight,
@@ -142,7 +142,7 @@ jQuery('.blog-bxslider').each(function(ele,index){
   });
 	// 	onSliderLoad: function(){
 	//     document.getElementsByClassName('blog-bxslider')[0].classList.remove('load-delay');}
-  // });
+  });
 });
 
 
@@ -170,6 +170,8 @@ function sampleName(){
 		});
 	}
 }
+
+sampleName();
 
 // SEARCH BAR
 

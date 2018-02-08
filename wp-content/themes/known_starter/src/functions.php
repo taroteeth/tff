@@ -530,6 +530,8 @@ function wordpress_ajaxurl(){ ?>
 
 add_action('wp_head', 'wordpress_ajaxurl'); //run this first, not in footer
 
+
+
 // Load more Posts Function
 
 // function load_more_posts(){
@@ -606,4 +608,5 @@ add_action('wp_head', 'wordpress_ajaxurl'); //run this first, not in footer
 // }
 
 //how do I add action here with multiple buttons?
+
 ?>
