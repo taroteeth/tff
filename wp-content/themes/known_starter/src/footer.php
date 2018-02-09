@@ -12,12 +12,7 @@
 						</div>
 
 						<div class="button">
-<<<<<<< HEAD
-							<a href="<?php echo get_permalink('447'); ?>"></a>
-								Contact Us
-=======
 							<?php button(447, 'Contact Us'); ?>
->>>>>>> 0e73336ee5ca0d87138db151af06367a9cf3750f
 						</div>
 					</div> <!-- left-col -->
 
@@ -35,17 +30,17 @@
 
 					<ul id="sm-container">
 						<li>
-							<a href="https://www.linkedin.com/company/think-forward-financial-group-llc/"></a>
+							<a target="_blank" href="https://www.linkedin.com/company/think-forward-financial-group-llc/"></a>
 							<svg width="30px" height="30px" viewBox="0 0 23 23"><use href="#linkedin"></use></svg>
 						</li>
 
 						<li id="twitter">
-							<a href=""></a>
+							<a target="_blank" href=""></a>
 							<svg width="30px" height="30px" viewBox="0 0 24 23"><use href="#twitter"></use></svg>
 						</li>
 
 						<li>
-							<a href=""></a>
+							<a href="" target="_blank"></a>
 							<svg width="30px" height="30px" viewBox="0 0 23 23"><use href="#facebook"></use></svg>
 						</li>
 					</ul> <!-- #sm-container -->

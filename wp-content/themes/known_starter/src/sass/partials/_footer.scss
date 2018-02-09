@@ -41,6 +41,11 @@
         padding: 0;
         margin-bottom: 0;
       }
+
+      a {
+        text-decoration: none;
+        color: $textGrey; 
+      }
     }
 
     #sm-container {
