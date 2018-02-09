@@ -2545,6 +2545,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           text-align: left;
           font-size: 1.6rem; } }
       .alt-grid .row-inner .text-block .text-inner .text-byline:before {
+<<<<<<< HEAD
         content: "- "; }
     .alt-grid .row-inner .text-block .text-inner .btn-wrap {
       margin-top: 2em;
@@ -2553,6 +2554,11 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         .alt-grid .row-inner .text-block .text-inner .btn-wrap {
           text-align: left;
           margin-top: 3em; } }
+=======
+        content: "-"; }
+    .alt-grid .row-inner .text-block .text-inner .btn-wrap {
+      margin-top: 3em; }
+>>>>>>> 746c330efe5867fe87f707cf974fde7c3126139a
 
 #team-grid {
   max-width: 160rem;
@@ -3367,7 +3373,17 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           text-align: left; } }
       #primary-footer .inner #sm-container li {
         display: inline-block;
+<<<<<<< HEAD
         line-height: 1; }
+=======
+        position: relative; }
+        #primary-footer .inner #sm-container li a {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 9; }
+>>>>>>> 746c330efe5867fe87f707cf974fde7c3126139a
         #primary-footer .inner #sm-container li svg {
           fill: #F69420; }
       #primary-footer .inner #sm-container #twitter {

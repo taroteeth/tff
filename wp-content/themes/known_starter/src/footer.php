@@ -12,6 +12,8 @@
 						</div>
 
 						<?php button(447, 'Contact Us'); ?>
+						</div>
+>>>>>>> 746c330efe5867fe87f707cf974fde7c3126139a
 					</div> <!-- left-col -->
 
 					<div id="right-col">
@@ -19,19 +21,26 @@
 						<li>27 Whitehall Street</li>
 						<li>New York, NY 10004</li>
 						<li>T: 212.269.1300</li>
-						<li>info@thinkforwardfinancial.com</li>
-					</ul><!-- #footer-address -->
+						<li>
+							<a href="mailto:info@thinkforwardfinancial.com">
+								info@thinkforwardfinancial.com
+							</a>
+						</li>
+					</ul> <!-- #footer-address -->
 
 					<ul id="sm-container">
 						<li>
+							<a href="https://www.linkedin.com/company/think-forward-financial-group-llc/"></a>
 							<svg width="30px" height="30px" viewBox="0 0 23 23"><use href="#linkedin"></use></svg>
 						</li>
 
 						<li id="twitter">
+							<a href=""></a>
 							<svg width="30px" height="30px" viewBox="0 0 24 23"><use href="#twitter"></use></svg>
 						</li>
 
 						<li>
+							<a href=""></a>
 							<svg width="30px" height="30px" viewBox="0 0 23 23"><use href="#facebook"></use></svg>
 						</li>
 					</ul> <!-- #sm-container -->
