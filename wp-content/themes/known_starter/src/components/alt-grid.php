@@ -90,7 +90,7 @@
 				}
 
 				if($textBlockCta){
-					include('button.php');
+					button();
 				}
 
 				echo '</div> <!-- .text-inner -->';

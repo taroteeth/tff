@@ -2386,8 +2386,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
 
 .alt-grid {
   width: 100%;
-  border-top: 1px solid #F8F8F8;
-  padding: 2rem 0; }
+  border-top: 1px solid #F8F8F8; }
   @media (min-width: 768px) {
     .alt-grid .row-inner {
       display: -webkit-box;
@@ -2404,7 +2403,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     position: relative; }
     @media screen and (min-width: 768px) {
       .alt-grid .row-inner .img-block {
-        height: 45rem;
+        min-height: 45rem;
         max-width: 50%;
         -webkit-box-flex: 0;
             -ms-flex: 0 0 50%;
@@ -2538,19 +2537,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           text-align: left; } }
       .alt-grid .row-inner .text-block .text-inner .text-byline:before {
         content: "-"; }
-  .alt-grid .row-inner .btn-wrap {
-    width: 60%;
-    display: block;
-    margin: 0 auto; }
-    @media screen and (min-width: 768px) {
-      .alt-grid .row-inner .btn-wrap {
-        margin: 0 0; } }
-    .alt-grid .row-inner .btn-wrap .button {
-      margin: 1.5rem 0;
-      max-width: 15rem; }
-      .alt-grid .row-inner .btn-wrap .button a:after {
-        width: 2rem;
-        margin-left: .2rem; }
+    .alt-grid .row-inner .text-block .text-inner .btn-wrap {
+      margin-top: 3em; }
 
 #team-grid {
   max-width: 160rem;

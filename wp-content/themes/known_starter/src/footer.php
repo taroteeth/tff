@@ -12,8 +12,12 @@
 						</div>
 
 						<div class="button">
+<<<<<<< HEAD
 							<a href="<?php echo get_permalink('447'); ?>"></a>
 								Contact Us
+=======
+							<?php button(447, 'Contact Us'); ?>
+>>>>>>> 0e73336ee5ca0d87138db151af06367a9cf3750f
 						</div>
 					</div> <!-- left-col -->
 

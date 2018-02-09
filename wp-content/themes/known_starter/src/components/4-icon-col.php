@@ -7,7 +7,7 @@ $btnText = get_sub_field('bottom_cta_text');
 $btnLink = get_sub_field('bottom_cta_link');
 ?>
 
-<div class="icon-col <?php if($greyBg){ echo "grey-bg"; } ?>">
+<div class="icon-col <?php if($greyBg){ echo 'grey-bg'; } ?> <?php if($divider){ echo 'has-divider'; } ?>">
   <div class="inner">
 
     <?php
@@ -34,7 +34,9 @@ $btnLink = get_sub_field('bottom_cta_link');
       $isLink = get_sub_field('link_option');
       $linkSrc = get_sub_field('link_source'); ?>
 
-      <div class="col-inner <?php echo $iteration ?>"> <?php
+      <div class="col-inner <?php echo $iteration ?>">
+
+      <?php
 
         if($submodIcon){
           if($isLink){
@@ -47,6 +49,10 @@ $btnLink = get_sub_field('bottom_cta_link');
             echo wp_get_attachment_image($submodIcon);
             echo '</div><!-- #sub-icon-wrapper -->';
           }
+        }
+
+        if($divider) {
+          echo '<div class="divider"></div>';
         }
 
         if($submodTitle){

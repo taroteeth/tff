@@ -1,7 +1,6 @@
 .alt-grid {
   width: 100%;
   border-top: 1px solid $backgroundGrey;
-  padding: 2rem 0;
 
   .row-inner {
     @media(min-width: 768px) {
@@ -18,7 +17,7 @@
     .img-block {
       position: relative;
       @media screen and (min-width: 768px){
-        height: 45rem;
+        min-height: 45rem;
         max-width: 50%;
         flex: 0 0 50%;
       }
@@ -173,25 +172,9 @@
             content: "-";
           }
         }
-      }
 
-    }
-
-    .btn-wrap {
-      width: 60%;
-      display: block;
-      margin: 0 auto;
-      @media screen and (min-width: 768px){
-        margin: 0 0;
-      }
-
-      .button {
-        margin: 1.5rem 0;
-        max-width: 15rem;
-
-        a:after {
-        width: 2rem;
-        margin-left: .2rem;
+        .btn-wrap {
+          margin-top: 3em;
         }
       }
     }
