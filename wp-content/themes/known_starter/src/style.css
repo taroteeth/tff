@@ -3380,7 +3380,14 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         #primary-footer .inner #sm-container {
           padding: 1rem 0; } }
       #primary-footer .inner #sm-container li {
-        display: inline-block; }
+        display: inline-block;
+        position: relative; }
+        #primary-footer .inner #sm-container li a {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 9; }
         #primary-footer .inner #sm-container li svg {
           fill: #F69420; }
       #primary-footer .inner #sm-container #twitter {
