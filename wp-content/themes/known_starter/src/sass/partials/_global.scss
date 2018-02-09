@@ -44,11 +44,16 @@ body {
 
   #body-wrapper-inner {
     position: relative;
+    top: 0;
     transition: top 500ms cubic-bezier(0.86, 0, 0.07, 1);
     @media(min-width: 992px) {
-      top: 0;
       transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
-      body.nav-active & {
+    }
+
+    body.nav-active & {
+      top: 10rem;
+      @media(min-width: 992px) {
+        top: 0;
         transform: translateX(20rem);
       }
     }
