@@ -1,38 +1,107 @@
-.button {
-  background-color: #0176BC;
-  height: 2rem;
-  max-width: 30rem;
-  line-height: 2rem;
-  padding: 1rem;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  @media screen and (min-width: 768px){
-    padding: 0 1rem;
-    text-align: left;
-    max-width: 15rem; 
+// .button {
+//   background-color: #0176BC;
+//   height: 2rem;
+//   max-width: 30rem;
+//   line-height: 2rem;
+//   padding: 1rem;
+//   display: block;
+//   margin: 0 auto;
+//   text-align: center;
+//   @media screen and (min-width: 768px){
+//     padding: 0 1rem;
+//     text-align: left;
+//     max-width: 15rem;
+//   }
+//
+//   a {
+//     text-decoration: none;
+//     color: #fff;
+//     text-transform: uppercase;
+//     font-family: 'Poppins', sans-serif;
+//     letter-spacing: .2rem;
+//     font-size: 1.3rem;
+//     vertical-align: middle;
+//     @media screen and (min-width: 768px){
+//       font-size: 1rem;
+//     }
+//
+//     &:after {
+//       content: "";
+//       width: 2rem;
+//       height:  .2rem;
+//       margin-left: 1rem;
+//       background-color: #fff;
+//       display: inline-block;
+//       vertical-align: middle;
+//     }
+//   }
+// }
+
+.btn {
+  display: inline-block;
+  position: relative;
+  background: $blue;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: $orange;
+    transition: width ease 300ms;
   }
 
-  a {
-    text-decoration: none;
+  &:hover:before {
+    width: 100%;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    line-height: 1;
     color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-family: $Poppins;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: .2rem;
-    font-size: 1.3rem;
-    vertical-align: middle;
-    @media screen and (min-width: 768px){
-      font-size: 1rem;
+    letter-spacing: .1rem;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: .3rem;
+      background: #fff;
+      margin-right: 1rem;
+      transition: width ease 300ms;
+    }
+
+    &:hover:before {
+      width: 2.5rem;
     }
 
     &:after {
-      content: "";
-      width: 2rem;
-      height:  .2rem;
-      margin-left: 1rem;
-      background-color: #fff;
+      content: '';
       display: inline-block;
       vertical-align: middle;
+      width: 2.5rem;
+      height: .3rem;
+      background: #fff;
+      margin-left: 1rem;
+      transition: width ease 300ms;
+    }
+
+    &:hover:after {
+      width: 0;
     }
   }
+}
+
+.btn-wrap {
+
 }

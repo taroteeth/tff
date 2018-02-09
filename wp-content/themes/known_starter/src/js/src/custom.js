@@ -20,6 +20,11 @@ function findAncestorById (el, id) {
   return el;
 }
 
+function getScrollPosition() {
+  var doc = document.documentElement;
+  return (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+}
+
 //--------------- Utility Functions ---------------//
 
 
@@ -58,6 +63,9 @@ function toggleNav() {
   if(hamburger) {
     hamburger.addEventListener("click", function(e){
   		e.preventDefault();
+      if(window.matchMedia('(min-width: 992px)').matches) {
+        primaryNav.style.top = getScrollPosition() + 'px';
+      }
   		body[0].classList.toggle("nav-active");
   	});
   }
