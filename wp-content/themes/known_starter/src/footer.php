@@ -12,9 +12,7 @@
 						</div>
 
 						<div class="button">
-							<a href="">
-								Contact Us
-							</a>
+							<?php button(447, 'Contact Us'); ?>
 						</div>
 					</div> <!-- left-col -->
 
