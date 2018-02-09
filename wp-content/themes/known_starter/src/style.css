@@ -2510,17 +2510,17 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           text-align: left; } }
       .alt-grid .row-inner .text-block .text-inner .text-byline:before {
         content: "-"; }
-  .alt-grid .row-inner .button-wrapper {
+  .alt-grid .row-inner .btn-wrap {
     width: 60%;
     display: block;
     margin: 0 auto; }
     @media screen and (min-width: 768px) {
-      .alt-grid .row-inner .button-wrapper {
+      .alt-grid .row-inner .btn-wrap {
         margin: 0 0; } }
-    .alt-grid .row-inner .button-wrapper .button {
+    .alt-grid .row-inner .btn-wrap .button {
       margin: 1.5rem 0;
       max-width: 15rem; }
-      .alt-grid .row-inner .button-wrapper .button a:after {
+      .alt-grid .row-inner .btn-wrap .button a:after {
         width: 2rem;
         margin-left: .2rem; }
 
@@ -2631,7 +2631,14 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           text-transform: uppercase;
           font-size: 1.3rem;
           line-height: 100%;
-          padding: 1rem; }
+          padding: 1rem 2rem;
+          position: relative; }
+          #team-grid .inner .row .content-block .content-inner .button-container a svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%); }
         #team-grid .inner .row .content-block .content-inner .button-container .profile-button {
           margin: 0; }
           #team-grid .inner .row .content-block .content-inner .button-container .profile-button.plural {
@@ -3346,6 +3353,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           padding: 1rem 0; } }
       #primary-footer .inner #sm-container li {
         display: inline-block; }
+        #primary-footer .inner #sm-container li svg {
+          fill: #F69420; }
       #primary-footer .inner #sm-container #twitter {
         margin: 0 .5rem; }
 

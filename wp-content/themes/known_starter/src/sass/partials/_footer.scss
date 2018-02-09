@@ -52,6 +52,10 @@
 
       li {
         display: inline-block;
+
+        svg {
+          fill: $orange;
+        }
       }
 
       #twitter {

@@ -20,7 +20,7 @@ echo '<div class="network-exhibit">';
         }
 
         if($i == 1 || $i == 2){
-          echo '<svg class="shadow" viewBox="0 0 701 499">
+          echo '<svg class="shadow" height="200px" width="100px" viewBox="0 0 701 499">
                 <use href="#curve-shadow"></use>
                 </svg>';
         }

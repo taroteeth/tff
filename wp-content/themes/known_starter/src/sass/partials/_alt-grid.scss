@@ -1,7 +1,7 @@
 .alt-grid {
   width: 100%;
   border-top: 1px solid $backgroundGrey;
-  padding: 2rem 0; 
+  padding: 2rem 0;
 
   .row-inner {
     @media(min-width: 768px) {
@@ -177,7 +177,7 @@
 
     }
 
-    .button-wrapper {
+    .btn-wrap {
       width: 60%;
       display: block;
       margin: 0 auto;
