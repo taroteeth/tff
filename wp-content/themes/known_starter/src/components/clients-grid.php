@@ -13,7 +13,8 @@ if( have_rows('client_industry_module' ) ) :
       echo '<div class="industry-module">';
 
       echo '<p class="header">'. $moduleTitle .'</p>';
-      
+      echo '<svg class="triangle" width="14px" height="7px" viewBox="0 0 14 7"><use href="#triangle-up"></use></svg>';
+
       $categories = get_sub_field_object('industry_category_submodule')['value'];
       $categoriesArray = [];
 

@@ -14,6 +14,14 @@
       text-align: center;
     }
 
+    .triangle {
+      position: absolute;
+      left: 50%;
+      transform: rotate(180deg);
+      margin: 1rem auto;
+      fill: $orange;
+    }
+
     .categories-list {
       display: block;
       margin: 4rem auto;

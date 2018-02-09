@@ -48,7 +48,7 @@
 		else {
 			echo '<h2 class="results">No results for \'<span class="query-term">'. get_search_query() .'</span>\'</h2>';
 
-			echo '<a class="home-path" href="'. get_permalink('6') .'">Return Home</a>'; // add svg
+			echo '<div class="home-wrapper"><a class="home-path" href="'. get_permalink('6') .'">Return Home</a></div>'; 
 		}?>
 
 	</div>
