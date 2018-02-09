@@ -75,9 +75,7 @@ $btnLink = get_sub_field('bottom_cta_link');
     endif; // end repeater loop
 
     if($hasBtn){
-      echo '<div class="col-cta">';
-      include('button.php');
-      echo '</div> <!-- .col-cta -->';
+      button();
     } ?>
 
   </div> <!-- .inner -->

@@ -34,9 +34,7 @@ echo '<div class="network-icon-col">';
     endif; // end repeater loop
 
     if($hasBtn){
-      echo '<div id="col-cta">';
-      include('button.php');
-      echo '</div> <!-- #col-cta -->';
+      button();
     } ?>
 
   </div> <!-- .inner -->

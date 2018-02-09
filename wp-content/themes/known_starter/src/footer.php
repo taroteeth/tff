@@ -11,9 +11,7 @@
 							</svg>
 						</div>
 
-						<div class="button">
-							<?php button(447, 'Contact Us'); ?>
-						</div>
+						<?php button(447, 'Contact Us'); ?>
 					</div> <!-- left-col -->
 
 					<div id="right-col">
@@ -22,7 +20,7 @@
 						<li>New York, NY 10004</li>
 						<li>T: 212.269.1300</li>
 						<li>info@thinkforwardfinancial.com</li>
-					</ul> <!-- #footer-address -->
+					</ul><!-- #footer-address -->
 
 					<ul id="sm-container">
 						<li>

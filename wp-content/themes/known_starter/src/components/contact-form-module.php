@@ -49,9 +49,11 @@ $contactTitle = get_sub_field('contact_title');
 
       </div><!-- .fields -->
 
-      <button type="submit" name="request-info" id="contact-button">
-        <span>Request Info</span>
-      </button>
+      <div class="btn-wrap">
+        <button type="submit" name="request-info" id="contact-button" class="btn">
+          <span>Request Info</span>
+        </button>
+      </div>
 
     </div><!-- inner -->
   </form> <!-- contact-form -->

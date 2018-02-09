@@ -16,6 +16,7 @@
 
     .img-block {
       position: relative;
+      box-sizing: border-box;
       @media screen and (min-width: 768px){
         min-height: 45rem;
         max-width: 50%;
@@ -57,6 +58,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        vertical-align: bottom;
       }
 
       svg {
@@ -93,7 +95,8 @@
         background-color: $blueTransparent;
         bottom: 0;
         width: 100%;
-        padding: 2rem 0;
+        padding: 2rem;
+        box-sizing: border-box;
         font-size: 1.4rem;
         letter-spacing: .1rem;
         font-weight: bold;
@@ -103,7 +106,6 @@
           text-align: center;
           text-transform: uppercase;
           display: block;
-          width: 50%;
           margin: 0 auto;
         }
       }
@@ -142,6 +144,8 @@
         }
 
         .text-header {
+          margin-bottom: 1em;
+
           p {
             font-size: 2rem;
             font-family: 'Merriweather', serif;
@@ -158,23 +162,28 @@
         }
 
         .text-byline {
-          font-size: 1.3rem;
+          font-size: 1.4rem;
           font-family: $Merriweather;
           font-weight: bold;
           color: $blue;
-          padding: 1rem 0;
           text-align: center;
           @media screen and (min-width: 768px){
             text-align: left;
+            font-size: 1.6rem;
           }
 
           &:before {
-            content: "-";
+            content: "- ";
           }
         }
 
         .btn-wrap {
-          margin-top: 3em;
+          margin-top: 2em;
+          text-align: center;
+          @media(min-width: 768px) {
+            text-align: left;
+            margin-top: 3em;
+          }
         }
       }
     }

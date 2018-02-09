@@ -41,6 +41,7 @@
   display: inline-block;
   position: relative;
   background: $blue;
+  border: none;
 
   &:before {
     content: '';

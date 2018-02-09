@@ -27,12 +27,13 @@ $blurbText = get_sub_field('blurb_button_text'); ?>
 
     echo '<div class="hero-text-wrapper">';
 
-      if(is_page('6')){
-        echo '<svg width="176px" height="39px" viewBox="0 0 176 39"><use href="#color-logo"></use></svg> ';
-      } else { ?>
-        <p class="hero-title <?php echo $imagePos == "Left" ? "div-left" : "div-right";?>"> <?php echo get_the_title() ?></p> <?php
+      if(is_front_page()) {
+        if($blurbText){
+          echo '<svg width="176px" height="39px" viewBox="0 0 176 39"><use href="#color-logo"></use></svg> ';
+        }
+      } else {
+        echo '<p class="hero-title '. ($imagePos == 'Left' ? 'div-left' : 'div-right') .'">'. get_the_title() . '</p>';
       }
-
 
       if($heroHeader){
         echo '<p class="header">'. $heroHeader. '</p>';

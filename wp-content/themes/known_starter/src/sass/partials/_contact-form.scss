@@ -113,33 +113,11 @@
           border-color: red;
         }
       }
-    }
+    } //.fields
 
-    #contact-button {
-      border: none;
-      text-transform: uppercase;
-      background-color: $blue;
-      padding: 1rem 2rem;
-      display: block;
-      margin: 1rem auto 0 auto;
+    .btn-wrap {
       text-align: center;
-
-      span {
-        color: #fff;
-        font-family: 'Poppins', sans-serif;
-        letter-spacing: .2rem;
-        font-size: 1.3rem;
-
-        &:after {
-          content: "";
-          width: 2rem;
-          height:  .2rem;
-          margin-left: 1rem;
-          background-color: #fff;
-          display: inline-block;
-          vertical-align: middle;
-        }
-      }
+      margin-top: 2em;
     }
   }
 }
