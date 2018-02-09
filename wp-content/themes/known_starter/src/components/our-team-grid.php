@@ -27,7 +27,7 @@ if( $team_query->have_posts() ) :
       echo '<div class="row">';
     } ?>
 
-    <div class="photo-block <?php if($rowCount % 2 == 0){echo ', right';}?>"><?php
+    <div class="photo-block <?php if($rowCount % 2 == 0){echo 'right';}?>"><?php
       if($image){
         echo '<div class="image-wrapper">';
         echo wp_get_attachment_image($image, 'full');
@@ -48,20 +48,24 @@ if( $team_query->have_posts() ) :
         if($blurb){
           echo '<p class="blurb">'. $blurb .'</p>';
         }
+        ?>
 
-        echo '<div class="button-container">';
-          if($linkedIn){
-            echo '<a class="linkedIn" href="'. $linkedIn .'">';
-            echo '<svg width="23px" height="23px" viewBox="0 0 23 23"><use href="#linkedin"></use></svg>';
-            echo '</a><!-- .linkedIn -->';
-          }?>
+        <div class="btns-wrap">
 
-          <a class="profile-button <?php if($linkedIn){echo 'plural';} ?>" href="<?php echo $path ?>"> <?php
-          echo '<span>View Profile</span>';
-          echo '</a>';
-        echo '</div><!-- .button-container-->';
+          <?php if($linkedIn) { ?>
+          <a class="linkedIn" href="<?php echo $linkedIn ?>">
+            <svg width="23px" height="23px" viewBox="0 0 23 23"><use href="#linkedin"></use></svg>
+          </a>
+          <?php } ?>
 
-      echo '</div><!-- .content-inner -->';
+          <a class="btn <?php if($linkedIn) echo 'plural' ?>" href="<?php echo $path ?>">
+            <span>View Profile</span>
+          </a>
+
+        </div>
+
+        <?php
+        echo '</div><!-- .content-inner -->';
     echo '</div><!-- .content-block-->';
 
     $i++;
