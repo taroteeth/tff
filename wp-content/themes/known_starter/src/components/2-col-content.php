@@ -5,7 +5,7 @@ $introduction = get_sub_field('content_module_introduction');
 
 ?>
 
-<div class="2-col-content">
+<div class="two-col-content">
   <div class="introduction-module">
     <?php
     if($title) echo '<p class="header">'. $title .'</p>';
@@ -13,7 +13,7 @@ $introduction = get_sub_field('content_module_introduction');
     ?>
   </div><!-- .introduction-module -->
 
-  <div class="2-col-module">
+  <div class="two-col-module">
     <?php
 
     if(have_rows('column_content_item') ) :
@@ -29,5 +29,5 @@ $introduction = get_sub_field('content_module_introduction');
       endwhile;
     endif;
     ?>
-  </div><!-- .2-col-module -->
-</div><!-- 2-col-content -->
+  </div><!-- two-col-module -->
+</div><!-- two-col-content -->

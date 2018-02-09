@@ -1,0 +1,32 @@
+//nice
+
+.two-col-content {
+
+  .introduction-module {
+    text-align: center;
+    margin: 4rem auto 0;
+  }
+
+  .two-col-module {
+    padding: 2rem;
+
+    .block {
+      margin: 2rem 0;
+
+      .title {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $blue;
+        letter-spacing: .1rem;
+        &:after {
+          content: "";
+          display: block;
+          background-color: $orange;
+          height: .2rem;
+          width: 3.8rem;
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}

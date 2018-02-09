@@ -150,9 +150,6 @@ p, li {
 .body-content {
   margin-top: 6rem; }
 
-.2-col-content {
-  background-color: blue; }
-
 .case-study .hero {
   background-color: #F8F8F8;
   display: -webkit-box;
@@ -1923,17 +1920,12 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     @media screen and (min-width: 768px) {
       .embed-image-module .inner {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        padding: 2rem; } }
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; } }
     .embed-image-module .inner .embed-image-wrapper {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
@@ -1978,7 +1970,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           -webkit-box-ordinal-group: 2;
               -ms-flex-order: 1;
                   order: 1;
-          padding: 0 2rem;
+          padding: 2rem;
           display: block;
           vertical-align: middle;
           width: 50%;
@@ -1998,13 +1990,15 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         @media screen and (min-width: 768px) {
           .embed-image-module .inner .text-wrapper .divider:after {
             margin: 1rem 0; } }
-      .embed-image-module .inner .text-wrapper p {
-        padding: 1rem 0; }
-      .embed-image-module .inner .text-wrapper h5 {
-        padding: 1rem 0;
-        font-family: "Poppins", sans-serif;
-        color: #F69420;
-        line-height: 1.3em; }
+      .embed-image-module .inner .text-wrapper .body-content {
+        margin-top: 0; }
+        .embed-image-module .inner .text-wrapper .body-content p {
+          padding: 1rem 0; }
+        .embed-image-module .inner .text-wrapper .body-content h5 {
+          padding: 1rem 0;
+          font-family: "Poppins", sans-serif;
+          color: #F69420;
+          line-height: 1.3em; }
       .embed-image-module .inner .text-wrapper .button {
         width: 100%;
         max-width: 30rem;
@@ -2245,6 +2239,27 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           max-width: 50rem;
           display: block;
           margin: 0 auto; }
+
+.two-col-content .introduction-module {
+  text-align: center;
+  margin: 4rem auto 0; }
+
+.two-col-content .two-col-module {
+  padding: 2rem; }
+  .two-col-content .two-col-module .block {
+    margin: 2rem 0; }
+    .two-col-content .two-col-module .block .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #0176BC;
+      letter-spacing: .1rem; }
+      .two-col-content .two-col-module .block .title:after {
+        content: "";
+        display: block;
+        background-color: #F69420;
+        height: .2rem;
+        width: 3.8rem;
+        margin: 1rem 0; }
 
 .network-icon-col {
   background-color: #F8F8F8;
@@ -2720,7 +2735,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       font-family: "Poppins", sans-serif;
       font-size: 1.2rem;
       letter-spacing: .2rem;
-      font-weight: bold; }
+      font-weight: bold;
+      white-space: pre-wrap;
+      display: inline-block; }
       .clients-grid .inner .categories-list span:after {
         content: "|";
         color: #858585;
