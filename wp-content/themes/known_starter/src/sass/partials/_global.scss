@@ -21,7 +21,6 @@ body {
   top: 0;
   overflow: hidden;
 
-
   &:before {
     content: '';
     position: fixed;
@@ -111,11 +110,4 @@ p, li {
 
 .body-content {
   margin-top: 6rem;
-
-
-  //padding: 0 2rem;  add this to larger screen sizes
-}
-
-.2-col-content {
-  background-color: blue;
 }

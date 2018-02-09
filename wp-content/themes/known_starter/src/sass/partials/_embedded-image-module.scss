@@ -7,10 +7,9 @@
   .inner {
     display: flex;
     position: relative;
-    flex-direction: column;
+    flex-wrap: wrap;
     @media screen and (min-width: 768px){
-      flex-direction: row;
-      padding: 2rem;
+      flex-wrap: nowrap;
     }
 
     .embed-image-wrapper {
@@ -52,7 +51,7 @@
       order: 2;
       @media screen and (min-width: 768px){
         order: 1;
-        padding: 0 2rem;
+        padding: 2rem;
         display: block;
         vertical-align: middle;
         width: 50%;
@@ -79,15 +78,19 @@
         }
       }
 
-      p {
-        padding: 1rem 0;
-      }
+      .body-content {
+        margin-top: 0;
 
-      h5 {
-        padding: 1rem 0;
-        font-family: $Poppins;
-        color: $orange;
-        line-height: 1.3em;
+        p {
+          padding: 1rem 0;
+        }
+
+        h5 {
+          padding: 1rem 0;
+          font-family: $Poppins;
+          color: $orange;
+          line-height: 1.3em;
+        }
       }
 
       .button {
