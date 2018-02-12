@@ -1,10 +1,10 @@
-<?php
+<div id="our-network-content-cols">
 
-echo '<div id="our-network-content-cols">';
+<?php if( have_rows('content_cols_module') ): ?>
 
-if( have_rows('content_cols_module') ):
+  <div class="content-cols-module">
 
-  echo '<div class="content-cols-module">';
+  <?php
 
   while( have_rows('content_cols_module') ) : the_row();
 
@@ -19,15 +19,37 @@ if( have_rows('content_cols_module') ):
       // This will loop through all the rows, and generate a new multidimensional array for each set of title/items
       for($i = 0; $i < count($subModuleObj); $i++) {
         if($subModuleObj[$i]['title_button'] && $subModuleObj[$i]['title_text'] !== '') :
-          if($i !== 0) $currentGroup++;
-          $groups[] = ['title' => [], 'content' => []];
-          $groups[$currentGroup]['title'] = $subModuleObj[$i];
+          if($i !== 0) {
+            $currentGroup++;
+          }
+          $groups[$currentGroup]['title-text'] = $subModuleObj[$i]['title_text'];
+          $groups[$currentGroup]['content'] = [];
+          $groups[$currentGroup]['totalLength'] = 0;
         else :
-          $subModuleObj[$i]['length'] = strlen($subModuleObj[$i]['content']);
-          $groups[$currentGroup]['content'][] = $subModuleObj[$i]; // third bracket allows you to add new stuff without overwriting
+          $groups[$currentGroup]['content'][] = [
+            'header' => $subModuleObj[$i]['header'],
+            'subheader' => $subModuleObj[$i]['subheader'],
+            'content' => $subModuleObj[$i]['content'],
+            'length' => strlen($subModuleObj[$i]['content'])
+          ];
+          $groups[$currentGroup]['totalLength'] += strlen($subModuleObj[$i]['content']);
         endif;
       }
-      print_r($groups);
+
+      // loop through groups to get split point
+      for($i = 0; $i < count($groups); $i++) {
+        $c = 0;
+        for($x = 0; $x < count($groups[$i]['content']); $x++) {
+          $c += $groups[$i]['content'][$x]['length'];
+          if($c >= ($groups[$i]['totalLength'] * 0.5)){
+            $groups[$i]['splitIndex'] = $x;
+            break;
+          }
+        }
+      }
+
+      echo '<div class="module-wrap">';
+
       if($moduleTitle) echo '<p class="header">'. $moduleTitle .'</p>';
       if($moduleIntro) echo '<div class="module-intro">'. $moduleIntro .'</div>';
 
@@ -37,48 +59,67 @@ if( have_rows('content_cols_module') ):
 
           $contentCount = count($group['content']);
           $contentCounter = 0;
+          ?>
 
-          echo '<div class="group">';
+          <div class="group-wrap">
+          <div class="group">
 
-          if($group['title']['title_text']) {
-            echo '<div class="title">';
-            echo $group['title']['title_text'];
-            echo '</div>';
-          }
+          <?php if($group['title-text']) { ?>
+            <div class="title"><?php echo $group['title-text'] ?></div>
+          <?php } ?>
 
-          foreach($group['content'] as $g) :
+          <?php
+
+          for($i = 0; $i < count($group['content']); $i++) {
+
+            $g = $group['content'][$i];
 
             // if zero or half of the count, round rounds up
-            if($contentCounter === 0 || $contentCounter == round($contentCount / 2)) echo '<div class="col">';
+            if($contentCounter === 0 || $i == $group['splitIndex'] + 1) {
+              echo '<div class="col">';
+            }
 
             $header = $g['header'];
             $subheader = $g['subheader'];
             $content = $g['content'];
+            ?>
 
-            echo '<div class="block">';
-            echo '<p class="block-header">'. $header .'</p><!-- .block-header -->';
-            echo '<p class="block-subheader">'. $subheader .'</p>';
-            echo $content;
-            echo '</div>';
+            <div class="block">
+              <p class="block-header"><?php echo $header ?></p>
+              <p class="block-subheader"><?php echo $subheader ?></p>
+              <?php echo $content ?>
+            </div>
 
-            if($contentCounter == round(($contentCount / 2) - 1) || $contentCounter == count($group['content']) - 1) echo '</div><!-- .col -->';
+            <?php if($i == $group['splitIndex'] || $contentCounter == count($group['content']) - 1) { ?>
+              </div><!-- .col -->
+            <?php } ?>
 
+            <?php
             $contentCounter++;
 
-          endforeach;
+          }
+          ?>
 
-          echo '</div>';
+          </div>
+          </div>
+
+        <?php
 
         endforeach;
-
       endif;
+
+      echo '</div><!-- .module-wrap -->';
+
 
     endif; //if get row layout
   endwhile; // while have rows content_module
-  echo '</div><!-- .content-cols-module -->';
-endif; // have rows content cols module
-wp_reset_query();
+  ?>
 
-echo '</div> <!-- our-network-content-cols -->';
+  </div><!-- .content-cols-module -->
 
-?>
+  <?php
+  endif; // have rows content cols module
+  wp_reset_query();
+  ?>
+
+</div> <!-- our-network-content-cols -->
