@@ -2676,9 +2676,12 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       #team-grid .inner .row .content-block .content-inner .linkedIn {
         display: inline-block;
         vertical-align: middle;
-        margin-right: 2rem; }
+        margin-right: 2rem;
+        background-color: #0176BC;
+        padding: .5rem; }
         #team-grid .inner .row .content-block .content-inner .linkedIn svg {
-          vertical-align: bottom; }
+          vertical-align: bottom;
+          fill: #fff; }
 
 .clients-grid {
   padding: 0 2rem;
@@ -3386,7 +3389,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           text-align: left; } }
       #primary-footer .inner #sm-container li {
         display: inline-block;
-        position: relative; }
+        position: relative;
+        margin: 0 .5rem; }
         #primary-footer .inner #sm-container li a {
           display: block;
           position: absolute;
@@ -3395,5 +3399,3 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           z-index: 9; }
         #primary-footer .inner #sm-container li svg {
           fill: #F69420; }
-      #primary-footer .inner #sm-container #twitter {
-        margin: 0 .5rem; }

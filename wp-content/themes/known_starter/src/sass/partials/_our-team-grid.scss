@@ -99,9 +99,12 @@
             display: inline-block;
             vertical-align: middle;
             margin-right: 2rem;
+            background-color: $blue;
+            padding: .5rem;
 
             svg {
               vertical-align: bottom;
+              fill: #fff; 
             }
           }
         }
