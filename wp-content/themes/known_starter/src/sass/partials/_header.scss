@@ -221,6 +221,7 @@ body.nav-active {
     background-color: $blue;
     display: block;
     transition: all ease .5s;
+    position: relative;
     @media(min-width: 768px) {
       & {
         padding: 3rem;
@@ -244,6 +245,7 @@ body.nav-active {
       flex-wrap: wrap;
       justify-content: center;
       margin: 0 -2rem;
+      z-index: 9;
 
       & > li {
         flex: 0 0 50%;

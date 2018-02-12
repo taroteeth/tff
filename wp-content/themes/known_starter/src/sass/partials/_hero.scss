@@ -6,7 +6,7 @@
   overflow: hidden;
   padding: 0;
   @media screen and (min-width: 768px){
-    height: 50vh;
+    height: 45vh;
   }
   @media screen and (min-width: 992px){
     height: 55vh;
@@ -40,6 +40,12 @@
             left: -.1rem;
             right: auto;
           }
+        }
+      }
+
+      .hero-text-wrapper {
+        @media screen and (min-width: 768px){
+          padding-left: 7rem; 
         }
       }
     }
