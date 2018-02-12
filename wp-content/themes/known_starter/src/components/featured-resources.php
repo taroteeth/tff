@@ -29,13 +29,14 @@ if($featuredPosts){
 
     echo '<div class="button">';
     echo '<a href="'. $permalink .'">';
+    echo '<span>'; 
 
       if($pdf){
         echo 'Download PDF';
       } else {
         echo 'Read Article';
       }
-
+    echo '</span>';
     echo '</a>';
     echo '</div>';
 
