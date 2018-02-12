@@ -19,19 +19,6 @@
     overflow: visible;
   }
 
-  .image-right { //styling for specifically if the image is on right
-    .hero-img-wrapper {
-      @media screen and (min-width: 768px){
-        order: 2;
-      }
-
-      .photo-curve-vert {
-        transform: rotate(180deg);
-        left: 0;
-      }
-    }
-  }
-
 
   .inner {
     width: 100%;
@@ -39,6 +26,22 @@
     flex-wrap: wrap;
     @media screen and (min-width: 768px){
       flex-wrap: nowrap;
+    }
+
+    &.image-right {
+      .hero-img-wrapper {
+        @media screen and (min-width: 768px){
+          order: 2;
+        }
+
+        .photo-curve-vert {
+          @media screen and (min-width: 768px) {
+            transform: none;
+            left: -.1rem;
+            right: auto;
+          }
+        }
+      }
     }
 
     .hero-img-wrapper {
@@ -67,9 +70,10 @@
         fill: $backgroundGrey;
         @media screen and (min-width: 768px){
           display: block;
-          right: 0;
+          right: -.1rem;
           bottom: 0;
           height: 100%;
+          transform: rotate(180deg);
         }
       }
 
@@ -179,7 +183,7 @@
       }
     }
   }
-  
+
   .orange-circle {
     display: none;
     width: 15rem;

@@ -22,7 +22,9 @@ $imgCount = 0;
       if($heroImg){
         echo '<div class="hero-img-wrapper">';
         echo wp_get_attachment_image($heroImg, 'full');
-        echo '<svg class="test" viewBox="0 0 350 500"><use href="#test-shape"></use></svg>';
+        echo '<svg class="photo-curve-vert" viewBox="0 0 112 650">
+          <use href="#photo-curve-vert"></use>
+        </svg>';
         echo '<svg class="photo-curve-horiz" viewBox="0 0 320 54"><use href="#photo-curve-horiz"></use></svg>';
         echo '</div> <!-- .hero-img-wrapper -->';
       }
