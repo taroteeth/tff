@@ -17,8 +17,8 @@ function customGalSlider( $atts ){
     );
     $images = new WP_Query( $args );
     if( $images->have_posts()):
-      $html = '<div id="blog-bxslider-wrapper">';
-      $html .= '<ul class="blog-bxslider load-delay">';
+      $html = '<div class="blog-bxslider-wrapper load-delay">';
+      $html .= '<ul class="blog-bxslider">';
       while($images->have_posts()) : $images->the_post();
       $image = wp_get_attachment_image_src( get_post_thumbnail_id( $images->post->ID ), 'full');
       $caption = get_the_excerpt($images->post->ID);
