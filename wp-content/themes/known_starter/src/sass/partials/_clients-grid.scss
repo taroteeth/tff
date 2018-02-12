@@ -54,6 +54,8 @@
     .category-submodule {
       border-top: 2px solid $backgroundGrey;
       position: relative;
+      padding-top: 5rem;
+      margin-top: 5rem;
 
       .title {
         text-transform: uppercase;
@@ -65,27 +67,28 @@
         margin: -1rem auto;
         padding: 0 2rem;
         left: 50%;
+        top: 0;
         transform: translateX(-50%);
       }
 
       .row {
         display: flex;
         flex: 0 0 100%;
-        padding: 2rem;
+        padding: 0 2rem;
         flex-wrap: wrap;
         @media screen and (min-width: 768px){
           flex-wrap: nowrap;
         }
 
         .category-exhibit {
-          padding: 1rem 0;
+          margin-bottom: 5rem;
           box-sizing: border-box;
           justify-content: space-between;
           flex: 0 0 100%;
           @media screen and (min-width: 768px){
             max-width: 33.3%;
             flex: 0 0 33.3%;
-            padding: 1rem 2rem;
+            padding: 0 2rem;
           }
 
           .investment {
@@ -98,11 +101,12 @@
             text-transform: uppercase;
             color: $blue;
             font-size: 1.4rem;
+            letter-spacing: .1rem;
             padding: .5rem 0 1rem;
           }
 
           .location {
-            font-size: 1.8rem;
+
             &:after {
               content: "";
               background-color: $orange;
