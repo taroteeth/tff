@@ -92,7 +92,7 @@
 
           .btns-wrap {
             margin-top: 3rem;
-            display: block;
+            display: flex;
           }
 
           .linkedIn {
@@ -101,10 +101,13 @@
             margin-right: 2rem;
             background-color: $blue;
             padding: .5rem;
+            text-align: center;
+
 
             svg {
               vertical-align: bottom;
-              fill: #fff; 
+              fill: #fff;
+              width: 80%; 
             }
           }
         }
