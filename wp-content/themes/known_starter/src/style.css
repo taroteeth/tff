@@ -785,11 +785,14 @@ p, li {
           margin-left: -10%; } }
       .resource-single .inner .body-content .inner #blog-bxslider-wrapper .bx-viewport .blog-bxslider li {
         margin: 0 1rem;
-        overflow: hidden; }
+        overflow: hidden;
+        height: 100%; }
         .resource-single .inner .body-content .inner #blog-bxslider-wrapper .bx-viewport .blog-bxslider li img {
           height: auto;
           overflow: hidden;
-          max-height: 30rem; }
+          max-height: 30rem;
+          display: inline;
+          vertical-align: middle; }
           @media screen and (min-width: 768px) {
             .resource-single .inner .body-content .inner #blog-bxslider-wrapper .bx-viewport .blog-bxslider li img {
               height: auto;
@@ -2466,7 +2469,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       left: 0;
       top: 0;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      z-index: 999; }
     .alt-grid .row-inner .img-block img {
       width: 100%;
       height: 100%;
@@ -2681,11 +2685,27 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         margin-right: 2rem;
         background-color: #0176BC;
         padding: .5rem;
-        text-align: center; }
+        text-align: center;
+        max-width: 2rem;
+        position: relative; }
+        #team-grid .inner .row .content-block .content-inner .linkedIn:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0;
+          height: 100%;
+          background: #F69420;
+          -webkit-transition: width ease 300ms;
+          transition: width ease 300ms; }
+        #team-grid .inner .row .content-block .content-inner .linkedIn:hover:before {
+          width: 100%; }
         #team-grid .inner .row .content-block .content-inner .linkedIn svg {
           vertical-align: bottom;
           fill: #fff;
-          width: 80%; }
+          width: 80%;
+          position: relative;
+          z-index: 1; }
 
 .clients-grid {
   padding: 0 2rem;
@@ -3092,7 +3112,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         font-family: "Poppins", sans-serif;
         font-size: 1.3rem; }
       .contact-module .inner .fields .field .active {
-        top: 0;
+        top: 0 !important;
         font-size: 1.3rem; }
       .contact-module .inner .fields .field input {
         border: 0.1rem solid #aaa;
