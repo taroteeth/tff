@@ -19,19 +19,6 @@
     overflow: visible;
   }
 
-  .image-right {
-    .hero-img-wrapper {
-      @media screen and (min-width: 768px){
-        order: 2;
-      }
-
-      .photo-curve-vert {
-        left: -.1rem;
-        right: auto;
-      }
-    }
-  }
-
 
   .inner {
     width: 100%;
@@ -39,6 +26,22 @@
     flex-wrap: wrap;
     @media screen and (min-width: 768px){
       flex-wrap: nowrap;
+    }
+
+    &.image-right {
+      .hero-img-wrapper {
+        @media screen and (min-width: 768px){
+          order: 2;
+        }
+
+        .photo-curve-vert {
+          @media screen and (min-width: 768px) {
+            transform: none;
+            left: -.1rem;
+            right: auto;
+          }
+        }
+      }
     }
 
     .hero-img-wrapper {

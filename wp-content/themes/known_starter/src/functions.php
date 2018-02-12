@@ -104,19 +104,22 @@ function html5blank_nav()
 function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
+      wp_register_script('jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.min.js', array());
+      wp_enqueue_script('jquery', $in_footer = true);
 
-      // change into jquery and bxslider and then take out of head , bxslider will have jquery in array, change in footer to true as well, use #3 as reference
+      wp_register_script('bxslider', get_template_directory_uri() . '/bower_components/bxslider-4/dist/jquery.bxslider.min.js', array('jquery'));
+      wp_enqueue_script('bxslider', $in_footer = true);
 
-       wp_register_script('jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.min.js', array()); // jquery
-        wp_enqueue_script('jquery', $in_footer = true); // Enqueue it!
-
-        wp_register_script('bxslider', get_template_directory_uri() . '/bower_components/bxslider-4/dist/jquery.bxslider.min.js', array('jquery')); // bx-slider
-        wp_enqueue_script('bxslider', $in_footer = true); // Enqueue it!
-
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/dist/all.js', array('jquery'), '1.0.0', true); // Custom scripts
-        wp_enqueue_script('html5blankscripts', $src = '', $deps = array(), $ver = false, $in_footer = true); // Enqueue it!
+      wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/dist/all.js', array('jquery'), '1.0.0', true);
+      wp_enqueue_script('html5blankscripts', $src = '', $deps = array(), $ver = false, $in_footer = true);
     }
 }
+
+// Custom Admin Scripts for ACF
+function my_admin_enqueue_scripts() {
+	wp_enqueue_script( 'custom-admin-script', get_template_directory_uri() . '/js/admin/custom-admin-script.js', array(), '1.0.0', true );
+}
+add_action('acf/input/admin_enqueue_scripts', 'my_admin_enqueue_scripts');
 
 // Load HTML5 Blank conditional scripts
 function html5blank_conditional_scripts()
