@@ -6,6 +6,7 @@ $heroImg = get_field('cover_photo');
 $title = get_the_title();
 $subtitle = get_field('subtitle');
 $author = get_field('author');
+$content = get_field('resource_content');
 
 $nextBtn = get_field('next_step_heading'); // all next steps are to contact us
 
@@ -50,7 +51,7 @@ $nextBtn = get_field('next_step_heading'); // all next steps are to contact us
       <div class="inner">
         <?php
         if( have_posts() ) : while( have_posts() ) : the_post();
-        echo the_content();
+        echo $content;
           endwhile;
         endif;
         ?>

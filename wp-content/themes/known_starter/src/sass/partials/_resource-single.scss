@@ -112,10 +112,13 @@
               li {
                 margin: 0 1rem;
                 overflow: hidden;
+                height: 100%;
                 img {
                   height: auto;
                   overflow: hidden;
-                  max-height: 30rem; 
+                  max-height: 30rem;
+                  display: inline;
+                  vertical-align: middle;
                   @media screen and (min-width: 768px){
                     height: auto;
                     max-height: 50rem;

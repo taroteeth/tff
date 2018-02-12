@@ -123,16 +123,30 @@ if(blurbButtons) {
 // contact form label animation
 function labelDrift(){
 	$('.contact-form input').on('focus', function(){
-	    var label = $(this).siblings('label');
+      var label = $(this).siblings('label');
 	    if(label) label.addClass('active');
 	  });
 
-	  $('.contact-form input').on('blur', function(){
+	  $('.contact-form input' || '.contact-form textarea').on('blur', function(e){
+      e.preventDefault();
 	    var label = $(this).siblings('label');
 	    if($(this).val() === ''){
 	      if(label) label.removeClass('active');
 	    }
 	  });
+
+    $('.contact-form textarea').on('focus', function(){
+        var label = $(this).siblings('label');
+  	    if(label) label.addClass('active');
+  	  });
+
+      $('.contact-form textarea').on('blur', function(e){
+        e.preventDefault();
+        var label = $(this).siblings('label');
+        if($(this).val() === ''){
+          if(label) label.removeClass('active');
+        }
+      });
 }
 
 labelDrift();
