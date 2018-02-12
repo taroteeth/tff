@@ -28,18 +28,21 @@
 
 					<ul id="sm-container">
 						<li>
-							<a target="_blank" href="https://www.linkedin.com/company/think-forward-financial-group-llc/"></a>
-							<svg width="30px" height="30px" viewBox="0 0 23 23"><use href="#linkedin"></use></svg>
+							<a target="_blank" href="https://www.linkedin.com/company/think-forward-financial-group-llc/">
+								<svg width="20px" viewBox="0 0 23 23"><use href="#linkedin"></use></svg>
+							</a>
 						</li>
 
 						<li id="twitter">
-							<a target="_blank" href=""></a>
-							<svg width="30px" height="30px" viewBox="0 0 24 23"><use href="#twitter"></use></svg>
+							<a target="_blank" href="">
+								<svg width="20px" viewBox="0 0 24 23"><use href="#twitter"></use></svg>
+							</a>
 						</li>
 
 						<li>
-							<a href="" target="_blank"></a>
-							<svg width="30px" height="30px" viewBox="0 0 23 23"><use href="#facebook"></use></svg>
+							<a href="" target="_blank">
+								<svg width="20px" viewBox="0 0 23 23"><use href="#facebook"></use></svg>
+							</a>
 						</li>
 					</ul> <!-- #sm-container -->
 				</div> <!-- right-col -->
