@@ -8,7 +8,9 @@ $image = get_sub_field('main_image');
 $imagePos = get_sub_field('main_image_position');
 $orangeCircle = get_sub_field('orange_circle');
 $blurbButton = get_sub_field('blurb_button');
-$blurbText = get_sub_field('blurb_button_text'); ?>
+$blurbText = get_sub_field('blurb_button_text');
+
+?>
 
 
 <div class="hero <?php if($blurbButton){echo 'has-blurb';}?>">
@@ -17,8 +19,8 @@ $blurbText = get_sub_field('blurb_button_text'); ?>
       if($image){
         echo '<div class="hero-img-wrapper">';
         echo wp_get_attachment_image($image, 'full');
-        echo '<svg class="photo-curve-vert" viewBox="0 0 110 650">
-          <path d="M0.243078268,0 L112,0 L112,650 L1.01853134,650 C66.5022043,558.395501 105,446.431527 105,325.541033 C105,204.174121 66.1981734,91.8042236 0.243078268,-2.84217094e-14 Z"></path>
+        echo '<svg class="photo-curve-vert" viewBox="0 0 112 650">
+          <use href="#photo-curve-vert"></use>
         </svg>';
         echo '<svg class="photo-curve-horiz" viewBox="0 0 320 54"><use href="#photo-curve-horiz"></use></svg>';
         echo '</div> <!-- .hero-img-wrapper -->';

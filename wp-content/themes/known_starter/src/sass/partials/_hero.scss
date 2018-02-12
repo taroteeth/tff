@@ -19,15 +19,15 @@
     overflow: visible;
   }
 
-  .image-right { //styling for specifically if the image is on right
+  .image-right {
     .hero-img-wrapper {
       @media screen and (min-width: 768px){
         order: 2;
       }
 
       .photo-curve-vert {
-        transform: rotate(180deg);
-        left: 0;
+        left: -.1rem;
+        right: auto;
       }
     }
   }
@@ -67,9 +67,10 @@
         fill: $backgroundGrey;
         @media screen and (min-width: 768px){
           display: block;
-          right: 0;
+          right: -.1rem;
           bottom: 0;
           height: 100%;
+          transform: rotate(180deg);
         }
       }
 
@@ -179,7 +180,7 @@
       }
     }
   }
-  
+
   .orange-circle {
     display: none;
     width: 15rem;
