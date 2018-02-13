@@ -36,8 +36,10 @@ if(get_post_type() == 'resource'){
 
         echo '<div class="button">';
         echo '<a href="'. $permalink .'">';
+        echo '<span>';
           if($pdf){ echo 'Download PDF';
           } else { echo 'Read Article'; }
+        echo '</span>';
         echo '</a>';
         echo '</div><!-- .button -->';
       echo '</div> <!-- .text-wrapper -->';
@@ -102,11 +104,13 @@ if(get_post_type() == 'resource'){
 
       echo '<div class="button">';
       echo '<a href="'. $permalink .'">';
+      echo '<span>';
         if($pdf){
           echo 'Download PDF';
         } else {
           echo 'Read Article';
         }
+      echo '</span>'; 
       echo '</a>';
       echo '</div><!-- .button -->';
 

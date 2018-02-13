@@ -43,11 +43,13 @@ function knowledge_base_query() {
 
         $html .= '<div class="button">';
         $html .= '<a href="'. $permalink .'">';
+        $html .= '<span>';
           if($pdf){
             $html .= 'Download PDF';
           } else {
             $html .= 'Read Article';
           }
+        $html .= '</span>'; 
         $html .= '</a>';
         $html .= '</div><!-- .button -->';
 

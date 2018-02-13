@@ -929,6 +929,64 @@ p, li {
             background-color: #F69420;
             display: block;
             margin: 1.5rem auto; }
+        #article-grid #grid-inner .row .article-wrapper .text-wrapper .button {
+          margin: 2rem 0 0 0;
+          text-align: left;
+          display: inline-block;
+          position: relative;
+          background: #0176BC;
+          border: none; }
+          @media screen and (min-width: 768px) {
+            #article-grid #grid-inner .row .article-wrapper .text-wrapper .button {
+              margin: 1rem 0; } }
+          #article-grid #grid-inner .row .article-wrapper .text-wrapper .button:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: #F69420;
+            -webkit-transition: width ease 300ms;
+            transition: width ease 300ms; }
+          #article-grid #grid-inner .row .article-wrapper .text-wrapper .button:hover:before {
+            width: 100%; }
+          #article-grid #grid-inner .row .article-wrapper .text-wrapper .button span {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            line-height: 1;
+            color: #fff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-family: "Poppins", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .1rem; }
+            #article-grid #grid-inner .row .article-wrapper .text-wrapper .button span:before {
+              content: '';
+              display: inline-block;
+              vertical-align: middle;
+              width: 0;
+              height: .3rem;
+              background: #fff;
+              margin-right: 1rem;
+              -webkit-transition: width ease 300ms;
+              transition: width ease 300ms; }
+            #article-grid #grid-inner .row .article-wrapper .text-wrapper .button span:hover:before {
+              width: 2.5rem; }
+            #article-grid #grid-inner .row .article-wrapper .text-wrapper .button span:after {
+              content: '';
+              display: inline-block;
+              vertical-align: middle;
+              width: 2.5rem;
+              height: .3rem;
+              background: #fff;
+              margin-left: 1rem;
+              -webkit-transition: width ease 300ms;
+              transition: width ease 300ms; }
+            #article-grid #grid-inner .row .article-wrapper .text-wrapper .button span:hover:after {
+              width: 0; }
   #article-grid #page-counter {
     display: block;
     margin: 0 auto;
@@ -1284,7 +1342,8 @@ body.nav-active {
     display: block;
     -webkit-transition: all ease .5s;
     transition: all ease .5s;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     @media (min-width: 768px) {
       #primary-nav .inner {
         padding: 3rem; } }
@@ -1299,7 +1358,45 @@ body.nav-active {
                 align-items: flex-start;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
-        padding: 5rem; } }
+        padding: 5rem;
+        position: relative; } }
+    #primary-nav .inner #circle-1 {
+      display: block;
+      width: 100%;
+      height: 20rem;
+      position: absolute;
+      top: 0;
+      fill: #0066B0;
+      top: -25%;
+      left: -25%; }
+      @media screen and (min-width: 768px) {
+        #primary-nav .inner #circle-1 {
+          left: 0;
+          width: 40rem;
+          height: 20rem; } }
+      @media screen and (min-width: 992px) {
+        #primary-nav .inner #circle-1 {
+          top: -5rem;
+          left: -20rem;
+          width: 80rem; } }
+    #primary-nav .inner #circle-2 {
+      display: block;
+      width: 50%;
+      position: absolute;
+      fill: #0066B0;
+      bottom: 0;
+      right: -25%;
+      overflow: hidden; }
+      @media screen and (min-width: 768px) {
+        #primary-nav .inner #circle-2 {
+          width: 20rem;
+          height: 20rem;
+          right: -1rem; } }
+      @media screen and (min-width: 992px) {
+        #primary-nav .inner #circle-2 {
+          width: 40rem;
+          height: 20rem;
+          right: -10rem; } }
     #primary-nav .inner button {
       font-size: 5rem;
       color: #fff; }
@@ -1313,7 +1410,8 @@ body.nav-active {
           -ms-flex-pack: center;
               justify-content: center;
       margin: 0 -2rem;
-      z-index: 9; }
+      z-index: 9;
+      position: relative; }
       #primary-nav .inner #menu-default-menu > li {
         -webkit-box-flex: 0;
             -ms-flex: 0 0 50%;

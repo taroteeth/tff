@@ -19,7 +19,7 @@ if($featuredPosts){
     echo '<li>';
     if($image){
       echo '<div class="image-wrapper">';
-      echo wp_get_attachment_image($image);
+      echo wp_get_attachment_image($image, 'full');
       echo '</div> <!-- .image-wrapper -->';
     };
     echo '<div class="text-wrapper">';
@@ -29,7 +29,7 @@ if($featuredPosts){
 
     echo '<div class="button">';
     echo '<a href="'. $permalink .'">';
-    echo '<span>'; 
+    echo '<span>';
 
       if($pdf){
         echo 'Download PDF';
