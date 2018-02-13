@@ -13,7 +13,7 @@ echo '<div class="embed-image-module">';
   echo '<div class="inner" >';
     if($image){ ?>
       <div class="embed-image-wrapper <?php if($imagePos === 'Left'){echo 'left';} if($imageRound){echo ', round';}?>"> <?php
-      echo wp_get_attachment_image($image);
+      echo wp_get_attachment_image($image, 'full');
       echo '</div> <!-- .embed-image-wrapper -->';
     } ?>
 

@@ -89,19 +89,9 @@
 			<div id="primary-nav">
 				<div class="inner">
 					<?php wp_nav_menu('default-menu'); ?>
-
-					<div id="circle-1">
-					<svg version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-					<circle cx="250" cy="250" r="200" />
-					</svg>
-					</div>
-
-					<div id="circle-2">
-					<svg version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-					<circle cx="250" cy="250" r="200" />
-					</svg>
-					</div>
-
+					<div class="nav-contact">
+						<p>27 Whitehall Street New York, NY 10004  |  T: 212.269.1300  |  info@thinkforwardfinancial.com</p>
+					</div><!-- .nav-contact -->
 				</div> <!-- .inner -->
 			</div> <!-- .nav -->
 

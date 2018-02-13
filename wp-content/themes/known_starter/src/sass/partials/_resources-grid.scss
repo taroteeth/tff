@@ -105,7 +105,9 @@
             }
 
             &:hover:before {
-              width: 100%;
+              @media screen and (min-width: 768px){
+                width: 100%;
+              }
             }
 
             span {
@@ -133,7 +135,9 @@
               }
 
               &:hover:before {
-                width: 2.5rem;
+                @media screen and (min-width: 768px){
+                  width: 2.5rem;
+                }
               }
 
               &:after {
@@ -148,7 +152,9 @@
               }
 
               &:hover:after {
-                width: 0;
+                @media screen and (min-width: 768px){
+                  width: 0;
+                }
               }
             }
           }

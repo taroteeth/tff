@@ -76,7 +76,7 @@
 			echo '<div class="text-block">';
 				echo '<div class="text-inner">';
 				if($textBlockHeader){ ?>
-					<div class="text-header <?php if($orangeLine){echo 'divider';} ?>">
+					<div class="text-header <?php if($orangeLine){echo 'divider';} if(is_page('case-studies')){echo ' caps-header';}?>">
 						 <?php echo $textBlockHeader ?>
 					 </div> <!-- .text-header -->
 				<?php }
@@ -85,8 +85,8 @@
 					echo '<p class="text-byline">'. $textBlockByline .'</p><!-- .text-byline -->';
 				}
 
-				if($textBlockCopy){
-					echo '<p class="text-copy">'. $textBlockCopy .'</p><!-- .text-copy -->';
+				if($textBlockCopy){ ?>
+					<div class="text-copy <?php if(is_page('case-studies')){ echo ' center'; }?>"><?php echo $textBlockCopy ?></div><!-- .text-copy --> <?php
 				}
 
 				if($textBlockCta){

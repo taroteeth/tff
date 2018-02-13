@@ -1,5 +1,5 @@
 #primary-header {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -12,6 +12,7 @@
   z-index: 99;
   max-width: 160rem;
   transform: translateX(-50%);
+  border-bottom: 1px solid #E1E1E1;
 
   #header-inner {
     display: flex;
@@ -237,47 +238,6 @@ body.nav-active {
       position: relative;
     }
 
-    #circle-1 {
-      display: block;
-      width: 100%;
-      height: 20rem;
-      position: absolute;
-      top: 0;
-      fill: #0066B0;
-      top: -25%;
-      left: -25%;
-      @media screen and (min-width: 768px){
-        left: 0;
-        width: 40rem;
-        height: 20rem;
-      }
-      @media screen and (min-width: 992px){
-        top: -5rem;
-        left: -20rem;
-        width: 80rem;
-      }
-    }
-
-    #circle-2 {
-      display: block;
-      width: 50%;
-      position: absolute;
-      fill: #0066B0;
-      bottom: 0;
-      right: -25%;
-      overflow: hidden;
-      @media screen and (min-width: 768px){
-        width: 20rem;
-        height: 20rem;
-        right: -1rem;
-      }
-      @media screen and (min-width: 992px){
-        width: 40rem;
-        height: 20rem;
-        right: -10rem;
-      }
-    }
-
     button {
       font-size: 5rem;
       color: #fff;
@@ -299,10 +259,6 @@ body.nav-active {
         box-sizing: border-box;
         @media(min-width: 992px) {
           font-size: 1.8rem;
-        }
-        @media(min-width: 1366px) {
-          font-size: 2.4rem;
-          margin-bottom: 5rem;
         }
 
         &:nth-last-child(-n+2) {
@@ -342,7 +298,7 @@ body.nav-active {
             font-size: 1.6rem;
           }
           @media(min-width: 1366px) {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
           }
 
           &:last-child {
@@ -351,6 +307,24 @@ body.nav-active {
         }
       }
     } // #menu-default-menu
+
+    .nav-contact {
+      display: block;
+      width: 100%;
+      margin-top: 3rem;
+      @media screen and (min-width: 992px){
+        position: absolute;
+        bottom: 4rem;
+        left: 4rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #fff;
+        letter-spacing: .05rem;
+        line-height: 1.5em;
+      }
+    }
 
 
   } // .inner

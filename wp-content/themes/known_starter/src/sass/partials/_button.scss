@@ -1,41 +1,3 @@
-// .button {
-//   background-color: #0176BC;
-//   height: 2rem;
-//   max-width: 30rem;
-//   line-height: 2rem;
-//   padding: 1rem;
-//   display: block;
-//   margin: 0 auto;
-//   text-align: center;
-//   @media screen and (min-width: 768px){
-//     padding: 0 1rem;
-//     text-align: left;
-//     max-width: 15rem;
-//   }
-//
-//   a {
-//     text-decoration: none;
-//     color: #fff;
-//     text-transform: uppercase;
-//     font-family: 'Poppins', sans-serif;
-//     letter-spacing: .2rem;
-//     font-size: 1.3rem;
-//     vertical-align: middle;
-//     @media screen and (min-width: 768px){
-//       font-size: 1rem;
-//     }
-//
-//     &:after {
-//       content: "";
-//       width: 2rem;
-//       height:  .2rem;
-//       margin-left: 1rem;
-//       background-color: #fff;
-//       display: inline-block;
-//       vertical-align: middle;
-//     }
-//   }
-// }
 
 .btn {
   display: inline-block;
@@ -55,7 +17,9 @@
   }
 
   &:hover:before {
-    width: 100%;
+    @media screen and (min-width: 768px){
+      width: 100%;
+    }
   }
 
   span {
@@ -83,7 +47,9 @@
     }
 
     &:hover:before {
-      width: 2.5rem;
+      @media screen and (min-width: 768px){
+        width: 2.5rem;
+      }
     }
 
     &:after {
@@ -98,7 +64,9 @@
     }
 
     &:hover:after {
-      width: 0;
+      @media screen and (min-width: 768px){
+        width: 0;
+      }
     }
   }
 }
