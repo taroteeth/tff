@@ -22,6 +22,7 @@
 			$textBlockByline = get_sub_field('text_block_byline');
 			$textBlockCopy = get_sub_field('text_block_copy');
 			$textBlockCta = get_sub_field('text_block_cta');
+			$centeredButton = get_sub_field('centered_button');
 			$btnLink = get_sub_field('button_link');
 			$btnPath = get_sub_field('button_path');
 			$url = (!empty($btnPath)) ? get_permalink($btnPath[0]) : $btnLink;
@@ -90,7 +91,13 @@
 				}
 
 				if($textBlockCta){
+					if($centeredButton){
+						echo '<div class="center-wrap">';
+					}
 					button();
+					if($centeredButton){
+						echo '</div><!-- .center-wrap-->';
+					}
 				}
 
 				echo '</div> <!-- .text-inner -->';

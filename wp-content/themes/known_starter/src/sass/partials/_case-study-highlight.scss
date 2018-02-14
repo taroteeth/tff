@@ -6,6 +6,23 @@
   @media screen and (min-width: 1024px) {
     overflow: visible;
   }
+  // left image orientation styling
+  &.left {
+    .columns {
+      &:before {
+        display: none !important;
+      }
+
+      .bubble-image-wrapper {
+        order: 0;
+      }
+      .text-wrapper {
+        @media screen and (min-width: 768px){
+          padding-left: 10rem;
+        }
+      }
+    }
+  }
 
   .inner {
     padding: 4rem 3rem;
@@ -41,6 +58,7 @@
       &:before {
         @media screen and (min-width: 1024px) {
           content: '';
+          display: block;
           position: absolute;
           z-index: 5;
           right: calc(-8vw + 4rem);
@@ -72,6 +90,7 @@
         border-radius: 100%;
         display: block;
         margin: 0 auto;
+        object-fit: cover;
         @media screen and (min-width: 768px){
           width:50vw;
           height: 50vw;

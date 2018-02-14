@@ -7,13 +7,15 @@ $studyTitle = get_sub_field('case_study_title');
 $blockQuote = get_sub_field('block_quote');
 $byline = get_sub_field('quote_byline');
 
+?>
 
 
-echo '<div class="case-study-highlight-module">';
+
+<div class="case-study-highlight-module <?php if($imagePos === 'Left'){echo 'left';}?>"> <?php
   echo '<div class="inner" >';
   echo '<div class="columns">';
-    if($image){ ?>
-      <div class="bubble-image-wrapper <?php if($imagePos === 'Right'){echo 'right';}?>"> <?php /// need to finish working on this styling and make the field come through
+    if($image){
+      echo '<div class="bubble-image-wrapper">';
       echo wp_get_attachment_image($image, 'full');
       echo '</div> <!-- .bubble-image-wrapper -->';
     }

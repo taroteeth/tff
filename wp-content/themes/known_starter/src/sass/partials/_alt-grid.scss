@@ -203,6 +203,18 @@
           }
         }
 
+        .center-wrap {
+          @media screen and (min-width: 768px){
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25rem;
+          }
+          .btn-wrap {
+            text-align: center;
+          }
+        }
+
         .btn-wrap {
           margin-top: 2em;
           text-align: center;
