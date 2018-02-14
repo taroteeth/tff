@@ -88,6 +88,83 @@
         color: $textGrey;
         font-family: $Poppins;
       }
+
+      .dir-btn-wrapper {
+        margin: 3rem 0;
+
+        a {
+          text-decoration: none;
+          background-color: $blue;
+          padding: 1rem 2rem;
+          position: relative;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:before {
+            background-color: $orange;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            transition: width ease 300ms;
+          }
+
+          &:hover:before {
+            @media screen and (min-width: 768px){
+              width: 100%;
+            }
+          }
+
+          span {
+            text-transform: uppercase;
+            color: #fff;
+            font-family: $Poppins;
+            letter-spacing: .1rem;
+            line-height: 1;
+            font-size: 1.2rem;
+            z-index: 1;
+            position: relative;
+
+            &:before {
+              content: '';
+              display: inline-block;
+              vertical-align: middle;
+              width: 0;
+              height: .2rem;
+              background-color: #fff;
+              margin-right: 1rem;
+              transition: width ease 300ms;
+            }
+
+            &:hover:before {
+              @media screen and (min-width: 768px){
+                width: 2.5rem;
+              }
+            }
+
+            &:after {
+              content: '';
+              display: inline-block;
+              vertical-align: middle;
+              width: 2.5rem;
+              height: .2rem;
+              background-color: #fff;
+              margin-left: 1rem;
+              transition: width ease 300ms;
+            }
+
+            &:hover:after {
+              @media screen and (min-width: 768px){
+                width: 0;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

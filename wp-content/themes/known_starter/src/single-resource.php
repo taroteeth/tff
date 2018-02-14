@@ -22,6 +22,8 @@ $nextBtn = get_field('next_step_heading'); // all next steps are to contact us
       if($heroImg){
         echo '<div class="hero-img-wrapper">';
         echo wp_get_attachment_image($heroImg, 'full');
+        echo '<svg class="photo-curve-vert" viewBox="0 0 112 650"><use href="#photo-curve-vert"></use></svg>';
+        echo '<svg class="photo-curve-horiz" viewBox="0 0 320 54"><use href="#photo-curve-horiz"></use></svg>';
         echo '</div> <!-- #hero-img-wrapper -->';
       }
 

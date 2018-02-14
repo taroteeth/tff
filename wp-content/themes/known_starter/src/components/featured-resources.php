@@ -15,11 +15,14 @@ if($featuredPosts){
     $date = get_the_date("m/d/y", $p->ID);
     $permalink = get_permalink($p->ID);
     $pdf = get_field('pdf', $p->ID);
+    $pdfAttachment = get_field('pdf_document', $p->ID);
 
     echo '<li>';
     if($image){
       echo '<div class="image-wrapper">';
+      echo '<div class="image-inner-wrapper">';
       echo wp_get_attachment_image($image, 'full');
+      echo '</div> <!-- .image-inner-wrapper -->';
       echo '</div> <!-- .image-wrapper -->';
     };
     echo '<div class="text-wrapper">';
@@ -28,17 +31,17 @@ if($featuredPosts){
     echo '<p class="subheader">'. $subtitle .'</p>';
 
     echo '<div class="button">';
-    echo '<a href="'. $permalink .'">';
-    echo '<span>';
 
-      if($pdf){
-        echo 'Download PDF';
-      } else {
-        echo 'Read Article';
-      }
-    echo '</span>';
-    echo '</a>';
-    echo '</div>';
+    if($pdf){
+      echo '<a target="_blank" href="'. wp_get_attachment_url($pdfAttachment) .'">';
+      echo '<span>Download PDF</span>';
+      echo '</a>';
+    } else {
+      echo '<a href="'. $permalink .'">';
+      echo '<span>Read Article</span>';
+      echo '</a>';
+    }
+    echo '</div><!-- .button -->';
 
     echo '</div> <!-- .text-wrapper -->';
     echo '</li>';

@@ -8,8 +8,10 @@
     .hero-text-wrapper {
       padding: 6rem 2rem;
       @media screen and (min-width: 768px){
-        padding: 10rem 4rem;
+        padding: 10rem 0;
         width: 80vw;
+        display: block;
+        margin: 0 auto;
         max-width: 100rem;
       }
 
@@ -41,7 +43,7 @@
       #subheader {
         color: $lightGrey;
         font-size: 2rem;
-        margin: 1rem 0; 
+        margin: 1rem 0;
       }
     }
   }
