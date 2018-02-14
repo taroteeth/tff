@@ -171,6 +171,32 @@
     display: block;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+
+    #loader {
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -4rem;
+      transition: all ease .3s;
+      &.active {
+        display: block;
+      }
+
+      #loader-gif {
+        display: block;
+        margin: 0 auto;
+      }
+
+      #loader-text {
+        display: block;
+        font-family: $Poppins;
+        text-transform: uppercase;
+        color: $blue;
+        letter-spacing: .1rem;
+      }
+    }
 
     button {
       background: none;

@@ -110,7 +110,7 @@ if(get_post_type() == 'resource'){
         } else {
           echo 'Read Article';
         }
-      echo '</span>'; 
+      echo '</span>';
       echo '</a>';
       echo '</div><!-- .button -->';
 
@@ -130,6 +130,12 @@ if(get_post_type() == 'resource'){
     </div>
 
     <div id="page-counter">
+
+      <div id="loader">
+        <img id="loader-gif" alt="loading" src="<?php bloginfo('template_directory');?>/img/ajax-loader1.gif"/>
+        <span id="loader-text">Loading</span>
+      </div><!-- .loader -->
+
       <button id="prev" class="disable">
         <svg viewbox="0 0 7 14" width="7px" height="14px">
           <use xlink:href="#triangle-left"></use>

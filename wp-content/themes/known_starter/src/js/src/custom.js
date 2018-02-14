@@ -161,7 +161,7 @@ $('.blog-bxslider').each(function(ele,index){
     infiniteLoop: true,
 		controls: false,
 		onSliderLoad: function(){
-      var slider = document.querySelector('.blog-bxslider-wrapper');
+      var slider = document.querySelector('.blog-bxslider');
 	    slider.classList.remove('load-delay');
     }
   });
@@ -178,6 +178,7 @@ class knowledgeBaseQuery {
     this.prevBtn = document.querySelector('#page-counter #prev');
     this.nextBtn = document.querySelector('#page-counter #next');
     this.pageBtns = document.querySelectorAll('#page-counter button.page-num');
+    this.loader = document.getElementById('loader');
 
     this.prevBtn.addEventListener('click', function(){
       this.prev();
@@ -199,6 +200,7 @@ class knowledgeBaseQuery {
 
   prev() {
     if(this.currentPage !== 0) { // don't go below 0
+      this.loader.classList.add('active');
       this.currentPage = this.currentPage - 1;
       this.loadPage();
       if(this.currentPage == 0) {
@@ -210,6 +212,7 @@ class knowledgeBaseQuery {
 
   next() {
     if(this.currentPage < (this.totalPages - 1)) {
+      this.loader.classList.add('active');
       this.prevBtn.classList.remove('disable');
       this.currentPage = this.currentPage + 1;
       this.loadPage();
@@ -222,6 +225,7 @@ class knowledgeBaseQuery {
   goToPage(btn) {
     var page = parseInt(btn.dataset.page);
     if(this.currentPage !== page) {
+      this.loader.classList.add('active');
       this.currentPage = page;
       this.loadPage();
       btn.classList.add('active');
@@ -240,7 +244,9 @@ class knowledgeBaseQuery {
 			cache: true,
 			success: function (data) {
         $('#grid-inner').html(data.html);
-			}
+
+        this.loader.classList.remove('active'); // remove loader
+			}.bind(this)
 		});
 	}
 }

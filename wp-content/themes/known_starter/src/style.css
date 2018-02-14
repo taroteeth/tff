@@ -807,6 +807,10 @@ p, li {
           -webkit-box-align: center;
               -ms-flex-align: center;
                   align-items: center; }
+          .resource-single .inner .body-content .inner .blog-bxslider-wrapper .bx-viewport .blog-bxslider.load-delay li img {
+            display: none; }
+          .resource-single .inner .body-content .inner .blog-bxslider-wrapper .bx-viewport .blog-bxslider.load-delay li:first-child img {
+            display: block; }
           .resource-single .inner .body-content .inner .blog-bxslider-wrapper .bx-viewport .blog-bxslider li {
             margin: 0 1rem;
             overflow: hidden;
@@ -1000,7 +1004,28 @@ p, li {
   #article-grid #page-counter {
     display: block;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    position: relative; }
+    #article-grid #page-counter #loader {
+      display: none;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      top: -4rem;
+      -webkit-transition: all ease .3s;
+      transition: all ease .3s; }
+      #article-grid #page-counter #loader.active {
+        display: block; }
+      #article-grid #page-counter #loader #loader-gif {
+        display: block;
+        margin: 0 auto; }
+      #article-grid #page-counter #loader #loader-text {
+        display: block;
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        color: #0176BC;
+        letter-spacing: .1rem; }
     #article-grid #page-counter button {
       background: none;
       border: none;
@@ -2954,7 +2979,13 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       letter-spacing: .2rem;
       font-weight: bold;
       white-space: pre-wrap;
-      display: inline-block; }
+      display: inline-block;
+      -webkit-transition: all ease .3s;
+      transition: all ease .3s;
+      cursor: pointer; }
+      @media screen and (min-width: 992px) {
+        .clients-grid .inner .categories-list span:hover {
+          color: #F69420; } }
       .clients-grid .inner .categories-list span:after {
         content: "|";
         color: #858585;

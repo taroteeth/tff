@@ -97,9 +97,6 @@
           @media screen and (min-width: 768px){
             padding: 4rem 0;
           }
-          &.load-delay {
-
-          }
 
           .bx-viewport {
             max-height: 30rem !important;
@@ -115,6 +112,16 @@
             .blog-bxslider {
               display: flex;
               align-items: center;
+
+              //bxslider 
+              &.load-delay {
+                li img {
+                  display: none;
+                }
+                 li:first-child img {
+                  display: block;
+                }
+              }
 
               li {
                 margin: 0 1rem;
