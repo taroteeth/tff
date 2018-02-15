@@ -46,14 +46,14 @@ $nextBtn = get_field('next_step_heading');
     echo '<div id="specs-module">';
 
       if($experience){
-        echo '<div id="experience-module">';
+        echo '<div id="experience-module" class="trigger_fade">';
         echo '<p class="title">Experience</p>';
         echo '<div class="module-content">'. $experience .'</div>';
         echo '</div><!-- #experience-module -->';
       }
 
       if($careerHighlights){
-        echo '<div id="highlights-module">';
+        echo '<div id="highlights-module" class="trigger_fade">';
         echo '<p class="title">Career Highlights</p>';
         echo '<div class="module-content">'. $careerHighlights .'</div>';
         echo '</div><!-- #highlights-module -->';
@@ -64,7 +64,7 @@ $nextBtn = get_field('next_step_heading');
     if($bioBlurb){
       echo '<div id="bio-blurb-module">';
       echo '<div class="inner">';
-      echo '<div class="blurb">'. $bioBlurb .'</div>';
+      echo '<div class="blurb trigger_fade">'. $bioBlurb .'</div>';
       echo '<div class="blurb-circle"></div>';
       echo '</div><!-- .inner -->';
       echo '</div><!-- #bio-blurb-module -->';
@@ -80,11 +80,11 @@ $nextBtn = get_field('next_step_heading');
 
       echo '<div class="content-block">';
         if($title){
-          echo '<p class="title">'. $title .'</p>';
+          echo '<p class="title trigger_fade">'. $title .'</p>';
         }
 
         if($content){
-          echo '<div class="content">';
+          echo '<div class="content trigger_fade">';
           echo $content;
           echo '</div>';
         }

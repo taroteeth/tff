@@ -54,7 +54,7 @@ $imgCount = 0;
     echo '<div class="specs-module">';
 
       if($role){
-        echo '<div class="spec-title">';
+        echo '<div class="spec-title trigger_fade">';
         echo '<p>ThinkForward served as '. $role .'</p>';
         echo '</div>';
       }
@@ -77,8 +77,8 @@ $imgCount = 0;
             }
 
             echo '<div class="spec">';
-            echo '<p class="spec-name">'. $name .'</p><!-- .spec-name -->';
-            echo '<div class="spec-content">'. $content .'</div><!-- .spec-content -->';
+            echo '<p class="spec-name trigger_fade">'. $name .'</p><!-- .spec-name -->';
+            echo '<div class="spec-content trigger_fade">'. $content .'</div><!-- .spec-content -->';
             echo '</div> <!-- .spec -->';
             $i++;
             $totalCounter++;
@@ -118,7 +118,7 @@ $imgCount = 0;
 
           <div id="text-module" class="<?php if($greyBg){echo 'grey-bg';} if($imgCounter % 2 == 0){echo ' img-right';}?>"> <?php
             echo '<div class="inner">';
-              echo '<p class="header">'. $title .'</p>';
+              echo '<p class="header trigger_fade">'. $title .'</p>';
               echo $bodyContent;
             echo '</div><!-- inner -->';
           echo '</div><!-- #text-module -->';

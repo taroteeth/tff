@@ -16,7 +16,7 @@ function button($id = null, $text = null) {
 
   $url = $btnPath ? get_permalink($btnPath) : $btnLink;
 
-  echo '<div class="btn-wrap">';
+  echo '<div class="btn-wrap trigger_fade">';
   echo '<a class="btn" href="'. $url .'">';
   echo '<span>' . $btnText . '</span>';
   echo '</a>';

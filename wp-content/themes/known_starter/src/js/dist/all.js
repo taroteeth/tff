@@ -168,6 +168,101 @@ $('.blog-bxslider').each(function(ele,index){
 });
 
 
+// Clients page autoscroll on click
+// $("#button").click(function() {
+//     $('html, body').animate({
+//         scrollTop: $("#elementtoScrollToID").offset().top
+//     }, 2000);
+// });
+
+// need to figure out how to confirm the title being scrolled to and category match up
+
+
+// A N I M A T I O N
+
+/*
+ *
+ * Animate .module-header lines
+ *
+*/
+
+$(window).on("scroll load", function(){
+  $(".hero-title").each(function(){
+    var $this = $(this),
+        height = $this.innerHeight(),
+        scroll = $(window).scrollTop(),
+        offset = $this.offset().top,
+        windowH = window.innerHeight;
+    if((scroll + windowH) > ((offset + height) + (windowH * 0.1))) {
+      $this.addClass("active");
+    }
+  });
+});
+
+
+// animate text up and in on scroll - used on hero and rte, alt and team grids
+function inFrame(element, window_top, window_bottom) {
+  var content_top = $(element).offset().top;
+	var content_bottom = content_top + $(element).outerHeight();
+
+	if (window_bottom < content_top) {
+		// below window
+	} else if (content_bottom < window_top) {
+		// above window
+	} else {
+		// in the window
+
+    // for fades
+    $(element).removeClass('trigger_fade');
+    $(element).addClass('fade_in');
+	}
+}
+
+  function contentFadeIn() {
+    var window_top = $(window).scrollTop();
+    var window_bottom = window_top + $(window).height();
+    $('.trigger_fade').each(function(){
+      inFrame($(this), window_top, window_bottom);
+    })
+  }
+
+  window.onscroll = function() {
+    contentFadeIn()
+  };
+
+  window.onresize = function() {
+    contentFadeIn()
+  };
+
+  $(document).ready(function(){
+    contentFadeIn()
+  });
+
+  // number svg animation
+  function numberSvgAnimation(){
+    var path = document.querySelector('.number-one-path');
+    // console.log(path);
+    var length = path.getTotalLength();
+    // console.log(length);
+    // Clear any previous transition
+    path.style.transition = path.style.WebkitTransition =
+      'none';
+    // Set up the starting positions
+    path.style.strokeDasharray = length + ' ' + length;
+    path.style.strokeDashoffset = length;
+    // Trigger a layout so styles are calculated & the browser
+    // picks up the starting position before animating
+    path.getBoundingClientRect();
+    // Define our transition
+    path.style.transition = path.style.WebkitTransition =
+      'stroke-dashoffset 2s ease-in-out';
+    // Go!
+    path.style.strokeDashoffset = '0';
+    console.log('nice!');
+  }
+
+numberSvgAnimation();
+
 // KNOWLEDGE BASE AJAX LOADER
 
 class knowledgeBaseQuery {

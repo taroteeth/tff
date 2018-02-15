@@ -22,7 +22,7 @@
 
           <div class="categories-list">
           <?php foreach($categoriesArray as $catItem){ ?>
-              <span><?php echo $catItem ?></span>
+              <span id="<?php echo $catItem ?>"><?php echo $catItem ?></span>
           <?php } ?>
           </div><!-- categories-list -->
 
@@ -35,7 +35,7 @@
               ?>
 
               <div class="category-submodule">
-                <p class="title"><?php echo $categoryTitle ?></p>
+                <p class="title" id="<?php echo $categoryTitle ?>"><?php echo $categoryTitle ?></p>
 
                 <?php
 

@@ -38,19 +38,19 @@ if( $team_query->have_posts() ) :
     echo '<div class="content-block">';
       echo '<div class="content-inner">';
         if($position){
-          echo '<p class="title">'. $position .'</p>';
+          echo '<p class="title trigger_fade">'. $position .'</p>';
         }
 
         if($name){
-          echo '<p class="header">'. $name .'</p>';
+          echo '<p class="header trigger_fade">'. $name .'</p>';
         }
 
         if($blurb){
-          echo '<p class="blurb">'. $blurb .'</p>';
+          echo '<div class="blurb trigger_fade">'. $blurb .'</div>';
         }
         ?>
 
-        <div class="btns-wrap">
+        <div class="btns-wrap trigger_fade">
 
           <?php if($linkedIn) { ?>
           <a class="linkedIn" href="<?php echo $linkedIn ?>">

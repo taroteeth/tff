@@ -12,13 +12,13 @@ $bodyContent = get_sub_field('body_content');
     <?php
 
     if($contentTitle){
-      echo '<p id="content-title" class="header">';
+      echo '<p id="content-title" class="header trigger_fade">';
       echo $contentTitle;
       echo '</p>';
     }
 
     if($bodyContent){
-      echo '<div id="content-inner">';
+      echo '<div id="content-inner" class="trigger_fade">';
       echo $bodyContent;
       echo '</div><!-- #content-inner -->';
     }

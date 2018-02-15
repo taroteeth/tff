@@ -37,19 +37,21 @@
 
 			if($numberedGrid){ // numbered svgs
 				if($numberIteration == 0){
-					echo '<svg viewBox="0 0 315 240">
-				        <use xlink:href="#number-01"></use>
+					echo '<svg class="numbersvg" viewBox="0 0 315 240">
+				        <use xlink:href="#number-01">
+								
+								</use>
 				      </svg>';
 				} elseif($numberIteration == 1) {
-					echo '<svg viewBox="0 0 382 240">
+					echo '<svg class="numbersvg" viewBox="0 0 382 240">
 				        <use xlink:href="#number-02"></use>
 				      </svg>';
 				} elseif($numberIteration == 2) {
-					echo '<svg viewBox="0 0 385 240">
+					echo '<svg class="numbersvg" viewBox="0 0 385 240">
 				        <use xlink:href="#number-03"></use>
 				      </svg>';
 				} elseif($numberIteration == 3) {
-					echo '<svg viewBox="0 0 407 240">
+					echo '<svg class="numbersvg" viewBox="0 0 407 240">
 				        <use xlink:href="#number-04"></use>
 				      </svg>';
 				}
@@ -77,17 +79,17 @@
 			echo '<div class="text-block">';
 				echo '<div class="text-inner">';
 				if($textBlockHeader){ ?>
-					<div class="text-header <?php if($orangeLine){echo 'divider';} if(is_page('case-studies')){echo ' caps-header';}?>">
+					<div class="text-header trigger_fade <?php if($orangeLine){echo 'divider';} if(is_page('case-studies')){echo ' caps-header';}?>">
 						 <?php echo $textBlockHeader ?>
 					 </div> <!-- .text-header -->
 				<?php }
 
 				if($textBlockByline){
-					echo '<p class="text-byline">'. $textBlockByline .'</p><!-- .text-byline -->';
+					echo '<p class="text-byline trigger_fade">'. $textBlockByline .'</p><!-- .text-byline -->';
 				}
 
 				if($textBlockCopy){ ?>
-					<div class="text-copy <?php if(is_page('case-studies')){ echo ' center'; }?>"><?php echo $textBlockCopy ?></div><!-- .text-copy --> <?php
+					<div class="text-copy trigger_fade <?php if(is_page('case-studies')){ echo ' center'; }?>"><?php echo $textBlockCopy ?></div><!-- .text-copy --> <?php
 				}
 
 				if($textBlockCta){

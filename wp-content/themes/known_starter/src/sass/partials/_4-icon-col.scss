@@ -80,8 +80,8 @@
 
           .sub-icon-wrapper {
             text-align: center;
-            height: 10rem;
-            line-height: 10rem;
+            height: 8rem;
+            line-height: 8rem;
             position: relative;
             margin-bottom: 1rem;
 
@@ -137,5 +137,12 @@
           }
         }
       }
+    }
+  }
+
+  #sub-icon-wrapper {
+    img {
+      width: 7rem;
+      height: 7rem;
     }
   }

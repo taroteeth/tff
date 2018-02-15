@@ -150,6 +150,51 @@ p, li {
 .body-content {
   margin-top: 6rem; }
 
+.fade_in {
+  -webkit-animation: fade_in 1s forwards;
+          animation: fade_in 1s forwards;
+  position: relative; }
+
+@-webkit-keyframes fade_in {
+  0% {
+    opacity: 0;
+    top: 50px; }
+  20% {
+    opacity: 0;
+    top: 50px; }
+  100% {
+    opacity: 1;
+    top: 0; } }
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+    top: 50px; }
+  20% {
+    opacity: 0;
+    top: 50px; }
+  100% {
+    opacity: 1;
+    top: 0; } }
+
+@-webkit-keyframes line_swipe {
+  :before {
+    0% {
+      width: 0; }
+    50% {
+      width: 50%; }
+    100% {
+      width: 100%; } } }
+
+@keyframes line_swipe {
+  :before {
+    0% {
+      width: 0; }
+    50% {
+      width: 50%; }
+    100% {
+      width: 100%; } } }
+
 .case-study .hero {
   background-color: #F8F8F8;
   display: -webkit-box;
@@ -1659,8 +1704,30 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
               -ms-flex: 0 0 50%;
                   flex: 0 0 50%;
           max-width: 50%; } }
-      .hero .inner .hero-text-wrapper svg {
+      .hero .inner .hero-text-wrapper .logo {
+        position: relative;
         margin-bottom: 2rem; }
+        .hero .inner .hero-text-wrapper .logo:before {
+          content: "";
+          width: .3rem;
+          height: 5rem;
+          background-color: #F69420;
+          display: block;
+          position: absolute;
+          right: 50%;
+          -webkit-transform: translateX(-50%);
+                  transform: translateX(-50%);
+          top: -5rem; }
+          @media screen and (min-width: 768px) {
+            .hero .inner .hero-text-wrapper .logo:before {
+              width: 12rem;
+              height: .3rem;
+              display: inline-block;
+              bottom: unset !important;
+              top: 50% !important;
+              -webkit-transform: translate(calc(-100% - 2rem), -50%);
+                      transform: translate(calc(-100% - 2rem), -50%);
+              right: unset; } }
       @media screen and (min-width: 768px) {
         .hero .inner .hero-text-wrapper .div-left:before {
           position: absolute !important;
@@ -1693,7 +1760,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           top: -5rem; }
           @media screen and (min-width: 768px) {
             .hero .inner .hero-text-wrapper .hero-title:before {
-              width: 12rem;
+              width: 0;
               height: .3rem;
               display: inline-block;
               bottom: .8rem !important;
@@ -1701,7 +1768,11 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
               -webkit-transform: translateX(calc(-100% - 2rem));
                       transform: translateX(calc(-100% - 2rem));
               right: unset;
-              left: -14rem; } }
+              left: -14rem;
+              -webkit-transition: all ease .5s;
+              transition: all ease .5s; } }
+        .hero .inner .hero-text-wrapper .hero-title.active:before {
+          width: 12rem; }
       .hero .inner .hero-text-wrapper .header {
         text-align: center;
         margin-bottom: .5em; }
@@ -2447,8 +2518,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             padding: 0 3rem; } }
         .icon-col .inner .cols-inner .col-inner .sub-icon-wrapper {
           text-align: center;
-          height: 10rem;
-          line-height: 10rem;
+          height: 8rem;
+          line-height: 8rem;
           position: relative;
           margin-bottom: 1rem; }
           .icon-col .inner .cols-inner .col-inner .sub-icon-wrapper.divider:after {
@@ -2486,6 +2557,10 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           max-width: 50rem;
           display: block;
           margin: 0 auto; }
+
+#sub-icon-wrapper img {
+  width: 7rem;
+  height: 7rem; }
 
 .two-col-content .introduction-module {
   text-align: center;
@@ -2686,7 +2761,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; } }
-    .alt-grid .row-inner .img-block.number svg {
+    .alt-grid .row-inner .img-block.number .numbersvg {
       max-width: 30rem;
       display: block;
       margin: 0 auto;
