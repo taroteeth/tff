@@ -34,7 +34,7 @@ $blurbText = get_sub_field('blurb_button_text');
           echo '<div class="logo"><svg id="logo" width="176px" height="39px" viewBox="0 0 176 39"><use href="#color-logo"></use></svg></div>';
         }
       } else {
-        echo '<p class="hero-title trigger_line '. ($imagePos == 'Left' ? 'div-left' : 'div-right') .'">'. get_the_title() . '</p>';
+        echo '<p class="hero-title '. ($imagePos == 'Left' ? 'div-left' : 'div-right') .'">'. get_the_title() . '</p>';
       }
 
       if($heroHeader){

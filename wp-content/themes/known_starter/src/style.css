@@ -752,7 +752,12 @@ p, li {
         margin-right: 1rem; }
         @media screen and (min-width: 768px) {
           .resources-hero .hero-text-wrapper .hero-title:before {
-            width: 7rem; } }
+            width: 0;
+            -webkit-transition: all ease .5s;
+            transition: all ease .5s; } }
+      @media screen and (min-width: 768px) {
+        .resources-hero .hero-text-wrapper .hero-title.active:before {
+          width: 7rem; } }
     .resources-hero .hero-text-wrapper .header {
       text-align: left !important;
       margin: 1rem 0; }
@@ -1771,8 +1776,11 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
               left: -14rem;
               -webkit-transition: all ease .5s;
               transition: all ease .5s; } }
-        .hero .inner .hero-text-wrapper .hero-title.active:before {
-          width: 12rem; }
+        .hero .inner .hero-text-wrapper .hero-title.div-right:before {
+          left: 100%; }
+        @media screen and (min-width: 768px) {
+          .hero .inner .hero-text-wrapper .hero-title.active:before {
+            width: 12rem; } }
       .hero .inner .hero-text-wrapper .header {
         text-align: center;
         margin-bottom: .5em; }

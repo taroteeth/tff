@@ -27,7 +27,7 @@ if(get_post_type() == 'resource'){
       $permalink = get_permalink();
       $pdf = get_field('pdf');
 
-       echo '<div class="article-wrapper">';
+       echo '<div class="article-wrapper trigger_fade">';
 
        if($image) echo wp_get_attachment_image($image, 'full');
 

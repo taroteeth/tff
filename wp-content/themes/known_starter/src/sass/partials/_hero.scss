@@ -177,13 +177,21 @@
             transform: translateX(calc(-100% - 2rem));
             right: unset;
             left: -14rem;
-            transition: all ease .5s; 
+            transition: all ease .5s;
+          }
+        }
+
+        &.div-right{
+          &:before {
+            left: 100%;
           }
         }
 
         &.active {
           &:before {
-            width: 12rem;
+            @media screen and (min-width: 768px){
+              width: 12rem;
+            }
           }
         }
       }

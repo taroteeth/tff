@@ -200,7 +200,7 @@ $(window).on("scroll load", function(){
 });
 
 
-// animate text up and in on scroll - used on hero and rte, alt and team grids
+// animate text up and in on scroll - used on hero and rte, alt and team grids, resource single article grid
 function inFrame(element, window_top, window_bottom) {
   var content_top = $(element).offset().top;
 	var content_bottom = content_top + $(element).outerHeight();
@@ -258,7 +258,6 @@ function inFrame(element, window_top, window_bottom) {
       'stroke-dashoffset 2s ease-in-out';
     // Go!
     path.style.strokeDashoffset = '0';
-    console.log('nice!');
   }
 
 numberSvgAnimation();
