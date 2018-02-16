@@ -265,45 +265,6 @@ function inFrame(element, window_top, window_bottom) {
   });
 
 
-  // // animate client tombstones to fade staggered in as tiles
-  // function inFrame(element, window_top, window_bottom) {
-  //   var content_top = $(element).offset().top;
-  // 	var content_bottom = content_top + $(element).outerHeight();
-  //
-  // 	if (window_bottom < content_top) {
-  // 		// below window
-  // 	} else if (content_bottom < window_top) {
-  // 		// above window
-  // 	} else {
-  // 		// in the window
-  //
-  //     // for fades
-  //     $(element).removeClass('trigger_tile');
-  //     $(element).addClass('tile_fade');
-  // 	}
-  // }
-  //
-  //   function tileContentFadeIn() {
-  //     var window_top = $(window).scrollTop();
-  //     var window_bottom = window_top + $(window).height();
-  //     $('.trigger_tile').each(function(){
-  //       inFrame($(this), window_top, window_bottom);
-  //     })
-  //   }
-  //
-  //   window.onscroll = function() {
-  //     tileContentFadeIn()
-  //   };
-  //
-  //   window.onresize = function() {
-  //     tileContentFadeIn()
-  //   };
-  //
-  //   $(document).ready(function(){
-  //     tileContentFadeIn()
-  //   });
-
-
   // number svg animation
   function numberSvgAnimation(){
     var path = document.querySelector('.number-one-path');

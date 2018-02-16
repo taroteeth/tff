@@ -10,7 +10,7 @@ $moduleTitle = get_sub_field('module_title');
 
     <?php
     if($moduleTitle){
-      echo '<p id="module-header" class="header">';
+      echo '<p id="module-header" class="header trigger_fade">';
       echo $moduleTitle;
       echo '</p> <!-- module-header -->';
     }
@@ -25,7 +25,7 @@ $moduleTitle = get_sub_field('module_title');
       $plus = get_sub_field('plus_sign');
       $descriptor = get_sub_field('integer_descriptor');
 
-      echo '<div class="col-inner">';
+      echo '<div class="col-inner trigger_tile">';
 
         if($integer){ ?>
           <div id="integer" class="<?php if($plus){echo 'plus';}?>"><?php echo $integer ?></div> <?php
