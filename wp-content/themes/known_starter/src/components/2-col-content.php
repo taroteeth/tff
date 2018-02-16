@@ -16,17 +16,26 @@ $introduction = get_sub_field('content_module_introduction');
   <div class="two-col-module">
     <?php
 
-    if(have_rows('column_content_item') ) :
-      while(have_rows('column_content_item') ) : the_row();
-      $title = get_sub_field('title');
-      $content = get_sub_field('content');
+    $colContent = get_sub_field('column_content_item');
+    $itemsCount = count($colContent);
+    $itemsHalf = ceil($itemsCount / 2);
+    $itemsGroup = array_chunk($colContent, $itemsHalf);
 
-      echo '<div class="block">';
-      echo '<p class="title">'. $title .'</p>';
-      echo '<div class="content">'. $content .'</div>';
-      echo '</div>';
+    if($colContent) :
 
-      endwhile;
+        foreach($itemsGroup as $group):
+          echo '<div class="items">';
+          echo '<ul>';
+            foreach($group as $value):
+              echo '<li>';
+              echo '<p class="title">'. $value['title'] .'</p>';
+              echo '<div class="content">'. $value['content'] .'</div>';
+              echo '</li>';
+            endforeach;
+          echo '</ul>';
+          echo '</div>';
+        endforeach;
+
     endif;
     ?>
   </div><!-- two-col-module -->
