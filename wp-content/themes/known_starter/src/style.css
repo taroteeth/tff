@@ -236,24 +236,18 @@ p, li {
             animation: colorize .5s forwards; }
 
 @-webkit-keyframes colorize {
-  0% {
+  from {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%); }
-  50% {
-    -webkit-filter: grayscale(50%);
-            filter: grayscale(50%); }
-  100% {
+  to {
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%); } }
 
 @keyframes colorize {
-  0% {
+  from {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%); }
-  50% {
-    -webkit-filter: grayscale(50%);
-            filter: grayscale(50%); }
-  100% {
+  to {
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%); } }
 

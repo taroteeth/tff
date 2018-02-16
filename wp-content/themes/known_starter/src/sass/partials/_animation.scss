@@ -75,13 +75,10 @@
 }
 
 @keyframes colorize {
-  0% {
+  from {
     filter: grayscale(100%);
   }
-  50% {
-    filter: grayscale(50%);
-  }
-  100%{
+  to {
     filter: grayscale(0%);
   }
 }
