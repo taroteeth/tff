@@ -2,6 +2,22 @@
   width: 100%;
   border-top: 1px solid #E1E1E1;
 
+  &.case-studies {
+    .text-header {
+      p {
+        text-align: center !important;
+        text-transform: uppercase !important;
+        letter-spacing: .2rem !important;
+        font-weight: bold !important;
+        font-family: $Poppins !important;
+      }
+    }
+
+    .btn-wrap {
+      text-align: center;
+    }
+  }
+
   .row-inner {
     @media(min-width: 768px) {
       display: flex;
@@ -156,15 +172,6 @@
 
         .text-header {
           margin-bottom: 1em;
-          &.caps-header {
-            p {
-              text-align: center;
-              text-transform: uppercase;
-              letter-spacing: .2rem;
-              font-weight: bold;
-              font-family: $Poppins;
-            }
-          }
 
           p {
             font-size: 2rem;
@@ -219,7 +226,7 @@
           margin-top: 2em;
           text-align: center;
           @media(min-width: 768px) {
-            text-align: left;
+            text-align: center;
             margin-top: 3em;
           }
         }

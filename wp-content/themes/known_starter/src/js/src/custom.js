@@ -180,12 +180,7 @@ $('.blog-bxslider').each(function(ele,index){
 
 // A N I M A T I O N
 
-/*
- *
- * Animate .module-header lines
- *
-*/
-
+// Animate .module-header lines
 $(window).on("scroll load", function(){
   $(".hero-title").each(function(){
     var $this = $(this),
@@ -195,6 +190,22 @@ $(window).on("scroll load", function(){
         windowH = window.innerHeight;
     if((scroll + windowH) > ((offset + height) + (windowH * 0.1))) {
       $this.addClass("active");
+    }
+  });
+});
+
+
+//animate images from black and white to color on scroll
+$(window).on("scroll load", function(){
+  $(".grayscale").each(function(){
+    var $this = $(this),
+        height = $this.innerHeight(),
+        scroll = $(window).scrollTop(),
+        offset = $this.offset().top,
+        windowH = window.innerHeight;
+
+    if((scroll + windowH) > ((offset + height) + (windowH * 0.1))){
+      $this.addClass("color");
     }
   });
 });

@@ -27,7 +27,7 @@ $introduction = get_sub_field('content_module_introduction');
           echo '<div class="items">';
           echo '<ul>';
             foreach($group as $value):
-              echo '<li>';
+              echo '<li class="block">';
               echo '<p class="title">'. $value['title'] .'</p>';
               echo '<div class="content">'. $value['content'] .'</div>';
               echo '</li>';

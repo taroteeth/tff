@@ -16,7 +16,7 @@ function button($id = null, $text = null, $class = null) {
 
   $url = $btnPath ? get_permalink($btnPath) : $btnLink;
 
-  echo '<div class="btn-wrap trigger_fade">'; // figure out way to add fade in class and then attach to js
+  echo '<div class="btn-wrap trigger_fade">';  // figure out way to add fade in class and then attach to js
   echo '<a class="btn" href="'. $url .'">';
   echo '<span>' . $btnText . '</span>';
   echo '</a>';
