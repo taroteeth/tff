@@ -1,6 +1,7 @@
 @import "partials/variables"; // ALWAYS FIRST
 @import "partials/reset";
 @import "partials/global";
+@import "partials/animation"; 
 @import "partials/case-study-single";
 @import "partials/team-member-single";
 @import "partials/resources";
@@ -18,7 +19,7 @@
 @import "partials/embedded-image-module";
 @import "partials/bubble-image-module";
 @import "partials/4-icon-col";
-@import "partials/2-col-content"; 
+@import "partials/2-col-content";
 @import "partials/network-module";
 @import "partials/network-exhibit";
 @import "partials/alt-grid";
