@@ -39,7 +39,7 @@
 				if($numberIteration == 0){
 					echo '<svg class="numbersvg" viewBox="0 0 315 240">
 				        <use xlink:href="#number-01">
-								
+
 								</use>
 				      </svg>';
 				} elseif($numberIteration == 1) {
