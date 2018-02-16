@@ -177,23 +177,36 @@ p, li {
     opacity: 1;
     top: 0; } }
 
-@-webkit-keyframes line_swipe {
-  :before {
-    0% {
-      width: 0; }
-    50% {
-      width: 50%; }
-    100% {
-      width: 100%; } } }
+.grayscale {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s; }
+  .grayscale.color {
+    -webkit-animation: colorize 2s forwards;
+            animation: colorize 2s forwards; }
 
-@keyframes line_swipe {
-  :before {
-    0% {
-      width: 0; }
-    50% {
-      width: 50%; }
-    100% {
-      width: 100%; } } }
+@-webkit-keyframes colorize {
+  0% {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
+  50% {
+    -webkit-filter: grayscale(50%);
+            filter: grayscale(50%); }
+  100% {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%); } }
+
+@keyframes colorize {
+  0% {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
+  50% {
+    -webkit-filter: grayscale(50%);
+            filter: grayscale(50%); }
+  100% {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%); } }
 
 .case-study .hero {
   background-color: #F8F8F8;
@@ -2738,6 +2751,14 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
 .alt-grid {
   width: 100%;
   border-top: 1px solid #E1E1E1; }
+  .alt-grid.case-studies .text-header p {
+    text-align: center !important;
+    text-transform: uppercase !important;
+    letter-spacing: .2rem !important;
+    font-weight: bold !important;
+    font-family: "Poppins", sans-serif !important; }
+  .alt-grid.case-studies .btn-wrap {
+    text-align: center; }
   @media (min-width: 768px) {
     .alt-grid .row-inner {
       display: -webkit-box;
@@ -2882,12 +2903,6 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           display: inline-block; } }
     .alt-grid .row-inner .text-block .text-inner .text-header {
       margin-bottom: 1em; }
-      .alt-grid .row-inner .text-block .text-inner .text-header.caps-header p {
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: .2rem;
-        font-weight: bold;
-        font-family: "Poppins", sans-serif; }
       .alt-grid .row-inner .text-block .text-inner .text-header p {
         font-size: 2rem;
         font-family: 'Merriweather', serif;
@@ -2928,7 +2943,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       text-align: center; }
       @media (min-width: 768px) {
         .alt-grid .row-inner .text-block .text-inner .btn-wrap {
-          text-align: left;
+          text-align: center;
           margin-top: 3em; } }
 
 #team-grid {

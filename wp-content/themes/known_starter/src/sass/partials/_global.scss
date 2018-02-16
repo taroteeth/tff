@@ -136,16 +136,22 @@ p, li {
   }
 }
 
-@keyframes line_swipe {
-  &:before {
-    0% {
-      width: 0;
-    }
-    50% {
-      width: 50%;
-    }
-    100% {
-      width: 100%; 
-    }
+.grayscale {
+  filter: grayscale(100%);
+  transition: all ease 1s;
+  &.color {
+    animation: colorize 2s forwards;
+  }
+}
+
+@keyframes colorize {
+  0% {
+    filter: grayscale(100%);
+  }
+  50% {
+    filter: grayscale(50%);
+  }
+  100%{
+    filter: grayscale(0%);
   }
 }

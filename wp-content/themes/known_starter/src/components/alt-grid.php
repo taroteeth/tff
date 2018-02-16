@@ -1,8 +1,8 @@
 <?php
 
-	$orangeLine = get_sub_field('orange_line');
+	$orangeLine = get_sub_field('orange_line'); ?>
 
-	echo '<div class="alt-grid">';
+	<div class="alt-grid <?php if(is_page('case-studies')) {echo ' case-studies';} ?>"> <?php
 
 	 if( have_rows('grid_row') ):
 
@@ -28,7 +28,7 @@
 			$url = (!empty($btnPath)) ? get_permalink($btnPath[0]) : $btnLink;
 			?>
 
-			<div class="img-block <?php if($iteration % 2 !== 0){ echo 'right';} if($numberedGrid){echo ' number';}?>">
+			<div class="img-block grayscale <?php if($iteration % 2 !== 0){ echo 'right';} if($numberedGrid){echo ' number';}?>">
 
 			<?php
 			if($textBlockCta && ($btnLink || $btnPath)){
@@ -39,7 +39,7 @@
 				if($numberIteration == 0){
 					echo '<svg class="numbersvg" viewBox="0 0 315 240">
 				        <use xlink:href="#number-01">
-								
+
 								</use>
 				      </svg>';
 				} elseif($numberIteration == 1) {
@@ -79,7 +79,7 @@
 			echo '<div class="text-block">';
 				echo '<div class="text-inner">';
 				if($textBlockHeader){ ?>
-					<div class="text-header trigger_fade <?php if($orangeLine){echo 'divider';} if(is_page('case-studies')){echo ' caps-header';}?>">
+					<div class="text-header trigger_fade <?php if($orangeLine){echo 'divider';} ?>">
 						 <?php echo $textBlockHeader ?>
 					 </div> <!-- .text-header -->
 				<?php }
@@ -93,13 +93,7 @@
 				}
 
 				if($textBlockCta){
-					if($centeredButton){
-						echo '<div class="center-wrap">';
-					}
 					button();
-					if($centeredButton){
-						echo '</div><!-- .center-wrap-->';
-					}
 				}
 
 				echo '</div> <!-- .text-inner -->';
