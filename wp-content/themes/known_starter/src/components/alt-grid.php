@@ -93,7 +93,11 @@
 				}
 
 				if($textBlockCta){
-					button();
+					if(is_page('case-studies')){
+						button($id, $text, 'align-center');
+					} else {
+						button();
+					}
 				}
 
 				echo '</div> <!-- .text-inner -->';

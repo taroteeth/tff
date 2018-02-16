@@ -16,7 +16,7 @@ echo '<div class="network-icon-col">';
       $submodIcon = get_sub_field('submodule_icon');
       $submodTitle = get_sub_field('submodule_title');
 
-      echo '<div class="col-inner">';
+      echo '<div class="col-inner trigger_tile">';
 
         if($submodIcon){
             echo '<div id="sub-icon-wrapper">';

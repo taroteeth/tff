@@ -17,12 +17,12 @@
 
           <div class="industry-module">
 
-          <p class="header"><?php echo $moduleTitle ?></p>
+          <p class="header trigger_fade"><?php echo $moduleTitle ?></p>
           <svg class="triangle" width="14px" height="7px" viewBox="0 0 14 7"><use href="#triangle-up"></use></svg>
 
           <div class="categories-list">
           <?php foreach($categoriesArray as $catItem){ ?>
-              <span id="<?php echo $catItem ?>"><?php echo $catItem ?></span>
+              <span class="trigger_tile" id="<?php echo $catItem ?>"><?php echo $catItem ?></span>
           <?php } ?>
           </div><!-- categories-list -->
 
@@ -35,7 +35,7 @@
               ?>
 
               <div class="category-submodule">
-                <p class="title" id="<?php echo $categoryTitle ?>"><?php echo $categoryTitle ?></p>
+                <p class="title trigger_fade" id="<?php echo $categoryTitle ?>"><?php echo $categoryTitle ?></p>
 
                 <?php
 
@@ -58,7 +58,7 @@
                       <div class="row">
                     <?php } ?>
 
-                    <div class="category-exhibit">
+                    <div class="category-exhibit trigger_tile">
                       <?php if($investment) { ?>
                         <p class="investment"><?php echo $investment ?></p>
                       <?php } ?>

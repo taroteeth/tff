@@ -8,8 +8,8 @@ $introduction = get_sub_field('content_module_introduction');
 <div class="two-col-content">
   <div class="introduction-module">
     <?php
-    if($title) echo '<p class="header">'. $title .'</p>';
-    if($introduction) echo '<div class="intro">'. $introduction .'</div>';
+    if($title) echo '<p class="header trigger_fade">'. $title .'</p>';
+    if($introduction) echo '<div class="intro trigger_fade">'. $introduction .'</div>';
     ?>
   </div><!-- .introduction-module -->
 

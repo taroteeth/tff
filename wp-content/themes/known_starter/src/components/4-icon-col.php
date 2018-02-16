@@ -34,7 +34,7 @@ $btnLink = get_sub_field('bottom_cta_link');
       $isLink = get_sub_field('link_option');
       $linkSrc = get_sub_field('link_source'); ?>
 
-      <div class="col-inner <?php echo $iteration ?>">
+      <div class="col-inner trigger_tile <?php echo $iteration ?>">
 
       <?php
 

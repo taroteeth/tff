@@ -72,5 +72,8 @@
 }
 
 .btn-wrap {
-
+  text-align: left;
+  &.align-center {
+    text-align: center; 
+  }
 }

@@ -50,8 +50,8 @@
 
       echo '<div class="module-wrap">';
 
-      if($moduleTitle) echo '<p class="header">'. $moduleTitle .'</p>';
-      if($moduleIntro) echo '<div class="module-intro">'. $moduleIntro .'</div>';
+      if($moduleTitle) echo '<p class="header trigger_fade">'. $moduleTitle .'</p>';
+      if($moduleIntro) echo '<div class="module-intro trigger_fade">'. $moduleIntro .'</div>';
 
       if(!empty($groups)) :
 
@@ -65,7 +65,7 @@
           <div class="group">
 
           <?php if($group['title-text']) { ?>
-            <div class="title"><?php echo $group['title-text'] ?></div>
+            <div class="title trigger_fade"><?php echo $group['title-text'] ?></div>
           <?php } ?>
 
           <?php
@@ -85,9 +85,9 @@
             ?>
 
             <div class="block">
-              <p class="block-header"><?php echo $header ?></p>
-              <p class="block-subheader"><?php echo $subheader ?></p>
-              <?php echo $content ?>
+              <p class="block-header trigger_fade"><?php echo $header ?></p>
+              <p class="block-subheader trigger_fade"><?php echo $subheader ?></p>
+              <?php echo '<div class="trigger_fade">'. $content .'</div>';?>
             </div>
 
             <?php if($i == $group['splitIndex'] || $contentCounter == count($group['content']) - 1) { ?>
