@@ -206,10 +206,9 @@ $(window).on("scroll load", function(){
 
     if((scroll + windowH) > ((offset + height) + (windowH * 0.1))){
       $this.addClass("color");
-      $this.removeClass("grayscale");
     }
   });
-}); 
+});
 
 
 // animate text up and in on scroll - used on hero and rte, alt and team grids, resource single article grid

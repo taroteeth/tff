@@ -138,9 +138,8 @@ p, li {
 
 .grayscale {
   filter: grayscale(100%);
-  transition: all ease 1s;
   &.color {
-    animation: colorize 2s forwards;
+    animation: colorize .8s forwards;
   }
 }
 

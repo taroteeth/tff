@@ -179,12 +179,10 @@ p, li {
 
 .grayscale {
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  -webkit-transition: all ease 1s;
-  transition: all ease 1s; }
+          filter: grayscale(100%); }
   .grayscale.color {
-    -webkit-animation: colorize 2s forwards;
-            animation: colorize 2s forwards; }
+    -webkit-animation: colorize .8s forwards;
+            animation: colorize .8s forwards; }
 
 @-webkit-keyframes colorize {
   0% {
