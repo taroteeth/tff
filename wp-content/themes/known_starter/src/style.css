@@ -1840,7 +1840,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
               -webkit-transform: translateX(calc(-100% - 2rem));
                       transform: translateX(calc(-100% - 2rem));
               right: unset;
-              left: -14rem;
+              left: 0;
               -webkit-transition: all ease .5s;
               transition: all ease .5s; } }
         .hero .inner .hero-text-wrapper .hero-title.div-right:before {

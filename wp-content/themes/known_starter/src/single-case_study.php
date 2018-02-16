@@ -10,8 +10,7 @@ $role = get_field('role_title');
 $testimonial = get_field('testimonial_quote');
 $byline = get_field('testimonial_byline');
 $nextBtn = get_field('next_step_heading');
-$imgCount = 0;
-
+$imageLeft = true;
 ?>
 
 <div class="case-study">
@@ -99,30 +98,35 @@ $imgCount = 0;
 
         echo '<div class="text-wrapper">';
 
-        $imgCounter = 0;
-
         while(have_rows('text_module')): the_row();
+
           $greyBg = get_sub_field('grey_background');
           $title = get_sub_field('module_title');
           $bodyContent = get_sub_field('module_body_content');
+          $bodyContentVal = get_sub_field_object('module_body_content')['value'];
 
-          // print_r(get_sub_field_object('module_body_content'));
+          preg_match_all('/(class="wp-caption )/', $bodyContentVal, $matches, PREG_OFFSET_CAPTURE);
 
-          if( strpos(get_sub_field_object('module_body_content')['value'], '<img') ){
-            $imgCounter++;
-            echo 'test';
+          $matches = array_filter($matches);
+          $found = count($matches[0]);
+
+          if($found){
+            $additionalOffset = 0;
+
+            for($i = 0; $i < $found; $i++) {
+              if($i % 2 != 0 && $i !== 0) {
+                $bodyContentVal = substr_replace($bodyContentVal, 'class="wp-caption align-right ', ($matches[0][$i][1] + $additionalOffset), strlen($matches[0][$i][0]));
+
+                // this needs to add to each additional loop because the new string will be longer with each replace
+                $additionalOffset += strlen('class="wp-caption align-right ') - strlen($matches[0][$i][0]);
+              }
+            }
           }
 
-          echo $imgCounter;
+          echo $bodyContentVal;
           ?>
 
-          <div id="text-module" class="<?php if($greyBg){echo 'grey-bg';} if($imgCounter % 2 == 0){echo ' img-right';}?>"> <?php
-            echo '<div class="inner">';
-              echo '<p class="header trigger_fade">'. $title .'</p>';
-              echo $bodyContent;
-            echo '</div><!-- inner -->';
-          echo '</div><!-- #text-module -->';
-
+        <?php
         endwhile;
 
         echo '</div><!-- .text-wrapper -->';
