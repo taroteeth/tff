@@ -27,7 +27,7 @@ if( $team_query->have_posts() ) :
       echo '<div class="row">';
     } ?>
 
-    <div class="photo-block <?php if($rowCount % 2 == 0){echo 'right';}?>"><?php
+    <div class="photo-block grayscale <?php if($rowCount % 2 == 0){echo 'right';}?>"><?php
       if($image){
         echo '<div class="image-wrapper">';
         echo wp_get_attachment_image($image, 'full');

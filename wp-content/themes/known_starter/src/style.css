@@ -181,8 +181,8 @@ p, li {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%); }
   .grayscale.color {
-    -webkit-animation: colorize .8s forwards;
-            animation: colorize .8s forwards; }
+    -webkit-animation: colorize .5s forwards;
+            animation: colorize .5s forwards; }
 
 @-webkit-keyframes colorize {
   0% {
@@ -2586,21 +2586,50 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   margin: 4rem auto 0; }
 
 .two-col-content .two-col-module {
-  padding: 2rem; }
-  .two-col-content .two-col-module .block {
-    margin: 2rem 0; }
-    .two-col-content .two-col-module .block .title {
-      text-transform: uppercase;
-      font-weight: bold;
-      color: #0176BC;
-      letter-spacing: .1rem; }
-      .two-col-content .two-col-module .block .title:after {
-        content: "";
-        display: block;
-        background-color: #F69420;
-        height: .2rem;
-        width: 3.8rem;
-        margin: 1rem 0; }
+  padding: 2rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 100rem;
+  margin: 0 auto; }
+  @media screen and (min-width: 768px) {
+    .two-col-content .two-col-module {
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; } }
+  .two-col-content .two-col-module .items {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%; }
+    @media screen and (min-width: 768px) {
+      .two-col-content .two-col-module .items {
+        padding: 0 2rem;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; } }
+    @media screen and (min-width: 992px) {
+      .two-col-content .two-col-module .items {
+        padding: 0; } }
+    .two-col-content .two-col-module .items ul .block {
+      margin: 2rem 0; }
+      .two-col-content .two-col-module .items ul .block .title {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #0176BC;
+        letter-spacing: .1rem; }
+        .two-col-content .two-col-module .items ul .block .title:after {
+          content: "";
+          display: block;
+          background-color: #F69420;
+          height: .2rem;
+          width: 3.8rem;
+          margin: 1rem 0; }
 
 .network-icon-col {
   background-color: #F8F8F8;

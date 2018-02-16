@@ -28,7 +28,7 @@
 			$url = (!empty($btnPath)) ? get_permalink($btnPath[0]) : $btnLink;
 			?>
 
-			<div class="img-block grayscale <?php if($iteration % 2 !== 0){ echo 'right';} if($numberedGrid){echo ' number';}?>">
+			<div class="img-block <?php if($iteration % 2 !== 0){ echo 'right';} if($numberedGrid){echo ' number';} if(!$numberedGrid){echo ' grayscale';}?>">
 
 			<?php
 			if($textBlockCta && ($btnLink || $btnPath)){

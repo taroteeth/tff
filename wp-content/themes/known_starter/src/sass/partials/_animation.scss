@@ -21,9 +21,9 @@
 
 //colorize on scroll
 .grayscale {
-  filter: grayscale(100%); 
+  filter: grayscale(100%);
   &.color {
-    animation: colorize .8s forwards;
+    animation: colorize .5s forwards;
   }
 }
 
