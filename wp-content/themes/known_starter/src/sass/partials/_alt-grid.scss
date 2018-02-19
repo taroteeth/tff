@@ -38,10 +38,23 @@
         max-width: 50%;
         flex: 0 0 50%;
       }
+
       &.number {
         @media screen and (min-width: 768px){
           display: flex;
           align-items: center;
+          padding: 5rem 0;
+          margin: 5rem 0;
+          border-right: .1rem solid #e1e1e1;
+
+          &.right {
+            border-right: 0;
+            border-left: .1rem solid #e1e1e1;
+          }
+        }
+
+        &:before {
+          background-color: rgba(0,0,0,0);
         }
 
         .numbersvg {
@@ -49,19 +62,11 @@
           display: block;
           margin: 0 auto;
           width: 100%;
-        }
-        &:before {
-          background-color: rgba(0,0,0,0);
-        }
-        @media screen and (min-width: 768px){
-          border-right: 3px solid $backgroundGrey;
-          min-height: unset;
-        }
-        &.right {
-          border-right: none;
-          @media screen and (min-width: 768px){
-            border-left: 3px solid $backgroundGrey;
-          }
+          position: static;
+          transform: none;
+          stroke: $blue;
+          stroke-width: .2rem;
+          fill: none;
         }
       }
 
