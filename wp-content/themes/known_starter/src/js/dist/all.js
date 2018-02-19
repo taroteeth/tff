@@ -25,6 +25,14 @@ function getScrollPosition() {
   return (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
 }
 
+function getViewportHeight() {
+  return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+}
+
+function getViewportWidth() {
+  return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+}
+
 function setVendor(element, property, value) {
   element.style["webkit" + property] = value;
   element.style["moz" + property] = value;
@@ -519,6 +527,45 @@ function openSearchbar(){
 function closeSearchbar(){
   searchBox.classList.remove('search-active');
   searchBarActive = false;
+}
+
+// Animated number svgs
+class numberSVGSClass {
+  constructor() {
+    this.svgs = numberSVGS;
+    this.arr = [];
+    this.interval;
+    this.allLoaded = false;
+
+    for(var i = 0; i < this.svgs.length; i++) {
+  		this.arr[i] = {
+        'length': this.svgs[i].getElementsByTagName('path')[0].getTotalLength(),
+        'load': false
+      }
+  		this.svgs[i].style.strokeDashoffset = this.arr[i]['length'];
+  		this.svgs[i].style.strokeDasharray = this.arr[i]['length'];
+  	}
+
+    window.addEventListener('scroll', function(){
+      for(var i = 0; i < this.arr.length; i++) {
+        var scroll = getScrollPosition();
+        var eleOffset = this.svgs[i].getBoundingClientRect();
+
+        if( (scroll + getViewportHeight()) > ((eleOffset.top + scroll) + eleOffset.height) ) {
+          if(!this.arr[i]['load']){
+            this.arr[i]['load'] = true;
+            this.svgs[i].style.transition = 'all 3000ms ease';
+            this.svgs[i].style.strokeDashoffset = 0;
+          }
+        }
+      }
+    }.bind(this));
+  }
+}
+
+var numberSVGS = document.querySelectorAll('.numbersvg');
+if(numberSVGS) {
+  var numberSVGSInstance = new numberSVGSClass();
 }
 
 })(jQuery);
