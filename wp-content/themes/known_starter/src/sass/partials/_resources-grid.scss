@@ -34,6 +34,8 @@
       display: flex;
       flex-wrap: wrap;
       margin: 3rem auto;
+      transition: transform 300ms ease, opacity 300ms ease;
+      opacity: 1;
       @media screen and (min-width: 768px){
         flex-wrap: nowrap;
         margin: 6rem auto;

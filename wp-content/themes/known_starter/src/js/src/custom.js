@@ -25,6 +25,14 @@ function getScrollPosition() {
   return (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
 }
 
+function setVendor(element, property, value) {
+  element.style["webkit" + property] = value;
+  element.style["moz" + property] = value;
+  element.style["ms" + property] = value;
+  element.style["o" + property] = value;
+  element.style[property] = value;
+}
+
 //--------------- Utility Functions ---------------//
 
 
@@ -321,6 +329,12 @@ class knowledgeBaseQuery {
     this.nextBtn = document.querySelector('#page-counter #next');
     this.pageBtns = document.querySelectorAll('#page-counter button.page-num');
     this.loader = document.getElementById('loader');
+    this.gridInner = document.querySelector('#article-grid #grid-inner');
+    this.rows = this.gridInner.querySelectorAll('.row');
+    this.rowCounter = 0;
+    this.row1;
+    this.row2;
+    this.ajaxData = '';
 
     this.prevBtn.addEventListener('click', function(){
       this.prev();
@@ -374,6 +388,50 @@ class knowledgeBaseQuery {
     }
   }
 
+  removeRows() {
+    setVendor(this.rows[this.rowCounter], 'transform', 'translateX(-100px)');
+    setVendor(this.rows[this.rowCounter], 'opacity', '0');
+
+    this.rowCounter++;
+    if( this.rowCounter < this.rows.length ){
+      setTimeout( function(){
+        this.removeRows();
+      }.bind(this), 300 );
+    }
+
+    if( this.rowCounter == this.rows.length ) {
+      setTimeout(function(){
+        // Remove last posts
+        this.gridInner.innerHTML = '';
+        this.rowCounter = 0;
+        // Animate new posts
+        this.addRows();
+      }.bind(this), 300);
+    }
+  }
+
+  addRows() {
+    setVendor(this.row1, 'opacity', '0');
+    setVendor(this.row1, 'transform', 'translateX(50px)');
+    setVendor(this.row2, 'opacity', '0');
+    setVendor(this.row2, 'transform', 'translateX(50px)');
+
+    this.gridInner.appendChild(this.row1);
+    this.gridInner.appendChild(this.row2);
+    this.rows = this.gridInner.querySelectorAll('.row');
+    this.gridInner.style.minHeight = 0;
+
+    setTimeout(function(){
+      setVendor(this.row1, 'opacity', '1');
+      setVendor(this.row1, 'transform', 'translateX(0)');
+    }.bind(this), 1);
+
+    setTimeout(function(){
+      setVendor(this.row2, 'opacity', '1');
+      setVendor(this.row2, 'transform', 'translateX(0)');
+    }.bind(this), 300);
+  }
+
 	loadPage() {
     $.ajax({
 			url: ajaxurl,
@@ -384,10 +442,25 @@ class knowledgeBaseQuery {
       },
 			type: 'GET',
 			cache: true,
+      beforeSend: function() {
+        // set minimum height on row container
+        var total = 0;
+        for(var i = 0; i < this.rows.length; i++) {
+          total = total + this.rows[i].getBoundingClientRect().height;
+        }
+        this.gridInner.style.minHeight = total+'px';
+      }.bind(this),
 			success: function (data) {
-        $('#grid-inner').html(data.html);
+        this.ajaxData = data.html;
+        var tempDiv = document.createElement('div');
+        tempDiv.innerHTML = this.ajaxData;
+        this.row1 = tempDiv.children[0];
+        this.row2 = tempDiv.children[1];
 
-        this.loader.classList.remove('active'); // remove loader
+        this.loader.classList.remove('active');
+
+        // Slide/fade out rows
+        this.removeRows();
 			}.bind(this)
 		});
 	}
