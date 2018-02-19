@@ -251,6 +251,18 @@ p, li {
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%); } }
 
+.trigger_circle_grow {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+  top: auto !important; }
+
+.circle_grow {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  top: auto !important; }
+
 .case-study .hero {
   background-color: #F8F8F8;
   display: -webkit-box;
