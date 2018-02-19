@@ -552,6 +552,7 @@ class numberSVGSClass {
 
     for(var i = 0; i < this.svgs.length; i++) {
   		this.arr[i] = {
+        // get exact length of path for dash animation
         'length': this.svgs[i].getElementsByTagName('path')[0].getTotalLength(),
         'load': false
       }
@@ -564,6 +565,7 @@ class numberSVGSClass {
         var scroll = getScrollPosition();
         var eleOffset = this.svgs[i].getBoundingClientRect();
 
+        // check to see if in browser window - current scroll position plus viewport height (to account for extra space), check to see if greater than the getboundingclientrect needs to be added to current scroll position, then add height of element to check for bottom of element 
         if( (scroll + getViewportHeight()) > ((eleOffset.top + scroll) + eleOffset.height) ) {
           if(!this.arr[i]['load']){
             this.arr[i]['load'] = true;
