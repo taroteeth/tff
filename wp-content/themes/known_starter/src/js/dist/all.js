@@ -393,8 +393,8 @@ class knowledgeBaseQuery {
     var offset = gridTop.getBoundingClientRect();
     var top = offset.top;
 
-    gridTop.scrollIntoView(true);
-    window.scrollBy(0, -100);
+    gridTop.scrollIntoView(true, 'smooth');
+    window.scrollBy(0, -100, 'smooth');
   }
 
   removeRows() {
