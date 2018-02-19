@@ -78,6 +78,7 @@
       max-width: 100%;
       overflow: hidden;
       box-sizing: border-box;
+      flex-wrap: wrap;
       @media screen and (min-width: 768px){
         flex: 0 0 33.33%;
         max-width: 33.33%;
@@ -94,11 +95,8 @@
         }
       }
       .text-wrapper {
-        position: relative;
         bottom: 0;
         padding: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
         width: 100%;
         box-sizing: border-box;
         text-align: center;
