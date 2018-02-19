@@ -388,6 +388,15 @@ class knowledgeBaseQuery {
     }
   }
 
+  scrollUp(){
+    var gridTop = document.getElementById('articles-header');
+    var offset = gridTop.getBoundingClientRect();
+    var top = offset.top;
+
+    gridTop.scrollIntoView(true);
+    window.scrollBy(0, -100);
+  }
+
   removeRows() {
     setVendor(this.rows[this.rowCounter], 'transform', 'translateX(-100px)');
     setVendor(this.rows[this.rowCounter], 'opacity', '0');
@@ -457,10 +466,14 @@ class knowledgeBaseQuery {
         this.row1 = tempDiv.children[0];
         this.row2 = tempDiv.children[1];
 
+        // scroll to top of module
+        this.scrollUp();
+
         this.loader.classList.remove('active');
 
         // Slide/fade out rows
         this.removeRows();
+
 			}.bind(this)
 		});
 	}

@@ -170,9 +170,13 @@
 
   #page-counter {
     display: block;
-    margin: 0 auto;
+    margin: 5rem auto 0;
     text-align: center;
     position: relative;
+    @media screen and (min-width: 768px){
+      margin: 0 auto; 
+    }
+
 
     #loader {
       display: none;
