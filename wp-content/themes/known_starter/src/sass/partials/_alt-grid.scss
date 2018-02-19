@@ -40,6 +40,7 @@
       }
 
       &.number {
+        padding: 4rem 2rem 0 2rem;
         @media screen and (min-width: 768px){
           display: flex;
           align-items: center;
@@ -58,7 +59,7 @@
         }
 
         .numbersvg {
-          max-width: 30rem;
+          max-width: 20rem;
           display: block;
           margin: 0 auto;
           width: 100%;
@@ -67,6 +68,9 @@
           stroke: $blue;
           stroke-width: .2rem;
           fill: none;
+          @media(min-width: 768px) {
+            max-width: 30rem;
+          }
         }
       }
 
