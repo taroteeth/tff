@@ -230,6 +230,10 @@ function inFrame(element, window_top, window_bottom) {
     // for tile fades
     $(element).removeClass('trigger_tile');
     $(element).addClass('tile_fade');
+
+    // for hero orange circle animation
+    $(element).removeClass('trigger_circle_grow');
+    $(element).addClass('circle_grow');
 	}
 }
 
@@ -249,19 +253,30 @@ function inFrame(element, window_top, window_bottom) {
     })
   }
 
+  function circleGrow() {
+    var window_top = $(window).scrollTop();
+    var window_bottom = window_top + $(window).height();
+    $('.trigger_circle_grow').each(function(){
+      inFrame($(this), window_top, window_bottom);
+    })
+  }
+
   window.onscroll = function() {
     contentFadeIn()
     tileContentFadeIn()
+    circleGrow()
   };
 
   window.onresize = function() {
     contentFadeIn()
     tileContentFadeIn()
+    circleGrow()
   };
 
   $(document).ready(function(){
     contentFadeIn()
     tileContentFadeIn()
+    circleGrow()
   });
 
 

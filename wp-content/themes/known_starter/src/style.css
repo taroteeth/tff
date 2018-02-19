@@ -442,46 +442,53 @@ p, li {
             .case-study .specs-module .specs-wrapper .row .spec .spec-content p {
               line-height: 2em; } }
 
-.case-study .text-wrapper #text-module .inner {
+.case-study .text-wrapper {
   padding: 5rem 2rem; }
   @media screen and (min-width: 768px) {
-    .case-study .text-wrapper #text-module .inner {
+    .case-study .text-wrapper {
       width: 80vw;
       max-width: 70rem;
       display: block;
       margin: 0 auto;
       padding: 5rem 0; } }
-  .case-study .text-wrapper #text-module .inner .header:after {
+  .case-study .text-wrapper .header:after {
     content: "";
     height: .2rem;
     width: 7.5rem;
     background-color: #F69420;
     display: block;
     margin-top: 2rem; }
-  .case-study .text-wrapper #text-module .inner p {
+  .case-study .text-wrapper p {
     line-height: 1.5em;
     padding: 2rem 0; }
-  .case-study .text-wrapper #text-module .inner .wp-caption {
+  .case-study .text-wrapper .wp-caption {
     max-width: 100% !important;
     position: relative;
     padding: 2rem 0; }
     @media screen and (min-width: 768px) {
-      .case-study .text-wrapper #text-module .inner .wp-caption {
+      .case-study .text-wrapper .wp-caption {
         margin-left: -2rem; } }
-    .case-study .text-wrapper #text-module .inner .wp-caption img {
+    @media screen and (min-width: 768px) {
+      .case-study .text-wrapper .wp-caption.align-right img {
+        margin: 0 40rem; }
+      .case-study .text-wrapper .wp-caption.align-right .wp-caption-text {
+        left: 2rem; }
+        .case-study .text-wrapper .wp-caption.align-right .wp-caption-text:before {
+          left: 35rem; } }
+    .case-study .text-wrapper .wp-caption img {
       border-radius: 100%;
       display: block;
       margin: 0 auto; }
       @media screen and (min-width: 768px) {
-        .case-study .text-wrapper #text-module .inner .wp-caption img {
+        .case-study .text-wrapper .wp-caption img {
           display: inline-block; } }
-    .case-study .text-wrapper #text-module .inner .wp-caption .wp-caption-text {
+    .case-study .text-wrapper .wp-caption .wp-caption-text {
       font-style: italic;
       font-family: "Merriweather", serif;
       text-align: center;
       padding-top: 4rem; }
       @media screen and (min-width: 768px) {
-        .case-study .text-wrapper #text-module .inner .wp-caption .wp-caption-text {
+        .case-study .text-wrapper .wp-caption .wp-caption-text {
           width: 50%;
           position: absolute;
           left: 30rem;
@@ -490,7 +497,7 @@ p, li {
                   transform: translateY(-50%);
           text-align: left;
           padding: 0; } }
-      .case-study .text-wrapper #text-module .inner .wp-caption .wp-caption-text:before {
+      .case-study .text-wrapper .wp-caption .wp-caption-text:before {
         content: "";
         background-color: #0176BC;
         position: absolute;
@@ -500,7 +507,7 @@ p, li {
         left: 50%;
         top: 24rem; }
         @media screen and (min-width: 768px) {
-          .case-study .text-wrapper #text-module .inner .wp-caption .wp-caption-text:before {
+          .case-study .text-wrapper .wp-caption .wp-caption-text:before {
             height: .2rem;
             width: 7.5rem;
             left: -10rem;
@@ -1873,6 +1880,10 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     @media screen and (min-width: 768px) {
       .hero .orange-circle {
         display: block; } }
+    @media screen and (min-width: 992px) {
+      .hero .orange-circle {
+        width: 20rem;
+        height: 20rem; } }
   .hero .circle-left {
     left: -5rem; }
   .hero .circle-right {
