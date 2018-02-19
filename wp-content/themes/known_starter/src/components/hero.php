@@ -51,7 +51,7 @@ $blurbText = get_sub_field('blurb_button_text');
     echo '</div><!-- .inner -->';
 
     if($orangeCircle){ ?>
-      <div class="orange-circle <?php echo $imagePos == "Left" ? "circle-right" : "circle-left";?>"> <?php
+      <div class="orange-circle trigger_circle_grow <?php echo $imagePos == "Left" ? "circle-right" : "circle-left";?>"> <?php
       echo '</div> <!-- .orange-circle --> ';
     }
 

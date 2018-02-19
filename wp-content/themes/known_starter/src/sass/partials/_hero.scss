@@ -239,6 +239,10 @@
     @media screen and (min-width: 768px){
       display: block;
     }
+    @media screen and (min-width: 992px){
+      width: 20rem;
+      height: 20rem;
+    }
   }
   .circle-left {
     left: -5rem;

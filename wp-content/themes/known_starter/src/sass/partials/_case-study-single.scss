@@ -207,17 +207,14 @@
   }
 
   .text-wrapper {
-
-    #text-module {
-      .inner {
-        padding: 5rem 2rem;
-        @media screen and (min-width: 768px){
-          width: 80vw;
-          max-width: 70rem;
-          display: block;
-          margin: 0 auto;
-          padding: 5rem 0;
-        }
+    padding: 5rem 2rem;
+    @media screen and (min-width: 768px){
+      width: 80vw;
+      max-width: 70rem;
+      display: block;
+      margin: 0 auto;
+      padding: 5rem 0;
+    }
 
         .header {
           &:after {
@@ -239,6 +236,19 @@
           padding: 2rem 0;
           @media screen and (min-width: 768px){
             margin-left: -2rem;
+          }
+          &.align-right {
+            @media screen and (min-width: 768px){
+              img {
+                margin: 0 40rem;
+              }
+              .wp-caption-text {
+                left: 2rem;
+                &:before {
+                  left: 35rem;
+                }
+              }
+            }
           }
 
           img {
@@ -281,8 +291,6 @@
             }
           }
         }
-      }
-    }
   }
 
   .testimonial {
