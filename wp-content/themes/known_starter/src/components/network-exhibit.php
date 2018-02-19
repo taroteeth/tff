@@ -19,11 +19,11 @@ echo '<div class="network-exhibit">';
           echo '<p class="title">'. $title .'</p>';
         }
 
-        if($i == 1 || $i == 2){
-          echo '<svg class="shadow" height="200px" width="100px" viewBox="0 0 701 499">
-                <use href="#curve-shadow"></use>
-                </svg>';
-        }
+        if($i == 1 || $i == 2){ ?>
+          <svg viewBox="0 0 90 450" class="shadow">
+            <path d="M0,450H13.87c25.52-56,41.56-135.69,41.56-224.82C55.43,135.86,39.31,55,13.69,0H.17Z"/>
+          </svg>
+        <?php }
 
         $i++;
 
