@@ -98,80 +98,86 @@
             padding: 4rem 0;
           }
 
-          .bx-viewport {
-            max-height: 30rem !important;
-            position: relative;
-            text-align: center;
-            @media screen and (min-width: 768px){
-              height: auto;
-              max-height: 50rem !important;
-              width: 120% !important;
-              margin-left: -10%;
-            }
-
-            .blog-bxslider {
-              display: flex;
-              align-items: center;
-
-              //bxslider 
-              &.load-delay {
-                li img {
-                  display: none;
-                }
-                 li:first-child img {
-                  display: block;
-                }
+          .bx-wrapper {
+            margin-right: 1.5rem;
+              @media screen and (min-width: 768px){
+                margin-right: 0;
               }
-
-              li {
-                margin: 0 1rem;
-                overflow: hidden;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                img {
+              .bx-viewport {
+                max-height: 30rem !important;
+                position: relative;
+                text-align: center;
+                @media screen and (min-width: 768px){
                   height: auto;
-                  overflow: hidden;
-                  max-height: 30rem;
-                  @media screen and (min-width: 768px){
-                    height: auto;
-                    max-height: 50rem;
+                  max-height: 50rem !important;
+                  width: 120% !important;
+                  margin-left: -10%;
+                }
+
+                .blog-bxslider {
+                  display: flex;
+                  align-items: center;
+
+                  //bxslider
+                  &.load-delay {
+                    li img {
+                      display: none;
+                    }
+                     li:first-child img {
+                      display: block;
+                    }
+                  }
+
+                  li {
+                    margin: 0 1rem;
+                    overflow: hidden;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                      height: auto;
+                      overflow: hidden;
+                      max-height: 30rem;
+                      @media screen and (min-width: 768px){
+                        height: auto;
+                        max-height: 50rem;
+                      }
+                    }
                   }
                 }
               }
-            }
-          }
 
-          .bx-controls {
-            display: block;
+              .bx-controls {
+                display: block;
 
-            .bx-pager {
-              text-align: center;
-              margin: 2rem auto;
+                .bx-pager {
+                  text-align: center;
+                  margin: 2rem auto;
 
-              .bx-pager-item {
-                display: inline-block;
-                margin: 0 1rem;
+                  .bx-pager-item {
+                    display: inline-block;
+                    margin: 0 1rem;
 
-                a{
-                  text-decoration: none;
-                  background-color: $lightGrey;
-                  border-radius: 100%;
-                  transition: all ease .3s;
-                  height: 20px;
-                  width: 20px;
-                  color: rgba(0,0,0,0);
-                  font-size: 0;
-                  display: block;
-                  width: 1.5rem;
-                  height: 1.5rem;
-                  &.active {
-                    background-color: $blue;
+                    a{
+                      text-decoration: none;
+                      background-color: $lightGrey;
+                      border-radius: 100%;
+                      transition: all ease .3s;
+                      height: 20px;
+                      width: 20px;
+                      color: rgba(0,0,0,0);
+                      font-size: 0;
+                      display: block;
+                      width: 1.5rem;
+                      height: 1.5rem;
+                      &.active {
+                        background-color: $blue;
+                      }
+                    }
                   }
                 }
-              }
-            }
+              }    
           }
         }
       }

@@ -149,6 +149,18 @@ function toggleNav() {
 }
 toggleNav();
 
+// //body event listener for nav
+// document.body.addEventListener('click', function(e){
+//   e.preventDefault();
+//   e.stopPropagation();
+//
+//   if(body[0].classList.contains('nav-active')){
+//     if(!$(e.target).parents('#nav').length){
+//       closeNav();
+//     }
+//   }
+// });
+
 
 // Nav slide down
 function openNav(){
@@ -622,7 +634,7 @@ class numberSVGSClass {
         var scroll = getScrollPosition();
         var eleOffset = this.svgs[i].getBoundingClientRect();
 
-        // check to see if in browser window - current scroll position plus viewport height (to account for extra space), check to see if greater than the getboundingclientrect needs to be added to current scroll position, then add height of element to check for bottom of element 
+        // check to see if in browser window - current scroll position plus viewport height (to account for extra space), check to see if greater than the getboundingclientrect needs to be added to current scroll position, then add height of element to check for bottom of element
         if( (scroll + getViewportHeight()) > ((eleOffset.top + scroll) + eleOffset.height) ) {
           if(!this.arr[i]['load']){
             this.arr[i]['load'] = true;
