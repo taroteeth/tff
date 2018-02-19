@@ -224,16 +224,22 @@ function inFrame(element, window_top, window_bottom) {
 		// in the window
 
     // for fades
-    $(element).removeClass('trigger_fade');
-    $(element).addClass('fade_in');
+    if($(element).hasClass('trigger_fade')){
+      $(element).removeClass('trigger_fade');
+      $(element).addClass('fade_in');
+    }
 
     // for tile fades
-    $(element).removeClass('trigger_tile');
-    $(element).addClass('tile_fade');
+    if($(element).hasClass('trigger_tile')){
+      $(element).removeClass('trigger_tile');
+      $(element).addClass('tile_fade');
+    }
 
     // for hero orange circle animation
-    $(element).removeClass('trigger_circle_grow');
-    $(element).addClass('circle_grow');
+    if($(element).hasClass('trigger_circle_grow')){
+      $(element).removeClass('trigger_circle_grow');
+      $(element).addClass('circle_grow');
+    }
 	}
 }
 

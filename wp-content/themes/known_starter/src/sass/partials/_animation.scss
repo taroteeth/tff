@@ -85,14 +85,12 @@
 
 
 // circle hero growth
-
 .trigger_circle_grow {
-  transform: scale(.8);
-  transition: all ease .3s;
-  top: auto !important;
+  transform: scale(.7) translate(50%,50%);
+  transition: all 1s ease .3s;
 }
 
 .circle_grow {
-  transform: scale(1);
-  top: auto !important;
+  transform: scale(1) translate(0,0);
+  transition: all 1s ease .3s;
 }

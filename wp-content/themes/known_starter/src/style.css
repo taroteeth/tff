@@ -252,16 +252,16 @@ p, li {
             filter: grayscale(0%); } }
 
 .trigger_circle_grow {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  -webkit-transition: all ease .3s;
-  transition: all ease .3s;
-  top: auto !important; }
+  -webkit-transform: scale(0.7) translate(50%, 50%);
+          transform: scale(0.7) translate(50%, 50%);
+  -webkit-transition: all 1s ease .3s;
+  transition: all 1s ease .3s; }
 
 .circle_grow {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  top: auto !important; }
+  -webkit-transform: scale(1) translate(0, 0);
+          transform: scale(1) translate(0, 0);
+  -webkit-transition: all 1s ease .3s;
+  transition: all 1s ease .3s; }
 
 .case-study .hero {
   background-color: #F8F8F8;
