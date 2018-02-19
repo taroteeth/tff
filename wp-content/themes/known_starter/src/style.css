@@ -1131,9 +1131,12 @@ p, li {
                 width: 0; } }
   #article-grid #page-counter {
     display: block;
-    margin: 0 auto;
+    margin: 5rem auto 0;
     text-align: center;
     position: relative; }
+    @media screen and (min-width: 768px) {
+      #article-grid #page-counter {
+        margin: 0 auto; } }
     #article-grid #page-counter #loader {
       display: none;
       position: absolute;
