@@ -20,22 +20,26 @@
 
 			//while loop
 			 while ( have_posts() ) : the_post();
-			 $image = get_field('cover_photo', $p->ID);
-			 $pdf = get_field('pdf', $p->ID);
+			 $image = get_field_object('components')['value'][0]['main_image'];
+			 if(!$image) $image = get_field('cover_photo', $post->ID);
+			 if(!$image) $image = get_field('hero_image', $post->ID);
+			 $pdf = get_field('pdf', $post->ID);
 
 			 echo '<div class="article-wrapper">';
+
 			 if($image){
 								echo wp_get_attachment_image($image, 'full');
 							};
+							
 			 echo '<div class="text-wrapper">';
-			 echo '<h2>'. get_the_title() .'</h2>';
+			 echo '<p class="header">'. get_the_title() .'</p>';
 
 			 echo '<div class="button">';
 			 echo '<a href="'. get_permalink() .'">';
 				 if($pdf){
-					 echo 'Download PDF';
+					 echo '<span>Download PDF</span>';
 				 } else {
-					 echo 'Read Article';
+					 echo '<span>Read Article</span>';
 				 }
 			 echo '</a>';
 			 echo '</div><!-- .button -->';
@@ -48,7 +52,7 @@
 		else {
 			echo '<h2 class="results">No results for \'<span class="query-term">'. get_search_query() .'</span>\'</h2>';
 
-			echo '<div class="home-wrapper"><a class="home-path" href="'. get_permalink('6') .'">Return Home</a></div>'; 
+			echo '<div class="home-wrapper"><a class="home-path" href="'. get_permalink('6') .'">Return Home</a></div>';
 		}?>
 
 	</div>

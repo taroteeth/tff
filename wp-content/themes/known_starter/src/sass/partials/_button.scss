@@ -34,6 +34,7 @@
     font-family: $Poppins;
     text-transform: uppercase;
     letter-spacing: .1rem;
+    white-space: nowrap;
 
     &:before {
       content: '';
@@ -74,6 +75,6 @@
 .btn-wrap {
   text-align: left;
   &.align-center {
-    text-align: center; 
+    text-align: center;
   }
 }
