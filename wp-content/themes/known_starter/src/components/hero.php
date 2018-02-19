@@ -17,19 +17,23 @@ $blurbText = get_sub_field('blurb_button_text');
   <div class="inner <?php echo $imagePos == "Left" ? "image-left" : "image-right";?>">
     <?php if(!is_page('290')){ // there is no image in the hero for the resources page
       if($image){
-        echo '<div class="hero-img-wrapper">';
-        echo wp_get_attachment_image($image, 'full');
-        echo '<svg class="photo-curve-vert" viewBox="0 0 112 650">
-          <use href="#photo-curve-vert"></use>
-        </svg>';
-        echo '<svg class="photo-curve-horiz" viewBox="0 0 320 54"><use href="#photo-curve-horiz"></use></svg>';
-        echo '</div> <!-- .hero-img-wrapper -->';
-      }
+        ?>
+        <div class="hero-img-wrapper">
+          <?php echo wp_get_attachment_image($image, 'full'); ?>
+          <svg class="photo-curve-vert" viewBox="0 0 112 650">
+            <path d="M7,325A553.11,553.11,0,0,1,112,.08V0H0V650H112v-.08A553.11,553.11,0,0,1,7,325Z"/>
+          </svg>
+          <svg class="photo-curve-horiz" viewBox="0 0 320 54">
+            <use href="#photo-curve-horiz"></use>
+          </svg>
+        </div> <!-- .hero-img-wrapper -->
+      <?php }
     }
+    ?>
 
-    echo '<div class="hero-text-wrapper">';
+    <div class="hero-text-wrapper">
 
-      if(is_front_page()) {
+      <?php if(is_front_page()) {
         if($blurbText){
           echo '<div class="logo"><svg id="logo" width="176px" height="39px" viewBox="0 0 176 39"><use href="#color-logo"></use></svg></div>';
         }
