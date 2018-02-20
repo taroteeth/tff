@@ -1,7 +1,11 @@
 // fade in on scroll
-.fade_in {
-  animation: fade_in 1s forwards;
-  position: relative;
+.trigger_fade {
+  opacity: 0;
+
+  &.animate {
+    animation: fade_in 1s forwards;
+    position: relative;
+  }
 }
 
 @keyframes fade_in {
@@ -22,33 +26,33 @@
 // tiled fade in on scroll
 .trigger_tile {
   opacity: 0;
-}
 
-.tile_fade {
-  animation: tile_fade 1s forwards;
-  opacity: 0;
+  &.animate {
+    animation: tile_fade 1s forwards;
+    opacity: 0;
 
-  &:nth-child(2) {
-      animation-delay: .3s;
-    }
-    &:nth-child(3) {
-      animation-delay: .6s;
-    }
-    &:nth-child(4) {
-      animation-delay: .9s;
-    }
-    &:nth-child(5) {
-      animation-delay: 1.2s;
-    }
-    &:nth-child(6) {
-      animation-delay: 1.5s;
-    }
-    &:nth-child(7) {
-      animation-delay: 1.8s;
-    }
-    &:nth-child(8) {
-      animation-delay: 2.1s;
-    }
+    &:nth-child(2) {
+        animation-delay: .3s;
+      }
+      &:nth-child(3) {
+        animation-delay: .6s;
+      }
+      &:nth-child(4) {
+        animation-delay: .9s;
+      }
+      &:nth-child(5) {
+        animation-delay: 1.2s;
+      }
+      &:nth-child(6) {
+        animation-delay: 1.5s;
+      }
+      &:nth-child(7) {
+        animation-delay: 1.8s;
+      }
+      &:nth-child(8) {
+        animation-delay: 2.1s;
+      }
+  }
 }
 
 @keyframes tile_fade {
@@ -66,10 +70,12 @@
   }
 }
 
+
 //colorize on scroll
 .grayscale {
   filter: grayscale(100%);
-  &.color {
+
+  &.animate {
     animation: colorize .5s forwards;
   }
 }
@@ -88,9 +94,9 @@
 .trigger_circle_grow {
   transform: scale(.7) translate(50%,50%);
   transition: all 1s ease .3s;
-}
-
-.circle_grow {
-  transform: scale(1) translate(0,0);
-  transition: all 1s ease .3s;
+  
+  &.animate {
+    transform: scale(1) translate(0,0);
+    transition: all 1s ease .3s;
+  }
 }

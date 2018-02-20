@@ -153,10 +153,12 @@ p, li {
 .body-content {
   margin-top: 6rem; }
 
-.fade_in {
-  -webkit-animation: fade_in 1s forwards;
-          animation: fade_in 1s forwards;
-  position: relative; }
+.trigger_fade {
+  opacity: 0; }
+  .trigger_fade.animate {
+    -webkit-animation: fade_in 1s forwards;
+            animation: fade_in 1s forwards;
+    position: relative; }
 
 @-webkit-keyframes fade_in {
   0% {
@@ -182,32 +184,31 @@ p, li {
 
 .trigger_tile {
   opacity: 0; }
-
-.tile_fade {
-  -webkit-animation: tile_fade 1s forwards;
-          animation: tile_fade 1s forwards;
-  opacity: 0; }
-  .tile_fade:nth-child(2) {
-    -webkit-animation-delay: .3s;
-            animation-delay: .3s; }
-  .tile_fade:nth-child(3) {
-    -webkit-animation-delay: .6s;
-            animation-delay: .6s; }
-  .tile_fade:nth-child(4) {
-    -webkit-animation-delay: .9s;
-            animation-delay: .9s; }
-  .tile_fade:nth-child(5) {
-    -webkit-animation-delay: 1.2s;
-            animation-delay: 1.2s; }
-  .tile_fade:nth-child(6) {
-    -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s; }
-  .tile_fade:nth-child(7) {
-    -webkit-animation-delay: 1.8s;
-            animation-delay: 1.8s; }
-  .tile_fade:nth-child(8) {
-    -webkit-animation-delay: 2.1s;
-            animation-delay: 2.1s; }
+  .trigger_tile.animate {
+    -webkit-animation: tile_fade 1s forwards;
+            animation: tile_fade 1s forwards;
+    opacity: 0; }
+    .trigger_tile.animate:nth-child(2) {
+      -webkit-animation-delay: .3s;
+              animation-delay: .3s; }
+    .trigger_tile.animate:nth-child(3) {
+      -webkit-animation-delay: .6s;
+              animation-delay: .6s; }
+    .trigger_tile.animate:nth-child(4) {
+      -webkit-animation-delay: .9s;
+              animation-delay: .9s; }
+    .trigger_tile.animate:nth-child(5) {
+      -webkit-animation-delay: 1.2s;
+              animation-delay: 1.2s; }
+    .trigger_tile.animate:nth-child(6) {
+      -webkit-animation-delay: 1.5s;
+              animation-delay: 1.5s; }
+    .trigger_tile.animate:nth-child(7) {
+      -webkit-animation-delay: 1.8s;
+              animation-delay: 1.8s; }
+    .trigger_tile.animate:nth-child(8) {
+      -webkit-animation-delay: 2.1s;
+              animation-delay: 2.1s; }
 
 @-webkit-keyframes tile_fade {
   0% {
@@ -234,7 +235,7 @@ p, li {
 .grayscale {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%); }
-  .grayscale.color {
+  .grayscale.animate {
     -webkit-animation: colorize .5s forwards;
             animation: colorize .5s forwards; }
 
@@ -259,12 +260,11 @@ p, li {
           transform: scale(0.7) translate(50%, 50%);
   -webkit-transition: all 1s ease .3s;
   transition: all 1s ease .3s; }
-
-.circle_grow {
-  -webkit-transform: scale(1) translate(0, 0);
-          transform: scale(1) translate(0, 0);
-  -webkit-transition: all 1s ease .3s;
-  transition: all 1s ease .3s; }
+  .trigger_circle_grow.animate {
+    -webkit-transform: scale(1) translate(0, 0);
+            transform: scale(1) translate(0, 0);
+    -webkit-transition: all 1s ease .3s;
+    transition: all 1s ease .3s; }
 
 .case-study .hero {
   background-color: #F8F8F8;
