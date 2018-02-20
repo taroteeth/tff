@@ -2,7 +2,8 @@
   background-color: #fff;
   position: relative;
   z-index: 7;
-  padding: 2rem; 
+  padding: 2rem;
+
   @media screen and (min-width: 768px){
     padding: 5rem;
   }
@@ -24,12 +25,21 @@
       top: 0;
       width: 100%;
       height: 100%;
+
+      &:hover {
+        #next-step-heading {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
     }
 
     .content {
       padding: 4rem 3rem;
       box-sizing: border-box;
       color: #fff;
+
       @media(min-width: 768px) {
         flex: 0 0 60%;
         max-width: 60%;
@@ -53,6 +63,20 @@
           display: inline-block;
           vertical-align: middle;
           margin: 0 1.5rem;
+        }
+      }
+
+      #next-step-heading {
+        transition: width ease .3s;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          height: .2rem;
+          width: 0;
+          background-color: $orange;
+          display: block;
         }
       }
     }
@@ -101,12 +125,6 @@
           fill: $blue;
           height: 100%;
         }
-      }
-    }
-
-    &:hover .image {
-      img {
-        transform: scale(1.1);
       }
     }
   }
