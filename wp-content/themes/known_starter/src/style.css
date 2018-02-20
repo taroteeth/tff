@@ -326,16 +326,6 @@ p, li {
           .case-study .hero .inner .hero-img-wrapper img {
             height: 100%;
             width: 100%; } }
-      .case-study .hero .inner .hero-img-wrapper .case-study-curve-vert {
-        position: absolute;
-        display: none;
-        fill: #F8F8F8; }
-        @media screen and (min-width: 768px) {
-          .case-study .hero .inner .hero-img-wrapper .case-study-curve-vert {
-            display: block;
-            right: 0;
-            bottom: 0;
-            height: 100%; } }
       .case-study .hero .inner .hero-img-wrapper .photo-curve-horiz {
         position: absolute;
         display: block;
@@ -344,6 +334,8 @@ p, li {
         @media screen and (min-width: 768px) {
           .case-study .hero .inner .hero-img-wrapper .photo-curve-horiz {
             display: none; } }
+      .case-study .hero .inner .hero-img-wrapper .photo-curve-vert {
+        fill: #F8F8F8; }
   .case-study .hero .hero-text-wrapper {
     padding: 25rem 0 3rem 0; }
     @media screen and (min-width: 768px) {

@@ -43,18 +43,6 @@
           }
         }
 
-        .case-study-curve-vert {
-          position: absolute;
-          display: none;
-          fill: $backgroundGrey;
-          @media screen and (min-width: 768px){
-            display: block;
-            right: 0;
-            bottom: 0;
-            height: 100%;
-          }
-        }
-
         .photo-curve-horiz {
           position: absolute;
           display: block;
@@ -63,6 +51,10 @@
           @media screen and (min-width: 768px){
             display: none;
           }
+        }
+
+        .photo-curve-vert {
+          fill: $backgroundGrey; 
         }
       }
     }
