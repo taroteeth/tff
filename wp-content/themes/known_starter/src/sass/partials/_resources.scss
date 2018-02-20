@@ -1,5 +1,6 @@
 .resources-hero {
   height: auto !important;
+  background-color: $backgroundGrey !important; 
 
     @media screen and (min-width: 768px){
         padding: 2rem 4rem;
@@ -31,7 +32,7 @@
           margin-right: 1rem;
           @media screen and (min-width: 768px){
             width: 0;
-            transition: all ease .5s; 
+            transition: all ease .5s;
           }
         }
 
