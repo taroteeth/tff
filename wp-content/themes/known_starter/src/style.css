@@ -3829,8 +3829,6 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       top: 0;
       width: 100%;
       height: 100%; }
-      .next-step-wrapper .next-step-container a.cover-link:hover #next-step-heading:after {
-        width: 100%; }
     .next-step-wrapper .next-step-container .content {
       padding: 4rem 3rem;
       -webkit-box-sizing: border-box;
