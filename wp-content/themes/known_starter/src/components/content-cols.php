@@ -45,7 +45,7 @@ $button = get_sub_field('button_option');
     echo '</div> <!-- #specs-module -->';
 
     if($button){
-      include('button.php');
+      button($id, $text, 'align-center');
     }
 
     ?>
