@@ -343,8 +343,9 @@ numberSvgAnimation();
 // header logo scroll function
 function logoScroll(){
 
+  var homeHero = document.getElementById('home-logo');
+
   if(homeHero){
-    var homeHero = document.getElementById('home-logo');
     var headerLogo = document.getElementById('primary-logo');
     var body = document.getElementsByTagName('body')[0].getBoundingClientRect();
     var heroPos = homeHero.getBoundingClientRect();

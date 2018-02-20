@@ -9,7 +9,7 @@ $subheader = get_field('subheader');
 $role = get_field('role_title');
 $testimonial = get_field('testimonial_quote');
 $byline = get_field('testimonial_byline');
-$nextBtn = get_field('next_step_heading');
+$nextBtn = get_field('next_step_image');
 $imageLeft = true;
 ?>
 

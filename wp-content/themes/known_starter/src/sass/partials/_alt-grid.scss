@@ -14,7 +14,7 @@
       }
     }
 
-    .btn-wrap {
+    .row-inner .text-block .text-inner .btn-wrap {
       text-align: center;
     }
   }
@@ -268,7 +268,7 @@
           text-align: center;
           @media(min-width: 768px) {
             margin-top: 3em;
-            text-align: left; 
+            text-align: left;
           }
         }
       }
