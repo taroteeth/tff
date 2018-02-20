@@ -148,7 +148,7 @@ if(get_post_type() == 'resource'){
       <?php } ?>
       <button id="next">
         <svg viewbox="0 0 7 14" width="7px" height="14px">
-          <use href="#triangle-right"></use>
+          <use xlink:href="#triangle-right"></use>
         </svg>
       </button>
     </div>
