@@ -113,6 +113,9 @@ h1 {
   font-weight: normal;
   line-height: 1.5em; }
 
+h2, h3, h4, h5, h6 {
+  line-height: 1.5em; }
+
 .header {
   font-size: 2.5rem;
   font-family: 'Merriweather', serif;
@@ -123,7 +126,7 @@ h1 {
       font-size: 3rem; } }
 
 p, li {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5em; }
 
 .grey-text {
@@ -2335,113 +2338,6 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       #our-network-content-cols .content-cols-module .content-submodule .row .block-content p {
         padding: .5rem 0; }
 
-.embed-image-module {
-  position: relative;
-  z-index: 6;
-  display: block;
-  margin: 0 auto; }
-  .embed-image-module .inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    @media screen and (min-width: 768px) {
-      .embed-image-module .inner {
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap; } }
-    .embed-image-module .inner .embed-image-wrapper {
-      -webkit-box-ordinal-group: 2;
-          -ms-flex-order: 1;
-              order: 1;
-      position: relative;
-      height: 100%;
-      width: 100%; }
-      @media screen and (min-width: 768px) {
-        .embed-image-module .inner .embed-image-wrapper {
-          -webkit-box-ordinal-group: 3;
-              -ms-flex-order: 2;
-                  order: 2;
-          margin-right: -2rem;
-          width: 50%; } }
-      .embed-image-module .inner .embed-image-wrapper img {
-        width: 100%;
-        height: auto;
-        position: relative;
-        display: block;
-        margin: 0 auto; }
-        @media screen and (min-width: 768px) {
-          .embed-image-module .inner .embed-image-wrapper img {
-            min-width: 35rem;
-            min-height: 35rem;
-            max-height: 40rem;
-            -o-object-fit: cover;
-               object-fit: cover; } }
-    @media screen and (min-width: 768px) {
-      .embed-image-module .inner .left {
-        -webkit-box-ordinal-group: 2 !important;
-            -ms-flex-order: 1 !important;
-                order: 1 !important;
-        margin-left: -2rem; } }
-    .embed-image-module .inner .text-wrapper {
-      width: auto;
-      padding: 4rem 2rem;
-      -webkit-box-ordinal-group: 3;
-          -ms-flex-order: 2;
-              order: 2; }
-      @media screen and (min-width: 768px) {
-        .embed-image-module .inner .text-wrapper {
-          -webkit-box-ordinal-group: 2;
-              -ms-flex-order: 1;
-                  order: 1;
-          padding: 2rem;
-          display: block;
-          vertical-align: middle;
-          width: 50%;
-          margin-left: 2rem; } }
-      .embed-image-module .inner .text-wrapper .header {
-        text-align: center; }
-        @media screen and (min-width: 768px) {
-          .embed-image-module .inner .text-wrapper .header {
-            text-align: left; } }
-      .embed-image-module .inner .text-wrapper .divider:after {
-        content: "";
-        width: 3rem;
-        height: .3rem;
-        display: block;
-        margin: 1rem auto;
-        background-color: #F69420; }
-        @media screen and (min-width: 768px) {
-          .embed-image-module .inner .text-wrapper .divider:after {
-            margin: 1rem 0; } }
-      .embed-image-module .inner .text-wrapper .body-content {
-        margin-top: 0; }
-        .embed-image-module .inner .text-wrapper .body-content p {
-          padding: 1rem 0; }
-        .embed-image-module .inner .text-wrapper .body-content h5 {
-          padding: 1rem 0;
-          font-family: "Poppins", sans-serif;
-          color: #F69420;
-          line-height: 1.3em; }
-      .embed-image-module .inner .text-wrapper .button {
-        width: 100%;
-        max-width: 30rem;
-        padding: 1rem;
-        text-align: center;
-        margin: 2rem 0 0 0; }
-        @media screen and (min-width: 768px) {
-          .embed-image-module .inner .text-wrapper .button {
-            margin: 2rem 0;
-            max-width: 15rem;
-            text-align: left;
-            padding: 0 1rem; } }
-    @media screen and (min-width: 768px) {
-      .embed-image-module .inner .right {
-        -webkit-box-ordinal-group: 3 !important;
-            -ms-flex-order: 2 !important;
-                order: 2 !important; } }
-
 .bubble-image-module {
   position: relative;
   z-index: 6;
@@ -3057,9 +2953,22 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         @media screen and (min-width: 768px) {
           .alt-grid .row-inner .text-block .text-inner .text-header p {
             text-align: left; } }
-        @media (min-width: 1366px) {
+        @media (min-width: 1024px) {
           .alt-grid .row-inner .text-block .text-inner .text-header p {
             font-size: 2.5rem; } }
+        @media (min-width: 1440px) {
+          .alt-grid .row-inner .text-block .text-inner .text-header p {
+            font-size: 3rem; } }
+        .embedded-image-module .alt-grid .row-inner .text-block .text-inner .text-header p:after {
+          content: '';
+          display: block;
+          margin: 2rem auto;
+          height: .4rem;
+          width: 5rem;
+          background: #F69420; }
+          @media (min-width: 768px) {
+            .embedded-image-module .alt-grid .row-inner .text-block .text-inner .text-header p:after {
+              margin: 2rem 0; } }
     .alt-grid .row-inner .text-block .text-inner .text-byline {
       font-size: 1.4rem;
       font-family: "Merriweather", serif;
@@ -3074,6 +2983,14 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         content: "- "; }
     .alt-grid .row-inner .text-block .text-inner .text-copy.center {
       text-align: center; }
+    .alt-grid .row-inner .text-block .text-inner .text-copy p {
+      margin-bottom: 1em; }
+    .alt-grid .row-inner .text-block .text-inner .text-copy h5 {
+      font-family: "Poppins", sans-serif;
+      color: orange;
+      margin-bottom: 1em; }
+    .alt-grid .row-inner .text-block .text-inner .text-copy *:last-child {
+      margin-bottom: 0; }
     @media screen and (min-width: 768px) {
       .alt-grid .row-inner .text-block .text-inner .center-wrap {
         position: absolute;
