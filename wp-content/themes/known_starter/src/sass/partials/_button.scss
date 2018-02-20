@@ -64,7 +64,8 @@
       height: .3rem;
       background: #fff;
       margin-right: 1rem;
-      transform: translateX(-20rem);
+      transform: scale(0, 1);
+      transform-origin:  left center;
       animation: before_line_swipe_out .4s forwards;
     }
 
@@ -76,19 +77,19 @@
 
     @keyframes before_line_swipe_in {
       from {
-        transform: translate(-20rem, 0);
+        transform: scale(0, 1);
       }
       to {
-        transform: translate(0, 0);
+        transform: scale(1, 1);
       }
     }
 
     @keyframes before_line_swipe_out {
       from {
-        transform: translate(0rem, 0);
+        transform: scale(1, 1);
       }
       to {
-        transform: translate(-20rem, 0);
+        transform: scale(0, 1);
       }
     }
 
@@ -100,7 +101,8 @@
       height: .3rem;
       background: #fff;
       margin-left: 1rem;
-      transform: translate(0,0);
+      transform: scale(1, 1);
+      transform-origin:  right center;
       animation: after_line_swipe_in .4s forwards;
     }
 
@@ -112,19 +114,19 @@
 
     @keyframes after_line_swipe_out {
       0% {
-        transform: translate(0,0);
+        transform: scale(1,1);
       }
       100% {
-        transform: translate(20rem, 0);
+        transform: scale(0, 1);
       }
     }
 
     @keyframes after_line_swipe_in {
       0% {
-        transform: translate(20rem,0);
+        transform: scale(0, 1);
       }
       100% {
-        transform: translate(0, 0);
+        transform: translate(1, 1);
       }
     }
   }

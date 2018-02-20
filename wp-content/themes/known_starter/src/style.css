@@ -1724,8 +1724,10 @@ body.nav-active {
       height: .3rem;
       background: #fff;
       margin-right: 1rem;
-      -webkit-transform: translateX(-20rem);
-              transform: translateX(-20rem);
+      -webkit-transform: scale(0, 1);
+              transform: scale(0, 1);
+      -webkit-transform-origin: left center;
+              transform-origin: left center;
       -webkit-animation: before_line_swipe_out .4s forwards;
               animation: before_line_swipe_out .4s forwards; }
     @media screen and (min-width: 768px) {
@@ -1735,35 +1737,35 @@ body.nav-active {
 
 @-webkit-keyframes before_line_swipe_in {
   from {
-    -webkit-transform: translate(-20rem, 0);
-            transform: translate(-20rem, 0); }
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1); }
   to {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); } }
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); } }
 
 @keyframes before_line_swipe_in {
   from {
-    -webkit-transform: translate(-20rem, 0);
-            transform: translate(-20rem, 0); }
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1); }
   to {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); } }
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); } }
 
 @-webkit-keyframes before_line_swipe_out {
   from {
-    -webkit-transform: translate(0rem, 0);
-            transform: translate(0rem, 0); }
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
   to {
-    -webkit-transform: translate(-20rem, 0);
-            transform: translate(-20rem, 0); } }
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1); } }
 
 @keyframes before_line_swipe_out {
   from {
-    -webkit-transform: translate(0rem, 0);
-            transform: translate(0rem, 0); }
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
   to {
-    -webkit-transform: translate(-20rem, 0);
-            transform: translate(-20rem, 0); } }
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1); } }
     .btn span:after {
       content: '';
       display: inline-block;
@@ -1772,8 +1774,10 @@ body.nav-active {
       height: .3rem;
       background: #fff;
       margin-left: 1rem;
-      -webkit-transform: translate(0, 0);
-              transform: translate(0, 0);
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+      -webkit-transform-origin: right center;
+              transform-origin: right center;
       -webkit-animation: after_line_swipe_in .4s forwards;
               animation: after_line_swipe_in .4s forwards; }
     @media screen and (min-width: 768px) {
@@ -1783,35 +1787,35 @@ body.nav-active {
 
 @-webkit-keyframes after_line_swipe_out {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); }
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
   100% {
-    -webkit-transform: translate(20rem, 0);
-            transform: translate(20rem, 0); } }
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1); } }
 
 @keyframes after_line_swipe_out {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); }
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
   100% {
-    -webkit-transform: translate(20rem, 0);
-            transform: translate(20rem, 0); } }
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1); } }
 
 @-webkit-keyframes after_line_swipe_in {
   0% {
-    -webkit-transform: translate(20rem, 0);
-            transform: translate(20rem, 0); }
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1); }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); } }
+    -webkit-transform: translate(1, 1);
+            transform: translate(1, 1); } }
 
 @keyframes after_line_swipe_in {
   0% {
-    -webkit-transform: translate(20rem, 0);
-            transform: translate(20rem, 0); }
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1); }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); } }
+    -webkit-transform: translate(1, 1);
+            transform: translate(1, 1); } }
 
 .btn-wrap {
   text-align: left; }
