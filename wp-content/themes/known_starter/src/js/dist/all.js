@@ -339,6 +339,33 @@ var animationInstance = new animations();
 
 numberSvgAnimation();
 
+
+// header logo scroll function
+function logoScroll(){
+  var homeHero = document.getElementById('home-logo');
+  var headerLogo = document.getElementById('primary-logo');
+  var body = document.getElementsByTagName('body')[0].getBoundingClientRect();
+  var heroPos = homeHero.getBoundingClientRect();
+  var heroTop = heroPos.top;
+
+  //subtract top pos from body's rectan
+
+  console.log(getScrollPosition());
+
+  if(homeHero){
+    document.addEventListener('scroll', function(){
+      console.log(heroTop, getScrollPosition());
+      if(getScrollPosition() >= heroTop){
+        headerLogo.classList.add('active');
+      } else {
+        headerLogo.classList.remove('active'); 
+      }
+    })
+  }
+}
+
+logoScroll();
+
 // KNOWLEDGE BASE AJAX LOADER
 
 class knowledgeBaseQuery {
