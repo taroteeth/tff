@@ -1619,6 +1619,20 @@ body.nav-active {
       #primary-nav .inner #menu-default-menu ul.sub-menu li {
         margin: 0 0 .6em 0;
         font-size: 1.4rem; }
+        #primary-nav .inner #menu-default-menu ul.sub-menu li a {
+          margin: 1rem 0;
+          position: relative; }
+          #primary-nav .inner #menu-default-menu ul.sub-menu li a:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: .1rem;
+            background-color: #F69420;
+            -webkit-transition: width ease .3s;
+            transition: width ease .3s; }
+          #primary-nav .inner #menu-default-menu ul.sub-menu li a:hover:after {
+            width: 100%; }
         @media (min-width: 992px) {
           #primary-nav .inner #menu-default-menu ul.sub-menu li {
             font-size: 1.6rem; } }
@@ -1626,7 +1640,7 @@ body.nav-active {
           #primary-nav .inner #menu-default-menu ul.sub-menu li {
             font-size: 1.6rem; } }
         #primary-nav .inner #menu-default-menu ul.sub-menu li:last-child {
-          margin-bottom: 0; }
+          margin-bottom: 1rem; }
     #primary-nav .inner .nav-contact {
       display: block;
       width: 100%;
