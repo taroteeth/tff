@@ -36,7 +36,7 @@ $byline = get_sub_field('quote_byline');
         echo '<p class="byline">'. $byline .'</p>';
       }
 
-      include('button.php');
+      button();
 
     echo '</div><!-- .text-wrapper -->';
     echo '</div><!-- .columns -->';
