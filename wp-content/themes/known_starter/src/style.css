@@ -1710,44 +1710,14 @@ body.nav-active {
     -webkit-transform: translate(-100%, 0);
             transform: translate(-100%, 0);
     background: #F69420;
-    -webkit-animation: color_swipe_out .4s forwards;
-            animation: color_swipe_out .4s forwards; }
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease; }
   @media screen and (min-width: 768px) {
     .btn:hover:before {
-      -webkit-animation: color_swipe_in .4s forwards;
-              animation: color_swipe_in .4s forwards; } }
-
-@-webkit-keyframes color_swipe_in {
-  from {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0); }
-  to {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); } }
-
-@keyframes color_swipe_in {
-  from {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0); }
-  to {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); } }
-
-@-webkit-keyframes color_swipe_out {
-  from {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); }
-  to {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0); } }
-
-@keyframes color_swipe_out {
-  from {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); }
-  to {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0); } }
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0); } }
   .btn span {
     position: relative;
     z-index: 1;
@@ -1767,52 +1737,15 @@ body.nav-active {
       content: '';
       display: inline-block;
       vertical-align: middle;
-      width: 2.5rem;
+      width: 0;
       height: .3rem;
       background: #fff;
       margin-right: 1rem;
-      -webkit-transform: scale(0, 1);
-              transform: scale(0, 1);
-      -webkit-transform-origin: left center;
-              transform-origin: left center;
-      -webkit-animation: before_line_swipe_out .4s forwards;
-              animation: before_line_swipe_out .4s forwards; }
+      -webkit-transition: width 300ms ease;
+      transition: width 300ms ease; }
     @media screen and (min-width: 768px) {
       .btn span:hover:before {
-        -webkit-animation: before_line_swipe_in .4s forwards;
-                animation: before_line_swipe_in .4s forwards; } }
-
-@-webkit-keyframes before_line_swipe_in {
-  from {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1); }
-  to {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); } }
-
-@keyframes before_line_swipe_in {
-  from {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1); }
-  to {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); } }
-
-@-webkit-keyframes before_line_swipe_out {
-  from {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  to {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1); } }
-
-@keyframes before_line_swipe_out {
-  from {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  to {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1); } }
+        width: 2.5rem; } }
     .btn span:after {
       content: '';
       display: inline-block;
@@ -1821,48 +1754,11 @@ body.nav-active {
       height: .3rem;
       background: #fff;
       margin-left: 1rem;
-      -webkit-transform: scale(1, 1);
-              transform: scale(1, 1);
-      -webkit-transform-origin: right center;
-              transform-origin: right center;
-      -webkit-animation: after_line_swipe_in .4s forwards;
-              animation: after_line_swipe_in .4s forwards; }
+      -webkit-transition: width 300ms ease;
+      transition: width 300ms ease; }
     @media screen and (min-width: 768px) {
       .btn span:hover:after {
-        -webkit-animation: after_line_swipe_out .4s forwards;
-                animation: after_line_swipe_out .4s forwards; } }
-
-@-webkit-keyframes after_line_swipe_out {
-  0% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  100% {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1); } }
-
-@keyframes after_line_swipe_out {
-  0% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  100% {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1); } }
-
-@-webkit-keyframes after_line_swipe_in {
-  0% {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1); }
-  100% {
-    -webkit-transform: translate(1, 1);
-            transform: translate(1, 1); } }
-
-@keyframes after_line_swipe_in {
-  0% {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1); }
-  100% {
-    -webkit-transform: translate(1, 1);
-            transform: translate(1, 1); } }
+        width: 0; } }
 
 .btn-wrap {
   text-align: left; }
@@ -4128,6 +4024,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         margin: 0 auto;
         padding: 4rem 3rem; } }
     #primary-footer .inner #footer-logo {
+      width: 17.6rem;
       margin-bottom: 3rem; }
       @media (min-width: 768px) {
         #primary-footer .inner #footer-logo {
