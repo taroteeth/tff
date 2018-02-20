@@ -30,6 +30,14 @@
 
 			<div class="img-block <?php if($iteration % 2 !== 0){ echo 'right';} if($numberedGrid){echo ' number';} if(!$numberedGrid){echo ' grayscale';}?>">
 
+			<!--
+			animate-position:		int(%), defaults to pixels
+			parallax-offset-y: 		int(%), defaults to pixels
+			positioned-end:			float, range [0-1]
+			parallax:						boolean
+			positioned:					boolean
+			-->
+
 			<?php
 			if($textBlockCta && ($btnLink || $btnPath)){
 				echo '<a href="'. $url .'" class="cover-link"></a>';
