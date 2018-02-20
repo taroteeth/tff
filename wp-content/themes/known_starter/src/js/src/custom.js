@@ -33,6 +33,12 @@ function getViewportWidth() {
   return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 }
 
+function inWindow(currentScroll, eleTop, eleHeight, vH) {
+  if( (currentScroll + vH) > (eleTop + currentScroll) && (currentScroll + primaryHeader.height) < (eleTop + currentScroll + eleHeight) ) {
+    return true;
+  }
+}
+
 function setVendor(element, property, value) {
   element.style["webkit" + property] = value;
   element.style["moz" + property] = value;
@@ -251,110 +257,62 @@ $('.blog-bxslider').each(function(ele,index){
 
 // A N I M A T I O N
 
-// Animate .module-header lines
-$(window).on("scroll load", function(){
-  $(".hero-title").each(function(){
-    var $this = $(this),
-        height = $this.innerHeight(),
-        scroll = $(window).scrollTop(),
-        offset = $this.offset().top,
-        windowH = window.innerHeight;
-    if((scroll + windowH) > ((offset + height) + (windowH * 0.1))) {
-      $this.addClass("active");
+class animations {
+  constructor() {
+    this.eleArr = [];
+    this.elements = document.querySelectorAll('.trigger_fade, .trigger_tile, .trigger_circle_grow, .grayscale, .hero-title');
+    this.interval;
+    this.currentScroll;
+
+    this.setValues(true);
+
+    this.toBeLoaded = this.eleArr.length;
+
+    if(this.eleArr.length) {
+      this.init();
     }
-  });
-});
+  }
 
+  setValues(init = false) {
+    for(var i = 0; i < this.elements.length; i++) {
+      var rect = this.elements[i].getBoundingClientRect();
 
-//animate images from black and white to color on scroll
-$(window).on("scroll load", function(){
-  $(".grayscale").each(function(){
-    var $this = $(this),
-        height = $this.innerHeight(),
-        scroll = $(window).scrollTop(),
-        offset = $this.offset().top,
-        windowH = window.innerHeight;
-
-    if((scroll + windowH) > ((offset + height) + (windowH * 0.1))){
-      $this.addClass("color");
+      if(init) {
+        this.eleArr[i] = {
+          'ele': this.elements[i],
+          'top': rect.top,
+          'bottom': rect.bottom,
+          'height': rect.height,
+          'loaded': false
+        }
+      } else {
+        this.eleArr[i]['top'] = rect.top;
+      }
     }
-  });
-});
+  }
 
-
-// animate text up and in on scroll - used on hero and rte, alt and team grids, resource single article grid
-function inFrame(element, window_top, window_bottom) {
-  var content_top = $(element).offset().top;
-	var content_bottom = content_top + $(element).outerHeight();
-
-	if (window_bottom < content_top) {
-		// below window
-	} else if (content_bottom < window_top) {
-		// above window
-	} else {
-		// in the window
-
-    // for fades
-    if($(element).hasClass('trigger_fade')){
-      $(element).removeClass('trigger_fade');
-      $(element).addClass('fade_in');
-    }
-
-    // for tile fades
-    if($(element).hasClass('trigger_tile')){
-      $(element).removeClass('trigger_tile');
-      $(element).addClass('tile_fade');
-    }
-
-    // for hero orange circle animation
-    if($(element).hasClass('trigger_circle_grow')){
-      $(element).removeClass('trigger_circle_grow');
-      $(element).addClass('circle_grow');
-    }
-	}
+  init() {
+    this.interval = setInterval(function(){
+      this.currentScroll = getScrollPosition();
+      this.setValues(); // keep ele top updated
+      if(this.toBeLoaded > 0) {
+        for(var i = 0; i < this.eleArr.length; i++) {
+          if(!this.eleArr[i]['loaded']) {
+            if( inWindow(this.currentScroll, this.eleArr[i]['top'], this.eleArr[i]['height'], getViewportHeight()) ) {
+              this.eleArr[i]['ele'].classList.add('animate');
+              this.eleArr[i]['loaded'] = true;
+              this.toBeLoaded = this.toBeLoaded - 1;
+            }
+          }
+        }
+      } else {
+        clearInterval(this.interval);
+      }
+    }.bind(this), 30);
+  }
 }
 
-  function contentFadeIn() {
-    var window_top = $(window).scrollTop();
-    var window_bottom = window_top + $(window).height();
-    $('.trigger_fade').each(function(){
-      inFrame($(this), window_top, window_bottom);
-    })
-  }
-
-  function tileContentFadeIn() {
-    var window_top = $(window).scrollTop();
-    var window_bottom = window_top + $(window).height();
-    $('.trigger_tile').each(function(){
-      inFrame($(this), window_top, window_bottom);
-    })
-  }
-
-  function circleGrow() {
-    var window_top = $(window).scrollTop();
-    var window_bottom = window_top + $(window).height();
-    $('.trigger_circle_grow').each(function(){
-      inFrame($(this), window_top, window_bottom);
-    })
-  }
-
-  window.onscroll = function() {
-    contentFadeIn()
-    tileContentFadeIn()
-    circleGrow()
-  };
-
-  window.onresize = function() {
-    contentFadeIn()
-    tileContentFadeIn()
-    circleGrow()
-  };
-
-  $(document).ready(function(){
-    contentFadeIn()
-    tileContentFadeIn()
-    circleGrow()
-  });
+var animationInstance = new animations();
 
 
   // number svg animation
