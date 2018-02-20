@@ -4,21 +4,39 @@
   position: relative;
   background: $blue;
   border: none;
+  overflow: hidden;
 
   &:before {
     content: '';
     position: absolute;
-    left: 0;
     top: 0;
-    width: 0;
+    width: 100%;
     height: 100%;
+    transform: translate(-100%, 0);
     background: $orange;
-    transition: width ease 300ms;
+    animation: color_swipe_out .4s forwards;
   }
 
   &:hover:before {
     @media screen and (min-width: 768px){
-      width: 100%;
+      animation: color_swipe_in .4s forwards;
+    }
+  }
+
+  @keyframes color_swipe_in {
+    from {
+      transform: translate(-100%, 0);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes color_swipe_out {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-100%, 0);
     }
   }
 
@@ -35,21 +53,43 @@
     text-transform: uppercase;
     letter-spacing: .1rem;
     white-space: nowrap;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
 
     &:before {
       content: '';
       display: inline-block;
       vertical-align: middle;
-      width: 0;
+      width: 2.5rem;
       height: .3rem;
       background: #fff;
       margin-right: 1rem;
-      transition: width ease 300ms;
+      transform: scale(0, 1);
+      transform-origin:  left center;
+      animation: before_line_swipe_out .4s forwards;
     }
 
     &:hover:before {
       @media screen and (min-width: 768px){
-        width: 2.5rem;
+        animation: before_line_swipe_in .4s forwards;
+      }
+    }
+
+    @keyframes before_line_swipe_in {
+      from {
+        transform: scale(0, 1);
+      }
+      to {
+        transform: scale(1, 1);
+      }
+    }
+
+    @keyframes before_line_swipe_out {
+      from {
+        transform: scale(1, 1);
+      }
+      to {
+        transform: scale(0, 1);
       }
     }
 
@@ -61,12 +101,32 @@
       height: .3rem;
       background: #fff;
       margin-left: 1rem;
-      transition: width ease 300ms;
+      transform: scale(1, 1);
+      transform-origin:  right center;
+      animation: after_line_swipe_in .4s forwards;
     }
 
     &:hover:after {
       @media screen and (min-width: 768px){
-        width: 0;
+        animation: after_line_swipe_out .4s forwards;
+      }
+    }
+
+    @keyframes after_line_swipe_out {
+      0% {
+        transform: scale(1,1);
+      }
+      100% {
+        transform: scale(0, 1);
+      }
+    }
+
+    @keyframes after_line_swipe_in {
+      0% {
+        transform: scale(0, 1);
+      }
+      100% {
+        transform: translate(1, 1);
       }
     }
   }

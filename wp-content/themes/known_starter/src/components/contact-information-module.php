@@ -29,7 +29,7 @@ echo '<div class="contact-information-module">';
         echo '<a class="email" href="mailto:'. $email .'">'. $email .'</a>';
       }
 
-      echo '<div class="dir-btn-wrapper">';
+      echo '<div class="dir-btn-wrapper trigger_fade">';
       echo '<a target="_blank" href="https://goo.gl/maps/CCFbXr4bMnv">';
       echo '<span>Directions</span>';
       echo '</a>';

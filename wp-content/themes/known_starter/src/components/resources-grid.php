@@ -27,7 +27,7 @@ if(get_post_type() == 'resource'){
       $permalink = get_permalink();
       $pdf = get_field('pdf');
 
-       echo '<div class="article-wrapper trigger_fade">';
+       echo '<div class="article-wrapper trigger_tile">';
 
        if($image) echo wp_get_attachment_image($image, 'full');
 
@@ -93,7 +93,7 @@ if(get_post_type() == 'resource'){
         echo '<div class="row">';
       }
 
-      echo '<div class="article-wrapper">';
+      echo '<div class="article-wrapper trigger_tile">';
       echo '<a href="'. $permalink .'">';
       if($image){
         echo wp_get_attachment_image($image);
@@ -148,7 +148,7 @@ if(get_post_type() == 'resource'){
       <?php } ?>
       <button id="next">
         <svg viewbox="0 0 7 14" width="7px" height="14px">
-          <use href="#triangle-right"></use>
+          <use xlink:href="#triangle-right"></use>
         </svg>
       </button>
     </div>

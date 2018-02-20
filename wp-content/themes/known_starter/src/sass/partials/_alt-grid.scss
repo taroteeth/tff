@@ -265,8 +265,10 @@
 
         .btn-wrap {
           margin-top: 2em;
+          text-align: center;
           @media(min-width: 768px) {
             margin-top: 3em;
+            text-align: left; 
           }
         }
       }

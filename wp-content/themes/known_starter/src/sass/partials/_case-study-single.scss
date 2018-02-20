@@ -10,7 +10,7 @@
       height: 40vh;
     }
     @media screen and (min-width: 992px){
-      height: 72vh;
+      height: 50vh;
     }
     @media screen and (min-width: 1440px) {
       height: 65rem;
@@ -235,7 +235,7 @@
           position: relative;
           padding: 2rem 0;
           @media screen and (min-width: 768px){
-            margin-left: -2rem;
+            margin-left: 0;
           }
           &.align-right {
             @media screen and (min-width: 768px){

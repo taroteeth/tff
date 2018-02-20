@@ -13,7 +13,7 @@ $blurbText = get_sub_field('blurb_button_text');
 ?>
 
 
-<div class="hero <?php if($blurbButton){echo 'has-blurb';}?>">
+<div class="hero <?php if($blurbButton){echo 'has-blurb';} if($greyBg){echo ' grey-bg';}?>">
   <div class="inner <?php echo $imagePos == "Left" ? "image-left" : "image-right";?>">
     <?php if(!is_page('290')){ // there is no image in the hero for the resources page
       if($image){
@@ -35,7 +35,7 @@ $blurbText = get_sub_field('blurb_button_text');
 
       <?php if(is_front_page()) {
         if($blurbText){
-          echo '<div class="logo"><svg id="logo" width="176px" height="39px" viewBox="0 0 176 39"><use href="#color-logo"></use></svg></div>';
+          echo '<div class="logo"><svg id="logo" width="176px" height="39px" viewBox="0 0 176 39"><use xlink:href="#color-logo"></use></svg></div>';
         }
       } else {
         echo '<p class="hero-title '. ($imagePos == 'Left' ? 'div-left' : 'div-right') .'">'. get_the_title() . '</p>';

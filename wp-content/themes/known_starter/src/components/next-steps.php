@@ -61,10 +61,10 @@ $permalink = get_permalink($path);
     <div class="image">
       <?php echo wp_get_attachment_image($image, 'full'); ?>
       <svg class="photo-curve-horiz" viewBox="0 0 320 54">
-        <use href="#photo-curve-horiz"></use>
+        <use xlink:href="#photo-curve-horiz"></use>
       </svg>
       <svg class="photo-curve-vert" viewBox="0 0 112 650">
-        <use href="#photo-curve-vert"></use>
+        <use xlink:href="#photo-curve-vert"></use>
       </svg>
     </div>
   </div>

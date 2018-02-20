@@ -23,17 +23,17 @@ $byline = get_sub_field('quote_byline');
     echo '<div class="text-wrapper">';
 
       if($studyTitle){ ?>
-        <p class="title"> <?php
+        <p class="title trigger_fade"> <?php
         echo $studyTitle;
         echo '</p>';
       }
 
       if($blockQuote){
-        echo '<div class="block-quote">'. $blockQuote .'</div>';
+        echo '<div class="block-quote trigger_fade">'. $blockQuote .'</div>';
       }
 
       if($byline){
-        echo '<p class="byline">'. $byline .'</p>';
+        echo '<p class="byline trigger_fade">'. $byline .'</p>';
       }
 
       button();
