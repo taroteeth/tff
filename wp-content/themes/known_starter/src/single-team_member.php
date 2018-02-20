@@ -44,6 +44,7 @@ $nextBtn = get_field('next_step_heading');
     </div> <!-- .hero --> <?php
 
     echo '<div id="specs-module">';
+    echo '<div class="specs-inner">';
 
       if($experience){
         echo '<div id="experience-module" class="trigger_fade">';
@@ -59,6 +60,7 @@ $nextBtn = get_field('next_step_heading');
         echo '</div><!-- #highlights-module -->';
       }
 
+    echo '</div><!-- .specs-inner -->';
     echo '</div> <!-- #specs-module -->';
 
     if($bioBlurb){

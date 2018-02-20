@@ -100,19 +100,36 @@
     }
 
     #specs-module {
-      display: flex;
-      justify-content: space-between;
       padding: 4rem 2rem;
       margin: 0 auto;
-      flex-wrap: wrap;
       @media screen and (min-width: 768px){
         width: 80vw;
-        max-width: 80rem;
+        max-width: 100rem;
         padding: 6rem 0;
-        flex-wrap: nowrap;
       }
       @media screen and (min-width: 992px){
         padding: 10rem 0;
+      }
+
+      .specs-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+        @media(min-width: 768px) {
+          margin: 0 -4rem;
+          flex-wrap: nowrap;
+
+          &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 0;
+            border-right: .1rem solid #e1e1e1;
+          }
+        }
       }
 
       .title {
@@ -123,6 +140,8 @@
         font-size: 1.4rem;
         padding-left: 6rem;
         position: relative;
+        margin-bottom: 1.5em;
+
         &:before {
           content: "";
           background-color: $orange;
@@ -137,8 +156,6 @@
       }
 
       .module-content {
-        padding: 2rem 0;
-
         p {
           line-height: 1.6em;
           font-size: 1.6rem;
@@ -151,10 +168,11 @@
 
       #experience-module {
         width: 100%;
-        padding: 2rem 0;
+        margin-bottom: 5rem;
         @media screen and (min-width: 768px){
           max-width: 50%;
-          padding: 0 2rem;
+          padding: 0 4rem;
+          margin-bottom: 0;
         }
       }
 
@@ -162,7 +180,7 @@
         width: 100%;
         @media screen and (min-width: 768px){
           max-width: 50%;
-          padding: 0 2rem;
+          padding: 0 4rem;
         }
       }
     }
@@ -239,6 +257,7 @@
         .title {
           font-family: $Merriweather;
           font-size: 2.4rem;
+
           &:after {
             content: "";
             display: block;
