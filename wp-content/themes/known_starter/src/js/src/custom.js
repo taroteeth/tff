@@ -140,6 +140,7 @@ function toggleNav() {
   if(hamburger) {
     hamburger.addEventListener("click", function(e){
   		e.preventDefault();
+      e.stopPropagation();
       if(window.matchMedia('(min-width: 992px)').matches) {
         primaryNav.style.top = getScrollPosition() + 'px';
       }
@@ -150,33 +151,14 @@ function toggleNav() {
 toggleNav();
 
 // //body event listener for nav
-// document.body.addEventListener('click', function(e){
-//   e.preventDefault();
-//   e.stopPropagation();
-//
-//   if(body[0].classList.contains('nav-active')){
-//     if(!$(e.target).parents('#nav').length){
-//       closeNav();
-//     }
-//   }
-// });
-
-
-// Nav slide down
-function openNav(){
-	document.getElementById('nav').style.height = "80vh";
-	document.getElementById('nav').classList.add("active");
-  document.getElementById('body-content').classList.add("nav");
-	document.getElementById('body-content').style.marginTop = "80vh";
-}
-
-// Nav slide up
-function closeNav(){
-	document.getElementById('nav').style.height = "0px";
-	document.getElementById('nav').classList.remove("active");
-	document.getElementById('body-content').style.marginTop = "0px";
-}
-
+document.body.addEventListener('click', function(e){
+  if(body[0].classList.contains('nav-active')){
+    if(!$(e.target).parents('#primary-nav').length){
+      console.log('test');
+      body[0].classList.remove('nav-active');
+    }
+  }
+});
 
 
 // Correct positioning of orange blurb box on #hero
