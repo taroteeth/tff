@@ -28,19 +28,19 @@ $nextBtn = get_field('next_step_heading'); // all next steps are to contact us
       }
 
       echo '<div class="hero-text-wrapper">';
-        echo '<p class="date">';
+        echo '<p class="date trigger_fade">';
         echo get_the_date('d/m/Y');
         echo '</p>';
-        echo '<p class="hero-header">';
+        echo '<p class="hero-header trigger_fade">';
         echo $title;
         echo '</p>';
 
 
         if($subtitle && $author){
-          echo '<p class="hero-subheader">';
+          echo '<p class="hero-subheader trigger_fade">';
           echo $subtitle;
           echo '</p>';
-          echo '<p class="author">By ';
+          echo '<p class="author trigger_fade">By ';
           echo $author;
           echo '</p>';
         }
@@ -50,7 +50,7 @@ $nextBtn = get_field('next_step_heading'); // all next steps are to contact us
     </div> <!-- .hero -->
 
     <div class="body-content">
-      <div class="inner">
+      <div class="inner trigger_fade">
         <?php
         if( have_posts() ) : while( have_posts() ) : the_post();
         echo $content;

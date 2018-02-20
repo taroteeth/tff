@@ -17,7 +17,7 @@ if($featuredPosts){
     $pdf = get_field('pdf', $p->ID);
     $pdfAttachment = get_field('pdf_document', $p->ID);
 
-    echo '<li>';
+    echo '<li class="trigger_fade">';
     if($image){
       echo '<div class="image-wrapper">';
       echo '<div class="image-inner-wrapper">';
