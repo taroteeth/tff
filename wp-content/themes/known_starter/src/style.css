@@ -2018,8 +2018,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
               left: 0;
               -webkit-transition: all ease .5s;
               transition: all ease .5s; } }
-        .hero .inner .hero-text-wrapper .hero-title.div-right:before {
-          left: 100%; }
+        @media screen and (min-width: 768px) {
+          .hero .inner .hero-text-wrapper .hero-title.div-right:before {
+            left: 100%; } }
         @media screen and (min-width: 768px) {
           .hero .inner .hero-text-wrapper .hero-title.active:before {
             width: 12rem; } }
@@ -3145,10 +3146,12 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     .alt-grid .row-inner .text-block .text-inner .center-wrap .btn-wrap {
       text-align: center; }
     .alt-grid .row-inner .text-block .text-inner .btn-wrap {
-      margin-top: 2em; }
+      margin-top: 2em;
+      text-align: center; }
       @media (min-width: 768px) {
         .alt-grid .row-inner .text-block .text-inner .btn-wrap {
-          margin-top: 3em; } }
+          margin-top: 3em;
+          text-align: left; } }
 
 #team-grid {
   max-width: 160rem;

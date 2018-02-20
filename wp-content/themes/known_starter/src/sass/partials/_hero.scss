@@ -195,7 +195,9 @@
 
         &.div-right{
           &:before {
-            left: 100%;
+            @media screen and (min-width: 768px){
+              left: 100%;
+            }
           }
         }
 
