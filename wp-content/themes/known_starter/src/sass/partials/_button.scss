@@ -1,4 +1,3 @@
-
 .btn {
   display: inline-block;
   position: relative;
@@ -14,31 +13,34 @@
     height: 100%;
     transform: translate(-100%, 0);
     background: $orange;
-    animation: color_swipe_out .4s forwards;
+    transition: transform 300ms ease;
+    //animation: color_swipe_out .4s forwards;
   }
 
   &:hover:before {
     @media screen and (min-width: 768px){
-      animation: color_swipe_in .4s forwards;
+      transform: translate(0,0);
+      //animation: color_swipe_in .4s forwards;
     }
   }
 
-  @keyframes color_swipe_in {
-    from {
-      transform: translate(-100%, 0);
-    }
-    to {
-      transform: translate(0, 0);
-    }
-  }
-  @keyframes color_swipe_out {
-    from {
-      transform: translate(0, 0);
-    }
-    to {
-      transform: translate(-100%, 0);
-    }
-  }
+  // @keyframes color_swipe_in {
+  //   from {
+  //     transform: translate(-100%, 0);
+  //   }
+  //   to {
+  //     transform: translate(0, 0);
+  //   }
+  // }
+  //
+  // @keyframes color_swipe_out {
+  //   from {
+  //     transform: translate(0, 0);
+  //   }
+  //   to {
+  //     transform: translate(-100%, 0);
+  //   }
+  // }
 
   span {
     position: relative;
@@ -60,38 +62,40 @@
       content: '';
       display: inline-block;
       vertical-align: middle;
-      width: 2.5rem;
+      width: 0;
       height: .3rem;
       background: #fff;
       margin-right: 1rem;
-      transform: scale(0, 1);
-      transform-origin:  left center;
-      animation: before_line_swipe_out .4s forwards;
+      // transform: scale(0, 1);
+      // transform-origin:  left center;
+      // animation: before_line_swipe_out .4s forwards;
+      transition: width 300ms ease;
     }
 
     &:hover:before {
       @media screen and (min-width: 768px){
-        animation: before_line_swipe_in .4s forwards;
+        width: 2.5rem;
+        //animation: before_line_swipe_in .4s forwards;
       }
     }
 
-    @keyframes before_line_swipe_in {
-      from {
-        transform: scale(0, 1);
-      }
-      to {
-        transform: scale(1, 1);
-      }
-    }
-
-    @keyframes before_line_swipe_out {
-      from {
-        transform: scale(1, 1);
-      }
-      to {
-        transform: scale(0, 1);
-      }
-    }
+    // @keyframes before_line_swipe_in {
+    //   from {
+    //     transform: scale(0, 1);
+    //   }
+    //   to {
+    //     transform: scale(1, 1);
+    //   }
+    // }
+    //
+    // @keyframes before_line_swipe_out {
+    //   from {
+    //     transform: scale(1, 1);
+    //   }
+    //   to {
+    //     transform: scale(0, 1);
+    //   }
+    // }
 
     &:after {
       content: '';
@@ -101,34 +105,36 @@
       height: .3rem;
       background: #fff;
       margin-left: 1rem;
-      transform: scale(1, 1);
-      transform-origin:  right center;
-      animation: after_line_swipe_in .4s forwards;
+      transition: width 300ms ease;
+      //transform: scale(1, 1);
+      // transform-origin:  right center;
+      //animation: after_line_swipe_in .4s forwards;
     }
 
     &:hover:after {
       @media screen and (min-width: 768px){
-        animation: after_line_swipe_out .4s forwards;
+        width: 0;
+        //animation: after_line_swipe_out .4s forwards;
       }
     }
 
-    @keyframes after_line_swipe_out {
-      0% {
-        transform: scale(1,1);
-      }
-      100% {
-        transform: scale(0, 1);
-      }
-    }
-
-    @keyframes after_line_swipe_in {
-      0% {
-        transform: scale(0, 1);
-      }
-      100% {
-        transform: translate(1, 1);
-      }
-    }
+    // @keyframes after_line_swipe_out {
+    //   0% {
+    //     transform: scale(1,1);
+    //   }
+    //   100% {
+    //     transform: scale(0, 1);
+    //   }
+    // }
+    //
+    // @keyframes after_line_swipe_in {
+    //   0% {
+    //     transform: scale(0, 1);
+    //   }
+    //   100% {
+    //     transform: translate(1, 1);
+    //   }
+    // }
   }
 }
 
