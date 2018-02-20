@@ -1,5 +1,5 @@
 .hero {
-  background-color: $backgroundGrey;
+  background-color: #fff;
   display: flex;
   position: relative;
   z-index: 6;
@@ -17,6 +17,18 @@
 
   &.has-blurb {
     overflow: visible;
+  }
+
+  &.grey-bg {
+    background-color: $backgroundGrey;
+
+    .photo-curve-vert {
+      fill: $backgroundGrey !important;
+    }
+
+    .photo-curve-horiz {
+      fill: $backgroundGrey !important;
+    }
   }
 
 
@@ -73,7 +85,7 @@
       .photo-curve-vert {
         position: absolute;
         display: none;
-        fill: $backgroundGrey;
+        fill: #fff;
         @media screen and (min-width: 768px){
           display: block;
           right: -.1rem;
@@ -87,7 +99,7 @@
         position: absolute;
         display: block;
         bottom: 0;
-        fill: $backgroundGrey;
+        fill: #fff;
         @media screen and (min-width: 768px){
           display: none;
         }

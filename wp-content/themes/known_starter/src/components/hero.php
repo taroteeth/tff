@@ -13,7 +13,7 @@ $blurbText = get_sub_field('blurb_button_text');
 ?>
 
 
-<div class="hero <?php if($blurbButton){echo 'has-blurb';}?>">
+<div class="hero <?php if($blurbButton){echo 'has-blurb';} if($greyBg){echo ' grey-bg';}?>">
   <div class="inner <?php echo $imagePos == "Left" ? "image-left" : "image-right";?>">
     <?php if(!is_page('290')){ // there is no image in the hero for the resources page
       if($image){

@@ -35,7 +35,7 @@
               ?>
 
               <div class="category-submodule">
-                <p class="title trigger_fade" id="<?php echo $categoryTitle ?>"><?php echo $categoryTitle ?></p>
+                <p class="title" id="<?php echo $categoryTitle ?>"><?php echo $categoryTitle ?></p>
 
                 <?php
 

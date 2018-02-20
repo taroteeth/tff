@@ -598,7 +598,7 @@ p, li {
       height: 40vh; } }
   @media screen and (min-width: 992px) {
     .team-member .inner .hero {
-      height: 72vh; } }
+      height: 50vh; } }
   @media screen and (min-width: 1440px) {
     .team-member .inner .hero {
       height: 65rem; } }
@@ -689,7 +689,7 @@ p, li {
   @media screen and (min-width: 768px) {
     .team-member .inner #specs-module {
       width: 80vw;
-      max-width: 100rem;
+      max-width: 80rem;
       padding: 6rem 0;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; } }
@@ -748,7 +748,7 @@ p, li {
       .team-member .inner #bio-blurb-module .inner {
         padding: 2rem 0;
         width: 80vw;
-        max-width: 100rem; } }
+        max-width: 80rem; } }
     .team-member .inner #bio-blurb-module .inner .blurb {
       display: block;
       margin: 0 auto;
@@ -789,7 +789,7 @@ p, li {
     .team-member .inner .content-block-wrapper {
       padding: 6rem 0 0;
       width: 80vw;
-      max-width: 100rem; } }
+      max-width: 80rem; } }
   @media screen and (min-width: 992px) {
     .team-member .inner .content-block-wrapper {
       padding: 10rem 0 0; } }
@@ -1829,7 +1829,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   display: none; }
 
 .hero {
-  background-color: #F8F8F8;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1848,6 +1848,12 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       height: 65rem; } }
   .hero.has-blurb {
     overflow: visible; }
+  .hero.grey-bg {
+    background-color: #F8F8F8; }
+    .hero.grey-bg .photo-curve-vert {
+      fill: #F8F8F8 !important; }
+    .hero.grey-bg .photo-curve-horiz {
+      fill: #F8F8F8 !important; }
   .hero .inner {
     width: 100%;
     display: -webkit-box;
@@ -1896,7 +1902,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       .hero .inner .hero-img-wrapper .photo-curve-vert {
         position: absolute;
         display: none;
-        fill: #F8F8F8; }
+        fill: #fff; }
         @media screen and (min-width: 768px) {
           .hero .inner .hero-img-wrapper .photo-curve-vert {
             display: block;
@@ -1909,7 +1915,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         position: absolute;
         display: block;
         bottom: 0;
-        fill: #F8F8F8; }
+        fill: #fff; }
         @media screen and (min-width: 768px) {
           .hero .inner .hero-img-wrapper .photo-curve-horiz {
             display: none; } }
@@ -3419,7 +3425,11 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       margin-bottom: 3rem;
       vertical-align: top;
       -webkit-box-sizing: border-box;
-              box-sizing: border-box; }
+              box-sizing: border-box;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%;
+      max-width: 100%; }
       @media screen and (min-width: 768px) {
         .stat-module .inner .stat-inner .col-inner {
           max-width: 25%;
@@ -4080,7 +4090,11 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           text-align: left; } }
       #primary-footer .inner #footer-address a {
         text-decoration: none;
-        color: #3A3A3A; }
+        color: #3A3A3A;
+        -webkit-transition: all ease .3s;
+        transition: all ease .3s; }
+        #primary-footer .inner #footer-address a:hover {
+          color: #F69420; }
     #primary-footer .inner #sm-container {
       list-style: none;
       text-align: center; }
