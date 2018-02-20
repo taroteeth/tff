@@ -676,26 +676,39 @@ p, li {
       font-size: 1.8rem; }
 
 .team-member .inner #specs-module {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 4rem 2rem;
-  margin: 0 auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+  margin: 0 auto; }
   @media screen and (min-width: 768px) {
     .team-member .inner #specs-module {
       width: 80vw;
-      max-width: 80rem;
-      padding: 6rem 0;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap; } }
+      max-width: 100rem;
+      padding: 6rem 0; } }
   @media screen and (min-width: 992px) {
     .team-member .inner #specs-module {
       padding: 10rem 0; } }
+  .team-member .inner #specs-module .specs-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: relative; }
+    @media (min-width: 768px) {
+      .team-member .inner #specs-module .specs-inner {
+        margin: 0 -4rem;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; }
+        .team-member .inner #specs-module .specs-inner:after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 0;
+          height: 100%;
+          width: 0;
+          border-right: .1rem solid #e1e1e1; } }
   .team-member .inner #specs-module .title {
     font-weight: bold;
     letter-spacing: .1rem;
@@ -703,7 +716,8 @@ p, li {
     color: #0176BC;
     font-size: 1.4rem;
     padding-left: 6rem;
-    position: relative; }
+    position: relative;
+    margin-bottom: 1.5em; }
     .team-member .inner #specs-module .title:before {
       content: "";
       background-color: #F69420;
@@ -715,26 +729,25 @@ p, li {
       left: 0;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
-  .team-member .inner #specs-module .module-content {
-    padding: 2rem 0; }
-    .team-member .inner #specs-module .module-content p {
-      line-height: 1.6em;
-      font-size: 1.6rem; }
-      .team-member .inner #specs-module .module-content p br {
-        line-height: 4rem; }
+  .team-member .inner #specs-module .module-content p {
+    line-height: 1.6em;
+    font-size: 1.6rem; }
+    .team-member .inner #specs-module .module-content p br {
+      line-height: 4rem; }
   .team-member .inner #specs-module #experience-module {
     width: 100%;
-    padding: 2rem 0; }
+    margin-bottom: 5rem; }
     @media screen and (min-width: 768px) {
       .team-member .inner #specs-module #experience-module {
         max-width: 50%;
-        padding: 0 2rem; } }
+        padding: 0 4rem;
+        margin-bottom: 0; } }
   .team-member .inner #specs-module #highlights-module {
     width: 100%; }
     @media screen and (min-width: 768px) {
       .team-member .inner #specs-module #highlights-module {
         max-width: 50%;
-        padding: 0 2rem; } }
+        padding: 0 4rem; } }
 
 .team-member .inner #bio-blurb-module {
   background-color: #F8F8F8;
