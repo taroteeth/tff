@@ -3769,7 +3769,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
 .next-step-wrapper {
   background-color: #fff;
   position: relative;
-  z-index: 7; }
+  z-index: 7;
+  padding: 2rem; }
   @media screen and (min-width: 768px) {
     .next-step-wrapper {
       padding: 5rem; } }
