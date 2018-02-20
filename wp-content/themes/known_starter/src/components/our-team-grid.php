@@ -54,7 +54,7 @@ if( $team_query->have_posts() ) :
 
           <?php if($linkedIn) { ?>
           <a class="linkedIn" href="<?php echo $linkedIn ?>">
-            <svg width="23px" height="23px" viewBox="0 0 23 23"><use href="#linkedin"></use></svg>
+            <svg width="23px" height="23px" viewBox="0 0 23 23"><use xlink:href="#linkedin"></use></svg>
           </a>
           <?php } ?>
 

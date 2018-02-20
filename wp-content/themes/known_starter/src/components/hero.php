@@ -24,7 +24,7 @@ $blurbText = get_sub_field('blurb_button_text');
             <path d="M7,325A553.11,553.11,0,0,1,112,.08V0H0V650H112v-.08A553.11,553.11,0,0,1,7,325Z"/>
           </svg>
           <svg class="photo-curve-horiz" viewBox="0 0 320 54">
-            <use href="#photo-curve-horiz"></use>
+            <use xlink:href="#photo-curve-horiz"></use>
           </svg>
         </div> <!-- .hero-img-wrapper -->
       <?php }
