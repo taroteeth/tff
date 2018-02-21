@@ -1741,8 +1741,8 @@ body.nav-active {
     transition: transform 300ms ease, -webkit-transform 300ms ease; }
   @media screen and (min-width: 768px) {
     .btn:hover:before {
-      -webkit-transform: translate(0, 0);
-              transform: translate(0, 0); } }
+      -webkit-transform: translate(-7.5px, 0);
+              transform: translate(-7.5px, 0); } }
   .btn span {
     position: relative;
     z-index: 1;
