@@ -2195,6 +2195,14 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       @media screen and (min-width: 1024px) {
         .case-study-highlight-module .inner .bubble-image-wrapper {
           padding: 0 4rem; } }
+      .case-study-highlight-module .inner .bubble-image-wrapper.trigger_bubble_grow {
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+        -webkit-transition: all ease .5s;
+        transition: all ease .5s; }
+        .case-study-highlight-module .inner .bubble-image-wrapper.trigger_bubble_grow.animate {
+          -webkit-transform: scale(1);
+                  transform: scale(1); }
       .case-study-highlight-module .inner .bubble-image-wrapper img {
         width: 25rem;
         height: 25rem;

@@ -84,6 +84,15 @@
         padding: 0 4rem;
       }
 
+      &.trigger_bubble_grow {
+        transform: scale(.5);
+        transition: all ease .5s;
+
+        &.animate {
+          transform: scale(1);
+        }
+      }
+
       img {
         width: 25rem;
         height: 25rem;

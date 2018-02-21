@@ -15,7 +15,7 @@ $byline = get_sub_field('quote_byline');
   echo '<div class="inner" >';
   echo '<div class="columns">';
     if($image){
-      echo '<div class="bubble-image-wrapper">';
+      echo '<div class="bubble-image-wrapper trigger_bubble_grow">';
       echo wp_get_attachment_image($image, 'full');
       echo '</div> <!-- .bubble-image-wrapper -->';
     }

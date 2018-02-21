@@ -260,7 +260,7 @@ $('.blog-bxslider').each(function(ele,index){
 class animations {
   constructor() {
     this.eleArr = [];
-    this.elements = document.querySelectorAll('.trigger_fade, .trigger_tile, .trigger_circle_grow, .grayscale, .hero-title');
+    this.elements = document.querySelectorAll('.trigger_fade, .trigger_tile, .trigger_circle_grow, .grayscale, .trigger_bubble_grow, .hero-title');
     this.interval;
     this.currentScroll;
 
