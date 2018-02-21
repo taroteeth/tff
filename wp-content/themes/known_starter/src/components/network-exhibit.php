@@ -9,7 +9,7 @@ echo '<div class="network-exhibit">';
 
         $title = get_sub_field('exhibit_block_title');
 
-        echo '<div class="exhibit-col">';
+        echo '<div class="exhibit-col trigger_tile">';
 
           echo '<div class="number">';
           echo  $i;

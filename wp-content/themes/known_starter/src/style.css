@@ -2286,9 +2286,11 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
 
 #our-network-content-cols .content-cols-module {
   padding: 0 2rem; }
-  @media (min-width: 1024px) {
-    #our-network-content-cols .content-cols-module .module-wrap {
-      margin: 10rem 0; } }
+  #our-network-content-cols .content-cols-module .module-wrap {
+    margin: 4rem 0; }
+    @media (min-width: 1024px) {
+      #our-network-content-cols .content-cols-module .module-wrap {
+        margin: 10rem 0; } }
   #our-network-content-cols .content-cols-module .header {
     text-align: center; }
     #our-network-content-cols .content-cols-module .header:after {
