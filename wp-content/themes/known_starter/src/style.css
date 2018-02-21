@@ -589,7 +589,7 @@ p, li {
       height: 40vh; } }
   @media screen and (min-width: 992px) {
     .team-member .inner .hero {
-      height: 50vh; } }
+      height: 60vh; } }
   @media screen and (min-width: 1440px) {
     .team-member .inner .hero {
       height: 65rem; } }
