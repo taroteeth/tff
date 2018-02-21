@@ -24,23 +24,25 @@
 			 if(!$image) $image = get_field('cover_photo', $post->ID);
 			 if(!$image) $image = get_field('hero_image', $post->ID);
 			 $pdf = get_field('pdf', $post->ID);
+			 $pdfAttachment = get_field('pdf_document', $post->ID);
 
 			 echo '<div class="article-wrapper">';
 
 			 if($image){
 								echo wp_get_attachment_image($image, 'full');
 							};
-							
+
 			 echo '<div class="text-wrapper">';
 			 echo '<p class="header">'. get_the_title() .'</p>';
 
 			 echo '<div class="button">';
-			 echo '<a href="'. get_permalink() .'">';
-				 if($pdf){
-					 echo '<span>Download PDF</span>';
-				 } else {
-					 echo '<span>Read Article</span>';
-				 }
+			 if($pdf){
+				 echo '<a target="_blank" href="'. wp_get_attachment_url($pdfAttachment) .'">';
+				 echo '<span>Download PDF</span>';
+			 } else {
+				 echo '<a href="'. get_permalink() .'">';
+				 echo '<span>Read Article</span>';
+			 }
 			 echo '</a>';
 			 echo '</div><!-- .button -->';
 
