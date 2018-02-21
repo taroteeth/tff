@@ -14,11 +14,11 @@ echo '<div class="hero resources-hero">';
   }
 
   if($heroHeader){
-    echo '<p class="header">'. $heroHeader. '</p>';
+    echo '<p class="header trigger_fade">'. $heroHeader. '</p>';
   }
 
   if($heroSubheader){
-    echo '<div id="subheader">'. $heroSubheader .'</div>';
+    echo '<div id="subheader" class="trigger_fade">'. $heroSubheader .'</div>';
   }
   echo '</div> <!-- #hero-text-wrapper -->';
 echo '</div> <!-- #hero -->';

@@ -836,20 +836,19 @@ p, li {
       letter-spacing: .2rem;
       text-transform: uppercase;
       color: #0176BC; }
+      .resources-hero .hero-text-wrapper .hero-title.animate:before {
+        width: 5rem; }
       .resources-hero .hero-text-wrapper .hero-title:before {
         content: "";
-        width: 3rem;
+        width: 0;
         height: .3rem;
         background-color: #F69420;
         display: inline-block;
         vertical-align: middle;
         margin-left: 0;
-        margin-right: 1rem; }
-        @media screen and (min-width: 768px) {
-          .resources-hero .hero-text-wrapper .hero-title:before {
-            width: 0;
-            -webkit-transition: all ease .5s;
-            transition: all ease .5s; } }
+        margin-right: 1rem;
+        -webkit-transition: all ease .5s;
+        transition: all ease .5s; }
       @media screen and (min-width: 768px) {
         .resources-hero .hero-text-wrapper .hero-title.active:before {
           width: 7rem; } }
@@ -1952,8 +1951,13 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
               -webkit-transition: all ease .5s;
               transition: all ease .5s; } }
         @media screen and (min-width: 768px) {
+          .hero .inner .hero-text-wrapper .hero-title.div-right {
+            position: relative;
+            margin-left: 12rem; } }
+        @media screen and (min-width: 768px) {
           .hero .inner .hero-text-wrapper .hero-title.div-right:before {
-            left: 100%; } }
+            left: 0;
+            position: absolute; } }
         @media screen and (min-width: 768px) {
           .hero .inner .hero-text-wrapper .hero-title.active:before {
             width: 12rem; } }

@@ -38,7 +38,7 @@
         white-space: pre-wrap;
         display: inline-block;
         transition: all ease .3s;
-        cursor: pointer; 
+        cursor: pointer;
         &:hover {
           @media screen and (min-width: 992px){
             color: $orange;

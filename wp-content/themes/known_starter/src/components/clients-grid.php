@@ -22,7 +22,7 @@
 
           <div class="categories-list">
           <?php foreach($categoriesArray as $catItem){ ?>
-              <span class="trigger_tile" id="<?php echo $catItem ?>"><?php echo $catItem ?></span>
+              <span class="trigger_fade" id="<?php echo $catItem ?>"><?php echo $catItem ?></span>
           <?php } ?>
           </div><!-- categories-list -->
 
@@ -58,7 +58,7 @@
                       <div class="row">
                     <?php } ?>
 
-                    <div class="category-exhibit trigger_tile">
+                    <div class="category-exhibit trigger_fade">
                       <?php if($investment) { ?>
                         <p class="investment"><?php echo $investment ?></p>
                       <?php } ?>
