@@ -2867,6 +2867,16 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     font-family: "Poppins", sans-serif !important; }
   .alt-grid.case-studies .row-inner .text-block .text-inner .btn-wrap {
     text-align: center; }
+  @media screen and (min-width: 768px) {
+    .alt-grid .row-inner:hover .btn-wrap .btn:before {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0); } }
+  @media screen and (min-width: 768px) {
+    .alt-grid .row-inner:hover .btn-wrap .btn span:before {
+      width: 2.5rem; } }
+  @media screen and (min-width: 768px) {
+    .alt-grid .row-inner:hover .btn-wrap .btn span:after {
+      width: 0; } }
   @media (min-width: 768px) {
     .alt-grid .row-inner {
       display: -webkit-box;

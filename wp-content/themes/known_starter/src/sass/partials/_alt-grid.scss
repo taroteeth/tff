@@ -19,7 +19,35 @@
     }
   }
 
+  //btn animates on row hover
   .row-inner {
+    &:hover {
+      .btn-wrap {
+        .btn {
+          &:before {
+            @media screen and (min-width: 768px){
+              transform: translate(0,0);
+            }
+          }
+
+          span {
+            &:before {
+              @media screen and (min-width: 768px){
+                width: 2.5rem;
+                //animation: before_line_swipe_in .4s forwards;
+              }
+            }
+
+            &:after {
+              @media screen and (min-width: 768px){
+                width: 0;
+                //animation: after_line_swipe_out .4s forwards;
+              }
+            }
+          }
+        }
+      }
+    }
     @media(min-width: 768px) {
       display: flex;
       flex-wrap: nowrap;
