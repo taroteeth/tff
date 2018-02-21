@@ -4054,10 +4054,10 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         padding: 4rem 3rem; } }
     #primary-footer .inner #footer-logo {
       width: 17.6rem;
-      margin-bottom: 3rem; }
+      margin: 3rem auto; }
       @media (min-width: 768px) {
         #primary-footer .inner #footer-logo {
-          margin-bottom: 5rem; } }
+          margin: 5rem 0; } }
     #primary-footer .inner .btn-wrap {
       text-align: center;
       margin-bottom: 3rem; }

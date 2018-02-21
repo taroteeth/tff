@@ -23,9 +23,9 @@
 
     #footer-logo {
       width: 17.6rem;
-      margin-bottom: 3rem;
+      margin: 3rem auto;
       @media(min-width: 768px) {
-        margin-bottom: 5rem;
+        margin: 5rem 0;
       }
     }
 
