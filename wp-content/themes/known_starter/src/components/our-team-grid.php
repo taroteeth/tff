@@ -53,7 +53,7 @@ if( $team_query->have_posts() ) :
         <div class="btns-wrap trigger_fade">
 
           <?php if($linkedIn) { ?>
-          <a class="linkedIn" href="<?php echo $linkedIn ?>">
+          <a class="linkedIn" target="_blank" href="<?php echo $linkedIn ?>">
             <svg width="23px" height="23px" viewBox="0 0 23 23"><use xlink:href="#linkedin"></use></svg>
           </a>
           <?php } ?>
