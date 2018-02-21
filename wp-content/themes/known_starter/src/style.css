@@ -1730,7 +1730,7 @@ body.nav-active {
     content: '';
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 110%;
     height: 100%;
     -webkit-transform: translate(-120%, 0);
             transform: translate(-120%, 0);
