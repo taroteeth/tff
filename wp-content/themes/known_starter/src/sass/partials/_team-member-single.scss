@@ -46,7 +46,7 @@
             .photo-curve-vert {
               position: absolute;
               display: none;
-              fill: $backgroundGrey;
+              fill: #fff;
               @media screen and (min-width: 768px){
                 display: block;
                 right: -1px;
@@ -59,7 +59,7 @@
               position: absolute;
               display: block;
               bottom: 0;
-              fill: $backgroundGrey;
+              fill: #fff;
               @media screen and (min-width: 768px){
                 display: none;
               }
