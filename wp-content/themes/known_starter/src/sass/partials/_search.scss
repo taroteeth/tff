@@ -79,10 +79,12 @@
       overflow: hidden;
       box-sizing: border-box;
       flex-wrap: wrap;
+      margin: 2rem 0;
       @media screen and (min-width: 768px){
         flex: 0 0 33.33%;
         max-width: 33.33%;
         padding: 2rem;
+        margin: 0; 
       }
 
         img {

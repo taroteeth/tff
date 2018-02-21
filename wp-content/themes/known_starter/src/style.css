@@ -3922,14 +3922,16 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
+            flex-wrap: wrap;
+        margin: 2rem 0; }
         @media screen and (min-width: 768px) {
           .search-result-content .inner #grid-wrapper .article-wrapper {
             -webkit-box-flex: 0;
                 -ms-flex: 0 0 33.33%;
                     flex: 0 0 33.33%;
             max-width: 33.33%;
-            padding: 2rem; } }
+            padding: 2rem;
+            margin: 0; } }
         .search-result-content .inner #grid-wrapper .article-wrapper img {
           -o-object-fit: cover;
              object-fit: cover;
