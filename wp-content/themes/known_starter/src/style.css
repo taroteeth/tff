@@ -1925,6 +1925,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             padding-top: 0; } }
         @media screen and (min-width: 768px) {
           .hero .inner .hero-text-wrapper .hero-title.animate:before {
+            width: 5rem; } }
+        @media screen and (min-width: 992px) {
+          .hero .inner .hero-text-wrapper .hero-title.animate:before {
             width: 10rem; } }
         .hero .inner .hero-text-wrapper .hero-title:before {
           content: "";
@@ -1952,7 +1955,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
               transition: all ease .5s; } }
         @media screen and (min-width: 768px) {
           .hero .inner .hero-text-wrapper .hero-title.div-right {
-            position: relative;
+            position: relative; } }
+        @media screen and (min-width: 992px) {
+          .hero .inner .hero-text-wrapper .hero-title.div-right {
             margin-left: 12rem; } }
         @media screen and (min-width: 768px) {
           .hero .inner .hero-text-wrapper .hero-title.div-right:before {
