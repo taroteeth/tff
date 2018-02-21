@@ -170,6 +170,14 @@
           padding-top: 0;
         }
 
+        &.animate {
+          &:before {
+            @media screen and (min-width: 768px){
+              width: 10rem;
+            }
+          }
+        }
+
         &:before {
           content: "";
           width: .3rem;

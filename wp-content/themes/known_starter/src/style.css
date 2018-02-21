@@ -1924,6 +1924,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           .hero .inner .hero-text-wrapper .hero-title {
             text-align: left;
             padding-top: 0; } }
+        @media screen and (min-width: 768px) {
+          .hero .inner .hero-text-wrapper .hero-title.animate:before {
+            width: 10rem; } }
         .hero .inner .hero-text-wrapper .hero-title:before {
           content: "";
           width: .3rem;
