@@ -17,6 +17,10 @@
 
   &.has-blurb {
     overflow: visible;
+
+    .hero-text-wrapper {
+      margin-bottom: 0;
+    }
   }
 
   &.grey-bg {
@@ -56,8 +60,10 @@
       }
 
       .hero-text-wrapper {
+        margin-bottom: 4rem;
         @media screen and (min-width: 768px){
           padding-left: 7rem;
+          margin-bottom: 0;
         }
       }
     }
@@ -98,7 +104,7 @@
       .photo-curve-horiz {
         position: absolute;
         display: block;
-        bottom: 0;
+        bottom: -1px;
         fill: #fff;
         @media screen and (min-width: 768px){
           display: none;

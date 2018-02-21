@@ -1816,6 +1816,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       height: 65rem; } }
   .hero.has-blurb {
     overflow: visible; }
+    .hero.has-blurb .hero-text-wrapper {
+      margin-bottom: 0; }
   .hero.grey-bg {
     background-color: #F8F8F8; }
     .hero.grey-bg .photo-curve-vert {
@@ -1844,9 +1846,12 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
                 transform: none;
         left: -.1rem;
         right: auto; } }
-    @media screen and (min-width: 768px) {
-      .hero .inner.image-right .hero-text-wrapper {
-        padding-left: 7rem; } }
+    .hero .inner.image-right .hero-text-wrapper {
+      margin-bottom: 4rem; }
+      @media screen and (min-width: 768px) {
+        .hero .inner.image-right .hero-text-wrapper {
+          padding-left: 7rem;
+          margin-bottom: 0; } }
     .hero .inner .hero-img-wrapper {
       height: 20rem;
       position: relative;
@@ -1882,7 +1887,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       .hero .inner .hero-img-wrapper .photo-curve-horiz {
         position: absolute;
         display: block;
-        bottom: 0;
+        bottom: -1px;
         fill: #fff; }
         @media screen and (min-width: 768px) {
           .hero .inner .hero-img-wrapper .photo-curve-horiz {
