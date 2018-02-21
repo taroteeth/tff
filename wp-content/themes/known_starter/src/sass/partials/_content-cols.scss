@@ -13,16 +13,22 @@
         .row {
           display: flex;
           padding: 2rem 0;
+          flex-wrap: wrap;
           @media screen and (min-width: 768px){
-            max-width: 60vw;
+            max-width: 80vw;
             margin: 0 auto;
+            flex-wrap: nowrap; 
+          }
+          @media screen and (min-width: 992px){
+            max-width: 60vw;
           }
           .spec {
             padding: 2rem 1rem;
+            flex: 0 0 100%;
+            max-width: 100%;
             @media screen and (min-width: 768px){
               max-width: 33.3%;
               flex: 0 0 33.3%;
-              display: block;
               vertical-align: top;
               justify-content: center;
               padding: 0 1rem;

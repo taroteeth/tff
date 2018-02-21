@@ -3439,20 +3439,30 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      padding: 2rem 0; }
+      padding: 2rem 0;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
       @media screen and (min-width: 768px) {
         .content-cols .inner .specs-module .specs-wrapper .row {
-          max-width: 60vw;
-          margin: 0 auto; } }
+          max-width: 80vw;
+          margin: 0 auto;
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap; } }
+      @media screen and (min-width: 992px) {
+        .content-cols .inner .specs-module .specs-wrapper .row {
+          max-width: 60vw; } }
       .content-cols .inner .specs-module .specs-wrapper .row .spec {
-        padding: 2rem 1rem; }
+        padding: 2rem 1rem;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+        max-width: 100%; }
         @media screen and (min-width: 768px) {
           .content-cols .inner .specs-module .specs-wrapper .row .spec {
             max-width: 33.3%;
             -webkit-box-flex: 0;
                 -ms-flex: 0 0 33.3%;
                     flex: 0 0 33.3%;
-            display: block;
             vertical-align: top;
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
