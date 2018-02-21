@@ -27,7 +27,7 @@ $button = get_sub_field('button_option');
               echo '<div class="row">';
             }
 
-            echo '<div class="spec">';
+            echo '<div class="spec trigger_tile">';
             echo '<p class="spec-name">'. $name .'</p><!-- .spec-name -->';
             echo '<div class="spec-content">'. $content .'</div><!-- .spec-content -->';
             echo '</div> <!-- .spec -->';

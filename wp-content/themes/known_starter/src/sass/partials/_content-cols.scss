@@ -15,9 +15,9 @@
           padding: 2rem 0;
           flex-wrap: wrap;
           @media screen and (min-width: 768px){
-            max-width: 80vw;
+            max-width: 90vw;
             margin: 0 auto;
-            flex-wrap: nowrap; 
+            flex-wrap: nowrap;
           }
           @media screen and (min-width: 992px){
             max-width: 60vw;

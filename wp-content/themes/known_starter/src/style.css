@@ -3498,7 +3498,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           flex-wrap: wrap; }
       @media screen and (min-width: 768px) {
         .content-cols .inner .specs-module .specs-wrapper .row {
-          max-width: 80vw;
+          max-width: 90vw;
           margin: 0 auto;
           -ms-flex-wrap: nowrap;
               flex-wrap: nowrap; } }
