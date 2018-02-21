@@ -2847,14 +2847,21 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         z-index: 1; }
       .network-exhibit .inner #exhibit .exhibit-col .shadow {
         position: absolute;
-        height: 100%;
-        top: 0;
-        right: 0;
         fill: #F8F8F8;
         -webkit-filter: drop-shadow(7px 0 5px rgba(0, 0, 0, 0.05));
                 filter: drop-shadow(7px 0 5px rgba(0, 0, 0, 0.05));
-        -webkit-transform: translateX(50%);
-                transform: translateX(50%); }
+        width: 100%;
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        bottom: 0;
+        left: 0; }
+        @media screen and (min-width: 768px) {
+          .network-exhibit .inner #exhibit .exhibit-col .shadow {
+            height: 100%;
+            top: 0;
+            right: 0;
+            -webkit-transform: translateX(50%);
+                    transform: translateX(50%); } }
 
 .alt-grid {
   width: 100%;
