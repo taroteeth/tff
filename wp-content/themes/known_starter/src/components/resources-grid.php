@@ -26,6 +26,7 @@ if(get_post_type() == 'resource'){
       $title = get_the_title();
       $permalink = get_permalink();
       $pdf = get_field('pdf');
+      $pdfAttachment = get_field('pdf_document');
 
        echo '<div class="article-wrapper trigger_tile">';
 
@@ -35,7 +36,11 @@ if(get_post_type() == 'resource'){
         if($title) echo '<p class="header">'. $title .'</p>';
 
         echo '<div class="button">';
-        echo '<a href="'. $permalink .'">';
+        if($pdf){
+          echo '<a target="_blank" href="'. wp_get_attachment_url($pdfAttachment) .'">';
+        } else {
+          echo '<a href="'. $permalink .'">';
+        }
         echo '<span>';
           if($pdf){ echo 'Download PDF';
           } else { echo 'Read Article'; }
@@ -86,6 +91,7 @@ if(get_post_type() == 'resource'){
       $title = get_the_title();
       $permalink = get_permalink();
       $pdf = get_field('pdf');
+      $pdfAttachment = get_field('pdf_document');
       $totalCounter = 0;
       $total = wp_count_posts('resource')->publish;
 
@@ -94,16 +100,24 @@ if(get_post_type() == 'resource'){
       }
 
       echo '<div class="article-wrapper trigger_tile">';
-      echo '<a href="'. $permalink .'">';
+      if($pdf){
+        echo '<a target="_blank" href="'. wp_get_attachment_url($pdfAttachment) .'">';
+      } else {
+        echo '<a href="'. $permalink .'">';
+      }
       if($image){
-        echo wp_get_attachment_image($image);
+        echo wp_get_attachment_image($image, 'full');
       };
       echo '</a>';
       echo '<div class="text-wrapper">';
       echo '<p class="header">'. $title .'</p>';
 
       echo '<div class="button">';
-      echo '<a href="'. $permalink .'">';
+      if($pdf){
+        echo '<a target="_blank" href="'. wp_get_attachment_url($pdfAttachment) .'">';
+      } else {
+        echo '<a href="'. $permalink .'">';
+      }
       echo '<span>';
         if($pdf){
           echo 'Download PDF';

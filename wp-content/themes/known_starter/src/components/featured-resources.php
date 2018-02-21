@@ -27,7 +27,11 @@ if($featuredPosts){
     };
     echo '<div class="text-wrapper">';
     echo '<p class="date">'. $date .'</p>';
-    echo '<a class="header-link" href="'. $permalink .'"><p class="header">'. $title .'</p></a>';
+    if($pdf){
+      echo '<a class="header-link" href="'. wp_get_attachment_url($pdfAttachment) .'"><p class="header">'. $title .'</p></a>';
+    } else {
+      echo '<a class="header-link" href="'. $permalink .'"><p class="header">'. $title .'</p></a>';
+    }
     echo '<p class="subheader">'. $subtitle .'</p>';
 
     echo '<div class="button">';
