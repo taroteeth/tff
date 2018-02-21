@@ -1681,6 +1681,14 @@ body.nav-active {
         color: #fff;
         letter-spacing: .05rem;
         line-height: 1.5em; }
+        #primary-nav .inner .nav-contact p a {
+          text-decoration: none;
+          display: inline;
+          color: #fff;
+          -webkit-transition: all ease .3s;
+          transition: all ease .3s; }
+          #primary-nav .inner .nav-contact p a:hover {
+            color: #F69420; }
 
 #body-content {
   -webkit-transition: all ease .5s;

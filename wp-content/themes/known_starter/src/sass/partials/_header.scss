@@ -357,6 +357,16 @@ body.nav-active {
         color: #fff;
         letter-spacing: .05rem;
         line-height: 1.5em;
+
+        a {
+          text-decoration: none;
+          display: inline;
+          color: #fff;
+          transition: all ease .3s;
+          &:hover {
+            color: $orange; 
+          }
+        }
       }
     }
 

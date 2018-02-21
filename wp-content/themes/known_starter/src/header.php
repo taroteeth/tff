@@ -90,7 +90,7 @@
 				<div class="inner">
 					<?php wp_nav_menu('default-menu'); ?>
 					<div class="nav-contact">
-						<p>27 Whitehall Street New York, NY 10004  |  T: 212.269.1300  |  info@thinkforwardfinancial.com</p>
+						<p>27 Whitehall Street New York, NY 10004  |  T: 212.269.1300  |  <a href="mailto:info@thinkforwardfinancial.com">info@thinkforwardfinancial.com</a></p>
 					</div><!-- .nav-contact -->
 				</div> <!-- .inner -->
 			</div> <!-- .nav -->
