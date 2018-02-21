@@ -778,10 +778,15 @@ p, li {
       background-color: #F69420;
       left: 50%;
       bottom: -8.5rem;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
+      -webkit-transform: translateX(-50%) scale(0.5);
+              transform: translateX(-50%) scale(0.5);
       border-radius: 100%;
-      overflow: hidden; }
+      overflow: hidden;
+      -webkit-transition: all ease .3s;
+      transition: all ease .3s; }
+      .team-member .inner #bio-blurb-module .inner .blurb-circle.animate {
+        -webkit-transform: translateX(-50%) scale(1);
+                transform: translateX(-50%) scale(1); }
 
 .team-member .inner .content-block-wrapper {
   position: relative;

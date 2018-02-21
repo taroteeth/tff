@@ -67,7 +67,7 @@ $nextBtn = get_field('next_step_heading');
       echo '<div id="bio-blurb-module">';
       echo '<div class="inner">';
       echo '<div class="blurb trigger_fade">'. $bioBlurb .'</div>';
-      echo '<div class="blurb-circle"></div>';
+      echo '<div class="blurb-circle trigger_circle_grow"></div>';
       echo '</div><!-- .inner -->';
       echo '</div><!-- #bio-blurb-module -->';
     }

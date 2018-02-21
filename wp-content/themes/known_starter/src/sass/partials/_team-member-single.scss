@@ -229,9 +229,14 @@
           background-color: $orange;
           left: 50%;
           bottom: -8.5rem;
-          transform: translateX(-50%);
+          transform: translateX(-50%) scale(.5);
           border-radius: 100%;
           overflow: hidden;
+          transition: all ease .3s;
+
+          &.animate {
+            transform: translateX(-50%) scale(1);
+          }
         }
       }
     }
