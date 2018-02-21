@@ -100,3 +100,25 @@
     transition: all 1s ease .3s;
   }
 }
+
+//img slides for alt grid
+.trigger_img_slide_right {
+  @media screen and (min-width: 768px){
+    transform: translateX(-100%);
+    transition: all ease 1s;
+
+    &.animate {
+      transform: translateX(0);
+    }
+  }
+}
+
+.trigger_img_slide_left {
+  @media screen and (min-width: 768px){
+    transform: translateX(100%);
+    transition: all ease 1s;
+    &.animate {
+      transform: translateX(0);
+    }
+  }
+}

@@ -28,7 +28,7 @@
 			$url = (!empty($btnPath)) ? get_permalink($btnPath[0]) : $btnLink;
 			?>
 
-			<div class="img-block <?php if($iteration % 2 !== 0){ echo 'right';} if($numberedGrid){echo ' number';} if(!$numberedGrid){echo ' grayscale';}?>">
+			<div class="img-block <?php if($iteration % 2 !== 0){ echo 'right trigger_img_slide_left';} else {echo 'trigger_img_slide_right';} if($numberedGrid){echo ' number';} if(!$numberedGrid){echo ' grayscale';}?>">
 
 			<!--
 			animate-position:		int(%), defaults to pixels

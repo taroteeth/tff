@@ -278,6 +278,26 @@ p, li {
     -webkit-transition: all 1s ease .3s;
     transition: all 1s ease .3s; }
 
+@media screen and (min-width: 768px) {
+  .trigger_img_slide_right {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all ease 1s;
+    transition: all ease 1s; }
+    .trigger_img_slide_right.animate {
+      -webkit-transform: translateX(0);
+              transform: translateX(0); } }
+
+@media screen and (min-width: 768px) {
+  .trigger_img_slide_left {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all ease 1s;
+    transition: all ease 1s; }
+    .trigger_img_slide_left.animate {
+      -webkit-transform: translateX(0);
+              transform: translateX(0); } }
+
 .case-study .hero {
   background-color: #F8F8F8;
   display: -webkit-box;
