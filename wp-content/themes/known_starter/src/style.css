@@ -1400,6 +1400,11 @@ p, li {
   border-bottom: 1px solid #E1E1E1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0); }
+  @media screen and (min-width: 1600px) {
+    #primary-header {
+      left: 50%;
+      -webkit-transform: translate3d(-50%, 0, 0);
+              transform: translate3d(-50%, 0, 0); } }
   #primary-header #header-inner {
     display: -webkit-box;
     display: -ms-flexbox;
