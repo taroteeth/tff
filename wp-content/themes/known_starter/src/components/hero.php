@@ -35,18 +35,18 @@ $blurbText = get_sub_field('blurb_button_text');
 
       <?php if(is_front_page()) {
         if($blurbText){
-          echo '<div class="logo" id="home-logo"><svg id="logo" width="176px" height="39px" viewBox="0 0 176 39"><use xlink:href="#color-logo"></use></svg></div>';
+          echo '<div class="logo " id="home-logo"><svg id="logo" width="176px" height="39px" viewBox="0 0 176 39"><use xlink:href="#color-logo"></use></svg></div>';
         }
       } else {
         echo '<p class="hero-title '. ($imagePos == 'Left' ? 'div-left' : 'div-right') .'">'. get_the_title() . '</p>';
       }
 
       if($heroHeader){
-        echo '<p class="header">'. $heroHeader. '</p>';
+        echo '<p class="header trigger_fade">'. $heroHeader. '</p>';
       }
 
       if($heroContent){ ?>
-        <div class="subheader <?php if($blueText){echo 'blue';}?>"> <?php
+        <div class="subheader trigger_fade <?php if($blueText){echo 'blue';}?>"> <?php
         echo $heroContent;
         echo '</div>';
       }

@@ -4,7 +4,7 @@
     padding: 0 2rem;
 
     .module-wrap {
-      margin: 4rem 0; 
+      margin: 4rem 0;
       @media(min-width: 1024px) {
         margin: 10rem 0;
       }
@@ -59,13 +59,13 @@
         &:before {
           content: "";
           width: 5rem;
-          height: .2rem;
+          height: .3rem;
           background-color: $orange;
           display: block;
           vertical-align: middle;
-          margin: 1rem auto;
           position: absolute;
           left: 0;
+          bottom: 50%;
         }
         @media screen and (min-width: 768px){
           text-align: left;

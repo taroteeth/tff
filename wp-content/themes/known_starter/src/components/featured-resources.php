@@ -19,11 +19,17 @@ if($featuredPosts){
 
     echo '<li class="trigger_fade">';
     if($image){
+      if($pdf){
+        echo '<a target="_blank" href="'. wp_get_attachment_url($pdfAttachment) .'">';
+      } else {
+        echo '<a href="'. $permalink .'">';
+      }
       echo '<div class="image-wrapper">';
       echo '<div class="image-inner-wrapper">';
       echo wp_get_attachment_image($image, 'full');
       echo '</div> <!-- .image-inner-wrapper -->';
       echo '</div> <!-- .image-wrapper -->';
+      echo '</a>';
     };
     echo '<div class="text-wrapper">';
     echo '<p class="date">'. $date .'</p>';

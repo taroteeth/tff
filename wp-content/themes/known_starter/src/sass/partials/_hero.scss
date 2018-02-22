@@ -129,6 +129,17 @@
         position: relative;
         margin-bottom: 2rem;
 
+        &.animate {
+          &:before {
+            @media screen and (min-width: 768px){
+              width: 5rem;
+            }
+            @media screen and (min-width: 992px){
+              width: 10rem;
+            }
+          }
+        }
+
         &:before {
           content: "";
           width: .3rem;
@@ -139,8 +150,9 @@
           right: 50%;
           transform: translateX(-50%);
           top: -5rem;
+          transition: all ease .5s; 
           @media screen and (min-width: 768px){
-            width: 12rem;
+            width: 0;
             height: .3rem;
             display: inline-block;
             bottom: unset !important;
