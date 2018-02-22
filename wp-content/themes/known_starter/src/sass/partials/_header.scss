@@ -21,7 +21,7 @@
   background-color: #fff;
   z-index: 99;
   max-width: 160rem;
-  transform: translateX(-50%);
+  transform: translate3d(-50%, 0, 0);
   border-bottom: 1px solid #E1E1E1;
 
   #header-inner {
@@ -205,7 +205,7 @@
 }
 
 body.nav-active {
-  overflow: auto; 
+  overflow: auto;
   overflow-y: hidden;
 }
 

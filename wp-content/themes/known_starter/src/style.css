@@ -1397,8 +1397,8 @@ p, li {
   background-color: #fff;
   z-index: 99;
   max-width: 160rem;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
   border-bottom: 1px solid #E1E1E1; }
   #primary-header #header-inner {
     display: -webkit-box;
