@@ -147,7 +147,7 @@ function toggleNav() {
     hamburger.addEventListener("click", function(e){
       console.log('hamburger click');
   		e.preventDefault();
-      e.stopPropagation();
+      // e.stopPropagation();
       if(window.matchMedia('(min-width: 992px)').matches) {
         primaryNav.style.top = getScrollPosition() + 'px';
       }
