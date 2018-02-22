@@ -28,13 +28,13 @@ $nextBtn = get_field('next_step_heading');
       }
 
       echo '<div class="hero-text-wrapper">';
-        echo '<p class="hero-header">';
+        echo '<p class="hero-header trigger_fade">';
         echo $title;
         echo '</p>';
 
 
         if($position){
-          echo '<p class="hero-subheader">';
+          echo '<p class="hero-subheader trigger_fade">';
           echo $position;
           echo '</p>';
         }
