@@ -23,11 +23,11 @@
   max-width: 160rem;
   border-bottom: 1px solid #E1E1E1;
   transform: translate3d(0, 0, 0);
-  @media screen and (min-width: 1600px){
-    @media (hover: hover){
+  @media (min-width: 1600px){
+    // @media (hover: hover){
       left: 50%;
       transform: translate3d(-50%, 0, 0);
-    }
+    // }
   }
 
   #header-inner {
