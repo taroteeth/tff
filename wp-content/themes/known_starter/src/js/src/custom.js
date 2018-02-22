@@ -158,14 +158,14 @@ function toggleNav() {
 toggleNav();
 
 // //body event listener for nav
-// document.body.addEventListener('click', function(e){
-//   if(body[0].classList.contains('nav-active')){
-//     if(!$(e.target).parents('#primary-nav').length){
-//       console.log('test');
-//       body[0].classList.remove('nav-active');
-//     }
-//   }
-// });
+document.body.addEventListener('click', function(e){
+  if(body[0].classList.contains('nav-active')){
+    if(!$(e.target).parents('#primary-nav').length){
+      console.log('test');
+      body[0].classList.remove('nav-active');
+    }
+  }
+});
 
 
 // Correct positioning of orange blurb box on #hero
