@@ -3304,7 +3304,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     display: block;
     margin: 4rem auto;
     text-align: center; }
-    .clients-grid .inner .categories-list span {
+    .clients-grid .inner .categories-list a {
       color: #858585;
       padding: 0 .5rem;
       text-transform: uppercase;
@@ -3318,13 +3318,13 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       transition: all ease .3s;
       cursor: pointer; }
       @media screen and (min-width: 992px) {
-        .clients-grid .inner .categories-list span:hover {
+        .clients-grid .inner .categories-list a:hover {
           color: #F69420; } }
-      .clients-grid .inner .categories-list span:after {
+      .clients-grid .inner .categories-list a:after {
         content: "|";
         color: #858585;
         margin-left: .5rem; }
-      .clients-grid .inner .categories-list span:last-child:after {
+      .clients-grid .inner .categories-list a:last-child:after {
         content: "";
         display: none; }
   .clients-grid .inner .category-submodule {

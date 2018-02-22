@@ -21,21 +21,27 @@
           <svg class="triangle" width="14px" height="7px" viewBox="0 0 14 7"><use href="#triangle-up"></use></svg>
 
           <div class="categories-list">
-          <?php foreach($categoriesArray as $catItem){ ?>
-              <span class="trigger_fade" id="<?php echo $catItem ?>"><?php echo $catItem ?></span>
-          <?php } ?>
+          <?php
+          $catItemCounter = 0;
+
+          foreach($categoriesArray as $catItem){ ?>
+              <a class="cat-title trigger_fade" data-id="<?php echo 'id-'.$catItemCounter; ?>"><?php echo $catItem ?></a>
+          <?php $catItemCounter++;
+        } ?>
           </div><!-- categories-list -->
 
           <?php
 
           if(have_rows('industry_category_submodule')) :
+
+            $catSubmodCounter = 0;
             while(have_rows('industry_category_submodule')) : the_row();
 
               $categoryTitle = get_sub_field('category_title');
               ?>
 
               <div class="category-submodule">
-                <p class="title" id="<?php echo $categoryTitle ?>"><?php echo $categoryTitle ?></p>
+                <p class="title" data-id="<?php echo 'id-'.$catSubmodCounter; ?>"><?php echo $categoryTitle ?></p>
 
                 <?php
 
@@ -85,6 +91,7 @@
 
                     $totalCount++;
 
+
                   endwhile;
                 endif; // category exhibit
                 ?>
@@ -92,6 +99,7 @@
               </div><!-- .category-submodule-->
 
             <?php
+            $catSubmodCounter++;
             endwhile;
           endif; //category submodule
           ?>

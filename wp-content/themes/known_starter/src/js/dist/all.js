@@ -84,7 +84,7 @@ function scrollTo(to, callback, duration) {
     return document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop;
   }
   var start = position(),
-      change = to - start,
+      change = (to - start) - (primaryHeader.height + 30),
       currentTime = 0,
       increment = 20;
       duration = (typeof(duration) === 'undefined') ? 500 : duration;
@@ -92,7 +92,7 @@ function scrollTo(to, callback, duration) {
     // increment the time
     currentTime += increment;
     // find the value with the quadratic in-out easing function
-    var val = Math.easeInOutQuad(currentTime, start, change, duration);
+    var val = Math.easeInOutQuad(currentTime, start, change, duration); // change to make duration based on distance 
     // move the document.body
     move(val);
     // do the animation unless its over
@@ -246,14 +246,44 @@ $('.blog-bxslider').each(function(ele,index){
 });
 
 
-// Clients page autoscroll on click
-// $("#button").click(function() {
-//     $('html, body').animate({
-//         scrollTop: $("#elementtoScrollToID").offset().top
-//     }, 2000);
-// });
+// Clients page autoscroll on clicl
+class clientScroll {
+  constructor(ele){
+    this.element = ele;
+    this.list = this.element.querySelectorAll('.categories-list .cat-title'); // target the as in the industry module
 
-// need to figure out how to confirm the title being scrolled to and category match up
+    if(this.list.length){
+      for( var i = 0; i < this.list.length; i++){
+        this.list[i].addEventListener('click', function(e){
+          e.preventDefault;
+          var item = e.target;
+          var id = item.dataset.id;
+          var target = this.element.querySelector('.category-submodule p.title[data-id='+id+']'); //how you match it thoooo
+          var targetTop = target.getBoundingClientRect().top;
+
+          console.log(targetTop);
+
+          scrollTo((targetTop + getScrollPosition()), function(){
+            console.log('big don');
+          }, 1500);
+
+        }.bind(this));
+      }
+    }
+  }
+
+}
+var industryModules = document.querySelectorAll('.industry-module');
+console.log(industryModules);
+
+if(industryModules.length){
+  var industryClasses = [];
+  for( var i = 0; i < industryModules.length; i++ ){
+    industryClasses[i] = new clientScroll(industryModules[i]);
+  }
+  console.log(industryClasses);
+  // industryClasses[0].init();  you can run any function you want to any one item
+}
 
 
 // A N I M A T I O N
