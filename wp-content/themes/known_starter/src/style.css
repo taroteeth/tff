@@ -156,8 +156,8 @@ p, li {
 .trigger_fade {
   opacity: 0; }
   .trigger_fade.animate {
-    -webkit-animation: fade_in 1s forwards;
-            animation: fade_in 1s forwards;
+    -webkit-animation: fade_in .7s forwards;
+            animation: fade_in .7s forwards;
     position: relative; }
 
 @-webkit-keyframes fade_in {

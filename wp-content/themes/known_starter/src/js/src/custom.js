@@ -92,7 +92,7 @@ function scrollTo(to, callback, duration) {
     // increment the time
     currentTime += increment;
     // find the value with the quadratic in-out easing function
-    var val = Math.easeInOutQuad(currentTime, start, change, duration); // change to make duration based on distance 
+    var val = Math.easeInOutQuad(currentTime, start, change, duration); // change to make duration based on distance
     // move the document.body
     move(val);
     // do the animation unless its over
@@ -152,6 +152,7 @@ function toggleNav() {
         primaryNav.style.top = getScrollPosition() + 'px';
       }
   		body[0].classList.toggle("nav-active");
+      closeSearchbar();
   	});
   }
 }
