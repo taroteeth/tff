@@ -224,7 +224,10 @@ body.nav-active {
   }
 
   body.nav-active & {
-    transform: translateX(0);
+    transform: translateY(0);
+    @media screen and (min-width: 768px){
+      transform: translateX(0);
+    }
   }
 
   .inner {

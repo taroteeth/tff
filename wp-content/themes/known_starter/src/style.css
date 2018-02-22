@@ -1578,8 +1578,12 @@ body.nav-active {
       max-width: 70rem;
       height: calc(100vh - 6rem); } }
   body.nav-active #primary-nav {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+    @media screen and (min-width: 768px) {
+      body.nav-active #primary-nav {
+        -webkit-transform: translateX(0);
+                transform: translateX(0); } }
   #primary-nav .inner {
     width: 100%;
     padding: 3rem 2rem;
