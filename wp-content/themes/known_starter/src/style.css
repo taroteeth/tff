@@ -1675,8 +1675,9 @@ body.nav-active {
             background-color: #F69420;
             -webkit-transition: width ease .3s;
             transition: width ease .3s; }
-          #primary-nav .inner #menu-default-menu ul.sub-menu li a:hover:after {
-            width: 100%; }
+          @media (hover: hover) {
+            #primary-nav .inner #menu-default-menu ul.sub-menu li a:hover:after {
+              width: 100%; } }
         @media (min-width: 992px) {
           #primary-nav .inner #menu-default-menu ul.sub-menu li {
             font-size: 1.6rem; } }

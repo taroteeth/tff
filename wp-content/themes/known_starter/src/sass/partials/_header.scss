@@ -326,8 +326,10 @@ body.nav-active {
             }
 
             &:hover {
-              &:after {
-                width: 100%;
+              @media (hover: hover){
+                &:after {
+                  width: 100%;
+                }
               }
             }
           }
