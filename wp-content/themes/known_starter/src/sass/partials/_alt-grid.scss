@@ -21,6 +21,17 @@
 
   //btn animates on row hover
   .row-inner {
+    position: relative;
+
+    .cover-link {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+    }
+
     &:hover {
       .btn-wrap {
         .btn {
@@ -109,15 +120,6 @@
         height: 100%;
         position: absolute;
         background-color: rgba(0,0,0,.3);
-      }
-
-      .cover-link {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 999;
       }
 
       img {

@@ -26,6 +26,11 @@
 			$btnLink = get_sub_field('button_link');
 			$btnPath = get_sub_field('button_path');
 			$url = (!empty($btnPath)) ? get_permalink($btnPath[0]) : $btnLink;
+
+
+			if($textBlockCta && ($btnLink || $btnPath)){
+				echo '<a href="'. $url .'" class="cover-link"></a>';
+			}
 			?>
 
 			<div class="img-block <?php if($iteration % 2 !== 0){ echo 'right trigger_img_slide_left';} else {echo 'trigger_img_slide_right';} if($numberedGrid){echo ' number';} if(!$numberedGrid){echo ' grayscale';}?>">
@@ -39,9 +44,6 @@
 			-->
 
 			<?php
-			if($textBlockCta && ($btnLink || $btnPath)){
-				echo '<a href="'. $url .'" class="cover-link"></a>';
-			}
 
 			if($numberedGrid){ // numbered svgs
 				if($numberIteration == 0){ ?>
