@@ -1397,7 +1397,9 @@ p, li {
   background-color: #fff;
   z-index: 99;
   max-width: 160rem;
-  border-bottom: 1px solid #E1E1E1; }
+  border-bottom: 1px solid #E1E1E1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
   #primary-header #header-inner {
     display: -webkit-box;
     display: -ms-flexbox;
