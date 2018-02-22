@@ -17,9 +17,11 @@
       width: 80vw;
     }
     &:hover {
-      #next-step-heading {
-        &:after {
-          width: 100% !important;
+      @media (hover : hover){
+        #next-step-heading {
+          &:after {
+            width: 100% !important;
+          }
         }
       }
     }

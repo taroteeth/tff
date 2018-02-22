@@ -3819,8 +3819,9 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         display: -ms-flexbox;
         display: flex;
         width: 80vw; } }
-    .next-step-wrapper .next-step-container:hover #next-step-heading:after {
-      width: 100% !important; }
+    @media (hover: hover) {
+      .next-step-wrapper .next-step-container:hover #next-step-heading:after {
+        width: 100% !important; } }
     .next-step-wrapper .next-step-container a.cover-link {
       position: absolute;
       z-index: 1;
