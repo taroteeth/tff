@@ -149,6 +149,7 @@ function toggleNav() {
   		e.preventDefault();
       e.stopPropagation();
       if(window.matchMedia('(min-width: 992px)').matches) {
+        alert('match media'); 
         primaryNav.style.top = getScrollPosition() + 'px';
       }
   		body[0].classList.toggle("nav-active");

@@ -1580,7 +1580,7 @@ body.nav-active {
   body.nav-active #primary-nav {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
       body.nav-active #primary-nav {
         -webkit-transform: translateX(0);
                 transform: translateX(0); } }
