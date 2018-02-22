@@ -205,6 +205,7 @@
 }
 
 body.nav-active {
+  overflow: auto; 
   overflow-y: hidden;
 }
 
@@ -364,7 +365,7 @@ body.nav-active {
           color: #fff;
           transition: all ease .3s;
           &:hover {
-            color: $orange; 
+            color: $orange;
           }
         }
       }

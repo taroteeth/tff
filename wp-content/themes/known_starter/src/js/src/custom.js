@@ -145,6 +145,7 @@ setNavPadding();
 function toggleNav() {
   if(hamburger) {
     hamburger.addEventListener("click", function(e){
+      console.log('hamburger click'); 
   		e.preventDefault();
       e.stopPropagation();
       if(window.matchMedia('(min-width: 992px)').matches) {

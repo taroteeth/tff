@@ -1557,6 +1557,7 @@ p, li {
             width: 25rem; } }
 
 body.nav-active {
+  overflow: auto;
   overflow-y: hidden; }
 
 #primary-nav {
