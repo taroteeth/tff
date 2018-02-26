@@ -40,7 +40,7 @@ $btnLink = get_sub_field('bottom_cta_link');
 
         if($submodIcon){
           if($isLink){
-            echo '<a href="'. $linkSrc .'">'; ?>
+            echo '<a href="'. get_permalink($linkSrc[0]) .'">'; ?>
             <div class="sub-icon-wrapper <?php if($divider){echo 'divider';}?><?php if($iconFiletype = "svg"){echo 'svg';} ?>"> <?php
             echo wp_get_attachment_image($submodIcon);
             echo '</div><!-- #sub-icon-wrapper -->';
