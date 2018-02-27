@@ -23,24 +23,16 @@ $introduction = get_sub_field('content_module_introduction');
 
     if($colContent) :
 
-      $pattern = '/<p>(Source:[^<br>]*)/'; //regex
+      $pattern = '/<p>(Source:)/'; //regex
 
       foreach($itemsGroup as $key => $value):  //access array key name as opposed to index
         foreach($itemsGroup[$key] as $key2 => $value2):
 
-          // print_r($itemsGroup[$key][$key2]);
-          // preg_match($pattern, $value2['content'], $matches);
-          // var_dump($matches[1]);
-
           $itemsGroup[$key][$key2]['content'] = preg_replace($pattern, '<strong>$1</strong>', $value2['content']);
 
         endforeach;
-        // // print_r($value);
-        // // var_dump($matches);
-
       endforeach;
 
-      // print_r($itemsGroup);
 
         foreach($itemsGroup as $group):
           echo '<div class="items">';
