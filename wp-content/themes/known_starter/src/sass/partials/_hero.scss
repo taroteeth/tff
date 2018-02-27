@@ -276,7 +276,14 @@
       }
 
       .button-container {
-        margin: 2rem 0; 
+        margin: 2rem 0;
+
+        .btn-wrap {
+          text-align: center;
+          @media screen and (min-width: 768px){
+            text-align: left; 
+          }
+        }
       }
     }
   }

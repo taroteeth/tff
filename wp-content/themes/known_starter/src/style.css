@@ -2029,6 +2029,11 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         line-height: 2.5em; }
       .hero .inner .hero-text-wrapper .button-container {
         margin: 2rem 0; }
+        .hero .inner .hero-text-wrapper .button-container .btn-wrap {
+          text-align: center; }
+          @media screen and (min-width: 768px) {
+            .hero .inner .hero-text-wrapper .button-container .btn-wrap {
+              text-align: left; } }
   .hero .orange-circle {
     display: none;
     width: 15rem;
