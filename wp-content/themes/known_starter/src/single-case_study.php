@@ -105,6 +105,8 @@ $imageLeft = true;
           $bodyContent = get_sub_field('module_body_content');
           $bodyContentVal = get_sub_field_object('module_body_content')['value'];
 
+          echo '<p class="header">'. $title .'</p>'; 
+
           preg_match_all('/(class="wp-caption )/', $bodyContentVal, $matches, PREG_OFFSET_CAPTURE);
 
           $matches = array_filter($matches);
