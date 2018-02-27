@@ -2027,6 +2027,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         font-weight: bold;
         color: #0176BC !important;
         line-height: 2.5em; }
+      .hero .inner .hero-text-wrapper .button-container {
+        margin: 2rem 0; }
   .hero .orange-circle {
     display: none;
     width: 15rem;

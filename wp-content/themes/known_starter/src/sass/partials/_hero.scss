@@ -150,7 +150,7 @@
           right: 50%;
           transform: translateX(-50%);
           top: -5rem;
-          transition: all ease .5s; 
+          transition: all ease .5s;
           @media screen and (min-width: 768px){
             width: 0;
             height: .3rem;
@@ -273,6 +273,10 @@
             line-height: 2.5em;
           }
         }
+      }
+
+      .button-container {
+        margin: 2rem 0; 
       }
     }
   }
