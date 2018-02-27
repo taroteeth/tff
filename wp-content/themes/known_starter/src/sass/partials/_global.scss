@@ -11,6 +11,10 @@ body {
   color: $textGrey;
 }
 
+strong {
+  font-weight: bold; 
+}
+
 #body-wrapper {
   max-width: 160rem;
   background-color: #fff;

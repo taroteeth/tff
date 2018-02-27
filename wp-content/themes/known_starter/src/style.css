@@ -56,6 +56,9 @@ body {
   margin: 0 auto;
   color: #3A3A3A; }
 
+strong {
+  font-weight: bold; }
+
 #body-wrapper {
   max-width: 160rem;
   background-color: #fff;
