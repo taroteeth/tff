@@ -52,6 +52,12 @@ $hasBtn = get_sub_field('has_button');
         echo '</div>';
       }
 
+      if($hasBtn){
+        echo '<div class="button-container">';
+        button();
+        echo '</div>';
+      }
+
     echo '</div><!-- .hero-text-wrapper -->';
     echo '</div><!-- .inner -->';
 
@@ -59,12 +65,6 @@ $hasBtn = get_sub_field('has_button');
       <div class="orange-circle trigger_circle_grow <?php echo $imagePos == "Left" ? "circle-right" : "circle-left";?>">
       </div> <!-- .orange-circle -->
     <?php }
-
-  if($hasBtn){
-    echo '<div class="button-container">';
-    button();
-    echo '</div>';
-  }
 
   if($blurbButton){
     echo '<div class="blurb-button">';
