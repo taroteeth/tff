@@ -269,7 +269,7 @@ body.nav-active {
     #menu-default-menu {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: flex-start;
       margin: 0 -2rem;
       z-index: 9;
       position: relative;
