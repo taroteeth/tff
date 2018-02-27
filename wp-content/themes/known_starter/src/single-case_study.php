@@ -112,7 +112,6 @@ $imageLeft = true;
           $matches = array_filter($matches);
           $found = count($matches[0]);
 
-          $woo = true; 
 
           if($found){
             $additionalOffset = 0;
