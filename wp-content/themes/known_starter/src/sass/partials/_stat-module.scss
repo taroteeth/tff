@@ -64,7 +64,7 @@
         vertical-align: top;
         box-sizing: border-box;
         flex: 0 0 100%;
-        max-width: 100%; 
+        max-width: 100%;
         @media screen and (min-width: 768px){
           max-width: 25%;
           display: inline-block;
@@ -108,6 +108,13 @@
             max-width: 100%;
           }
         }
+      }
+    }
+    .button-container {
+      margin: 2rem auto;
+
+      .btn-wrap {
+        text-align: center; 
       }
     }
   }

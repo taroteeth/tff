@@ -3499,6 +3499,10 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         @media screen and (min-width: 768px) {
           .stat-module .inner .stat-inner .col-inner #descriptor {
             max-width: 100%; } }
+  .stat-module .inner .button-container {
+    margin: 2rem auto; }
+    .stat-module .inner .button-container .btn-wrap {
+      text-align: center; }
 
 .content-cols.grey-bg {
   background-color: #F8F8F8; }

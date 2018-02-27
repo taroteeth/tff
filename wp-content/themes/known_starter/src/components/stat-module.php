@@ -2,6 +2,7 @@
 
 $greyBg = get_sub_field('grey_background');
 $moduleTitle = get_sub_field('module_title');
+$hasBtn = get_sub_field('has_button');
 
 ?>
 
@@ -40,11 +41,10 @@ $moduleTitle = get_sub_field('module_title');
       echo '</div> <!-- stat-inner -->';
     endif; // end repeater loop
 
-    if($hasBtn){
-      echo '<div id="col-cta">';
-      include('button.php');
-      echo '</div> <!-- #col-cta -->';
-    } ?>
+    if($hasBtn)
+    echo '<div class="button-container">';
+    button();
+    echo '</div>'; ?>
 
   </div> <!-- .inner -->
 </div> <!-- stat-module -->
