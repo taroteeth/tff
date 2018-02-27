@@ -9,6 +9,7 @@ $imagePos = get_sub_field('main_image_position');
 $orangeCircle = get_sub_field('orange_circle');
 $blurbButton = get_sub_field('blurb_button');
 $blurbText = get_sub_field('blurb_button_text');
+$hasBtn = get_sub_field('has_button');
 
 ?>
 
@@ -59,11 +60,18 @@ $blurbText = get_sub_field('blurb_button_text');
       </div> <!-- .orange-circle -->
     <?php }
 
+  if($hasBtn){
+    echo '<div class="button-container">';
+    button();
+    echo '</div>';
+  }
+
   if($blurbButton){
     echo '<div class="blurb-button">';
     echo $blurbText;
     echo '</div>';
   }
+
 
 echo '</div> <!-- .hero -->';
 
