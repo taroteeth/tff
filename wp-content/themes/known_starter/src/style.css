@@ -2129,6 +2129,12 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   position: relative; }
   .rte.grey-bg {
     background-color: #F8F8F8; }
+    .rte.grey-bg .inner {
+      margin: 0 auto;
+      padding: 5rem 2rem; }
+      @media (min-width: 1024px) {
+        .rte.grey-bg .inner {
+          padding: 10rem 2rem; } }
   .rte .inner {
     margin: 5rem auto;
     padding: 0 2rem;
