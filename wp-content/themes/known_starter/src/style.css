@@ -3655,7 +3655,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         color: #0176BC;
         text-transform: uppercase;
         letter-spacing: .1rem;
-        padding: 1rem 0;
+        padding: 0 0 1rem 0;
         position: relative; }
         .contact-information-module .inner .text-wrapper .title:before {
           content: "";
@@ -3684,12 +3684,13 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         color: #3A3A3A;
         font-family: "Poppins", sans-serif; }
       .contact-information-module .inner .text-wrapper .dir-btn-wrapper {
-        margin: 3rem 0; }
+        margin: 3rem 0 0 0; }
         .contact-information-module .inner .text-wrapper .dir-btn-wrapper a {
           text-decoration: none;
           background-color: #0176BC;
           padding: 1rem 2rem;
-          position: relative; }
+          position: relative;
+          display: inline-block; }
           .contact-information-module .inner .text-wrapper .dir-btn-wrapper a:focus {
             outline: none; }
           .contact-information-module .inner .text-wrapper .dir-btn-wrapper a:before {

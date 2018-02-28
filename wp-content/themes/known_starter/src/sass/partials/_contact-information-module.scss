@@ -53,7 +53,7 @@
         color: $blue;
         text-transform: uppercase;
         letter-spacing: .1rem;
-        padding: 1rem 0;
+        padding: 0 0 1rem 0;
         position: relative;
         &:before {
           content: "";
@@ -90,13 +90,14 @@
       }
 
       .dir-btn-wrapper {
-        margin: 3rem 0;
+        margin: 3rem 0 0 0;
 
         a {
           text-decoration: none;
           background-color: $blue;
           padding: 1rem 2rem;
           position: relative;
+          display: inline-block;
 
           &:focus {
             outline: none;
