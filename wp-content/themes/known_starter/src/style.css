@@ -1735,6 +1735,8 @@ body.nav-active {
   border: none;
   overflow: hidden;
   cursor: pointer; }
+  .btn:focus {
+    outline: none; }
   .btn:before {
     content: '';
     position: absolute;
