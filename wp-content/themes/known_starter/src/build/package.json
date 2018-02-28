@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.2.3",
+    "gulp-clean-css": "^3.9.2",
     "gulp-concat": "^2.6.1",
     "gulp-minify": "^2.1.0",
     "gulp-postcss": "^7.0.0",
