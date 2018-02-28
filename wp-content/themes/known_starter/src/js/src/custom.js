@@ -204,7 +204,7 @@ function labelDrift(){
 	    if(label) label.addClass('active');
 	  });
 
-	  $('.contact-form input' || '.contact-form textarea').on('blur', function(e){
+	  $('.contact-form input', '.contact-form textarea').on('blur', function(e){
       e.preventDefault();
 	    var label = $(this).siblings('label');
 	    if($(this).val() === ''){
@@ -216,14 +216,6 @@ function labelDrift(){
         var label = $(this).siblings('label');
   	    if(label) label.addClass('active');
   	  });
-
-      $('.contact-form textarea').on('blur', function(e){
-        e.preventDefault();
-        var label = $(this).siblings('label');
-        if($(this).val() === ''){
-          if(label) label.removeClass('active');
-        }
-      });
 }
 
 labelDrift();
