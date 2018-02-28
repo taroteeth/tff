@@ -2129,21 +2129,22 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   .rte.grey-bg {
     background-color: #F8F8F8; }
   .rte .inner {
-    padding: 4rem 2rem;
+    margin: 5rem auto;
+    padding: 0 2rem;
     display: block;
-    margin: 0 auto;
     max-width: 70rem; }
     @media (min-width: 768px) {
       .rte .inner {
         width: 70vw; } }
     @media (min-width: 1024px) {
       .rte .inner {
-        padding: 10rem 2rem; } }
-    .rte .inner.contact {
-      padding: 6rem 2rem; }
-      @media screen and (min-width: 768px) {
-        .rte .inner.contact {
-          padding: 6rem 2rem 8rem; } }
+        margin: 10rem auto; } }
+    @media screen and (min-width: 768px) {
+      .rte .inner.contact {
+        margin-bottom: 8rem; } }
+    @media (min-width: 1024px) {
+      .rte .inner.contact {
+        margin-bottom: 10rem; } }
     .rte .inner #content-title {
       text-align: center;
       margin-left: auto;
