@@ -12,9 +12,9 @@ $bodyContent = get_sub_field('body_content');
     <?php
 
     if($contentTitle){
-      echo '<p id="content-title" class="header trigger_fade">';
+      echo '<h2 id="content-title" class="header trigger_fade">';
       echo $contentTitle;
-      echo '</p>';
+      echo '</h2>';
     }
 
     if($bodyContent){
