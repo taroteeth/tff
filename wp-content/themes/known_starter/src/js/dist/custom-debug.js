@@ -145,6 +145,7 @@ setNavPadding();
 function toggleNav() {
   if(hamburger) {
     hamburger.addEventListener("click", function(e){
+      console.log('hamburger click');
   		e.preventDefault();
       e.stopPropagation();
       if(window.matchMedia('(min-width: 992px)').matches) {
@@ -161,6 +162,7 @@ toggleNav();
 document.body.addEventListener('click', function(e){
   if(body[0].classList.contains('nav-active')){
     if(!$(e.target).parents('#primary-nav').length){
+      console.log('test');
       body[0].classList.remove('nav-active');
     }
   }
@@ -260,7 +262,10 @@ class clientScroll {
           var target = this.element.querySelector('.category-submodule p.title[data-id='+id+']'); //how you match it thoooo
           var targetTop = target.getBoundingClientRect().top;
 
+          console.log(targetTop);
+
           scrollTo((targetTop + getScrollPosition()), function(){
+            console.log('big don');
           }, 1500);
 
         }.bind(this));
@@ -270,12 +275,15 @@ class clientScroll {
 
 }
 var industryModules = document.querySelectorAll('.industry-module');
+console.log(industryModules);
 
 if(industryModules.length){
   var industryClasses = [];
   for( var i = 0; i < industryModules.length; i++ ){
     industryClasses[i] = new clientScroll(industryModules[i]);
   }
+  console.log(industryClasses);
+  // industryClasses[0].init();  you can run any function you want to any one item
 }
 
 
@@ -342,7 +350,9 @@ var animationInstance = new animations();
   // number svg animation
   function numberSvgAnimation(){
     var path = document.querySelector('.number-one-path');
+    // console.log(path);
     var length = path.getTotalLength();
+    // console.log(length);
     // Clear any previous transition
     path.style.transition = path.style.WebkitTransition =
       'none';
@@ -374,6 +384,7 @@ function logoScroll(){
     var heroTop = heroPos.top;
 
     document.addEventListener('scroll', function(){
+      console.log(heroTop, getScrollPosition());
       if(getScrollPosition() >= heroTop){
         headerLogo.classList.add('active');
       } else {
