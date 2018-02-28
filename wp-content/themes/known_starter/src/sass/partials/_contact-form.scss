@@ -115,6 +115,23 @@
       }
     } //.fields
 
+    .form-success {
+      text-align: center;
+      margin: 3rem auto;
+
+      h3 {
+        font-family: $Poppins;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $blue;
+        margin-bottom: .5em;
+      }
+
+      p {
+        line-height: 1.3em;
+      }
+    }
+
     .btn-wrap {
       text-align: center;
       margin-top: 2em;
