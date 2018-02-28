@@ -28,13 +28,13 @@
 
 					<ul id="sm-container">
 						<li>
-							<a target="_blank" href="https://www.linkedin.com/company/think-forward-financial-group-llc/">
+							<a target="_blank" rel="noopener" href="https://www.linkedin.com/company/think-forward-financial-group-llc/">
 								<svg width="20px" viewBox="0 0 23 23"><use xlink:href="#linkedin"></use></svg>
 							</a>
 						</li>
 
 						<li id="twitter">
-							<a target="_blank" href="https://twitter.com/think_forward">
+							<a target="_blank" rel="noopener" href="https://twitter.com/think_forward">
 								<svg width="20px" viewBox="0 0 24 23"><use xlink:href="#twitter"></use></svg>
 							</a>
 						</li>

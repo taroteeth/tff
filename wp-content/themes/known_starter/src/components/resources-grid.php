@@ -37,7 +37,7 @@ if(get_post_type() == 'resource'){
 
         echo '<div class="button">';
         if($pdf){
-          echo '<a target="_blank" href="'. wp_get_attachment_url($pdfAttachment) .'">';
+          echo '<a target="_blank" rel="noopener" href="'. wp_get_attachment_url($pdfAttachment) .'">';
         } else {
           echo '<a href="'. $permalink .'">';
         }
@@ -101,7 +101,7 @@ if(get_post_type() == 'resource'){
 
       echo '<div class="article-wrapper trigger_tile">';
       if($pdf){
-        echo '<a target="_blank" href="'. wp_get_attachment_url($pdfAttachment) .'">';
+        echo '<a target="_blank" rel="noopener" href="'. wp_get_attachment_url($pdfAttachment) .'">';
       } else {
         echo '<a href="'. $permalink .'">';
       }
@@ -114,7 +114,7 @@ if(get_post_type() == 'resource'){
 
       echo '<div class="button">';
       if($pdf){
-        echo '<a target="_blank" href="'. wp_get_attachment_url($pdfAttachment) .'">';
+        echo '<a target="_blank" rel="noopener" href="'. wp_get_attachment_url($pdfAttachment) .'">';
       } else {
         echo '<a href="'. $permalink .'">';
       }
