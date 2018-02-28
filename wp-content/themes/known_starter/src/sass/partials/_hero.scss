@@ -12,7 +12,7 @@
     height: 55vh;
   }
   @media screen and (min-width: 1440px) {
-    height: 65rem;
+    height: 50rem;
   }
 
   &.has-blurb {
@@ -113,7 +113,7 @@
     }
 
     .hero-text-wrapper {
-      padding: 2rem;
+      padding: 2rem 2rem 0 2rem;
       text-align: center;
       box-sizing: border-box;
       flex: 0 0 100%;
@@ -183,6 +183,7 @@
         text-align: center;
         padding-top: 1.5rem;
         position: relative;
+        margin-bottom: 2rem;
         @media screen and (min-width: 768px){
           text-align: left;
           padding-top: 0;
@@ -192,9 +193,6 @@
           &:before {
             @media screen and (min-width: 768px){
               width: 5rem;
-            }
-            @media screen and (min-width: 992px){
-              width: 10rem;
             }
           }
         }
@@ -227,7 +225,7 @@
             position: relative;
           }
           @media screen and (min-width: 992px){
-            margin-left: 12rem;
+            margin-left: 7rem;
           }
           &:before {
             @media screen and (min-width: 768px){
@@ -252,6 +250,9 @@
         @media screen and (min-width: 768px){
           text-align: left;
         }
+        @media(min-width: 1440px) {
+          font-size: 4rem;
+        }
       }
 
       .subheader {
@@ -261,6 +262,9 @@
           text-align: center;
           @media screen and (min-width: 768px){
             text-align: left;
+          }
+          @media(min-width: 1440px) {
+            font-size: 1.8rem;
           }
         }
 
@@ -281,7 +285,7 @@
         .btn-wrap {
           text-align: center;
           @media screen and (min-width: 768px){
-            text-align: left; 
+            text-align: left;
           }
         }
       }

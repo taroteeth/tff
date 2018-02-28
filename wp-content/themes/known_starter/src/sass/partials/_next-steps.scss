@@ -2,9 +2,10 @@
   background-color: #fff;
   position: relative;
   z-index: 7;
-  padding: 2rem;
+  padding: 0 2rem;
+  margin: 5rem 0;
   @media screen and (min-width: 768px){
-    padding: 5rem;
+    padding: 0;
   }
 
   .next-step-container {
@@ -69,7 +70,10 @@
       #next-step-heading {
         position: relative;
         display: inline-block;
-
+        @media(min-width: 1440px) {
+          font-size: 4rem;
+        }
+        
         &:after {
           content: "";
           position: absolute;
