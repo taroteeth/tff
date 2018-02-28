@@ -5,6 +5,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
+var minify = require('gulp-minify');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 
@@ -27,8 +28,22 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./../js/dist/'));
 });
 
+gulp.task('compress', function(){
+  gulp.src('./../js/src/*.js')
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'.js'
+        },
+        exclude: ['tasks'],
+        ignoreFiles: ['.combo.js', '-min.js']
+    }))
+    .pipe(gulp.dest('./../js/dist/'));
+});
+
 //auto watch
 gulp.task('default', function() {
   gulp.watch('./../sass/**/*.scss', ['sass']);
-  gulp.watch('./../js/src/*.js', ['scripts'])
+  gulp.watch('./../js/src/*.js', ['scripts']);
+  gulp.watch('./../js/src/*.js', ['compress']);
 });
