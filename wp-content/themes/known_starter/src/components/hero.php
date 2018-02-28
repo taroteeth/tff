@@ -43,7 +43,7 @@ $hasBtn = get_sub_field('has_button');
       }
 
       if($heroHeader){
-        echo '<p class="header trigger_fade">'. $heroHeader. '</p>';
+        echo '<h1 class="header trigger_fade">'. $heroHeader. '</h1>';
       }
 
       if($heroContent){ ?>
