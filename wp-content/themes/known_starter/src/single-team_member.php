@@ -28,9 +28,9 @@ $nextBtn = get_field('next_step_heading');
       }
 
       echo '<div class="hero-text-wrapper">';
-        echo '<p class="hero-header trigger_fade">';
+        echo '<h1 class="hero-header trigger_fade">';
         echo $title;
-        echo '</p>';
+        echo '</h1>';
 
 
         if($position){
@@ -82,7 +82,7 @@ $nextBtn = get_field('next_step_heading');
 
       echo '<div class="content-block">';
         if($title){
-          echo '<p class="title trigger_fade">'. $title .'</p>';
+          echo '<h2 class="title trigger_fade">'. $title .'</h2>';
         }
 
         if($content){
