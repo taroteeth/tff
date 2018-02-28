@@ -2,9 +2,15 @@
 
   .introduction-module {
     text-align: center;
-    margin: 4rem auto 2rem;
-    width: 80vw;
-    max-width: 100rem;
+    margin: 5rem auto 3rem auto;
+    max-width: 70rem;
+    @media(min-width: 768px) {
+      width: 70vw;
+    }
+    @media(min-width: 1024px) {
+      margin: 10rem auto 5rem auto;
+      padding: 0 2rem;
+    }
 
     .header {
       &:after {
@@ -61,6 +67,12 @@
               height: .2rem;
               width: 3.8rem;
               margin: 1rem 0;
+            }
+          }
+
+          .content {
+            p {
+              line-height: 1.7em;
             }
           }
         }

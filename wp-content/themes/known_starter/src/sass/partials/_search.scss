@@ -121,6 +121,7 @@
           display: inline-block;
           background: $blue;
           border: none;
+          position: relative;
           @media screen and (min-width: 768px){
             margin-top: 1rem;
           }

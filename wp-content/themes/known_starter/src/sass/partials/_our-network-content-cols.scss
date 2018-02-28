@@ -15,7 +15,7 @@
       &:after {
         content: "";
         width: 5rem;
-        height: .2rem;
+        height: .3rem;
         background-color: $orange;
         display: block;
         vertical-align: middle;
@@ -26,7 +26,7 @@
     .module-intro {
       padding: 2rem;
       text-align: center;
-      max-width: 90rem;
+      max-width: 70rem;
       margin: 0 auto;
     }
 
@@ -36,11 +36,11 @@
     }
 
     .group {
-      padding: 2rem;
+      padding: 2rem 1rem;
       @media screen and (min-width: 768px){
         display: flex;
         flex-wrap: wrap;
-        padding: 4rem 2rem;
+        padding: 4rem 1rem;
         margin: 0 -5rem;
       }
 
@@ -53,22 +53,21 @@
         letter-spacing: .2rem;
         font-family: "Poppins", sans-serif;
         text-align: left;
-        padding: 1rem 5.5rem 1rem 0;
-        padding-left: 5.5rem;
+        padding: 1rem 0;
         position: relative;
+        @media screen and (min-width: 768px){
+          text-align: left;
+          margin-left: 5rem;
+        }
+
         &:before {
           content: "";
           width: 5rem;
           height: .3rem;
           background-color: $orange;
-          display: block;
+          display: inline-block;
           vertical-align: middle;
-          position: absolute;
-          left: 0;
-          bottom: 50%;
-        }
-        @media screen and (min-width: 768px){
-          text-align: left;
+          margin-right: 1rem;
         }
       }
 

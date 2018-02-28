@@ -2146,7 +2146,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       .rte .inner #content-title:after {
         content: "";
         width: 5rem;
-        height: .2rem;
+        height: .3rem;
         background-color: #F69420;
         display: block;
         vertical-align: middle;
@@ -2340,7 +2340,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
     #our-network-content-cols .content-cols-module .header:after {
       content: "";
       width: 5rem;
-      height: .2rem;
+      height: .3rem;
       background-color: #F69420;
       display: block;
       vertical-align: middle;
@@ -2348,13 +2348,13 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
   #our-network-content-cols .content-cols-module .module-intro {
     padding: 2rem;
     text-align: center;
-    max-width: 90rem;
+    max-width: 70rem;
     margin: 0 auto; }
   #our-network-content-cols .content-cols-module .group-wrap {
     margin: 0 auto;
     max-width: 110rem; }
   #our-network-content-cols .content-cols-module .group {
-    padding: 2rem; }
+    padding: 2rem 1rem; }
     @media screen and (min-width: 768px) {
       #our-network-content-cols .content-cols-module .group {
         display: -webkit-box;
@@ -2362,7 +2362,7 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         display: flex;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-        padding: 4rem 2rem;
+        padding: 4rem 1rem;
         margin: 0 -5rem; } }
     #our-network-content-cols .content-cols-module .group .title {
       -webkit-box-flex: 0;
@@ -2375,22 +2375,20 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
       letter-spacing: .2rem;
       font-family: "Poppins", sans-serif;
       text-align: left;
-      padding: 1rem 5.5rem 1rem 0;
-      padding-left: 5.5rem;
+      padding: 1rem 0;
       position: relative; }
+      @media screen and (min-width: 768px) {
+        #our-network-content-cols .content-cols-module .group .title {
+          text-align: left;
+          margin-left: 5rem; } }
       #our-network-content-cols .content-cols-module .group .title:before {
         content: "";
         width: 5rem;
         height: .3rem;
         background-color: #F69420;
-        display: block;
+        display: inline-block;
         vertical-align: middle;
-        position: absolute;
-        left: 0;
-        bottom: 50%; }
-      @media screen and (min-width: 768px) {
-        #our-network-content-cols .content-cols-module .group .title {
-          text-align: left; } }
+        margin-right: 1rem; }
     @media screen and (min-width: 768px) {
       #our-network-content-cols .content-cols-module .group .title + .col:before,
       #our-network-content-cols .content-cols-module .group .col:first-child:before {
@@ -2713,9 +2711,15 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
 
 .two-col-content .introduction-module {
   text-align: center;
-  margin: 4rem auto 2rem;
-  width: 80vw;
-  max-width: 100rem; }
+  margin: 5rem auto 3rem auto;
+  max-width: 70rem; }
+  @media (min-width: 768px) {
+    .two-col-content .introduction-module {
+      width: 70vw; } }
+  @media (min-width: 1024px) {
+    .two-col-content .introduction-module {
+      margin: 10rem auto 5rem auto;
+      padding: 0 2rem; } }
   .two-col-content .introduction-module .header:after {
     content: "";
     width: 5rem;
@@ -2773,6 +2777,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           height: .2rem;
           width: 3.8rem;
           margin: 1rem 0; }
+      .two-col-content .two-col-module .items ul .block .content p {
+        line-height: 1.7em; }
 
 .network-icon-col {
   background-color: #F8F8F8;
@@ -4056,7 +4062,8 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
           text-align: left;
           display: inline-block;
           background: #0176BC;
-          border: none; }
+          border: none;
+          position: relative; }
           @media screen and (min-width: 768px) {
             .search-result-content .inner #grid-wrapper .text-wrapper .button {
               margin-top: 1rem; } }
