@@ -95,7 +95,6 @@ wp-content/index.php
 # ignore these plugins
 wp-content/plugins/hello.php
 wp-content/plugins/gravityforms/*
-wp-content/plugins/custom-form-entries-plugin
 
 
 # ignore specific themes
