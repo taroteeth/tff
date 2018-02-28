@@ -1,0 +1,35 @@
+.notfound-wrapper {
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 100rem;
+  padding: 4rem 0;
+  text-align: center;
+  @media screen and (min-width: 768px){
+    text-align: left;
+    min-height: 65rem;
+  }
+  @media screen and (min-width: 992px){
+    min-height: calc(100vh - 35rem);
+  }
+
+  .header {
+    margin: 4rem 0;
+  }
+
+  .home-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $blue;
+    font-weight: bold;
+    font-family: $Poppins;
+
+    &:before {
+      content: "<";
+      font-family: $Poppins;
+      color: $orange;
+      font-weight: bold;
+      margin-right:1rem;
+    }
+  }
+}

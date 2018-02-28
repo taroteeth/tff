@@ -156,16 +156,6 @@ p, li {
 .body-content {
   margin-top: 6rem; }
 
-.404-wrapper {
-  display: block;
-  margin: 0 auto;
-  width: 80vw;
-  max-width: 100rem;
-  padding: 2rem 0; }
-  .404-wrapper .home-link {
-    text-transform: uppercase;
-    text-decoration: none; }
-
 .trigger_fade {
   opacity: 0; }
   .trigger_fade.animate {
@@ -4113,6 +4103,35 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
             @media screen and (min-width: 768px) {
               .search-result-content .inner #grid-wrapper .text-wrapper .button span:hover:after {
                 width: 0; } }
+
+.notfound-wrapper {
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 100rem;
+  padding: 4rem 0;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .notfound-wrapper {
+      text-align: left;
+      min-height: 65rem; } }
+  @media screen and (min-width: 992px) {
+    .notfound-wrapper {
+      min-height: calc(100vh - 35rem); } }
+  .notfound-wrapper .header {
+    margin: 4rem 0; }
+  .notfound-wrapper .home-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0176BC;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif; }
+    .notfound-wrapper .home-link:before {
+      content: "<";
+      font-family: "Poppins", sans-serif;
+      color: #F69420;
+      font-weight: bold;
+      margin-right: 1rem; }
 
 #primary-footer {
   background-color: #F8F8F8;
