@@ -59,14 +59,16 @@
         &:before {
           content: "";
           background-color: $orange;
-          height: 10rem;
+          height: 6rem;
           width: .3rem;
           position: absolute;
           display: block;
           left: 50%;
-          top: -10rem;
+          top: -4rem;
+          transform: translateY(-50%);
           @media screen and (min-width: 768px){
             width: 15rem;
+            height: .3rem;
             top: 50%;
             transform: translateY(-50%);
             left: -17rem;

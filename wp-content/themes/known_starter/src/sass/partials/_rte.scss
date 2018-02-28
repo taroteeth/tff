@@ -8,20 +8,23 @@
   }
 
   .inner {
-    padding: 4rem 2rem;
+    margin: 5rem auto;
+    padding: 0 2rem;
     display: block;
-    margin: 0 auto;
     max-width: 70rem;
     @media(min-width: 768px) {
       width: 70vw;
     }
     @media(min-width: 1024px) {
-      padding: 10rem 2rem;
+      margin: 10rem auto;
     }
+
     &.contact {
-      padding: 6rem 2rem;
       @media screen and (min-width: 768px){
-        padding: 6rem 2rem 8rem;
+        margin-bottom: 8rem;
+      }
+      @media(min-width: 1024px) {
+        margin-bottom: 10rem;
       }
     }
 
