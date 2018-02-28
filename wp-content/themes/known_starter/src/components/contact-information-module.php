@@ -30,7 +30,7 @@ echo '<div class="contact-information-module">';
       }
 
       echo '<div class="dir-btn-wrapper trigger_fade">';
-      echo '<a target="_blank" href="https://goo.gl/maps/CCFbXr4bMnv">';
+      echo '<a target="_blank" rel="noopener" href="https://goo.gl/maps/CCFbXr4bMnv">';
       echo '<span>Directions</span>';
       echo '</a>';
       echo '</div><!-- .dir-btn-wrapper-->';
