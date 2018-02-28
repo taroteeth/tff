@@ -3655,41 +3655,41 @@ body.mobile-nav-active #hamburger g#hamburger_paths {
         color: #0176BC;
         text-transform: uppercase;
         letter-spacing: .1rem;
-        padding: 1rem 0;
+        margin-bottom: 1rem;
         position: relative; }
         .contact-information-module .inner .text-wrapper .title:before {
           content: "";
           background-color: #F69420;
           height: 10rem;
-          width: .2rem;
+          width: .3rem;
           position: absolute;
           display: block;
           left: 50%;
           top: -10rem; }
           @media screen and (min-width: 768px) {
             .contact-information-module .inner .text-wrapper .title:before {
-              height: .2rem;
               width: 15rem;
               top: 50%;
               -webkit-transform: translateY(-50%);
                       transform: translateY(-50%);
               left: -17rem; } }
       .contact-information-module .inner .text-wrapper .address {
-        padding: 1rem 0; }
+        margin: 0 0 1rem 0; }
       .contact-information-module .inner .text-wrapper .phone {
         letter-spacing: .05rem;
-        padding: 1rem 0; }
+        margin: 0 0 1rem 0; }
       .contact-information-module .inner .text-wrapper .email {
         text-decoration: none;
         color: #3A3A3A;
         font-family: "Poppins", sans-serif; }
       .contact-information-module .inner .text-wrapper .dir-btn-wrapper {
-        margin: 3rem 0; }
+        margin: 2rem 0 0 0; }
         .contact-information-module .inner .text-wrapper .dir-btn-wrapper a {
           text-decoration: none;
           background-color: #0176BC;
           padding: 1rem 2rem;
-          position: relative; }
+          position: relative;
+          display: inline-block; }
           .contact-information-module .inner .text-wrapper .dir-btn-wrapper a:focus {
             outline: none; }
           .contact-information-module .inner .text-wrapper .dir-btn-wrapper a:before {
