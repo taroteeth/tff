@@ -156,6 +156,16 @@ p, li {
 .body-content {
   margin-top: 6rem; }
 
+.404-wrapper {
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 100rem;
+  padding: 2rem 0; }
+  .404-wrapper .home-link {
+    text-transform: uppercase;
+    text-decoration: none; }
+
 .trigger_fade {
   opacity: 0; }
   .trigger_fade.animate {

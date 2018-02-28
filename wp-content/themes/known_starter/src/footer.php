@@ -34,16 +34,16 @@
 						</li>
 
 						<li id="twitter">
-							<a target="_blank" href="">
+							<a target="_blank" href="https://twitter.com/think_forward">
 								<svg width="20px" viewBox="0 0 24 23"><use xlink:href="#twitter"></use></svg>
 							</a>
 						</li>
 
-						<li>
+						<!-- <li>
 							<a href="" target="_blank">
 								<svg width="20px" viewBox="0 0 23 23"><use xlink:href="#facebook"></use></svg>
 							</a>
-						</li>
+						</li> -->
 					</ul> <!-- #sm-container -->
 				</div> <!-- right-col -->
 

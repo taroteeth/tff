@@ -30,7 +30,9 @@ if( $team_query->have_posts() ) :
     <div class="photo-block grayscale <?php if($rowCount % 2 == 0){echo 'right';}?>"><?php
       if($image){
         echo '<div class="image-wrapper">';
+        echo '<a href="'. $path .'">';
         echo wp_get_attachment_image($image, 'full');
+        echo '</a>'; 
         echo '</div>';
       }
     echo '</div><!-- .photo-block -->';
