@@ -35,9 +35,9 @@ $imageLeft = true;
 
 
         if($headline){
-          echo '<p class="header">';
+          echo '<h1 class="header">';
           echo $headline;
-          echo '</p>';
+          echo '</h1>';
         }
 
         if($subheader){
@@ -105,7 +105,7 @@ $imageLeft = true;
           $bodyContent = get_sub_field('module_body_content');
           $bodyContentVal = get_sub_field_object('module_body_content')['value'];
 
-          echo '<p class="header">'. $title .'</p>';
+          echo '<h2 class="header">'. $title .'</h2>';
 
           preg_match_all('/(class="wp-caption )/', $bodyContentVal, $matches, PREG_OFFSET_CAPTURE);
 
