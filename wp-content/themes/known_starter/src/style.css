@@ -1733,7 +1733,8 @@ body.nav-active {
   position: relative;
   background: #0176BC;
   border: none;
-  overflow: hidden; }
+  overflow: hidden;
+  cursor: pointer; }
   .btn:before {
     content: '';
     position: absolute;
