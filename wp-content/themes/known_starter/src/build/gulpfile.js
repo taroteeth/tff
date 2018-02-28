@@ -25,19 +25,7 @@ gulp.task('scripts', function() {
     './../js/src/*.js'
     ])
     .pipe(concat('all.js'))
-    .pipe(gulp.dest('./../js/dist/'));
-});
-
-gulp.task('compress', function(){
-  gulp.src('./../js/src/*.js')
-    .pipe(minify({
-        ext:{
-            src:'-debug.js',
-            min:'.js'
-        },
-        exclude: ['tasks'],
-        ignoreFiles: ['.combo.js', '-min.js']
-    }))
+    .pipe(minify())
     .pipe(gulp.dest('./../js/dist/'));
 });
 
@@ -45,5 +33,4 @@ gulp.task('compress', function(){
 gulp.task('default', function() {
   gulp.watch('./../sass/**/*.scss', ['sass']);
   gulp.watch('./../js/src/*.js', ['scripts']);
-  gulp.watch('./../js/src/*.js', ['compress']);
 });

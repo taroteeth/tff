@@ -152,7 +152,7 @@ function toggleNav() {
       }
   		body[0].classList.toggle("nav-active");
       closeSearchbar();
-  	}); 
+  	});
   }
 }
 toggleNav();
