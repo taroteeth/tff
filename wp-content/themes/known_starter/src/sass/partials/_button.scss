@@ -6,6 +6,10 @@
   overflow: hidden;
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -25,23 +29,6 @@
     }
   }
 
-  // @keyframes color_swipe_in {
-  //   from {
-  //     transform: translate(-100%, 0);
-  //   }
-  //   to {
-  //     transform: translate(0, 0);
-  //   }
-  // }
-  //
-  // @keyframes color_swipe_out {
-  //   from {
-  //     transform: translate(0, 0);
-  //   }
-  //   to {
-  //     transform: translate(-100%, 0);
-  //   }
-  // }
 
   span {
     position: relative;
