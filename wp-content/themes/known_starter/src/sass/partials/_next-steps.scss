@@ -73,11 +73,11 @@
         @media(min-width: 1440px) {
           font-size: 4rem;
         }
-        
+
         &:after {
           content: "";
           position: absolute;
-          height: .2rem;
+          height: .3rem;
           width: 0;
           background-color: $orange;
           display: block;
