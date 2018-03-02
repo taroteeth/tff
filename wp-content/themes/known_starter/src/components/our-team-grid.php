@@ -44,7 +44,7 @@ if( $team_query->have_posts() ) :
         }
 
         if($name){
-          echo '<p class="header trigger_fade">'. $name .'</p>';
+          echo '<h3 class="header trigger_fade">'. $name .'</h3>';
         }
 
         if($blurb){

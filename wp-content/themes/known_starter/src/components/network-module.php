@@ -5,7 +5,7 @@ $hasBtn = get_sub_field('button_text');
 echo '<div class="network-icon-col">';
   echo '<div class="inner">';
 
-    echo '<p id="col-header" class="header">Our Network is Expansive</p> <!-- col-header -->';
+    echo '<h2 id="col-header" class="header">Our Network is Expansive</h2> <!-- col-header -->';
 
     if(have_rows('col_submodule')):
 

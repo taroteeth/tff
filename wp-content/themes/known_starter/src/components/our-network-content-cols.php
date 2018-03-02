@@ -50,7 +50,7 @@
 
       echo '<div class="module-wrap">';
 
-      if($moduleTitle) echo '<p class="header trigger_fade">'. $moduleTitle .'</p>';
+      if($moduleTitle) echo '<h2 class="header trigger_fade">'. $moduleTitle .'</h2>';
       if($moduleIntro) echo '<div class="module-intro trigger_fade">'. $moduleIntro .'</div>';
 
       if(!empty($groups)) :

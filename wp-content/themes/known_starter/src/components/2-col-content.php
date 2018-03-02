@@ -9,7 +9,7 @@ $introduction = get_sub_field('content_module_introduction');
 
   <?php if($title || $introduction) {
     echo '<div class="introduction-module">';
-    if($title) echo '<p class="header trigger_fade">'. $title .'</p>';
+    if($title) echo '<h2 class="header trigger_fade">'. $title .'</h2>';
     if($introduction) echo '<div class="intro trigger_fade">'. $introduction .'</div>';
     echo '</div><!-- .introduction-module -->';
   } ?>
@@ -40,7 +40,7 @@ $introduction = get_sub_field('content_module_introduction');
           echo '<ul>';
             foreach($group as $value):
               echo '<li class="block trigger_fade">';
-              echo '<p class="title">'. $value['title'] .'</p>';
+              echo '<h3 class="title">'. $value['title'] .'</h3>';
               echo '<div class="content">'. $value['content'] .'</div>';
               echo '</li>';
             endforeach;

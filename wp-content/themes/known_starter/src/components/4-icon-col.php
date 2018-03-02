@@ -12,9 +12,9 @@ $btnLink = get_sub_field('bottom_cta_link');
 
     <?php
     if($moduleTitle){
-      echo '<p class="col-header header trigger_fade">';
+      echo '<h2 class="col-header header trigger_fade">';
       echo $moduleTitle;
-      echo '</p> <!-- .col-header -->';
+      echo '</h2> <!-- .col-header -->';
     }
 
     $rowCount = count(get_sub_field('col_submodule'));

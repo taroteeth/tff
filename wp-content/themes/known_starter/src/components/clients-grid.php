@@ -17,7 +17,7 @@
 
           <div class="industry-module">
 
-          <p class="header trigger_fade"><?php echo $moduleTitle ?></p>
+          <h2 class="header trigger_fade"><?php echo $moduleTitle ?></h2>
           <svg class="triangle" width="14px" height="7px" viewBox="0 0 14 7"><use href="#triangle-up"></use></svg>
 
           <div class="categories-list">
@@ -41,7 +41,7 @@
               ?>
 
               <div class="category-submodule">
-                <p class="title" data-id="<?php echo 'id-'.$catSubmodCounter; ?>"><?php echo $categoryTitle ?></p>
+                <h3 class="title" data-id="<?php echo 'id-'.$catSubmodCounter; ?>"><?php echo $categoryTitle ?></h3>
 
                 <?php
 

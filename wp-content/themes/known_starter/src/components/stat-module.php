@@ -11,9 +11,9 @@ $hasBtn = get_sub_field('has_button');
 
     <?php
     if($moduleTitle){
-      echo '<p id="module-header" class="header trigger_fade">';
+      echo '<h2 id="module-header" class="header trigger_fade">';
       echo $moduleTitle;
-      echo '</p> <!-- module-header -->';
+      echo '</h2> <!-- module-header -->';
     }
 
     if(have_rows('stat_submodule')):

@@ -11,9 +11,9 @@ $header = get_sub_field('section_header');
     <?php
 
     if($header){
-      echo '<p class="header">';
+      echo '<h2 class="header">';
       echo $header;
-      echo '</p>';
+      echo '</h2>';
     }
 
     ?>
